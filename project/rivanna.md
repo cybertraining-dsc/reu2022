@@ -16,8 +16,8 @@ JupyterLab: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard/batch_con
 
 **Figure:** UVA Login
 
-The user must install Duo as an authentication service to approve 
-logins.
+The user must install Duo Mobile on smartphone to use as an 
+authentication service to approve logins.
 
 For security reasons we suggest never saving the password within
 the browser autofill.
