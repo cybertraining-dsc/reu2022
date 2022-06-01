@@ -92,3 +92,12 @@ Here is the current status:
 
 For -account, users will enter either bii_dsc or bii_dsc_community depending on which group they belong to. You can find this by running the allocations utility at the commandline. For -gres=gpu:, users should enter the number of GPUs requested.
 
+The full details of the reservation are below. I named the Slurm reservation “bi_fox_dgx”.  It’s not a typo.  To change the name of the reservation, I would have to delete the reservation and re-create it and the actual name of the reservation does not affect the reservation’s usability.  I’ve successfully tested the ability to use this reservation for all the current bii_dsc and bii_dsc_community members using the Slurm parameters I sent previously.
+
+ReservationName=bi_fox_dgx StartTime=2022-06-01T08:37:38 EndTime=2022-06-02T08:37:38 Duration=1-00:00:00
+   Nodes=udc-an36-1 NodeCnt=1 CoreCnt=256 Features=(null) PartitionName=bii-gpu Flags=DAILY,SPEC_NODES
+   TRES=cpu=256
+   Users=(null) Groups=(null) Accounts=bii_dsc,bii_dsc_community Licenses=(null) State=ACTIVE BurstBuffer=(null) Watts=n/a
+   MaxStartDelay=(null)
+
+
