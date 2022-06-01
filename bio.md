@@ -16,7 +16,7 @@ Review other peoples bios and improve or give improvement tips where needed
 
 ## Jacques Fleischer
 
-![UVA Login](project/images/bio/jacques.jpg)
+![Jacques's Picture](project/images/bio/jacques.jpg)
 
 Jacques Fleischer is a sophomore at the Miami Dade Honors College. 
 He is set to receive his associate degree in computer science in 
