@@ -52,3 +52,22 @@ Authorized Use Only!
 -bash-4.2$
 
 ```
+## Notes: superpod
+
+Estimated deployment for testing by the end of this summer. 
+
+Hardware Components:
+
+* 10 DGX-A100 (80GB) Servers (8 GPUs)
+* 2 DGX-A100 (40GB) Servers (16 GPUs)
+* HDR Infiniband (200GB/s) IB network fabric for GPU-to-GPU direct communication
+* 500T ESS3200 pure SSD SpectrumScale (aka GPFS) direct-to-GPU storage array
+
+The SuperPod is a collection of GPU servers (Nvidia DGX-A100) integrated into 
+the Rivanna Cluster (on the GPU partition) with an 200Gb/s IB fabric 
+interconnecting the GPUs with each other and with dedicated temporary storage for 
+[Nvidia GPUDirect](https://developer.nvidia.com/gpudirect) features. The GPU Direct 
+features allow for very fast transfers between the GPUs, storage and also for 
+larger distributed GPU models.
+
+
