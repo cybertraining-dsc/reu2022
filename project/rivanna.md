@@ -70,4 +70,25 @@ interconnecting the GPUs with each other and with dedicated temporary storage fo
 features allow for very fast transfers between the GPUs, storage and also for 
 larger distributed GPU models.
 
+## Special DGX Nodes on Rivanna
+
+DGX A100 (udc-an36-1) is now available for your bii_dsc and bii_dsc_community members to test.
+
+Here is the current status:
+
+* The server is NOT YET integrated into the NVIDIA SuperPod because we are still awaiting networking equipment for implementing the SuperPod. We will be in 
+  touch if there is a need for a maintenance outage to integrate the server into the SuperPod.
+* There is a RAID0 array of NVMe disks mounted locally at /localscratch. The capacity is 27TB. Please keep in mind that /localscratch is not backed up.
+* The server is named udc-an36-1 and is currently in the bii-gpu partition with a permanent reservation named bi_fox_dgx for only bii_dsc and 
+  bii_dsc_community allocation members to use. To use this reservation for the A100 node, your researchers and students will have to use the following 
+  slurm flags:
+
+```
+#SBATCH --reservation=bi_fox_dgx
+#SBATCH --account=<enter relevant allocation here>
+#SBATCH --partition=bii-gpu
+#SBATCH --gres=gpu:<number of GPUs to request>
+```
+
+For -account, users will enter either bii_dsc or bii_dsc_community depending on which group they belong to. You can find this by running the allocations utility at the commandline. For -gres=gpu:, users should enter the number of GPUs requested.
 
