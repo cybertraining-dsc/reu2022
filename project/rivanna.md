@@ -102,3 +102,49 @@ ReservationName=bi_fox_dgx StartTime=2022-06-01T08:37:38 EndTime=2022-06-02T08:3
    MaxStartDelay=(null)
 ```
 
+### Starting interactive job on special partition
+
+```
+ssh $USERNAME@rivanna.hpc.virginia.edu
+
+$ ijob --reservation=bi_fox_dgx --account bii_dsc --partition=bii-gpu --gres=gpu:1
+salloc: Pending job allocation 39263336
+salloc: job 39263336 queued and waiting for resources
+salloc: job 39263336 has been allocated resources
+salloc: Granted job allocation 39263336
+salloc: Waiting for resource configuration
+salloc: Nodes udc-an36-1 are ready for job
+
+$ nvidia-smi 
+Wed Jun  1 17:15:49 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 470.103.01   Driver Version: 470.103.01   CUDA Version: 11.4     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-SXM...  Off  | 00000000:07:00.0 Off |                    0 |
+| N/A   29C    P0    54W / 400W |     85MiB / 81251MiB |      0%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A     13486      G   /usr/bin/X                         63MiB |
+|    0   N/A  N/A     13639      G   /usr/bin/gnome-shell               21MiB |
++-----------------------------------------------------------------------------+
+```
+
+## SSH Config
+
+```
+$ cat ~/.ssh/config
+host rivanna
+        User <USERNAME>
+        HostName rivanna.hpc.virginia.edu
+        IdentityFile ~/.ssh/id_rsa
+```
