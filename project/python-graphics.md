@@ -122,7 +122,25 @@ plt.show()
 
 ### Contour Plot
 
-TODO: Alex
+Unlike the previous types of plots shown, contour plots allows
+data involving three variables to be plotted on a 2D surface.
+In this example, an equation of a hyperbolic paraboloid is
+graphed on contour plot.
+
+```python
+#creating an equation for z based off of variables x,y
+x, y = np.meshgrid(np.linspace(-10, 10), np.linspace(-10, 10))
+z = 9*(x**2+1)+8*x-(y**2)
+levels = np.linspace(np.min(z), np.max(z), 15)
+
+#creating a contour graph based off the equation of z
+fig, ax = plt.subplots()
+ax.contour(x,y,z, levels=levels)
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("Function of z(x,y)")
+plt.show()
+```
 
 ### Bar Chart matplotlib Summary
 
@@ -178,7 +196,6 @@ plt.pie(x, labels, colors, normalize, startangle, radius, center)
 
 ### Contour Plot matplotlib Summary
 
-TODO: Alex
 
 A contour plot allows data and equations consisting of three variables to be plotted through plotting 3D surfaces as 2D slices on an xy plane. Matplotlib has the ability to display data and equations through contour graphs after they are inputted. Shown below are the parameters for plt.contour.
 
@@ -186,7 +203,7 @@ plt.contour([X, Y], Z, levels)
 
 The independent variables X and Y must be defined so the dependent variable Z can be defined. The variables can come in the form of a list or dictionary or as an equation. The levels parameter determines the number of contour lines that can be drawn. 
 
-Labels and Titles
+### Giving Labels and Titles to Graphs
 
 X-labels and y-labels: 
 
