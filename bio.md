@@ -10,6 +10,11 @@ Paul Kiattikhunphan is a second year at the University of Virginia majoring in c
 
 ## Alex Beck
 
+Alex is a first year student at the University of Virginia
+majoring in electrical engineering.
+
+
+
 ## Alison Lu
 
 Alison Lu has completed her second year at the University of Virginia pursuing a
