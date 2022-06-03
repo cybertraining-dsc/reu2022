@@ -81,6 +81,13 @@ plt.show()
 
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py)
 
+The output of this program is showcased in Figure *barchart*.
+
+
+![barchart](examples/images/matplotlib-barchart.svg)
+
+Figure *barchart*: Barchart created from data from Spotify
+
 The bar chart is a graph that visualizes data
 by displaying the quantity of several variables through different sized 
 rectangles. Matplotlib essentially creates the bar chart object as a figure, 
