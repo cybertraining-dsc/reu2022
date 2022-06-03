@@ -201,23 +201,54 @@ plt.pie(x, labels, colors, normalize, startangle, radius, center)
 
 
 A contour plot allows data and equations consisting of three variables to be plotted through plotting 3D surfaces as 2D slices on an xy plane. Matplotlib has the ability to display data and equations through contour graphs after they are inputted. Shown below are the parameters for plt.contour.
-
+```python
 plt.contour([X, Y], Z, levels)
+```
 
 The independent variables X and Y must be defined so the dependent variable Z can be defined. The variables can come in the form of a list or dictionary or as an equation. The levels parameter determines the number of contour lines that can be drawn. 
 
-### Giving Labels and Titles to Graphs
+## Giving Labels and Titles to Graphs
 
-X-labels and y-labels: 
+### x-axis labels and y-axis labels:
 
-	Within the matplotlib library are the functions plt.xlabel() and plt.ylabel(). All these functions do is set a string to the two axes. To use these functions, simply type:
-	plt.xlabel(“Label you want to set”)
-	plt.ylabel(“Label you want to set”)
-Titles
-	To title your graph in matplotlib, use the command plt.title(“Title you want to set”). 
-Legend
-	
-Show
+Within the matplotlib library are the functions plt.xlabel() and 
+plt.ylabel(). All these functions do is set a string to the two 
+axes. To use these functions, simply type:
+```python
+plt.xlabel(“Label you want to set”)
+plt.ylabel(“Label you want to set”)
+```
+
+### Titles
+
+Titles are necessary to let the reader know about your graph or 
+plot is exactly about. To give a title to your whole graph in 
+matplotlib, simply type:
+```python
+plt.title(“Title you want to set”). 
+```
+
+### Legend
+
+Sometimes, a legend may be necessary to let the reader know which
+part of the graph/plot corresponds to each part of the data shown.
+To show a legend, use the command:
+```python
+plt.legend()
+```
+
+### Showing
+
+The very last command you should put in your code is plt.show(),
+as this command displays the graph that you made. To show, simply
+type:
+
+```python
+plt.show()
+```
+
+## Exporting  Graphs as a File
+
 
 
 
