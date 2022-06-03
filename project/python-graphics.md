@@ -14,7 +14,7 @@ Do not duplicate what is already in the book. However you can improve waht is in
 
 [link](https://google.com)
 
-![Figure: PyCharm](./images/pycharm.png)
+![Figure: PyCharm](images/pycharm.png)
 
 To do: plot area “ticks”, white background, font size, save as pdf/png, set png image to 300dpi. 
 Matplotlib
@@ -86,7 +86,9 @@ plt.show()
 
 ### Line Plot
 
-TODO: Paul
+The matplotlib library in python allows for comprehensive line plots to be created. 
+Here we created a line plot using a for loop to generate random numbers in a range and plot it against the x and y axis to display the changes between two variables/data sets.
+
 
 ```python
 x = []
@@ -171,12 +173,18 @@ bars), linewidth (sets the width of the bar edges themselves- normally 0- no edg
 
 ### Line Chart matplotlib Summary
 
-TODO: Jackson
+The line chart using the matplotlib library allows for multiple data sets to be 
+contrasted against each other in the same graph. The line chart is positioned 
+based on the np.linspace which takes in two total parameters that determine the 
+starting point and the end point and an optional parameter that defines the total
+generated sample between the start/end points. With this, the variables and data 
+sets can be plotted and modified to shape the steepness of the curve and its 
+growth rate–exponential, polynomial, logarithmic, s-curved etc.
 
-The line chart using the matplotlib library allows for multiple data sets to be contrasted against each other in the same graph. The line chart is positioned based on the np.linspace which takes in two total parameters that determine the starting point and the end point and an optional parameter that defines the total generated sample between the start/end points. With this, the variables and data sets can be plotted and modified to shape the steepness of the curve and its growth rate–exponential, polynomial, logarithmic, s-curved etc.
-
+```python
 x = np.linspace(start,end,samples between start-finish)
 plt.plot(x, y)
+```
 
 	Instead of only plotting a linear line, there is a choice to include multiple points of x-values that relate to its corresponding y-values. As mentioned, functions can be incorporated to adjust the line's properties either by addition, subtraction, division or multiplication.
 Optional parameters for better visualization in a line chart includes the modification of the linestyle, and can be adjusted based on the viewer's preference–dotted line, dashed, dashed with dots or none). 
@@ -185,17 +193,16 @@ Optional parameters for better visualization in a line chart includes the modifi
 
 ### Pie Chart matplotlib Summary
 
-TODO: Paul
-
-The pie chart is a graph that visually displays multiple quantities of data 
-as a proportion to the total amount, represented as the whole circle, with each quantity shown as a proportional slice of it. Matplotlib has the ability to display data through a pie chart as a figure after data is inputted. The command plt.pie takes in many parameters.
+The pie chart is a graph that visually displays multiple quantities of data as a proportion to the total amount, represented as the whole circle, with each quantity shown as a proportional slice of it. Matplotlib has the ability to display data through a pie chart as a figure after data is inputted. The command plt.pie takes in many parameters.
 
 Here are some of the parameters used in plt.pie, from matplotlib API online, not all of them are shown here.
 
+```python
 plt.pie(x, labels, colors, normalize, startangle, radius, center)
+```
 
-	So, x is the parameter that consists of the data being plotted, which should be in the form of a list or dictionary as it’ll be multiple quantities of data. Each slice of the pie can be labeled. To do so, labels must be in the form of a list of strings in the same corresponding order as the data. The sequence of colors of the slices can be set using the command plt.get_cmap(“Colors”). 
-	There is also the choice of making the pie chart a full pie or not using normalize. Setting it to True, which is the default, makes it a full pie, False makes it not a full pie. The angle of the start of the pie, set counterclockwise from the x-axis can be set using startangle. The radius of the pie can be set using radius and setting it to a float. The coordinates of the center of the chart can be set in the form (float, float). 
+Here, the first parameter "x" is the parameter that consists of the data being plotted, which should be in the form of a list or dictionary as it be multiple quantities of data. Each slice of the pie can be labeled. To do so, labels must be in the form of a list of strings in the same corresponding order as the data. The sequence of colors of the slices can be set using the command plt.get_cmap(“Colors”). 
+There is also the choice of making the pie chart a full pie or not using normalize. Setting it to True, which is the default, makes it a full pie, False makes it not a full pie. The angle of the start of the pie, set counterclockwise from the x-axis can be set using startangle. The radius of the pie can be set using radius and setting it to a float. The coordinates of the center of the chart can be set in the form (float, float). 
 
 ### Contour Plot matplotlib Summary
 
@@ -342,64 +349,90 @@ p.hbar(x, y, line_color = 'black')
 http://docs.bokeh.org/en/latest/ -Bokeh Documentation
 https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html
 
-
-
-
-
 ## Seaborn
 
-TODO: Jackson 
+### Overview
 
-Initial Overview:
+Seaborn, like matplotlib is a data visualization tool. However, the graphs and 
+charts that seaborn can create are more complex than matplotlib. 
+The graphs that are created in seaborn are more statistically detailed. 
+Unlike matplotlib, seaborn draws upon other imported libraries: matplotlib, numpy,
+and pandas. This is because seaborn relies on more complex math (numpy) and 
+dataframes (generated from pandas) are passed into its functions as the data. 
 
-	Seaborn is another data visualization tool that relies heavily upon other libraries such as numpy, pandas, and matplotlib. Matplotlib creates graphs, but seaborn essentially does it a little bit better and in more detail. It is a library for creating statistical graphs- data scientists likely love seaborn as it provides many tools through which they could make better visualizations about data they are working on. 
+There are several types of plots that can be made from 
+seaborn: relational, distributional, categorical, regression, and matrix
+plots.
 
-	Seaborn can directly use numpy, pandas, and matplotlib to enhance its overall functionality. There are several different types of plots that can be made from seaborn. They are: relational, distributional, categorical, regression, and matrix plots. One can only assume from this that machine and deep learning algorithms can be trained by using seaborn!
+Additionally, it is important to note that seaborn draws on a GitHub repository
+that was created with test data sets. These test data sets are full of data 
+that user can use to try out the different functions created in seaborn. 
 
-	Seaborn can be installed in the exact same way as the other libraries installed earlier:
+### Installation
 
+Seaborn can be installed in the exact same way as the other libraries installed 
+earlier. The user who is installing the library should make sure that it is being
+installed in the correct environment. 
 
+```bash
 $ pip install seaborn
+```
 
 
-	This should allow the OS to take on the library and add it to the working environment. 
+### Import Statements
 
-	Additionally, it is important to note that seaborn comes with a function called load_dataset which automatically loads data from a Github repository called mwaskom. This repository appears to have a ton of datasets to practice using seaborn with. 
+The user will need to supply these import statements at the top of their code 
+in order for seaborn to be imported. 
 
-	Finally, it is equally important to point out that seaborn utilizes dataframes in order to create the plots that it has been programmed to create. Dataframes are 2 dimensional data objects, much like tables. 
+```python
+import seaborn as sns
+import matplotlib as plt
+```
 
-Our Code:
+### Statistical Plots
 
+There are many different plots that can be created. Each of the types below 
+is an overarching type, and there are many within each category. 
 
+#### Distribution Plot
 
+A distribution plot shows how the data is concentrated across a range of values. 
 
+```python
+sns.distplot(data)
+plt.show()
+```
 
+#### Categorical Plot
 
+```python
+sns.boxplot(data)
+plt.show()
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Seaborn Sources:
-https://seaborn.pydata.org/api.html
-https://www.geeksforgeeks.org/python-seaborn-tutorial/
-https://www.geeksforgeeks.org/introduction-to-seaborn-python/
-https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/
-https://stackoverflow.com/questions/30336324/seaborn-load-dataset
-​​https://github.com/mwaskom/seaborn-data/blob/master/planets.csv
+This can be done for each of the different types of plots that can be created
+with seaborn. The reason that the matplotlib code is relevant is because it is 
+used to actually display the data. 
 
 
-Gallery (images)
+## Sources
+
+### Seaborn
+
+<https://seaborn.pydata.org/api.html>
+
+<https://www.geeksforgeeks.org/python-seaborn-tutorial/>
+
+<https://www.geeksforgeeks.org/introduction-to-seaborn-python/>
+
+<https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/>
+
+<https://stackoverflow.com/questions/30336324/seaborn-load-dataset>
+
+<https://github.com/mwaskom/seaborn-data/blob/master/planets.csv>
+
+
+## Gallery (images)
 
 
 
