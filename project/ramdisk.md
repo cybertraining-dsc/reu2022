@@ -24,3 +24,5 @@ On Ubuntu, a RAM disk and its read-only shadow can be created by:
 
 mount -t tmpfs -o size=512m tmpfs /mnt/ramdisk
 mount -t aufs -o br:/mnt/ramdisk=ro none /mnt/readonly
+
+windows? https://forums.guru3d.com/threads/guide-using-imdisk-to-set-up-ram-disk-s-in-windows-with-no-limit-on-disk-size.356046/
