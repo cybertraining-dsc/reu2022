@@ -18,19 +18,9 @@ labels, fonts and the size of the images.
 
 ### Installation
 
-In this section, we're describing the installation process using Git Bash. 
-First, make sure to update Python to its latest version and it’s
-installed on PyCharm. As of writing this, the latest version of Python
-is 3.10.4. With this specific method, make sure that Git is installed
-and is the main shell path on PyCharm which can be configured in
-`Settings/Tools/Terminal/Application Settings/Shell` path: where Git
-Bash should be selected.  Next, on the top bar in PyCharm, go to
-`View->Tool Windows->Terminal`. The command line interface in PyCharm
-should show up on the bottom of the screen. Then type in the following
-and press Enter after each line:
+To install matplotlib, please use the command:
 
 ```bash
-$ cd
 $ pip install matplotlib
 ```
 
