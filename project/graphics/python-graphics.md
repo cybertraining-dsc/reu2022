@@ -9,29 +9,12 @@ this includes Matplotlib, Bokeh, and Seaborn.
 
 ## Matplotlib
 
-In python, there are multiple tiers (levels) in the hierarchy of
-code. These levels are libraries, packages, modules, and
-files. Libraries are large collections of packages and modules. They
-contain a plethora of code, typically with a purpose behind the
-collection. For instance, matplotlib is a library that contains a
-bunch of packages and modules that were coded to give the user the
-capability of data visualization. Packages are smaller than libraries
-and contain more specific code for a project. An example within
-matplotlib is pyplot- which is the package that specifically contains
-all of the code to create charts, graphs, pie plots, etc. Modules are
-even smaller and contain more specific code. They are essentially the
-same as files as far as I am aware. Files are the individual sections
-of code like what you would see on PyCharm that contain the code
-that is used for a specific section of something.
-
-Matplotlib is a library that contains the capabilities for data
-visualization. The library can create pie charts, bar charts, line
-plots, and other graphs specifically for data visualization. Inside
-the library is pyplot, the package that contains all of the code for
-the graphs- specifically the functions that need to be called and the
-parameters that the functions take. Matplotlib creates figures that
-can be manipulated and thus transformed. It also can create axes,
-which are the labels that go on to the figures that are created.
+Matplotlib is a library that allow the user to vizualize data. 
+The library can create pie charts, bar charts, line
+plots, and other graphs specifically for data visualization. 
+Matplotlib creates figures that
+can be manipulated and transformed. This includes manipulations of axes,
+labels, fonts and the size of the images. 
 
 ### Installation
 
