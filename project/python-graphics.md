@@ -126,7 +126,6 @@ TODO: Alex
 
 ### Bar Chart matplotlib Summary
 
-TODO: Abdul
 
 I researched the bar chart, which is a graph that visualizes data
 by displaying the quantity of several variables through different sized 
