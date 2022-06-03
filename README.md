@@ -1,13 +1,13 @@
 # reu2022
 
-Pinned by Alex Beck ∙ Saved
-9:35 AM
-laszewski Books:
-https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf
-https://cloudmesh-community.github.io/pub/vonLaszewski-python.epub
-https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf
-https://cloudmesh-community.github.io/pub/vonLaszewski-linux.epub
-https://cloudmesh.github.io/cloudmesh-mpi/report-mpi.pdf
+## Books
+
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-python.epub>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-linux.epub>
+* <https://cloudmesh.github.io/cloudmesh-mpi/report-mpi.pdf>
+
 The repository for our report(s)
 https://github.com/cybertraining-dsc/reu2022
 The many UVA technical help ticket systems
