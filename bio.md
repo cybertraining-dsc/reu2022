@@ -5,7 +5,9 @@ Please add here a 2-3 paragrapgh professional Bio. Look up who a professional bi
 Review other peoples bios and improve or give improvement tips where needed
 
 ## Paul Kiattikhunphan
+
 Paul Kiattikhunphan is a second year at the University of Virginia majoring in computer science. 
+
 ## Alex Beck
 
 ## Alison Lu
