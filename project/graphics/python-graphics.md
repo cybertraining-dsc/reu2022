@@ -57,13 +57,20 @@ In matplotlib it is easy to create bar charts. We demonstrate a simple
 example using data from a user from Spotify. 
 
 ```python
+import matplotlib as plt
+
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
 categories = data.keys()
 count = data.values()
 
 # Creating the bar chart
-plt.bar(categories, count, align='edge', color='darkorange', width=0.4, edgecolor=
-"royalblue", linewidth=4)
+plt.bar(categories, 
+        count, 
+        align='edge', 
+        color='darkorange', 
+        width=0.4, 
+        edgecolor="royalblue", 
+        linewidth=4)
 
 # Editing the bar chart's title, x, and y axes
 plt.xlabel("Genre of Music")
@@ -71,6 +78,8 @@ plt.ylabel("Number of songs in the genre")
 plt.title("Distribution of Genres in My Liked Songs")
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py)
 
 The bar chart is a graph that visualizes data
 by displaying the quantity of several variables through different sized 
