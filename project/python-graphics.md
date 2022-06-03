@@ -7,19 +7,19 @@ Do not duplicate what is already in the book. However you can improve waht is in
 * seaborn
 * bokeh
 
-# matplotlib
+## matplotlib
 
 * item 1
 * item 2
 
 [link](https://google.com)
 
-![Figure: PyCharm](./PyCharm.png)
+![Figure: PyCharm](./images/pycharm.png)
 
 To do: plot area “ticks”, white background, font size, save as pdf/png, set png image to 300dpi. 
 Matplotlib
 
-## Quick Overview of matplotlib
+### Quick Overview of matplotlib
 
 In python, there are multiple tiers (levels) in the hierarchy of
 code. These levels are libraries, packages, modules, and
@@ -45,7 +45,7 @@ parameters that the functions take. Matplotlib creates figures that
 can be manipulated and thus transformed. It also can create axes,
 which are the labels that go on to the figures that are created.
 
-## How To Install matplotlib/Bokeh in PyCharm using Git Bash
+### How To Install matplotlib/Bokeh in PyCharm using Git Bash
 
 First, make sure to update Python to its latest version and it’s
 installed on PyCharm. As of writing this, the latest version of Python
@@ -59,17 +59,13 @@ and press Enter after each line:
 
 ```bash
 $ cd
+$ pip install matplotlib
 ```
 
+### Bar Chart 
 
-
-$ pip install matplotlib
-
-OR
-$ pip install bokeh
-
-Our Own Work:
-Bar Chart: 
+In matplotlib it is easy to create bar charts. We demonstrate a simple 
+example using data from a user from Spotify. 
 
 ```python
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
@@ -88,12 +84,9 @@ plt.show()
 ```
 
 
+### Line Plot
 
-
-
-
-
-Line Plot:
+TODO: Paul
 
 ```python
 x = []
@@ -115,7 +108,9 @@ plt.show()
 ```
 
 
-Pie Plot:
+### Pie Plot
+
+TODO: Alison
 
 ```python
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
@@ -125,29 +120,38 @@ plt.pie(count, labels=categories)
 plt.show()
 ```
 
+### Contour Plot
 
+TODO: Alex
 
+### Bar Chart matplotlib Summary
 
+TODO: Abdul
 
-Contour Plot:
-
-
-
-
-
-Bar Chart matplotlib Summary
-	I researched the bar chart, which is a graph that visualizes data by displaying the quantity of several variables through different sized rectangles. Matplotlib essentially creates the bar chart object as a figure, and then displays that figure on the computer. plt.barchart takes in a multitude of parameters. 
+I researched the bar chart, which is a graph that visualizes data
+by displaying the quantity of several variables through different sized 
+rectangles. Matplotlib essentially creates the bar chart object as a figure, 
+and then displays that figure on the computer. plt.barchart takes in a multitude 
+of parameters. 
 
 Here is a full list of the parameters (most used), from the matplotlib API online. 
 
+```python
 plt.bar( x, height, width, bottom, align)
+```
 
 From the matplotlib.pyplot.bar API: “The bars are positioned at x with the given alignment. Their dimensions are given by height and width. The vertical baseline is bottom (default 0).” Additionally, most of the parameters can take either one value and apply to all of the bars displayed, or multiple values and apply the values to the corresponding bars. 
 
 So, x is the parameter that represents each x coordinate (which is usually the each individual bar label), height represents the height of each bar, width represents the width of the bars, bottom represents the starting point of the bottom of the bars (default 0), and align represents how the x values line up with the bars themselves (either “center” or “edge” with “center” being the middle and “edge” being the left side of the bar). 
 
-There are also optional parameters to take into account. These are color (sets the color of the bars, edgecolor (sets the color of the edge of the bars), linewidth (sets the width of the bar edges themselves- normally 0- no edge), tick_label (strings or list of strings that represents tick labels for the bars), xerr/yerr (adds error bars to the bar chart, if needed), ecolor (represents the color of the error bars), capsize (length of the error bars), log (sets x axis to be log scale), data (imports data instead of doing x and height), *kwargs (keyword arguments- essentially allows the programmer to edit the rectangles being created- not widely used unless absolutely necessary). 
-Line Chart matplotlib Summary
+There are also optional parameters to take into account. These are 
+color (sets the color of the bars, edgecolor (sets the color of the edge of the 
+bars), linewidth (sets the width of the bar edges themselves- normally 0- no edge), tick_label (strings or list of strings that represents tick labels for the bars), xerr/yerr (adds error bars to the bar chart, if needed), ecolor (represents the color of the error bars), capsize (length of the error bars), log (sets x axis to be log scale), data (imports data instead of doing x and height), *kwargs (keyword arguments- essentially allows the programmer to edit the rectangles being created- not widely used unless absolutely necessary). 
+
+### Line Chart matplotlib Summary
+
+TODO: Jackson
+
 The line chart using the matplotlib library allows for multiple data sets to be contrasted against each other in the same graph. The line chart is positioned based on the np.linspace which takes in two total parameters that determine the starting point and the end point and an optional parameter that defines the total generated sample between the start/end points. With this, the variables and data sets can be plotted and modified to shape the steepness of the curve and its growth rate–exponential, polynomial, logarithmic, s-curved etc.
 
 x = np.linspace(start,end,samples between start-finish)
@@ -158,8 +162,12 @@ Optional parameters for better visualization in a line chart includes the modifi
 	
 
 
-Pie Chart matplotlib Summary
-	The pie chart is a graph that visually displays multiple quantities of data as a proportion to the total amount, represented as the whole circle, with each quantity shown as a proportional slice of it. Matplotlib has the ability to display data through a pie chart as a figure after data is inputted. The command plt.pie takes in many parameters.
+### Pie Chart matplotlib Summary
+
+TODO: Paul
+
+The pie chart is a graph that visually displays multiple quantities of data 
+as a proportion to the total amount, represented as the whole circle, with each quantity shown as a proportional slice of it. Matplotlib has the ability to display data through a pie chart as a figure after data is inputted. The command plt.pie takes in many parameters.
 
 Here are some of the parameters used in plt.pie, from matplotlib API online, not all of them are shown here.
 
@@ -168,8 +176,11 @@ plt.pie(x, labels, colors, normalize, startangle, radius, center)
 	So, x is the parameter that consists of the data being plotted, which should be in the form of a list or dictionary as it’ll be multiple quantities of data. Each slice of the pie can be labeled. To do so, labels must be in the form of a list of strings in the same corresponding order as the data. The sequence of colors of the slices can be set using the command plt.get_cmap(“Colors”). 
 	There is also the choice of making the pie chart a full pie or not using normalize. Setting it to True, which is the default, makes it a full pie, False makes it not a full pie. The angle of the start of the pie, set counterclockwise from the x-axis can be set using startangle. The radius of the pie can be set using radius and setting it to a float. The coordinates of the center of the chart can be set in the form (float, float). 
 
-Contour Plot matplotlib Summary
-	A contour plot allows data and equations consisting of three variables to be plotted through plotting 3D surfaces as 2D slices on an xy plane. Matplotlib has the ability to display data and equations through contour graphs after they are inputted. Shown below are the parameters for plt.contour.
+### Contour Plot matplotlib Summary
+
+TODO: Alex
+
+A contour plot allows data and equations consisting of three variables to be plotted through plotting 3D surfaces as 2D slices on an xy plane. Matplotlib has the ability to display data and equations through contour graphs after they are inputted. Shown below are the parameters for plt.contour.
 
 plt.contour([X, Y], Z, levels)
 
@@ -190,7 +201,10 @@ Show
 
 
 
-Bokeh
+## Bokeh
+
+TODO: Alison 
+
 Overview
 Bokeh is a Python library useful for generating visualizations for web browsers. It generates graphics for all types of plots and dashboards powered by JavaScript without the user’s need to write any JavaScript code.
 
@@ -269,7 +283,9 @@ http://docs.bokeh.org/en/latest/ -Bokeh Documentation
 
 
 
-Seaborn
+## Seaborn
+
+TODO: Jackson 
 
 Initial Overview:
 
