@@ -14,6 +14,7 @@ Paul Kiattikhunphan is a second year at the University of Virginia majoring in c
 
 Alison Lu has completed her second year at the University of Virginia pursuing a
 double major in CS and Chemistry with a minor in Japanese.
+She is currently participating in research.
 
 ## Manaswini Tadigadapa
 
