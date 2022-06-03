@@ -6,6 +6,8 @@ Review other peoples bios and improve or give improvement tips where needed
 
 ## Paul Kiattikhunphan
 
+Paul Kiattikhunphan is a second year at the University of Virginia majoring in computer science. 
+
 ## Alex Beck
 
 Alex is a first year student at the University of Virginia
@@ -55,5 +57,8 @@ performance computing solutions using Raspberry Pis.
 
 ## Eric He
 
-## Abdulbaqiy Diyolu
+## Abdulbaqiy Diyaolu
+
+AbdulBaqiy Diyaolu is a Computer science and Mathematics Major from
+Mississippi Valley State University.
 
