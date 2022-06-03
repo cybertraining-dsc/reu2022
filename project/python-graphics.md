@@ -14,7 +14,7 @@ Do not duplicate what is already in the book. However you can improve waht is in
 
 [link](https://google.com)
 
-![Figure: PyCharm](./images/pycharm.png)
+![Figure: PyCharm](images/pycharm.png)
 
 To do: plot area “ticks”, white background, font size, save as pdf/png, set png image to 300dpi. 
 Matplotlib
@@ -86,7 +86,9 @@ plt.show()
 
 ### Line Plot
 
-TODO: Paul
+The matplotlib library in python allows for comprehensive line plots to be created. 
+Here we created a line plot using a for loop to generate random numbers in a range and plot it against the x and y axis to display the changes between two variables/data sets.
+
 
 ```python
 x = []
@@ -173,17 +175,16 @@ Optional parameters for better visualization in a line chart includes the modifi
 
 ### Pie Chart matplotlib Summary
 
-TODO: Paul
-
-The pie chart is a graph that visually displays multiple quantities of data 
-as a proportion to the total amount, represented as the whole circle, with each quantity shown as a proportional slice of it. Matplotlib has the ability to display data through a pie chart as a figure after data is inputted. The command plt.pie takes in many parameters.
+The pie chart is a graph that visually displays multiple quantities of data as a proportion to the total amount, represented as the whole circle, with each quantity shown as a proportional slice of it. Matplotlib has the ability to display data through a pie chart as a figure after data is inputted. The command plt.pie takes in many parameters.
 
 Here are some of the parameters used in plt.pie, from matplotlib API online, not all of them are shown here.
 
+```python
 plt.pie(x, labels, colors, normalize, startangle, radius, center)
+```
 
-	So, x is the parameter that consists of the data being plotted, which should be in the form of a list or dictionary as it’ll be multiple quantities of data. Each slice of the pie can be labeled. To do so, labels must be in the form of a list of strings in the same corresponding order as the data. The sequence of colors of the slices can be set using the command plt.get_cmap(“Colors”). 
-	There is also the choice of making the pie chart a full pie or not using normalize. Setting it to True, which is the default, makes it a full pie, False makes it not a full pie. The angle of the start of the pie, set counterclockwise from the x-axis can be set using startangle. The radius of the pie can be set using radius and setting it to a float. The coordinates of the center of the chart can be set in the form (float, float). 
+Here, the first parameter "x" is the parameter that consists of the data being plotted, which should be in the form of a list or dictionary as it be multiple quantities of data. Each slice of the pie can be labeled. To do so, labels must be in the form of a list of strings in the same corresponding order as the data. The sequence of colors of the slices can be set using the command plt.get_cmap(“Colors”). 
+There is also the choice of making the pie chart a full pie or not using normalize. Setting it to True, which is the default, makes it a full pie, False makes it not a full pie. The angle of the start of the pie, set counterclockwise from the x-axis can be set using startangle. The radius of the pie can be set using radius and setting it to a float. The coordinates of the center of the chart can be set in the form (float, float). 
 
 ### Contour Plot matplotlib Summary
 
