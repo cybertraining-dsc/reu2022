@@ -110,7 +110,10 @@ plt.show()
 
 ### Pie Plot
 
-TODO: Alison
+A pie plot is most commonly used when representing the division of components
+that form a whole thing e.g. showing how a budget is broken down into separate
+spending categories. In matplotlib, the pie() function creates a pie plot.
+In the following code example, a user's Spotify data will be displayed as a pie plot.
 
 ```python
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
@@ -203,81 +206,93 @@ Show
 
 ## Bokeh
 
-TODO: Alison 
-
-Overview
+### Overview
 Bokeh is a Python library useful for generating visualizations for web browsers. It generates graphics for all types of plots and dashboards powered by JavaScript without the user’s need to write any JavaScript code.
 
 The guide below will walk you through useful Bokeh commands and features.
 
-Bokeh Plotting Interface
+### Bokeh Plotting Interface
 Bokeh.plotting is the library’s main interface. It allows you to generate plots easily by providing parameters such as axes, grids, labels.
-List of useful + common features, use cases?
-Plotting charts
+The following code shows some of the simplest examples of plotting a line and a point
+on a chart.
 
-
+```python
 from bokeh.io import show
 from bokeh.plotting import figure
 
+# labeling the title, specifying the range of the x-axis, labeling the y-axis, specifying the height to be 500 pxls
 p = figure(title = "My Graph", x_range = [0,20], y_axis_label = "the y axis", height = 500)
 
 # plotting a line from (0,0) to (20,20); any of the CSS colors can be used
 p.line([0,20],[0, 20], color='indigo')
+
 # plotting a point (circle) at (5,10)
 p.circle(5,10, color = 'green')
 
 show(p)
+```
 
-Figure: Function [figure — Bokeh 2.4.3 Documentation]
+### Some useful parameters from figure
+* <b>x_axis_label</b> and <b>y_axis_label</b>: labels for the x and y axis
+* <b>x_range</b> and <b>y_range</b>: specifications for the range of the x and y axis
+* <b>title</b>: text title for your graph
+* <b>width</b> and <b>height</b>: width and height of your graph in pixels
+* <b>background_fill_color</b>: the background of the figure (takes any CSS colors)
 
+### Output_file Function
+Bokeh also supports outputs to a static HTML file with a specific name.
 
-Some useful parameters from figure:
-x_axis_label and y_axis_label: labels for the x and y axis
-x_range and y_range: specifications for the range of the x and y axis
-title: text title for your graph
-width and height: width and height of your graph in pixels
-TOOLS
-
-
-
-Output_file Function
-Outputs to a static HTML file with a specific name
-
+```python
 from bokeh.plotting import output_file
-output_file(“name.html”)
+output_file("name.html")
+```
 
 After importing the Bokeh plotting interface, you will be able to create different types of plots utilizing the figure created with the figure function.
 
-Scatter Plot
+### Scatter Plot
 The Bokeh library provides various marker shapes for marking points on the scatter plot. The example below demonstrates how to create a scatter plot with two points at locations (1,3) and (2,4) respectively with circular and square marker shapes. The size parameter controls the size of the marker.
 
-Circle
+```python
+# Circle
 p.circle([1,2], [3,4], size = 10)
 
-Square
+# Square
 p.square([1,2], [3,4], size = 10)
+```
 
 The list of all possible marker types and the functions used to create them can be found here:
 http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html
 
+### Line Graphs
 
-Line Graphs
-The library provides a series of functions for creating various types of line graphs ranging from a single line graph, step line graph, stacked line graph, multiple line graph and so on. You can create a simple linear line graph connecting the the points (1,1), (2,2) and (3,3) with the following. The line_width parameter sets the width of the line graph
-
+The library provides a series of functions for creating various types of line graphs ranging from a single line graph,
+step line graph, stacked line graph, multiple line graph and so on. You can create a simple linear line graph connecting
+the the points (1,1), (2,2) and (3,3) with the following.
+```python
+# The line_width parameter sets the width of the line graph.
 x = [1,2,3]
 y = [1,2,3]
 p.line(x, y, line_width = 1)
-
+```
 You can find the source code for other types of line graphs here:
 http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html
 
 
-Bar Graphs
+### Bar Graphs
 
+Similarly, the hbar() and vbar() functions can be used to display horizontal and vertical
+bar graphs, respectively.
 
-Reference
+```python
+# The line_color parameter sets the color of the bar graph.
+x = [1,2,3]
+y = [1,2,3]
+p.hbar(x, y, line_color = 'black')
+```
+
+### Reference
 http://docs.bokeh.org/en/latest/ -Bokeh Documentation
-
+https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html
 
 
 
