@@ -10,6 +10,9 @@ Review other peoples bios and improve or give improvement tips where needed
 
 ## Alison Lu
 
+Alison Lu has completed her second year at the University of Virginia pursuing a
+double major in CS and Chemistry with a minor in Japanese.
+
 ## Manaswini Tadigadapa
 
 ## Jackson Miskill
