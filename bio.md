@@ -8,6 +8,11 @@ Review other peoples bios and improve or give improvement tips where needed
 
 ## Alex Beck
 
+Alex is a first year student at the University of Virginia
+majoring in electrical engineering.
+
+
+
 ## Alison Lu
 
 ## Manaswini Tadigadapa
