@@ -40,6 +40,9 @@ using /dev/shm:
 
 http://ubuntuguide.net/ubuntu-using-ramdisk-for-better-performance-and-fast-response
 
+Various methods:
+(in german): https://wiki.ubuntuusers.de/RAM-Disk_erstellen/
+
 ## windows
 
 https://forums.guru3d.com/threads/guide-using-imdisk-to-set-up-ram-disk-s-in-windows-with-no-limit-on-disk-size.356046/
