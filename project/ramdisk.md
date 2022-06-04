@@ -43,6 +43,8 @@ http://ubuntuguide.net/ubuntu-using-ramdisk-for-better-performance-and-fast-resp
 Various methods:
 (in german): https://wiki.ubuntuusers.de/RAM-Disk_erstellen/
 
+ramfs is an older file system type and is replaced in mostly by tmpfs.
+
 ## windows
 
 https://forums.guru3d.com/threads/guide-using-imdisk-to-set-up-ram-disk-s-in-windows-with-no-limit-on-disk-size.356046/
