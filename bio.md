@@ -27,6 +27,24 @@ She is currently participating in research.
 
 ## Jackson Miskill
 
+Jackson Miskill has completed his second year at the University
+of Virginia where he is studying Computer Science and Cognitive
+Science. He will receive a Bachelor of Arts degree from UVa in
+Spring of 2024. 
+
+Jackson has worked in a variety of different environments:
+restaurant, coffee shop, environmental science organization,
+and nonprofit. He is currently working in research at the 
+UVA Biocomplexity Institute where he is planning to learn as much
+as possible about programming, data science, and academic research.
+
+
+At UVA, Jackson is active in organizations that he is passionate
+about. He volunteers for the National Alliance on Mental 
+Illness in the outreach committee, served as recruitment chair
+for Phi Delta Theta and treasurer of Phi Alpha Delta, and 
+volunteers with Madison House in the Casa Alma organization. 
+
 ## Jacques Fleischer
 
 ![Jacques's Picture](project/images/bio/jacques.jpg)
