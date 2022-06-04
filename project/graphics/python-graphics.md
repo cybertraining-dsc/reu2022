@@ -9,12 +9,12 @@ this includes Matplotlib, Bokeh, and Seaborn.
 
 ## Matplotlib
 
-Matplotlib is a library that allow the user to vizualize data. 
+Matplotlib is a library that allow the user to visualize data. 
 The library can create pie charts, bar charts, line
 plots, and other graphs specifically for data visualization. 
-Matplotlib creates figures that
-can be manipulated and transformed. This includes manipulations of axes,
-labels, fonts and the size of the images. 
+Matplotlib creates figures that can be manipulated and transformed.
+This includes manipulations of axes, labels, fonts and the size 
+of the images. 
 
 ### Installation
 
@@ -30,7 +30,9 @@ In matplotlib it is easy to create bar charts. We demonstrate a simple
 example using data from a user from Spotify. 
 
 ```python
-import matplotlib as plt
+import matplotlib.pyplot as plt
+
+# you can also do this: from matplotlib import pyplot as plt
 
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
 categories = data.keys()
@@ -67,42 +69,9 @@ rectangles. Matplotlib essentially creates the bar chart object as a figure,
 and then displays that figure on the computer. plt.barchart takes in a multitude 
 of parameters. 
 
-Here is a full list of the parameters (most used), from the matplotlib API online. 
 
-```python
-plt.bar(x, height, width, bottom, align)
-```
 
-From the `matplotlib.pyplot.bar` API: "The bars are positioned at x with
-the given alignment. Their dimensions are given by height and
-width. The vertical baseline is bottom (default 0)." Additionally,
-most of the parameters can take either one value and apply to all of
-the bars displayed, or multiple values and apply the values to the
-corresponding bars.
-
-So, x is the parameter that represents each x coordinate (which is
-usually the each individual bar label), height represents the height
-of each bar, width represents the width of the bars, bottom represents
-the starting point of the bottom of the bars (default 0), and align
-represents how the x values line up with the bars themselves (either
-"center" or "edge" with "center" being the middle and "edge" being the
-left side of the bar).
-
-There are also optional parameters to take into account. These are
-color (sets the color of the bars, edgecolor (sets the color of the
-edge of the bars), linewidth (sets the width of the bar edges
-themselves- normally 0- no edge), tick_label (strings or list of
-strings that represents tick labels for the bars), xerr/yerr (adds
-error bars to the bar chart, if needed), ecolor (represents the color
-of the error bars), capsize (length of the error bars), log (sets x
-axis to be log scale), data (imports data instead of doing x and
-height), *kwargs (keyword arguments- essentially allows the programmer
-to edit the rectangles being created- not widely used unless
-absolutely necessary).
-
-### Line Chart matplotlib Summary
-
-#### Line Plot Example
+### Line Plot 
 
 The matplotlib library in python allows for comprehensive line plots
 to be created.  Here we created a line plot using a for loop to
@@ -233,7 +202,7 @@ come in the form of a list or dictionary or as an equation.
 The levels parameter determines the number of contour lines
 that can be drawn. 
 
-## Titles, Labels, and Legends
+## Titles, Labels, and Legends 
 
 ### Titles
 
@@ -241,7 +210,7 @@ Titles are necessary to let the reader know about your graph or
 plot is exactly about. To give a title to your whole graph in 
 matplotlib, simply type:
 ```python
-plt.title("Title you want to set"). 
+plt.title("Title you want to set").
 ```
 
 ### x-axis labels and y-axis labels
@@ -249,22 +218,23 @@ plt.title("Title you want to set").
 Within the matplotlib library are the functions plt.xlabel() and 
 plt.ylabel(). All these functions do is set a string to the two 
 axes. To use these functions, simply type:
+
 ```python
 plt.xlabel("Label you want to set")
 plt.ylabel("Label you want to set")
 ```
-
 
 ### Legend
 
 Sometimes, a legend may be necessary to let the reader know which
 part of the graph/plot corresponds to each part of the data shown.
 To show a legend, use the command:
+
 ```python
 plt.legend()
 ```
 
-### Showing
+### Display
 
 The very last command you should put in your code is plt.show(),
 as this command displays the graph that you made. To show, simply
@@ -273,7 +243,6 @@ type:
 ```python
 plt.show()
 ```
-
 
 ## Bokeh
 
@@ -387,23 +356,25 @@ p.hbar(x, y, line_color = 'black')
 
 ## Seaborn
 
-Seaborn, like matplotlib is a data visualization tool. However,
-the graphs and charts that seaborn can create are more complex
-than matplotlib. The graphs that are created in seaborn are
-more statistically detailed. Unlike matplotlib, seaborn draws
-upon other imported libraries: matplotlib, numpy, and pandas.
-This is because seaborn relies on more complex math (numpy) and 
-dataframes (generated from pandas) are passed into its functions
+Seaborn, like Matplotlib, is a data visualization tool. However,
+the graphs and charts that Seaborn can create are more complex
+than Matplotlib. The graphs that are created in Seaborn are
+more statistically detailed. Unlike matplotlib, Seaborn draws
+upon other imported libraries such as Matplotlib, Numpy, and Pandas.
+This is because Seaborn relies on more complex math (Numpy) and 
+dataframes (generated from Pandas) that are passed into its functions
 as the data. 
 
-There are several types of plots that can be made from seaborn:
+There are several types of plots that can be made from Seaborn; they are
 relational, distributional, categorical, regression, and matrix
 plots.
 
-Additionally, it is important to note that seaborn draws on a 
-GitHub repository that was created with test data sets. 
-These test data sets are full of data that user can use to
-try out the different functions created in seaborn. 
+We have created examples to demonstrate the abilities of Seaborn. 
+These examples draw on a GitHub repository made by the creator of 
+Seaborn (listed in the sources section). The data ("mpg") used looks at 
+different variables in different cars such as displacement, horsepower, 
+miles per gallon, etc. 
+
 
 ### Installation
 
@@ -416,46 +387,128 @@ correct environment.
 $ pip install seaborn
 ```
 
-
 ### Import Statements
 
 The user will need to supply these import statements at the top
-of their code in order for seaborn to be imported. 
+of their code in order for Seaborn to be imported. 
 
 ```python
 import seaborn as sns
-import matplotlib as plt
+import matplotlib.pyplot as plt
 ```
 
-### Statistical Plots
-
-There are many different plots that can be created. Each of the
-types below is an overarching type, and there are many within 
-each category. 
-
-#### Distribution Plot
-
-A distribution plot shows how the data is concentrated across
-a range of values. 
+It is easy to set up the data to be used because the `load_dataset` method
+draws directly from GitHub: 
 
 ```python
-sns.distplot(data)
+data = sns.load_dataset("mpg")
+sns.set_theme()
+
+dependent_1 = data.horsepower
+dependent_2 = data.mpg
+
+independent_1 = data.displacement
+independent_2 = data.weight
+independent_3 = data.acceleration
+
+hue_1 = data.origin
+hue_2 = data.model_year
+```
+
+### Relational Plots
+
+Relational plots showcase the relationship between
+variables in a visual format. It is a broad term for data 
+representation. Examples of relational plots in Seaborn are 
+`relplot` `lineplot` and `scatterplot`. 
+
+It is simple to create a relational plot. A hued line plot can be created
+easily with Seaborn. 
+
+```python
+sns.lineplot( x=independent_1 , y=dependent_1, hue=hue_1)
+plt.show()
+```
+Which produces:
+
+![lineplot](examples/images/seaborn-lineplot.svg)
+
+
+### Distribution Plots
+
+A distribution plot shows how the data is concentrated in
+a range of values. The graph that appears looks similar to a bar
+graph in that there are bars. However, these bars show concentration of a 
+variable across a range of values rather than the quantity possessed by 
+a singular variable. The distributional plots in Seaborn are `displot` `histplot`
+`kdeplot` `ecdfplot` and `rugplot`.
+
+```python
+sns.displot(x=independent_2, y=dependent_2, hue=hue_1)
 plt.show()
 ```
 
-#### Categorical Plot
+Which produces:
+
+![displot](examples/images/seaborn-displot.svg)
+
+
+
+### Categorical Plots
+
+Categorical plots are statistical graphs that help 
+visualize magnitudes of different variables in a dataset. 
+A type of categorical plot is a bar chart, exactly like 
+the example produced in the Matplotlib section. The categorical plots are
+`catplot` `stripplot` `swarmplot` `boxplot` `violinplot` `boxenplot` 
+`pointplot` `barplot` and `countplot`.
+
+Categorical plots are relatively simple to implement. 
+It is necessary to include the `kind` parameter as it 
+specifies the type of categorical plot that will be created.
 
 ```python
-sns.boxplot(data)
+sns.catplot(x="displacement", data=data, kind="count")
 plt.show()
 ```
 
-This can be done for each of the different types of plots that 
-can be created with seaborn. The reason that the matplotlib 
-code is relevant is because it is used to actually display the data. 
+Which produces:
+
+![catplot](examples/images/seaborn-catplot.svg)
+
+
+### Regression Plots
+
+Regression plots are like relational plots in the way 
+that they help visualize the relationship between two 
+variables. Regression plots, however, show the linear 
+correlation that may or may not exist in a scatter plot
+of data. Ther regression plots are `lmplot` `regplot` and `residplot`.
+
+Regression plots are simple to implement:
+
+```python
+sns.regplot(x=independent_1, y=dependent_1)
+plt.show()
+```
+
+Which produces:
+
+![regplot](examples/images/seaborn-regplot.svg)
+
+Each of these plots can be manipulated to the users 
+needs via the API that is listed in the sources section. 
 
 ### Saving Figures
-TODO: Add section
+
+Saving figures created by Seaborn is quite simple. This is 
+because it is the exact same as in Matplotlib. 
+
+To save a figure:
+
+```python
+plt.savefig('figure_path/figure_name')
+```
 
 ## Sources
 
