@@ -106,7 +106,7 @@ absolutely necessary).
 
 The matplotlib library in python allows for comprehensive line plots
 to be created.  Here we created a line plot using a for loop to
-generate random numbers in a range and plot it against the x and y
+generate random numbers in a range and plot it against the `x` and `y`
 axis to display the changes between two variables/data sets.
 
 ```python
@@ -152,13 +152,12 @@ the modification of the linestyle, and can be adjusted based
 on the viewer's preference–dotted line, dashed, dashed with
 dots or none). 
 
-### Pie Chart matplotlib Summary
 
-#### Pie Plot Example
+### Pie Plot
 
 A pie plot is most commonly used when representing the division of
 components that form a whole thing e.g. showing how a budget is broken
-down into separate spending categories. In matplotlib, the pie()
+down into separate spending categories. In matplotlib, the `pie()`
 function creates a pie plot.  In the following code example, a user's
 Spotify data will be displayed as a pie plot.
 
@@ -182,24 +181,22 @@ not all of them are shown here.
 plt.pie(x, labels, colors, normalize, startangle, radius, center)
 ```
 
-Here, the first parameter "x" is the parameter that consists of
+Here, the first parameter `x` is the parameter that consists of
 the data being plotted, which should be in the form of a list or 
 dictionary as it be multiple quantities of data. Each slice of 
 the pie can be labeled. To do so, labels must be in the form of 
 a list of strings in the same corresponding order as the data. 
 The sequence of colors of the slices can be set using the command
-plt.get_cmap("Colors"). There is also the choice of making 
+`plt.get_cmap("Colors")`. There is also the choice of making 
 the pie chart a full pie or not using normalize. Setting it to
 True, which is the default, makes it a full pie, False makes 
 it not a full pie. The angle of the start of the pie, set 
 counterclockwise from the x-axis can be set using startangle.
 The radius of the pie can be set using radius and setting it 
 to a float. The coordinates of the center of the chart can be 
-set in the form (float, float). 
+set in the form `(float, float)`. 
 
-### Contour Plot matplotlib Summary
-
-#### Contour Plot Example
+#### Contour Plot
 
 Unlike the previous types of plots shown, contour plots allows
 data involving three variables to be plotted on a 2D surface.
@@ -236,7 +233,16 @@ come in the form of a list or dictionary or as an equation.
 The levels parameter determines the number of contour lines
 that can be drawn. 
 
-## Giving Labels and Titles to Graphs
+## Titles, Labels, and Legends
+
+### Titles
+
+Titles are necessary to let the reader know about your graph or 
+plot is exactly about. To give a title to your whole graph in 
+matplotlib, simply type:
+```python
+plt.title("Title you want to set"). 
+```
 
 ### x-axis labels and y-axis labels
 
@@ -248,14 +254,6 @@ plt.xlabel("Label you want to set")
 plt.ylabel("Label you want to set")
 ```
 
-### Titles
-
-Titles are necessary to let the reader know about your graph or 
-plot is exactly about. To give a title to your whole graph in 
-matplotlib, simply type:
-```python
-plt.title("Title you want to set"). 
-```
 
 ### Legend
 
