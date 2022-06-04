@@ -31,6 +31,11 @@ mount -t tmpfs -o size=512m tmpfs /mnt/ramdisk
 mount -t aufs -o br:/mnt/ramdisk=ro none /mnt/readonly
 ```
 
+```
+# mkdir /tmp/ramdisk; chmod 777 /tmp/ramdisk
+# mount -t tmpfs -o size=256M tmpfs /tmp/ramdisk/
+```
+
 using /dev/shm: 
 
 http://ubuntuguide.net/ubuntu-using-ramdisk-for-better-performance-and-fast-response
