@@ -4,7 +4,7 @@ TODO: Remove contractions (I, you, we, etc.)
 TODO: Grammarly for sections
 
 In Python, data and equations can be visually represented using graphs
-and plots.  We are showcasing how to use different plotting libraries,
+and plots.  Whereby showcasing how to use different plotting libraries,
 this includes Matplotlib, Bokeh, and Seaborn.
 
 ## Matplotlib
@@ -26,8 +26,8 @@ $ pip install matplotlib
 
 ### Bar Chart
 
-In matplotlib it is easy to create bar charts. We demonstrate a simple 
-example using data from a user from Spotify. 
+In matplotlib it is easy to create bar charts. For example this is a demonstration of a simple 
+bar chart using data from a user using Spotify. 
 
 ```python
 import matplotlib.pyplot as plt
@@ -74,7 +74,7 @@ of parameters.
 ### Line Plot 
 
 The matplotlib library in python allows for comprehensive line plots
-to be created.  Here we created a line plot using a for loop to
+to be created.  Here a line plot was created using a for loop to
 generate random numbers in a range and plot it against the `x` and `y`
 axis to display the changes between two variables/data sets.
 
@@ -257,7 +257,7 @@ through useful Bokeh commands and features.
 
 ### Bokeh Plotting Interface
 
-Bokeh.plotting is the library’s main interface. It allows you to
+Bokeh.plotting is the library’s main interface. It gives the ability to
 generate plots easily by providing parameters such as axes, 
 grids, labels. The following code shows some of the simplest 
 examples of plotting a line and a point on a chart.
@@ -298,7 +298,7 @@ from bokeh.plotting import output_file
 output_file("name.html")
 ```
 
-After importing the Bokeh plotting interface, you will be
+After importing the Bokeh plotting interface, it is possible to be
 able to create different types of plots utilizing the figure
 created with the figure function.
 
@@ -483,7 +483,7 @@ Regression plots are like relational plots in the way
 that they help visualize the relationship between two 
 variables. Regression plots, however, show the linear 
 correlation that may or may not exist in a scatter plot
-of data. Ther regression plots are `lmplot` `regplot` and `residplot`.
+of data. Their regression plots are `lmplot` `regplot` and `residplot`.
 
 Regression plots are simple to implement:
 
