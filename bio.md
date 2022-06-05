@@ -64,7 +64,7 @@ performance computing solutions using Raspberry Pis.
 ## Eric He
 
 ## Abdulbaqiy Diyaolu
-
+ 
 AbdulBaqiy Diyaolu is a Computer science and Mathematics Major from
 Mississippi Valley State University.
 
