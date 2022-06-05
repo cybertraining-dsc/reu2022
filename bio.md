@@ -84,5 +84,23 @@ performance computing solutions using Raspberry Pis.
 ## Abdulbaqiy Diyaolu
  
 AbdulBaqiy Diyaolu is a Computer science and Mathematics Major from
-Mississippi Valley State University.
+Mississippi Valley State University. He will be receiving his bachelor's 
+degrees in both Computer science and Mathematics in the year 2025. 
+AbdulBaqiy is currently a presidential scholar at 
+Mississippi Valley State University and he maintains a 4.0 GPA.
+
+
+AbdulBaqiy currently works at Fedex Logistics at MVSU. He helps in
+data entry and data Analysis. He is hoping to polish his data analysis
+skills with this opportunity. In the summer of 2022, he joins the Bio 
+complexity research program at UVA where he will be able to use his skills
+in support of different researches, and also learn more research skills along
+the way.
+
+Abdulbaqiy participates in several extracurricular activities in MVSU he
+is a member of African Student Union(ASU), National Society of Black engineers
+(NSBE), and the google developer's club. He is also a Strada scholar at MVSU
+where he participates in several leadership development activities.
+
+
 
