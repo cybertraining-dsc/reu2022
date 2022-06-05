@@ -1,29 +1,26 @@
 # Bios
 
-Please add here a 2-3 paragrapgh professional Bio. Look up who a professional bio is isn IEEE papers. Write in 3rd person
+Please add here a 2-3 paragrapgh professional Bio. Look up who a professional 
+bio is isn IEEE papers. Write in 3rd person. TOD: provide link example.
 
-Review other peoples bios and improve or give improvement tips where needed
+Review other peoples bios and improve or give improvement tips where needed.
+
+If it turns out you never contributed to anything, your bio will be removed 
+(as well as your name in this proceedings).
 
 ## Paul Kiattikhunphan
 
 Paul Kiattikhunphan is a second year at the University of Virginia majoring in computer science. 
-Updated second time
-Updated again
 
 ## Alex Beck
 
-Alex is a first year student at the University of Virginia
-majoring in electrical engineering.
-
-
+Alex is a first year student at the University of Virginia majoring in electrical engineering.
 
 ## Alison Lu
 
 Alison Lu has completed her second year at the University of Virginia pursuing a
 double major in CS and Chemistry with a minor in Japanese.
 She is currently participating in research.
-
-## Manaswini Tadigadapa
 
 ## Jackson Miskill
 
@@ -80,6 +77,8 @@ Gregor von Laszewski and Dr. Geoffrey C. Fox to find high
 performance computing solutions using Raspberry Pis.
 
 ## Eric He
+
+TBD
 
 ## Abdulbaqiy Diyaolu
 
