@@ -7,6 +7,9 @@
 * <https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf>
 * <https://cloudmesh-community.github.io/pub/vonLaszewski-linux.epub>
 * <https://cloudmesh.github.io/cloudmesh-mpi/report-mpi.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-writing.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-communicate.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-reu2022.pdf>
 
 ## The repository for our report(s)
 
@@ -37,7 +40,7 @@
 
 * <https://git-scm.com/downloads>
 
-## Pytcharm
+## Pycharm
 
 * pycharm community edition: <https://www.jetbrains.com/pycharm/download>
 * md: <https://www.jetbrains.com/help/pycharm/markdown.html>
