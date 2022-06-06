@@ -12,24 +12,24 @@ Improve the installation instructions for python in the book.
 
 * Install gitbash from <https://git-scm.com/downloads>
  
-* Click ```Download``` for Windows. The download will commence. Please open the file once it is finished downloading.
+* Click `Download` for Windows. The download will commence. Please open the file once it is finished downloading.
 
-* The UAC Prompt will appear. Click ```Yes``` because Git is a safe program. It will show you Git’s license: a GNU General Public License. Click ```Next```.
+* The UAC Prompt will appear. Click `Yes` because Git is a safe program. It will show you Git’s license: a GNU General Public License. Click `Next`.
 
-* Click``` Next``` to confirm that ```C:\Program Files\Git``` is the directory where you want Git to be installed.
+* Click `Next` to confirm that `C:\Program Files\Git` is the directory where you want Git to be installed.
 
-* Click ```Next``` unless you would like an icon for Git on the desktop (in which case you can check the box and then click ```Next```).
+* Click `Next` unless you would like an icon for Git on the desktop (in which case you can check the box and then click `Next`).
 
-* Click``` Next``` to accept the text editor,
-* Click ```Next``` again to Let Git decide the default branch name
-* Click ```Next``` again to run Git from the command line and 3rd party software,
-* Click ```Next``` again to use the OpenSSL library
-* Click ```Next``` again to checkout Windows-style,
-* Click ```Next``` again to use MinTTY,
-* Click ```Next``` again to use the default git pull,
-* Click ```Next``` again to use the Git Credential Manager Core,
-* Click ```Next``` again to enable file system caching, and then
-* Click ```Install``` because we do not need experimental features.
+* Click `Next` to accept the text editor,
+* Click `Next` again to Let Git decide the default branch name
+* Click `Next` again to run Git from the command line and 3rd party software,
+* Click `Next` again to use the OpenSSL library
+* Click `Next` again to checkout Windows-style,
+* Click `Next` again to use MinTTY,
+* Click `Next` again to use the default git pull,
+* Click `Next` again to use the Git Credential Manager Core,
+* Click `Next` again to enable file system caching, and then
+* Click `Install` because we do not need experimental features.
 
 A video tutorial on how to install Git and Git Bash on Windows 10 is located at <https://youtu.be/HCotEx_xCfA>
 
@@ -39,11 +39,11 @@ A written tutorial on how to install Git and Git Bash on Windows 10 is located a
 ### Python 3.10 install
 * Install python from <https://python.org>
 
-* Click ```Download``` . The download will commence. Please open the file once it is finished downloading
+* Click `Download`. The download will commence. Please open the file once it is finished downloading
 
-* Click ``` Add python 3.10 to path ```
+* Click `Add python 3.10 to path`
 
-* Click ```Install now ```
+* Click `Install now`
 
 A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
 
@@ -103,7 +103,7 @@ cms help
 touch .bashrc
 echo "source ~/ENV3/bin/activate" >> .bashrc
 echo "cd cm" >> .bashrc
-echo "source ~/ENV3/bin/activate" >> .zrofile
+echo "source ~/ENV3/bin/activate" >> .zprofile
 echo "cd cm" >> .zprofile
 ```
 
@@ -171,7 +171,7 @@ even python could be installed with it however we have not tested, if it adds py
 
 ## Choco install pycharm
 
-1. Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
+* Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
 
 2. In PowerShell execute the following command and press `Enter`:
    
@@ -197,6 +197,8 @@ even python could be installed with it however we have not tested, if it adds py
    then the Chocolatey installation has finished. Type ``` choco ```and press 
    `Enter` and you should see Chocolatey in green text. 
    Now you can install many programs by launching PowerShell as Administrator.
+
+
 
 ## Installing Pycharm
 
