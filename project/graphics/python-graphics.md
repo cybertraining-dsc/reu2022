@@ -4,7 +4,7 @@ TODO: Remove contractions (I, you, we, etc.)
 TODO: Grammarly for sections
 
 In Python, data and equations can be visually represented using graphs
-and plots.  We are showcasing how to use different plotting libraries,
+and plots.  Whereby showcasing how to use different plotting libraries,
 this includes Matplotlib, Bokeh, and Seaborn.
 
 ## Matplotlib
@@ -26,8 +26,8 @@ $ pip install matplotlib
 
 ### Bar Chart
 
-In matplotlib it is easy to create bar charts. We demonstrate a simple 
-example using data from a user from Spotify. 
+In matplotlib it is easy to create bar charts. For example this is a demonstration of a simple 
+bar chart using data from a user using Spotify. 
 
 ```python
 import matplotlib.pyplot as plt
@@ -71,14 +71,17 @@ of parameters.
 
 
 
-### Line Plot 
+### Line Chart 
 
 The matplotlib library in python allows for comprehensive line plots
-to be created.  Here we created a line plot using a for loop to
+to be created.  Here a line chart was created using a for loop to
 generate random numbers in a range and plot it against the `x` and `y`
 axis to display the changes between two variables/data sets.
 
 ```python
+import matplotlib.pyplot as plt
+import random
+
 x = []
 for i in range(0, 100):
     value = random.random() * 10000
@@ -96,6 +99,15 @@ plt.ylabel("y")
 plt.title("Plot Test")
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
+
+The output of this program is showcased in Figure *linechart*.
+
+
+![linechart](examples/images/matplotlib-linechart.svg)
+
+Figure *linechart*: Linechart created from random variables
 
 The line chart using the matplotlib library allows for multiple data
 sets to be contrasted against each other in the same graph. The line
@@ -122,21 +134,37 @@ on the viewer's preference–dotted line, dashed, dashed with
 dots or none). 
 
 
-### Pie Plot
 
-A pie plot is most commonly used when representing the division of
+### Pie Chart
+
+A pie chart is most commonly used when representing the division of
 components that form a whole thing e.g. showing how a budget is broken
 down into separate spending categories. In matplotlib, the `pie()`
-function creates a pie plot.  In the following code example, a user's
-Spotify data will be displayed as a pie plot.
+function creates a pie chart.  In the following code example, a user's
+Spotify data will be displayed as a pie chart.
 
 ```python
+import matplotlib.pyplot as plt
+
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
 categories = data.keys()
 count = data.values()
+
+# Creating the pie chart
 plt.pie(count, labels=categories)
+
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py)
+
+The output of this program is showcased in Figure *piechart*.
+
+
+![piechart](examples/images/matplotlib-piechart.svg)
+
+Figure *piechart*: Barchart created from data from Spotify
+
 The pie chart is a graph that visually displays multiple 
 quantities of data as a proportion to the total amount, 
 represented as the whole circle, with each quantity shown as a
@@ -173,19 +201,32 @@ In this example, an equation of a hyperbolic paraboloid is
 graphed on contour plot.
 
 ```python
+import matplotlib.pyplot as plt
+import numpy as np
+
 #creating an equation for z based off of variables x,y
 x, y = np.meshgrid(np.linspace(-10, 10), np.linspace(-10, 10))
 z = 9*(x**2+1)+8*x-(y**2)
 levels = np.linspace(np.min(z), np.max(z), 15)
 
 #creating a contour graph based off the equation of z
-fig, ax = plt.subplots()
-ax.contour(x,y,z, levels=levels)
+plt.contour(x,y,z, levels=levels)
+
+
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Function of z(x,y)")
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py)
+
+The output of this program is showcased in Figure *contourplot*.
+
+
+![piechart](examples/images/matplotlib-contour.svg)
+
+Figure *contourplot*: Multivariable (x, y, z) Equation Plotted
 
 A contour plot allows data and equations consisting of three
 variables to be plotted through plotting 3D surfaces as 2D 
@@ -257,7 +298,7 @@ through useful Bokeh commands and features.
 
 ### Bokeh Plotting Interface
 
-Bokeh.plotting is the library’s main interface. It allows you to
+Bokeh.plotting is the library’s main interface. It gives the ability to
 generate plots easily by providing parameters such as axes, 
 grids, labels. The following code shows some of the simplest 
 examples of plotting a line and a point on a chart.
@@ -278,8 +319,8 @@ p.circle(5,10, color = 'green')
 show(p)
 ```
 
-### Some useful parameters from figure
-TODO: change section header
+
+### Figure Parameters Example
 
 * <b>x_axis_label</b> and <b>y_axis_label</b>: labels for the
 x and y axis
@@ -298,7 +339,7 @@ from bokeh.plotting import output_file
 output_file("name.html")
 ```
 
-After importing the Bokeh plotting interface, you will be
+After importing the Bokeh plotting interface, it is possible to be
 able to create different types of plots utilizing the figure
 created with the figure function.
 
@@ -322,27 +363,25 @@ The list of all possible marker types and the functions used
 to create them can be found here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 
-### Line Graphs
-
-TODO: Make line graphs/plots a consistent term
+### Line Plots
 
 The library provides a series of functions for creating various 
-types of line graphs ranging from a single line graph, step line 
-graph, stacked line graph, multiple line graph and so on.
-You can create a simple linear line graph connecting the 
+types of line plots ranging from a single line plot, step line 
+plot, stacked line plot, multiple line plot and so on.
+You can create a simple linear line plot connecting the 
 points (1,1), (2,2) and (3,3) with the following.
 
 ```python
-# The line_width parameter sets the width of the line graph.
+# The line_width parameter sets the width of the line plot.
 x = [1,2,3]
 y = [1,2,3]
 p.line(x, y, line_width = 1)
 ```
-You can find the source code for other types of line graphs here:
+You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 
 
-### Bar Graphs
+### Bar Chart
 
 Similarly, the `hbar()` and `vbar()` functions can be used to display
 horizontal and vertical bar graphs, respectively.
@@ -485,7 +524,7 @@ Regression plots are like relational plots in the way
 that they help visualize the relationship between two 
 variables. Regression plots, however, show the linear 
 correlation that may or may not exist in a scatter plot
-of data. Ther regression plots are `lmplot` `regplot` and `residplot`.
+of data. Their regression plots are `lmplot` `regplot` and `residplot`.
 
 Regression plots are simple to implement:
 
