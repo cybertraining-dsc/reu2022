@@ -36,7 +36,7 @@ A video tutorial on how to install Git and Git Bash on Windows 10 is located at 
 A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
 
-### python 3.10 install
+### Python 3.10 install
 * Install python from <https://python.org>
 
 * Click ```Download``` . The download will commence. Please open the file once it is finished downloading
