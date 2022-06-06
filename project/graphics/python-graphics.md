@@ -71,14 +71,17 @@ of parameters.
 
 
 
-### Line Plot 
+### Line Chart 
 
 The matplotlib library in python allows for comprehensive line plots
-to be created.  Here a line plot was created using a for loop to
+to be created.  Here a line chart was created using a for loop to
 generate random numbers in a range and plot it against the `x` and `y`
 axis to display the changes between two variables/data sets.
 
 ```python
+import matplotlib.pyplot as plt
+import random
+
 x = []
 for i in range(0, 100):
     value = random.random() * 10000
@@ -96,6 +99,15 @@ plt.ylabel("y")
 plt.title("Plot Test")
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
+
+The output of this program is showcased in Figure *linechart*.
+
+
+![linechart](examples/images/matplotlib-linechart.svg)
+
+Figure *linechart*: Linechart created from random variables
 
 The line chart using the matplotlib library allows for multiple data
 sets to be contrasted against each other in the same graph. The line
@@ -122,21 +134,37 @@ on the viewer's preference–dotted line, dashed, dashed with
 dots or none). 
 
 
-### Pie Plot
 
-A pie plot is most commonly used when representing the division of
+### Pie Chart
+
+A pie chart is most commonly used when representing the division of
 components that form a whole thing e.g. showing how a budget is broken
 down into separate spending categories. In matplotlib, the `pie()`
-function creates a pie plot.  In the following code example, a user's
-Spotify data will be displayed as a pie plot.
+function creates a pie chart.  In the following code example, a user's
+Spotify data will be displayed as a pie chart.
 
 ```python
+import matplotlib.pyplot as plt
+
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
 categories = data.keys()
 count = data.values()
+
+# Creating the pie chart
 plt.pie(count, labels=categories)
+
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py)
+
+The output of this program is showcased in Figure *piechart*.
+
+
+![piechart](examples/images/matplotlib-piechart.svg)
+
+Figure *piechart*: Barchart created from data from Spotify
+
 The pie chart is a graph that visually displays multiple 
 quantities of data as a proportion to the total amount, 
 represented as the whole circle, with each quantity shown as a
@@ -173,19 +201,32 @@ In this example, an equation of a hyperbolic paraboloid is
 graphed on contour plot.
 
 ```python
+import matplotlib.pyplot as plt
+import numpy as np
+
 #creating an equation for z based off of variables x,y
 x, y = np.meshgrid(np.linspace(-10, 10), np.linspace(-10, 10))
 z = 9*(x**2+1)+8*x-(y**2)
 levels = np.linspace(np.min(z), np.max(z), 15)
 
 #creating a contour graph based off the equation of z
-fig, ax = plt.subplots()
-ax.contour(x,y,z, levels=levels)
+plt.contour(x,y,z, levels=levels)
+
+
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Function of z(x,y)")
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py)
+
+The output of this program is showcased in Figure *contourplot*.
+
+
+![piechart](examples/images/matplotlib-contour.svg)
+
+Figure *contourplot*: Multivariable (x, y, z) Equation Plotted
 
 A contour plot allows data and equations consisting of three
 variables to be plotted through plotting 3D surfaces as 2D 
