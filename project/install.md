@@ -13,6 +13,8 @@ A video tutorial on how to install Git and Git Bash on Windows 10 is located at 
 
 A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
+A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
+
 TODO: document the options
 
 
@@ -25,17 +27,18 @@ Start gitbash
 TODO fix as appropriate and document here
 
 ```bash
+python -m venv ~/ENV3
+source ~/ENV3/Scripts/activate
 cd
-python3.10 -m venv ~/ENV3
-source ~/ENV/Scripts/activate
 mkdir cm
 cd cm
+pip install pip -U
 pip install cloudmesh-installer 
 cloudmesh-installer get cmd5 
 cms help
 touch .bashrc
-echo "cd cm" >> .bashrc
 echo "source ~/ENV3/Scripts/activate" >> .bashrc
+echo "cd ~/cm" >> .bashrc
 ```
 
 start new gitbash and remove the first gitbash window, see if you see (ENV3) and continue. Git bash will initialize the environment
