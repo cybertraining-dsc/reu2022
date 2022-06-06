@@ -192,7 +192,7 @@ The radius of the pie can be set using `radius` and setting it
 to a float. The coordinates of the center of the chart can be 
 set in the form `(float, float)`. 
 
-#### Contour Plot
+### Contour Plot
 
 Unlike the previous types of plots shown, contour plots allow
 data involving three variables to be plotted on a 2D surface.
@@ -277,15 +277,34 @@ To show a legend, use the command:
 plt.legend()
 ```
 
+## Exporting
+
+### Saving Chart as Files
+After a chart is created and displayed, it can be exported as a file outside the
+code using this command:
+
+```python
+plt.savefig("fname", dpi='figure')
+```
+
+The name and format of the file are set as a string using `fname`. Make sure to 
+specify the format of the file by using a `.` after the file name and specify the 
+type after such as `.pdf`, `.png`, `svg`, etc.
+
+The parameter `dpi` sets the DPI (Dots per Inch) of the image being saved. Specify 
+this number in the form of a float. For example, set `dpi=300`.
+
 ### Display
 
-The very last command you should put in your code is `plt.show()`,
+The very last command that should be written is `plt.show()`,
 as this command displays the graph that you made. To show, simply
 type:
 
 ```python
 plt.show()
 ```
+
+
 
 ## Bokeh
 
