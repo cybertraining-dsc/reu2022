@@ -14,9 +14,8 @@ import shelve
 ## Creating a New Shelf
 
 A new shelf can be created using the command: `shelve.open('shelf_name')`. 
-User data can be inputted in the lines below as shown in this example where
+User data can be inputted in the lines below as shown in this [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_create.py) where
 it's in the form of a dictionary:
-
 
 ```python
 import shelve
