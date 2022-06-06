@@ -13,6 +13,8 @@ A video tutorial on how to install Git and Git Bash on Windows 10 is located at 
 
 A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
+A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
+
 TODO: document the options
 
 
@@ -25,17 +27,18 @@ Start gitbash
 TODO fix as appropriate and document here
 
 ```bash
+python -m venv ~/ENV3
+source ~/ENV3/Scripts/activate
 cd
-python3.10 -m venv ~/ENV3
-source ~/ENV/Scripts/activate
 mkdir cm
 cd cm
+pip install pip -U
 pip install cloudmesh-installer 
 cloudmesh-installer get cmd5 
 cms help
 touch .bashrc
-echo "cd cm" >> .bashrc
 echo "source ~/ENV3/Scripts/activate" >> .bashrc
+echo "cd ~/cm" >> .bashrc
 ```
 
 start new gitbash and remove the first gitbash window, see if you see (ENV3) and continue. Git bash will initialize the environment
@@ -83,8 +86,18 @@ echo "cd cm" >> .zshrc
 echo "source ~/ENV3/Scripts/activate" >> .zshrc
 echo "cd cm" >> .zprofile
 echo "source ~/ENV3/Scripts/activate" >> .zprofile
-
 ```
-
+## Choco install 
+There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
+```bash
+choco install make
+choco install emacs
+choco install pycharm
+choco install firefox
+choco install vscode
+choco install zoom
+...
+```
+even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
 
 
