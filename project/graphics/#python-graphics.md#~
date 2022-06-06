@@ -26,9 +26,8 @@ $ pip install matplotlib
 
 ### Bar Chart
 
-In matplotlib, it is easy to create bar charts. For example, this is a
-demonstration of a simple bar chart using data from a user using
-Spotify.
+In matplotlib, it is easy to create bar charts. For example, this is a demonstration
+of a simple bar chart using data from a user using Spotify.
 
 ```python
 import matplotlib.pyplot as plt
@@ -64,11 +63,12 @@ The output of this program is showcased in Figure *barchart*.
 
 Figure *barchart*: Barchart created from data from Spotify
 
-The bar chart is a graph that visualizes data by displaying the
-quantity of several variables through different sized
-rectangles. Matplotlib essentially creates the bar chart object as a
-figure and then displays that figure on the computer. The command
-plt.barchart takes in a multitude of parameters.
+The bar chart is a graph that visualizes data by displaying the quantity of 
+several variables through different sized rectangles. Matplotlib essentially
+creates the bar chart object as a figure and then displays that figure on the computer. The command plt.barchart takes in a multitude of parameters. 
+
+
+
 
 ### Line Chart 
 
@@ -109,8 +109,7 @@ The output of this program is showcased in Figure *linechart*.
 Figure *linechart*: Linechart created from random variables
 
 The line chart using the matplotlib library allows for multiple data
-sets to be contrasted against each other in the same graph. The line
-chart is positioned based on the np.linspace which takes in two total
+sets to be contrasted against each other in the same graph. The line chart is positioned based on the np.linspace which takes in two total
 parameters that determine the starting point and the endpoint and an
 optional parameter that defines the total generated sample between the
 start/end points. With this, the variables and data sets can be
@@ -138,8 +137,7 @@ dots or none.
 
 A pie chart is most commonly used when representing the division of
 components that form a whole thing e.g. showing how a budget is broken
-down into separate spending categories. In matplotlib, the function
-`pie()`creates a pie chart.  In the following code example, a user's
+down into separate spending categories. In matplotlib, the function `pie()`creates a pie chart.  In the following code example, a user's
 Spotify data will be displayed as a pie chart.
 
 ```python
@@ -322,8 +320,8 @@ p.circle(5,10, color = 'green')
 show(p)
 ```
 
-
-### Figure Parameters Example
+### Some useful parameters from figure
+TODO: change section header
 
 * <b>x_axis_label</b> and <b>y_axis_label</b>: labels for the
 x and y axis
@@ -366,32 +364,27 @@ The list of all possible marker types and the functions used
 to create them can be found here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 
-### Line Plots
+### Line Graphs
+
+TODO: Make line graphs/plots a consistent term
 
 The library provides a series of functions for creating various 
-<<<<<<< HEAD
 types of line graphs ranging from a single line graph, step line 
 graph, stacked line graph, multiple line graph, and so on.
 You can create a simple linear line graph connecting the 
 points (1,1), (2,2), and (3,3) with the following.
-=======
-types of line plots ranging from a single line plot, step line 
-plot, stacked line plot, multiple line plot and so on.
-You can create a simple linear line plot connecting the 
-points (1,1), (2,2) and (3,3) with the following.
->>>>>>> 70a20db9f6f919480e38dda5163722329bd2dbb6
 
 ```python
-# The line_width parameter sets the width of the line plot.
+# The line_width parameter sets the width of the line graph.
 x = [1,2,3]
 y = [1,2,3]
 p.line(x, y, line_width = 1)
 ```
-You can find the source code for other types of line plots here:
+You can find the source code for other types of line graphs here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 
 
-### Bar Chart
+### Bar Graphs
 
 Similarly, the `hbar()` and `vbar()` functions can be used to display
 horizontal and vertical bar graphs, respectively.
@@ -419,19 +412,11 @@ relational, distributional, categorical, regression, and matrix
 plots.
 
 We have created examples to demonstrate the abilities of Seaborn. 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 These examples draw on a GitHub repository made by the creator of 
 Seaborn (listed in the sources section). The data ("mpg") used looks at 
 different variables in different cars such as displacement, horsepower, 
 miles per gallon, etc.
-=======
-The data that is used for these examples comes from the makeup 
-of a user's storage on their phone. 
->>>>>>> 70a20db9f6f919480e38dda5163722329bd2dbb6
 
->>>>>>> 0a787db46b53aa8ea8b3f71f3f09801e289c99a4
 
 ### Installation
 
@@ -454,24 +439,22 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-Two unique sets of data will be created. The first set of data 
-represents how a user's phone storage is allocated and the second
-set represents how a user has used the photos application over 
-the past 5 months. 
+It is easy to set up the data to be used because the `load_dataset` method
+draws directly from GitHub: 
 
 ```python
-# the data represents how storage is allocated on a user's phone
+data = sns.load_dataset("mpg")
+sns.set_theme()
 
-source = ['Spotify', 'System Services', 'Uninstalled Apps', 'FaceTime', 'Instagram', 'Safari',
-          'Maps', 'Gmail', 'Photos', 'GroupMe', 'Podcasts']
+dependent_1 = data.horsepower
+dependent_2 = data.mpg
 
-value = [19.1, 10.9, 7.4, 4.3, 4.1, 3.9, 3.0, 1.8, 1.6, 1.3, 1.0]
-use = ['Yes', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'No']
+independent_1 = data.displacement
+independent_2 = data.weight
+independent_3 = data.acceleration
 
-# creating a different set of data that reflects how many photos a user took in each month of 2022 up to June
-
-months = [1, 2, 3, 4, 5]
-photos = [91, 151, 138, 101, 49]
+hue_1 = data.origin
+hue_2 = data.model_year
 ```
 
 ### Relational Plots
@@ -481,21 +464,17 @@ variables in a visual format. It is a broad term for data
 representation. Examples of relational plots in Seaborn are 
 `relplot` `lineplot` and `scatterplot`. 
 
-It is simple to create a relational plot with Seaborn: 
+It is simple to create a relational plot. A hued line plot can be created
+easily with Seaborn. 
 
 ```python
-sns.relplot( x=months , y=photos)
-plt.xlabel("Month of the year")
-plt.ylabel("Amount of photos taken")
+sns.lineplot( x=independent_1 , y=dependent_1, hue=hue_1)
 plt.show()
 ```
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
-
-The output of this program is showcased in Figure *lineplot*
+Which produces:
 
 ![lineplot](examples/images/seaborn-lineplot.svg)
 
-Figure *lineplot*: Lineplot created from user phone photo data. 
 
 ### Distribution Plots
 
@@ -508,16 +487,14 @@ a singular variable. The distributional plots in Seaborn are `displot` `histplot
 
 
 ```python
-sns.displot(x=source, y=value)
+sns.displot(x=independent_2, y=dependent_2, hue=hue_1)
 plt.show()
 ```
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output of this program is showcased in Figure *displot*
+Which produces:
 
 ![displot](examples/images/seaborn-displot.svg)
 
-Figure *displot*: Displot created from user phone storage data. 
 
 
 ### Categorical Plots
@@ -530,20 +507,18 @@ the example produced in the Matplotlib section. The categorical plots are
 `pointplot` `barplot` and `countplot`.
 
 Categorical plots are relatively simple to implement. 
-If using the `catplot` method, it is necessary to include the
-`kind` parameter. 
+It is necessary to include the `kind` parameter as it 
+specifies the type of categorical plot that will be created.
 
 ```python
-sns.barplot(x=source, y=value)
+sns.catplot(x="displacement", data=data, kind="count")
 plt.show()
 ```
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output from the program is showcased in Figure *catplot*
+Which produces:
 
 ![catplot](examples/images/seaborn-catplot.svg)
 
-Figure *catplot*: Created from user phone storage data 
 
 ### Regression Plots
 
@@ -556,16 +531,13 @@ of data. Their regression plots are `lmplot` `regplot` and `residplot`.
 Regression plots are simple to implement:
 
 ```python
-sns.regplot(x=months, y=photos)
+sns.regplot(x=independent_1, y=dependent_1)
 plt.show()
 ```
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output of this program is showcased in Figure *regplot*
+Which produces:
 
 ![regplot](examples/images/seaborn-regplot.svg)
-
-Figure *regplot*: Created from user phone photo data. 
 
 Each of these plots can be manipulated to the users 
 needs via the API that is listed in the sources section. 
@@ -580,9 +552,6 @@ To save a figure:
 ```python
 plt.savefig('figure_path/figure_name')
 ```
-
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
-
 
 ## Sources
 
