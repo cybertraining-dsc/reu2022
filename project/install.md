@@ -88,7 +88,7 @@ echo "cd cm" >> .zprofile
 echo "source ~/ENV3/Scripts/activate" >> .zprofile
 ```
 ## Choco install 
-There are a number of usefull packages that youca install via choco this includes visual code, pychram, emacs, and make
+There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
 ```bash
 choco install make
 choco install emacs
