@@ -48,6 +48,19 @@ start now again gitbash and remove the second gitbash you created. Now gitbash i
 If you do not want to always start in the directory `cm` do replace the line in your `.bashrc`
 `cd cm` with `cd`
 
+### Uninstall
+
+```bash
+rm -f ~/ENV3
+```
+
+Edit the .zshrc and .zprofile file and delete the lines
+
+```
+source ~/ENV3/Scripts/activate
+cd cm
+```
+
 
 ## Linux 
 
@@ -63,10 +76,23 @@ pip install cloudmesh-installer
 cloudmesh-installer get cmd5 
 cms help
 touch .bashrc
+echo "source ~/ENV3/bin/activate" >> .bashrc
 echo "cd cm" >> .bashrc
-echo "source ~/ENV3/Scripts/activate" >> .bashrc
+echo "source ~/ENV3/bin/activate" >> .zrofile
 echo "cd cm" >> .zprofile
-echo "source ~/ENV3/Scripts/activate" >> .zrofile
+```
+
+### Uninstall
+
+```bash
+rm -f ~/ENV3
+```
+
+Edit the .zshrc and .zprofile file and delete the lines
+
+```
+source ~/ENV3/bin/activate
+cd cm
 ```
 
 ## macOS
@@ -82,12 +108,21 @@ cd cm
 pip install cloudmesh-installer 
 cloudmesh-installer get cmd5 
 cms help
+echo "source ~/ENV3/bin/activate" >> .zshrc
 echo "cd cm" >> .zshrc
-echo "source ~/ENV3/Scripts/activate" >> .zshrc
+echo "source ~/ENV3/bin/activate" >> .zprofile
 echo "cd cm" >> .zprofile
-echo "source ~/ENV3/Scripts/activate" >> .zprofile
-
 ```
 
+### Uninstall
 
+```bash
+rm -f ~/ENV3
+```
 
+Edit the .zshrc and .zprofile file and delete the lines
+
+```
+source ~/ENV3/bin/activate
+cd cm
+```
