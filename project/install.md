@@ -47,23 +47,25 @@ A written tutorial on how to install Git and Git Bash on Windows 10 is located a
 
 A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
 
+A video on how to configure PyCharm with cloudmesh is located at <https://youtu.be/eb1IQBx0D50>
+
 Document the options, e.g. switch on path, icon on desktop, allow path longer then 256 chars
 
 Start gitbash
 
 ```bash
-python -m venv ~/ENV3
-source ~/ENV3/Scripts/activate
-cd
-mkdir cm
-cd cm
-pip install pip -U
-pip install cloudmesh-installer 
-cloudmesh-installer get cmd5 
-cms help
-touch .bashrc
-echo "source ~/ENV3/Scripts/activate" >> .bashrc
-echo "cd ~/cm" >> .bashrc
+$ python -m venv ~/ENV3
+$ source ~/ENV3/Scripts/activate
+$ cd
+# mkdir cm
+$ cd cm
+$ pip install pip -U
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+$ touch .bashrc
+$ echo "source ~/ENV3/Scripts/activate" >> .bashrc
+$ echo "cd ~/cm" >> .bashrc
 ```
 
 start new gitbash and remove the first gitbash window, see if you see (ENV3) and continue. Git bash will initialize the environment
@@ -76,14 +78,14 @@ If you do not want to always start in the directory `cm` do replace the line in 
 ### Uninstall
 
 ```bash
-rm -f ~/ENV3
+$ rm -f ~/ENV3
 ```
 
 Edit the .zshrc and .zprofile file and delete the lines
 
 ```
-source ~/ENV3/Scripts/activate
-cd cm
+$ source ~/ENV3/Scripts/activate
+$ cd cm
 ```
 
 
@@ -92,32 +94,32 @@ cd cm
 We assume you use bash
 
 ```bash
-cd
-python3.10 -m venv ~/ENV3
-source ~/ENV/bin/activate
-mkdir cm
-cd cm
-pip install cloudmesh-installer 
-cloudmesh-installer get cmd5 
-cms help
-touch .bashrc
-echo "source ~/ENV3/bin/activate" >> .bashrc
-echo "cd cm" >> .bashrc
-echo "source ~/ENV3/bin/activate" >> .zprofile
-echo "cd cm" >> .zprofile
+$ cd
+$ python3.10 -m venv ~/ENV3
+$ source ~/ENV/bin/activate
+# mkdir cm
+$ cd cm
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+$ touch .bashrc
+$ echo "source ~/ENV3/bin/activate" >> .bashrc
+$ echo "cd cm" >> .bashrc
+$ echo "source ~/ENV3/bin/activate" >> .zprofile
+$ echo "cd cm" >> .zprofile
 ```
 
 ### Uninstall
 
 ```bash
-rm -f ~/ENV3
+$ rm -f ~/ENV3
 ```
 
 Edit the .zshrc and .zprofile file and delete the lines
 
 ```
-source ~/ENV3/bin/activate
-cd cm
+$ source ~/ENV3/bin/activate
+$ cd cm
 ```
 
 ## macOS
@@ -125,46 +127,46 @@ cd cm
 We assume you use zsh which is the default on macOS
 
 ```bash
-cd
-python3.10 -m venv ~/ENV3
-source ~/ENV/bin/activate
-mkdir cm
-cd cm
-pip install cloudmesh-installer 
-cloudmesh-installer get cmd5 
-cms help
-echo "source ~/ENV3/bin/activate" >> .zshrc
-echo "cd cm" >> .zshrc
-echo "source ~/ENV3/bin/activate" >> .zprofile
-echo "cd cm" >> .zprofile
-echo "source ~/ENV3/Scripts/activate" >> .zprofile
+$ cd
+$ python3.10 -m venv ~/ENV3
+$ source ~/ENV/bin/activate
+# mkdir cm
+$ cd cm
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+$ echo "source ~/ENV3/bin/activate" >> .zshrc
+$ echo "cd cm" >> .zshrc
+$ echo "source ~/ENV3/bin/activate" >> .zprofile
+$ echo "cd cm" >> .zprofile
 ```
 
 
 ### Uninstall
 
 ```bash
-rm -f ~/ENV3
+$ rm -f ~/ENV3
 ```
 
 Edit the .zshrc and .zprofile file and delete the lines
 
 ```
-source ~/ENV3/bin/activate
-cd cm
+$ source ~/ENV3/bin/activate
+$ cd cm
 ```
 
 
 ## Choco install 
 
 There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
+
 ```bash
-choco install make
-choco install emacs
-choco install pycharm
-choco install firefox
-choco install vscode
-choco install zoom
+$ choco install make
+$ choco install emacs
+$ choco install pycharm
+$ choco install firefox
+$ choco install vscode
+$ choco install zoom
 ```
 
 even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
@@ -232,17 +234,17 @@ Installing `brew` is simple.
 
 * Third, in the terminal, write out: 
 
-```bash
-xcode-select --install
-```
+  ```bash
+  $ xcode-select --install
+  ```
 
-This installs `xcode` command line tools. 
+  This installs `xcode` command line tools. 
 
 * Fourth, run the following command in the terminal:
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+  ```bash
+  $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
 
 * Fifth, enter the administrator password into the desired location. 
 
@@ -254,7 +256,7 @@ After the user has correctly installed Homebrew, it is simple to
 install packages directly to the operating system:
 
 ```bash
-brew install [package name]
+$ brew install [package name]
 ```
 
 Most of this documentation was found at the following link:
