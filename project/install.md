@@ -173,18 +173,18 @@ even python could be installed with it however we have not tested, if it adds py
 
 * Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
 
-2. In PowerShell execute the following command and press `Enter`:
+2. In PowerShell execute the following command:
    
    ```
-   PS C:> Set-ExecutionPolicy AllSigned
+   PS C:\Windows\system32> Set-ExecutionPolicy AllSigned
    ``` 
    
-   Then type `y` and press `Enter`.
+   Then type `y`.
 
-3. Next type in the command and Press `Enter` (copy and paste to not make a mistake)
+3. Next type in the command (copy and paste to not make a mistake)
    
    ```
-   PS C:> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   PS C:\Windows\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
    ```
 
 4. Wait for the installation to complete; once you see 
@@ -194,25 +194,25 @@ even python could be installed with it however we have not tested, if it adds py
   ``` 
   
    with a blinking cursor again, and lines have stopped appearing, 
-   then the Chocolatey installation has finished. Type ``` choco ```and press 
-   `Enter` and you should see Chocolatey in green text. 
-   Now you can install many programs by launching PowerShell as Administrator.
+   then the Chocolatey installation has finished. Type `choco` 
+   and you should see Chocolatey in green text. 
 
+Now you can install many programs by launching PowerShell as Administrator or gitbash.
 
+A list of programs that you can install with `choco` can be found at
+
+* <https://community.chocolatey.org/packages/>
 
 ## Installing Pycharm
 
-PyCharm can be installed with choco while typing 
+PyCharm can be installed in gitbash with choco while typing 
 
 ```
-choco install pycharm
+$ choco install pycharm -y
 ``` 
 
-and press Enter.  When it asks if you want to run the script, type `a` 
-and press Enter. You can watch the install process, and once complete, 
-Visual Studio Code will be ready for you to use. You can install many programs 
-this way, and the total list of programs can be found here: 
-<https://community.chocolatey.org/packages/>
+Once teh install completes PyCharm will be ready for you to use. You can install many programs 
+this way, and the 
 
 ## Homebrew install 
 
@@ -225,10 +225,10 @@ and download the desired package.
 Installing `brew` is simple. 
 
 * First, make sure the computer that is downloading Homebrew is 
-up-to-date with the latest software for its OS. 
+  up-to-date with the latest software for its OS. 
 
 * Second, ensure that `xcode` has been installed. `xcode`
-can be installed from the Apple App Store.
+  can be installed from the Apple App Store.
 
 * Third, in the terminal, write out: 
 
@@ -247,8 +247,8 @@ This installs `xcode` command line tools.
 * Fifth, enter the administrator password into the desired location. 
 
 * It may take a moment for the software to install, but it will 
-eventually say **"Installation successful!"** in the terminal. After that,
-Homebrew is installed onto the device. 
+  eventually say **"Installation successful!"** in the terminal. After that,
+  Homebrew is installed onto the device. 
 
 After the user has correctly installed Homebrew, it is simple to 
 install packages directly to the operating system:
