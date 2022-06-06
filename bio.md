@@ -30,20 +30,14 @@ include computer architecture, machine learning, and quantum computing alongside
 Jackson Miskill has completed his second year at the University
 of Virginia where he is studying Computer Science and Cognitive
 Science. He will receive a Bachelor of Arts degree from UVa in
-Spring of 2024. 
+Spring of 2024. Jackson has studied python and java in his courses,
+delving into concepts from basic syntax to data structures and algorithms. 
 
-Jackson has worked in a variety of different environments:
-restaurant, coffee shop, environmental science organization,
-and nonprofit. He is currently working in research at the 
-UVA Biocomplexity Institute where he is planning to learn as much
-as possible about programming, data science, and academic research.
-
-
-At UVA, Jackson is active in organizations that he is passionate
-about. He volunteers for the National Alliance on Mental 
-Illness in the outreach committee, served as recruitment chair
-for Phi Delta Theta and treasurer of Phi Alpha Delta, and 
-volunteers with Madison House in the Casa Alma organization. 
+Jackson is currently working at the UVa Biocomplexity Institute 
+under Dr. Gregor von Laszewski as a part of the Computing for 
+Global Challenges program. He is studying the intersection
+between python and cloud computing. In the future, Jackson plans
+to continue research. 
 
 ## Jacques Fleischer
 
