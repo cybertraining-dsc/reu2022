@@ -22,6 +22,16 @@ To install matplotlib, please use the command:
 $ pip install matplotlib
 ```
 
+### Import Statements
+
+The user will need to supply these import statements at the top of their code in 
+order for Matplotlib to be imported.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
 ### Bar Chart
 
 In matplotlib, it is easy to create bar charts. For example, this is a
