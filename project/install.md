@@ -54,18 +54,18 @@ Document the options, e.g. switch on path, icon on desktop, allow path longer th
 Start gitbash
 
 ```bash
-python -m venv ~/ENV3
-source ~/ENV3/Scripts/activate
-cd
-mkdir cm
-cd cm
-pip install pip -U
-pip install cloudmesh-installer 
-cloudmesh-installer get cmd5 
-cms help
-touch .bashrc
-echo "source ~/ENV3/Scripts/activate" >> .bashrc
-echo "cd ~/cm" >> .bashrc
+$ python -m venv ~/ENV3
+$ source ~/ENV3/Scripts/activate
+$ cd
+# mkdir cm
+$ cd cm
+$ pip install pip -U
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+$ touch .bashrc
+$ echo "source ~/ENV3/Scripts/activate" >> .bashrc
+$ echo "cd ~/cm" >> .bashrc
 ```
 
 start new gitbash and remove the first gitbash window, see if you see (ENV3) and continue. Git bash will initialize the environment
@@ -78,14 +78,14 @@ If you do not want to always start in the directory `cm` do replace the line in 
 ### Uninstall
 
 ```bash
-rm -f ~/ENV3
+$ rm -f ~/ENV3
 ```
 
 Edit the .zshrc and .zprofile file and delete the lines
 
 ```
-source ~/ENV3/Scripts/activate
-cd cm
+$ source ~/ENV3/Scripts/activate
+$ cd cm
 ```
 
 
@@ -94,19 +94,19 @@ cd cm
 We assume you use bash
 
 ```bash
-cd
-python3.10 -m venv ~/ENV3
-source ~/ENV/bin/activate
-mkdir cm
-cd cm
-pip install cloudmesh-installer 
-cloudmesh-installer get cmd5 
-cms help
-touch .bashrc
-echo "source ~/ENV3/bin/activate" >> .bashrc
-echo "cd cm" >> .bashrc
-echo "source ~/ENV3/bin/activate" >> .zprofile
-echo "cd cm" >> .zprofile
+$ cd
+$ python3.10 -m venv ~/ENV3
+$ source ~/ENV/bin/activate
+# mkdir cm
+$ cd cm
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+$ touch .bashrc
+$ echo "source ~/ENV3/bin/activate" >> .bashrc
+$ echo "cd cm" >> .bashrc
+$ echo "source ~/ENV3/bin/activate" >> .zprofile
+$ echo "cd cm" >> .zprofile
 ```
 
 ### Uninstall
