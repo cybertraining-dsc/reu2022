@@ -25,17 +25,18 @@ Start gitbash
 TODO fix as appropriate and document here
 
 ```bash
+python -m venv ~/ENV3
+source ~/ENV3/Scripts/activate
 cd
-python3.10 -m venv ~/ENV3
-source ~/ENV/Scripts/activate
 mkdir cm
 cd cm
+pip install pip -Ucms
 pip install cloudmesh-installer 
 cloudmesh-installer get cmd5 
 cms help
 touch .bashrc
-echo "cd cm" >> .bashrc
 echo "source ~/ENV3/Scripts/activate" >> .bashrc
+echo "cd ~/cm" >> .bashrc
 ```
 
 start new gitbash and remove the first gitbash window, see if you see (ENV3) and continue. Git bash will initialize the environment
