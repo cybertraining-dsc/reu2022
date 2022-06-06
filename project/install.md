@@ -112,14 +112,14 @@ echo "cd cm" >> .zprofile
 ### Uninstall
 
 ```bash
-rm -f ~/ENV3
+$ rm -f ~/ENV3
 ```
 
 Edit the .zshrc and .zprofile file and delete the lines
 
 ```
-source ~/ENV3/bin/activate
-cd cm
+$ source ~/ENV3/bin/activate
+$ cd cm
 ```
 
 ## macOS
@@ -151,8 +151,8 @@ $ rm -f ~/ENV3
 Edit the .zshrc and .zprofile file and delete the lines
 
 ```
-source ~/ENV3/bin/activate
-cd cm
+$ source ~/ENV3/bin/activate
+$ cd cm
 ```
 
 
@@ -256,7 +256,7 @@ After the user has correctly installed Homebrew, it is simple to
 install packages directly to the operating system:
 
 ```bash
-brew install [package name]
+$ brew install [package name]
 ```
 
 Most of this documentation was found at the following link:
