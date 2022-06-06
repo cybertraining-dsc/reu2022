@@ -18,9 +18,12 @@ Alex is a first year student at the University of Virginia majoring in electrica
 
 ## Alison Lu
 
-Alison Lu has completed her second year at the University of Virginia pursuing a
-double major in CS and Chemistry with a minor in Japanese.
-She is currently participating in research.
+Alison Lu has completed her second year (Class of 2024) at the University of Virginia pursuing a
+double major in CS and Chemistry with a minor in Japanese. She is conducting research with the
+physics department studying quantum computing and photon resolution using machine learning. In 
+addition, she works with UVA's Repair Lab to study gentrification in Norfolk, VA. \
+She is currently participating in the Biocomplexity Institute's C4GC REU program. Her interests
+include computer architecture, machine learning, and quantum computing alongside quantum mechanics.
 
 ## Jackson Miskill
 
