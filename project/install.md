@@ -112,9 +112,21 @@ echo "source ~/ENV3/bin/activate" >> .zshrc
 echo "cd cm" >> .zshrc
 echo "source ~/ENV3/bin/activate" >> .zprofile
 echo "cd cm" >> .zprofile
-<<<<<<< HEAD
-=======
 echo "source ~/ENV3/Scripts/activate" >> .zprofile
+```
+
+
+### Uninstall
+
+```bash
+rm -f ~/ENV3
+```
+
+Edit the .zshrc and .zprofile file and delete the lines
+
+```
+source ~/ENV3/bin/activate
+cd cm
 ```
 
 
@@ -144,17 +156,3 @@ even python could be installed with it however we have not tested, if it adds py
 
 6. Type ``` choco install pycharm ``` and press Enter. When it asks if you want to run the script, type ```a``` and press Enter. You can watch the install process, and once complete, Visual Studio Code will be ready for you to use. You can install many programs this way, and the total list of programs can be found here: <https://community.chocolatey.org/packages/>
 
-
-
-### Uninstall
-
-```bash
-rm -f ~/ENV3
-```
-
-Edit the .zshrc and .zprofile file and delete the lines
-
-```
-source ~/ENV3/bin/activate
-cd cm
-```
