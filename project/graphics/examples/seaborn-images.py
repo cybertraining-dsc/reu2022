@@ -50,7 +50,7 @@ plt.show()
 
 # Distribution Plot -
 
-sns.displot(x=value, y=source)
+sns.displot(x=value, y= source)
 plt.savefig('images/seaborn-displot.png')
 plt.savefig('images/seaborn-displot.svg')
 plt.savefig('images/seaborn-displot.pdf')

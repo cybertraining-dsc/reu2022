@@ -409,9 +409,6 @@ relational, distributional, categorical, regression, and matrix
 plots.
 
 We have created examples to demonstrate the abilities of Seaborn. 
-The data that is used for these examples comes from the makeup 
-of a user's storage on their phone. 
-
 
 ### Installation
 
@@ -434,10 +431,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-To showcase a few methods in Seaborn, two unique sets of data will be 
-created. The first set of data represents how a user's phone storage is
-allocated and the second set represents how a user has used the photos
-application over the past 5 months. 
+Two unique sets of data will be created. The first set of data 
+represents how a user's phone storage is allocated and the second
+set represents how a user has used the photos application over 
+the past 5 months. 
 
 ```python
 # the data represents how storage is allocated on a user's phone
@@ -461,8 +458,7 @@ variables in a visual format. It is a broad term for data
 representation. Examples of relational plots in Seaborn are 
 `relplot` `lineplot` and `scatterplot`. 
 
-It is simple to create a relational plot. A hued line plot can be created
-easily with Seaborn. 
+It is simple to create a relational plot with Seaborn: 
 
 ```python
 sns.relplot( x=months , y=photos)
@@ -470,10 +466,13 @@ plt.xlabel("Month of the year")
 plt.ylabel("Amount of photos taken")
 plt.show()
 ```
-Which produces:
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
+
+The output of this program is showcased in Figure *lineplot*
 
 ![lineplot](examples/images/seaborn-lineplot.svg)
 
+Figure *lineplot*: Lineplot created from user phone photo data. 
 
 ### Distribution Plots
 
@@ -485,14 +484,16 @@ a singular variable. The distributional plots in Seaborn are `displot` `histplot
 `kdeplot` `ecdfplot` and `rugplot`.
 
 ```python
-sns.displot(x=)
+sns.displot(x=source, y=value)
 plt.show()
 ```
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-Which produces:
+The output of this program is showcased in Figure *displot*
 
 ![displot](examples/images/seaborn-displot.svg)
 
+Figure *displot*: Displot created from user phone storage data. 
 
 
 ### Categorical Plots
@@ -505,18 +506,20 @@ the example produced in the Matplotlib section. The categorical plots are
 `pointplot` `barplot` and `countplot`.
 
 Categorical plots are relatively simple to implement. 
-It is necessary to include the `kind` parameter as it 
-specifies the type of categorical plot that will be created.
+If using the `catplot` method, it is necessary to include the
+`kind` parameter. 
 
 ```python
-sns.catplot(x="displacement", data=data, kind="count")
+sns.barplot(x=source, y=value)
 plt.show()
 ```
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-Which produces:
+The output from the program is showcased in Figure *catplot*
 
 ![catplot](examples/images/seaborn-catplot.svg)
 
+Figure *catplot*: Created from user phone storage data 
 
 ### Regression Plots
 
@@ -529,13 +532,16 @@ of data. Their regression plots are `lmplot` `regplot` and `residplot`.
 Regression plots are simple to implement:
 
 ```python
-sns.regplot(x=independent_1, y=dependent_1)
+sns.regplot(x=months, y=photos)
 plt.show()
 ```
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-Which produces:
+The output of this program is showcased in Figure *regplot*
 
 ![regplot](examples/images/seaborn-regplot.svg)
+
+Figure *regplot*: Created from user phone photo data. 
 
 Each of these plots can be manipulated to the users 
 needs via the API that is listed in the sources section. 
@@ -550,6 +556,9 @@ To save a figure:
 ```python
 plt.savefig('figure_path/figure_name')
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
+
 
 ## Sources
 
