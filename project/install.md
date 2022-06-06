@@ -137,7 +137,6 @@ echo "source ~/ENV3/bin/activate" >> .zshrc
 echo "cd cm" >> .zshrc
 echo "source ~/ENV3/bin/activate" >> .zprofile
 echo "cd cm" >> .zprofile
-echo "source ~/ENV3/Scripts/activate" >> .zprofile
 ```
 
 
