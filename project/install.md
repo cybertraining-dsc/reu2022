@@ -111,7 +111,7 @@ even python could be installed with it however we have not tested, if it adds py
 
 3. Copy this: ``` Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))``` and then go back to PowerShell, paste it in, and press Enter.
 
-5. Wait for the installation to complete; once you see ```bash PS C:\Windows\system32> ``` with a blinking cursor again, and lines have stopped appearing, then the Chocolatey installation has finished. Type ```bash choco ```and press Enter and you should see Chocolatey in green text. Congratulations! Now you can install many programs by launching PowerShell as Administrator. Let's install Visual Studio Code.
+5. Wait for the installation to complete; once you see ``` PS C:\Windows\system32> ``` with a blinking cursor again, and lines have stopped appearing, then the Chocolatey installation has finished. Type ``` choco ```and press Enter and you should see Chocolatey in green text. Congratulations! Now you can install many programs by launching PowerShell as Administrator. Let's install Visual Studio Code.
 
 6. Type ``` choco install pycharm ``` and press Enter. When it asks if you want to run the script, type ```a``` and press Enter. You can watch the install process, and once complete, Visual Studio Code will be ready for you to use. You can install many programs this way, and the total list of programs can be found here: <https://community.chocolatey.org/packages/>
 
