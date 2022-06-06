@@ -3,7 +3,7 @@
 TODO: Abdul
 
 
-Improve the instalation instructions for python in the book.
+Improve the installation instructions for python in the book.
 
 ## Windows
 
@@ -35,7 +35,6 @@ A video tutorial on how to install Git and Git Bash on Windows 10 is located at 
 
 A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
-A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
 
 ### python 3.10 install
 * Install python from <https://python.org>
@@ -45,6 +44,9 @@ A video tutorial on how to install Professional PyCharm is located at <https://y
 * Click ``` Add python 3.10 to path ```
 
 * Click ```Install now ```
+
+A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
+
 Document the options, e.g. switch on path, icon on desktop, allow path longer then 256 chars
 
 Start gitbash
