@@ -30,7 +30,7 @@ source ~/ENV3/Scripts/activate
 cd
 mkdir cm
 cd cm
-pip install pip -Ucms
+pip install pip -U
 pip install cloudmesh-installer 
 cloudmesh-installer get cmd5 
 cms help
