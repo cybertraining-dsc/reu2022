@@ -107,15 +107,13 @@ even python could be installed with it however we have not tested, if it adds py
 
 1. Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
 
-2.Copy this:```bash Set-ExecutionPolicy AllSigned``` and then go to PowerShell (the blue window) and paste it in. Press Enter. Then type ```bash y ``` and press Enter.
+2. Copy this:```Set-ExecutionPolicy AllSigned``` and then go to PowerShell (the blue window) and paste it in. Press Enter. Then type ``` y ``` and press Enter.
 
-3.Copy this: ```bash Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))``` and then go back to PowerShell, paste it in, and press Enter.
+3. Copy this: ``` Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))``` and then go back to PowerShell, paste it in, and press Enter.
 
-5.Wait for the installation to complete; once you see ```bash PS C:\Windows\system32> ``` with a blinking cursor again, and lines have stopped appearing, then the Chocolatey installation has finished. Type ```bash choco ```and press Enter and you should see Chocolatey in green text. Congratulations! Now you can install many programs by launching PowerShell as Administrator. Let's install Visual Studio Code.
+5. Wait for the installation to complete; once you see ```bash PS C:\Windows\system32> ``` with a blinking cursor again, and lines have stopped appearing, then the Chocolatey installation has finished. Type ```bash choco ```and press Enter and you should see Chocolatey in green text. Congratulations! Now you can install many programs by launching PowerShell as Administrator. Let's install Visual Studio Code.
 
-6. Type ```bash choco install pycharm ``` and press Enter. When it asks if you want to run the script, type ```basha``` and press Enter. You can watch the install process, and once complete, Visual Studio Code will be ready for you to use. You can install many programs this way, and the total list of programs can be found here: https://community.chocolatey.org/packages/
-
-7. You can even install multiple programs like this: choco install python pycharm git
+6. Type ``` choco install pycharm ``` and press Enter. When it asks if you want to run the script, type ```a``` and press Enter. You can watch the install process, and once complete, Visual Studio Code will be ready for you to use. You can install many programs this way, and the total list of programs can be found here: <https://community.chocolatey.org/packages/>
 
 
 
