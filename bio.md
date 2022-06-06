@@ -18,29 +18,26 @@ Alex is a first year student at the University of Virginia majoring in electrica
 
 ## Alison Lu
 
-Alison Lu has completed her second year at the University of Virginia pursuing a
-double major in CS and Chemistry with a minor in Japanese.
-She is currently participating in research.
+Alison Lu has completed her second year (Class of 2024) at the University of Virginia pursuing a
+double major in CS and Chemistry with a minor in Japanese. She is conducting research with the
+physics department studying quantum computing and photon resolution using machine learning. In 
+addition, she works with UVA's Repair Lab to study gentrification in Norfolk, VA. \
+She is currently participating in the Biocomplexity Institute's C4GC REU program. Her interests
+include computer architecture, machine learning, and quantum computing alongside quantum mechanics.
 
 ## Jackson Miskill
 
 Jackson Miskill has completed his second year at the University
 of Virginia where he is studying Computer Science and Cognitive
 Science. He will receive a Bachelor of Arts degree from UVa in
-Spring of 2024. 
+Spring of 2024. Jackson has studied python and java in his courses,
+delving into concepts from basic syntax to data structures and algorithms. 
 
-Jackson has worked in a variety of different environments:
-restaurant, coffee shop, environmental science organization,
-and nonprofit. He is currently working in research at the 
-UVA Biocomplexity Institute where he is planning to learn as much
-as possible about programming, data science, and academic research.
-
-
-At UVA, Jackson is active in organizations that he is passionate
-about. He volunteers for the National Alliance on Mental 
-Illness in the outreach committee, served as recruitment chair
-for Phi Delta Theta and treasurer of Phi Alpha Delta, and 
-volunteers with Madison House in the Casa Alma organization. 
+Jackson is currently working at the UVa Biocomplexity Institute 
+under Dr. Gregor von Laszewski as a part of the Computing for 
+Global Challenges program. He is studying the intersection
+between python and cloud computing. In the future, Jackson plans
+to continue research. 
 
 ## Jacques Fleischer
 
