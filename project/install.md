@@ -112,7 +112,39 @@ echo "source ~/ENV3/bin/activate" >> .zshrc
 echo "cd cm" >> .zshrc
 echo "source ~/ENV3/bin/activate" >> .zprofile
 echo "cd cm" >> .zprofile
+<<<<<<< HEAD
+=======
+echo "source ~/ENV3/Scripts/activate" >> .zprofile
 ```
+
+
+## Choco install 
+
+There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
+```bash
+choco install make
+choco install emacs
+choco install pycharm
+choco install firefox
+choco install vscode
+choco install zoom
+```
+
+even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
+
+## Choco install pycharm
+
+1. Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
+
+2. Copy this:```Set-ExecutionPolicy AllSigned``` and then go to PowerShell (the blue window) and paste it in. Press Enter. Then type ``` y ``` and press Enter.
+
+3. Copy this: ``` Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))``` and then go back to PowerShell, paste it in, and press Enter.
+
+5. Wait for the installation to complete; once you see ``` PS C:\Windows\system32> ``` with a blinking cursor again, and lines have stopped appearing, then the Chocolatey installation has finished. Type ``` choco ```and press Enter and you should see Chocolatey in green text. Congratulations! Now you can install many programs by launching PowerShell as Administrator. Let's install Visual Studio Code.
+
+6. Type ``` choco install pycharm ``` and press Enter. When it asks if you want to run the script, type ```a``` and press Enter. You can watch the install process, and once complete, Visual Studio Code will be ready for you to use. You can install many programs this way, and the total list of programs can be found here: <https://community.chocolatey.org/packages/>
+
+
 
 ### Uninstall
 
