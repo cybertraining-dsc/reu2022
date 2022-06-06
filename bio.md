@@ -14,7 +14,17 @@ Paul Kiattikhunphan is a second year at the University of Virginia majoring in c
 
 ## Alex Beck
 
-Alex is a first year student at the University of Virginia majoring in electrical engineering.
+Alex Beck has completed his first year at the University of Virginia where he is 
+majoring in electrical engineering. He is set to receive his Bachelor of Science degree
+in the Spring of 2025.
+
+Alex is currently working in research this summer at the UVA Biocomplexity Institute 
+where is planning to gain experience in programming and data science. Prior to that, 
+he has experience in sales from working in retail.
+
+At UVA, Alex is involved in a few extracurricular organizations. He is currently active
+in the Virginia Eta Chapter of Sigma Phi Epsilon, the UVA Climbing Team, and the 
+UVA Chapter of the QuestBridge Scholars Network.
 
 ## Alison Lu
 
