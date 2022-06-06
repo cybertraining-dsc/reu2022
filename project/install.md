@@ -169,7 +169,7 @@ Installing ```brew``` is simple.
 * First, make sure the computer that is downloading Homebrew is 
 up-to-date with the latest software for its OS. 
 
-  * Second, ensure that ```xcode``` has been installed. ```xcode```
+* Second, ensure that ```xcode``` has been installed. ```xcode```
 can be installed from the Apple App Store.
 
 * Third, in the terminal, write out: 
