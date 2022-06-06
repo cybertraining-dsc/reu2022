@@ -173,28 +173,59 @@ even python could be installed with it however we have not tested, if it adds py
 
 1. Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
 
-2. Copy this:```Set-ExecutionPolicy AllSigned``` and then go to PowerShell (the blue window) and paste it in. Press Enter. Then type ``` y ``` and press Enter.
+2. In PowerShell execute the following command and press `Enter`:
+   
+   ```
+   PS C:> Set-ExecutionPolicy AllSigned
+   ``` 
+   
+   Then type `y` and press `Enter`.
 
-3. Copy this: ``` Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))``` and then go back to PowerShell, paste it in, and press Enter.
+3. Next type in the command and Press `Enter` (copy and paste to not make a mistake)
+   
+   ```
+   PS C:> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   ```
 
-5. Wait for the installation to complete; once you see ``` PS C:\Windows\system32> ``` with a blinking cursor again, and lines have stopped appearing, then the Chocolatey installation has finished. Type ``` choco ```and press Enter and you should see Chocolatey in green text. Congratulations! Now you can install many programs by launching PowerShell as Administrator. Let's install pycharm.
+4. Wait for the installation to complete; once you see 
+   
+  ```
+  PS C:\Windows\system32> 
+  ``` 
+  
+   with a blinking cursor again, and lines have stopped appearing, 
+   then the Chocolatey installation has finished. Type ``` choco ```and press 
+   `Enter` and you should see Chocolatey in green text. 
+   Now you can install many programs by launching PowerShell as Administrator.
 
-6. Type ``` choco install pycharm ``` and press Enter. When it asks if you want to run the script, type ```a``` and press Enter. You can watch the install process, and once complete, Visual Studio Code will be ready for you to use. You can install many programs this way, and the total list of programs can be found here: <https://community.chocolatey.org/packages/>
+## Installing Pycharm
+
+PyCharm can be installed with choco while typing 
+
+```
+choco install pycharm
+``` 
+
+and press Enter.  When it asks if you want to run the script, type `a` 
+and press Enter. You can watch the install process, and once complete, 
+Visual Studio Code will be ready for you to use. You can install many programs 
+this way, and the total list of programs can be found here: 
+<https://community.chocolatey.org/packages/>
 
 ## Homebrew install 
 
-Homebrew (a.k.a. ```brew```) like ```choco``` is a package management software. Unlike
-```choco```, it is used by macOS devices rather than Windows devices.
-```brew``` is used to more easily download packages to an operating
+Homebrew (`brew`) like `choco` is a package management software. Unlike
+choco`, it is used by macOS devices rather than Windows devices.
+`brew` is used to more easily download packages to an operating
 system; simply put, it eliminates the need for the user to search for
 and download the desired package. 
 
-Installing ```brew``` is simple. 
+Installing `brew` is simple. 
 
 * First, make sure the computer that is downloading Homebrew is 
 up-to-date with the latest software for its OS. 
 
-* Second, ensure that ```xcode``` has been installed. ```xcode```
+* Second, ensure that `xcode` has been installed. `xcode`
 can be installed from the Apple App Store.
 
 * Third, in the terminal, write out: 
@@ -203,7 +234,7 @@ can be installed from the Apple App Store.
 xcode-select --install
 ```
 
-This installs ```xcode``` command line tools. 
+This installs `xcode` command line tools. 
 
 * Fourth, run the following command in the terminal:
 
