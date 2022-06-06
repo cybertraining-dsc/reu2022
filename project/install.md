@@ -13,6 +13,8 @@ A video tutorial on how to install Git and Git Bash on Windows 10 is located at 
 
 A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
+A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
+
 TODO: document the options
 
 
