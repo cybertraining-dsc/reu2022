@@ -14,6 +14,27 @@ A video tutorial on how to install Git and Git Bash on Windows 10 is located at 
 
 A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
+* Open a web browser and search``` git```. Look for the result that is from ```git-scm.com``` and click Downloads.
+* Click ```Download``` for Windows. The download will commence. Please open the file once it is finished downloading.
+
+* The UAC Prompt will appear. Click ```Yes``` because Git is a safe program. It will show you Git’s license: a GNU General Public License. Click ```Next```.
+
+* Click``` Next``` to confirm that ```C:\Program Files\Git``` is the directory where you want Git to be installed.
+
+* Click ```Next``` unless you would like an icon for Git on the desktop (in which case you can check the box and then click ```Next```).
+
+* Click``` Next``` to accept the text editor,
+* Click ```Next``` again to Let Git decide the default branch name
+* Click ```Next``` again to run Git from the command line and 3rd party software,
+* Click ```Next``` again to use the OpenSSL library
+* Click ```Next``` again to checkout Windows-style,
+* Click ```Next``` again to use MinTTY,
+* Click ```Next``` again to use the default git pull,
+* Click ```Next``` again to use the Git Credential Manager Core,
+* Click ```Next``` again to enable file system caching, and then
+* Click ```Install``` because we do not need experimental features.
+
+
 A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
 
 TODO: document the options
