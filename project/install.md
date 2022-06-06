@@ -47,6 +47,8 @@ A written tutorial on how to install Git and Git Bash on Windows 10 is located a
 
 A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
 
+A video on how to configure PyCharm with cloudmesh is located at <https://youtu.be/eb1IQBx0D50>
+
 Document the options, e.g. switch on path, icon on desktop, allow path longer then 256 chars
 
 Start gitbash
