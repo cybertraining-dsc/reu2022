@@ -1,7 +1,5 @@
 # Python Graphics
 
-TODO: Remove contractions (I, you, we, etc.)
-TODO: Grammarly for sections
 
 In Python, data and equations can be visually represented using graphs
 and plots.  Whereby showcasing how to use different plotting libraries,
