@@ -16,11 +16,12 @@ Paul Kiattikhunphan is a second year at the University of Virginia majoring in c
 
 Alex Beck has completed his first year at the University of Virginia where he is 
 majoring in electrical engineering. He is set to receive his Bachelor of Science degree
-in the Spring of 2025.
+in the Spring of 2025. He currently maintains a 3.9 GPA. 
 
-Alex is currently working in research this summer at the UVA Biocomplexity Institute 
-where is planning to gain experience in programming and data science. Prior to that, 
-he has experience in sales from working in retail.
+Alex is currently working in research this summer at the UVA Biocomplexity Institute's
+Computing for Global Challenges program under Dr. Gregor Von Laszewski and Dr. Geoffrey
+Fox where he is planning to gain experience in programming and data science. Prior to 
+that, he has previous experience in sales from working in retail. 
 
 At UVA, Alex is involved in a few extracurricular organizations. He is currently active
 in the Virginia Eta Chapter of Sigma Phi Epsilon, the UVA Climbing Team, and the 
