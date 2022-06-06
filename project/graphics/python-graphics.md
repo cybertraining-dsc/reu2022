@@ -67,16 +67,11 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 
 The output of this program is showcased in Figure *barchart*.
 
-
 ![barchart](examples/images/matplotlib-barchart.svg)
 
 Figure *barchart*: Barchart created from data from Spotify
 
-The bar chart is a graph that visualizes data by displaying the
-quantity of several variables through different sized
-rectangles. Matplotlib essentially creates the bar chart object as a
-figure and then displays that figure on the computer. The command
-plt.barchart takes in a multitude of parameters.
+
 
 ### Line Chart 
 
@@ -116,31 +111,6 @@ The output of this program is showcased in Figure *linechart*.
 
 Figure *linechart*: Linechart created from random variables
 
-The line chart using the matplotlib library allows for multiple data
-sets to be contrasted against each other in the same graph. The line
-chart is positioned based on the np.linspace which takes in two total
-parameters that determine the starting point and the endpoint and an
-optional parameter that defines the total generated sample between the
-start/end points. With this, the variables and data sets can be
-plotted and modified to shape the steepness of the curve and its
-growth rate–exponential, polynomial, logarithmic, s-curved, etc.
-
-```python
-x = np.linspace(start,end,samples between start-finish)
-plt.plot(x, y)
-```
-
-Instead of only plotting a linear line, there is a choice to
-include multiple points of `x-values` that relate to its
-corresponding `y-values`. As mentioned, functions can be 
-incorporated to adjust the line's properties either by 
-addition, subtraction, division, or multiplication. Optional 
-parameters for better visualization in a line chart include
-the modification of the line style, and can be adjusted based 
-on the viewer's preference–dotted line, dashed, dashed with
-dots or none.
-
-
 
 ### Pie Chart
 
@@ -171,34 +141,6 @@ The output of this program is showcased in Figure *piechart*.
 ![piechart](examples/images/matplotlib-piechart.svg)
 
 Figure *piechart*: Barchart created from data from Spotify
-
-The pie chart is a graph that visually displays multiple 
-quantities of data as a proportion to the total amount, 
-represented as the whole circle, with each quantity shown as a
-proportional slice of it. Matplotlib can display 
-data through a pie chart as a figure after data is inputted. 
-The command `plt.pie` takes in many parameters. Here are some of 
-the parameters used in `plt.pie`, from matplotlib API online, 
-not all of them are shown here.
-
-```python
-plt.pie(x, labels, colors, normalize, startangle, radius, center)
-```
-
-Here, the first parameter `x` is the parameter that consists of
-the data being plotted, which should be in the form of a list or 
-dictionary as it is multiple quantities of data. Each slice of 
-the pie can be labeled. To do so, labels must be in the form of 
-a list of strings in the same corresponding order as the data. 
-The sequence of colors of the slices can be set using the command
-`plt.get_cmap("Colors")`. There is also the choice of making 
-the pie chart a full pie or not using normalize. Setting it to
-True, which is the default, make it a full pie, False makes 
-it not a full pie. The angle of the start of the pie, set 
-counterclockwise from the `x-axis` can be set using `startangle`.
-The radius of the pie can be set using `radius` and setting it 
-to a float. The coordinates of the center of the chart can be 
-set in the form `(float, float)`. 
 
 ### Contour Plot
 
