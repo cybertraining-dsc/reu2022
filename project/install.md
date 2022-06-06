@@ -20,7 +20,7 @@ TODO: document the options
 
 Install python from <https://python.org>
 
-Document the options, e.g. switch on path, icon on deskto, allow path longer then 256 chars
+Document the options, e.g. switch on path, icon on desktop, allow path longer then 256 chars
 
 Start gitbash
 
