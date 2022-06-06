@@ -278,8 +278,8 @@ p.circle(5,10, color = 'green')
 show(p)
 ```
 
-### Some useful parameters from figure
-TODO: change section header
+
+### Figure Parameters Example
 
 * <b>x_axis_label</b> and <b>y_axis_label</b>: labels for the
 x and y axis
@@ -322,27 +322,25 @@ The list of all possible marker types and the functions used
 to create them can be found here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 
-### Line Graphs
-
-TODO: Make line graphs/plots a consistent term
+### Line Plots
 
 The library provides a series of functions for creating various 
-types of line graphs ranging from a single line graph, step line 
-graph, stacked line graph, multiple line graph and so on.
-You can create a simple linear line graph connecting the 
+types of line plots ranging from a single line plot, step line 
+plot, stacked line plot, multiple line plot and so on.
+You can create a simple linear line plot connecting the 
 points (1,1), (2,2) and (3,3) with the following.
 
 ```python
-# The line_width parameter sets the width of the line graph.
+# The line_width parameter sets the width of the line plot.
 x = [1,2,3]
 y = [1,2,3]
 p.line(x, y, line_width = 1)
 ```
-You can find the source code for other types of line graphs here:
+You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 
 
-### Bar Graphs
+### Bar Chart
 
 Similarly, the `hbar()` and `vbar()` functions can be used to display
 horizontal and vertical bar graphs, respectively.
