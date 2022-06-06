@@ -355,6 +355,7 @@ show(p)
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py)
 
 ![figure](examples/images/bokeh-figure.png)
+
 Figure *Figure*: Figure created using Bokeh
 
 
@@ -438,6 +439,7 @@ show(p)
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py)
 
 ![Scatter Plot](examples/images/bokeh-scatter.png)
+
 Figure *Scatter Plot*: Scatter Plot created using Bokeh
 
 The list of all possible marker types and the functions used 
@@ -474,6 +476,7 @@ show(p)
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-line.py)
 
 ![Line Plot](examples/images/bokeh-line.png)
+
 Figure *Line Plot*: Line Plot created using Bokeh
 
 You can find the source code for other types of line plots here:
@@ -502,6 +505,7 @@ show(p)
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-bar.py)
 
 ![Bar Chart](examples/images/bokeh-bar.png)
+
 Figure *Bar Chart*: Bar Chart created using Bokeh
 
 ## Seaborn
