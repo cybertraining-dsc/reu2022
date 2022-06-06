@@ -18,6 +18,8 @@ print(df.head())
 
 # Creating the bar chart
 df.plot.bar(
+        x='Categories',
+        y='Count',
         align='center',
         color='orange',
         width=0.9,
