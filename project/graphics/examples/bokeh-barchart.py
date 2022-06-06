@@ -2,9 +2,10 @@ from bokeh.io import show, export_png, export_svg
 from bokeh.plotting import figure
 from selenium import webdriver
 import chromedriver_binary
+import os
 
 def save (p):
-    name = __file__.replace(".py", "")
+    name = os.path.basename(__file__).replace(".py", "")
     export_png(p, filename=f"images/{name}.png")
     export_svg(p, filename=f"images/{name}.svg")
     show(p)
