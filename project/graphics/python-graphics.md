@@ -369,17 +369,15 @@ to create them can be found here:
 ### Line Plots
 
 The library provides a series of functions for creating various 
-<<<<<<< HEAD
 types of line graphs ranging from a single line graph, step line 
 graph, stacked line graph, multiple line graph, and so on.
 You can create a simple linear line graph connecting the 
 points (1,1), (2,2), and (3,3) with the following.
-=======
+
 types of line plots ranging from a single line plot, step line 
 plot, stacked line plot, multiple line plot and so on.
 You can create a simple linear line plot connecting the 
 points (1,1), (2,2) and (3,3) with the following.
->>>>>>> 70a20db9f6f919480e38dda5163722329bd2dbb6
 
 ```python
 # The line_width parameter sets the width of the line plot.
@@ -418,20 +416,7 @@ Several types of plots can be made from Seaborn; they are
 relational, distributional, categorical, regression, and matrix
 plots.
 
-We have created examples to demonstrate the abilities of Seaborn. 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-These examples draw on a GitHub repository made by the creator of 
-Seaborn (listed in the sources section). The data ("mpg") used looks at 
-different variables in different cars such as displacement, horsepower, 
-miles per gallon, etc.
-=======
-The data that is used for these examples comes from the makeup 
-of a user's storage on their phone. 
->>>>>>> 70a20db9f6f919480e38dda5163722329bd2dbb6
-
->>>>>>> 0a787db46b53aa8ea8b3f71f3f09801e289c99a4
+We have created examples to demonstrate the abilities of Seaborn.
 
 ### Installation
 
