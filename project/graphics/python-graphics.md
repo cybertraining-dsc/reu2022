@@ -370,10 +370,8 @@ relational, distributional, categorical, regression, and matrix
 plots.
 
 We have created examples to demonstrate the abilities of Seaborn. 
-These examples draw on a GitHub repository made by the creator of 
-Seaborn (listed in the sources section). The data ("mpg") used looks at 
-different variables in different cars such as displacement, horsepower, 
-miles per gallon, etc. 
+The data that is used for these examples comes from the makeup 
+of a user's storage on their phone. 
 
 
 ### Installation
@@ -397,22 +395,24 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-It is easy to set up the data to be used because the `load_dataset` method
-draws directly from GitHub: 
+To showcase a few methods in Seaborn, two unique sets of data will be 
+created. The first set of data represents how a user's phone storage is
+allocated and the second set represents how a user has used the photos
+application over the past 5 months. 
 
 ```python
-data = sns.load_dataset("mpg")
-sns.set_theme()
+# the data represents how storage is allocated on a user's phone
 
-dependent_1 = data.horsepower
-dependent_2 = data.mpg
+source = ['Spotify', 'System Services', 'Uninstalled Apps', 'FaceTime', 'Instagram', 'Safari',
+          'Maps', 'Gmail', 'Photos', 'GroupMe', 'Podcasts']
 
-independent_1 = data.displacement
-independent_2 = data.weight
-independent_3 = data.acceleration
+value = [19.1, 10.9, 7.4, 4.3, 4.1, 3.9, 3.0, 1.8, 1.6, 1.3, 1.0]
+use = ['Yes', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'No']
 
-hue_1 = data.origin
-hue_2 = data.model_year
+# creating a different set of data that reflects how many photos a user took in each month of 2022 up to June
+
+months = [1, 2, 3, 4, 5]
+photos = [91, 151, 138, 101, 49]
 ```
 
 ### Relational Plots
@@ -426,7 +426,9 @@ It is simple to create a relational plot. A hued line plot can be created
 easily with Seaborn. 
 
 ```python
-sns.lineplot( x=independent_1 , y=dependent_1, hue=hue_1)
+sns.relplot( x=months , y=photos)
+plt.xlabel("Month of the year")
+plt.ylabel("Amount of photos taken")
 plt.show()
 ```
 Which produces:
@@ -444,7 +446,7 @@ a singular variable. The distributional plots in Seaborn are `displot` `histplot
 `kdeplot` `ecdfplot` and `rugplot`.
 
 ```python
-sns.displot(x=independent_2, y=dependent_2, hue=hue_1)
+sns.displot(x=)
 plt.show()
 ```
 
