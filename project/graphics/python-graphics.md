@@ -324,7 +324,20 @@ through useful Bokeh commands and features.
 
 ### Installation
 
+To install Bokeh, please use the command:
+```bash
+$ pip install bokeh
+```
+
 ### Import Statements
+
+To plot figures, we import the `show` and `figure` functions
+from the Bokeh libraries.
+
+```python
+from bokeh.io import show
+from bokeh.plotting import figure
+```
 
 ### Bokeh Plotting Interface
 
@@ -348,6 +361,11 @@ p.circle(5,10, color = 'green')
 
 show(p)
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py)
+
+![figure](examples/images/bokeh-figure.png)
+Figure *Figure*: Figure created using Bokeh
 
 
 ### Figure Parameters Example
@@ -373,6 +391,37 @@ After importing the Bokeh plotting interface, it is possible to be
 able to create different types of plots utilizing the figure
 created with the figure function.
 
+#### Saving Figures as PNG and SVG
+
+In order to save figures as a PNG or a SVG, both Selenium and a web
+driver will need to be installed. We will use Chromium here for our
+web driver. To install both at once, use the command:
+
+```bash
+$ pip install selenium chromedriver-binary
+```
+
+When writing a program, Chromium must be added to the PATH through these import
+statements:
+
+```python
+from selenium import webdriver
+import chromedriver_binary
+```
+
+In addition, the `export_png()` and `export_svg()` functions must be imported,
+and can be used as follows:
+
+```python
+from bokeh.io import export_png, export_svg
+
+export_png(fig, filename="file-name.png")
+export_svg(fig, filename="file-name.svg")
+```
+
+Note that Chromium tends to be slow and this process may take
+some time depending on proessing power.
+
 ### Scatter Plot
 
 The Bokeh library provides various marker shapes for marking
@@ -382,12 +431,24 @@ how to create a scatter plot with two points at locations
 shapes. The size parameter controls the size of the marker.
 
 ```python
+from bokeh.io import show
+from bokeh.plotting import figure
+
+p = figure(title="Scatter Plot")
+
 # Circle
-p.circle([1,2], [3,4], size = 10)
+p.circle([0,3], [4,5], size = 10)
 
 # Square
 p.square([1,2], [3,4], size = 10)
+
+show(p)
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py)
+
+![Scatter Plot](examples/images/bokeh-scatter.png)
+Figure *Scatter Plot*: Scatter Plot created using Bokeh
 
 The list of all possible marker types and the functions used 
 to create them can be found here:
@@ -407,11 +468,24 @@ You can create a simple linear line plot connecting the
 points (1,1), (2,2) and (3,3) with the following.
 
 ```python
+from bokeh.io import show
+from bokeh.plotting import figure
+
+p = figure(title="Line Plot")
+
 # The line_width parameter sets the width of the line plot.
 x = [1,2,3]
 y = [1,2,3]
 p.line(x, y, line_width = 1)
+
+show(p)
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-line.py)
+
+![Line Plot](examples/images/bokeh-line.png)
+Figure *Line Plot*: Line Plot created using Bokeh
+
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 
@@ -422,11 +496,23 @@ Similarly, the `hbar()` and `vbar()` functions can be used to display
 horizontal and vertical bar graphs, respectively.
 
 ```python
-# The line_color parameter sets the color of the bar graph.
+from bokeh.io import show
+from bokeh.plotting import figure
+
+p = figure(title="Bar Chart")
+
+# The line_width parameter sets the width of the line plot.
 x = [1,2,3]
 y = [1,2,3]
-p.hbar(x, y, line_color = 'black')
+p.vbar(x, top = y, line_color = 'black')
+
+show(p)
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-bar.py)
+
+![Bar Chart](examples/images/bokeh-bar.png)
+Figure *Bar Chart*: Bar Chart created using Bokeh
 
 ## Seaborn
 
