@@ -9,6 +9,10 @@ Improve the instalation instructions for python in the book.
 
 Install gitbash from <https://git-scm.com/downloads>
 
+A video tutorial on how to install Git and Git Bash on Windows 10 is located at <https://youtu.be/HCotEx_xCfA>
+
+A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
+
 TODO: document the options
 
 
