@@ -125,25 +125,25 @@ cd cm
 We assume you use zsh which is the default on macOS
 
 ```bash
-cd
-python3.10 -m venv ~/ENV3
-source ~/ENV/bin/activate
-mkdir cm
-cd cm
-pip install cloudmesh-installer 
-cloudmesh-installer get cmd5 
-cms help
-echo "source ~/ENV3/bin/activate" >> .zshrc
-echo "cd cm" >> .zshrc
-echo "source ~/ENV3/bin/activate" >> .zprofile
-echo "cd cm" >> .zprofile
+$ cd
+$ python3.10 -m venv ~/ENV3
+$ source ~/ENV/bin/activate
+# mkdir cm
+$ cd cm
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+$ echo "source ~/ENV3/bin/activate" >> .zshrc
+$ echo "cd cm" >> .zshrc
+$ echo "source ~/ENV3/bin/activate" >> .zprofile
+$ echo "cd cm" >> .zprofile
 ```
 
 
 ### Uninstall
 
 ```bash
-rm -f ~/ENV3
+$ rm -f ~/ENV3
 ```
 
 Edit the .zshrc and .zprofile file and delete the lines
@@ -157,13 +157,14 @@ cd cm
 ## Choco install 
 
 There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
+
 ```bash
-choco install make
-choco install emacs
-choco install pycharm
-choco install firefox
-choco install vscode
-choco install zoom
+$ choco install make
+$ choco install emacs
+$ choco install pycharm
+$ choco install firefox
+$ choco install vscode
+$ choco install zoom
 ```
 
 even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
@@ -231,17 +232,17 @@ Installing `brew` is simple.
 
 * Third, in the terminal, write out: 
 
-```bash
-xcode-select --install
-```
+  ```bash
+  $ xcode-select --install
+  ```
 
-This installs `xcode` command line tools. 
+  This installs `xcode` command line tools. 
 
 * Fourth, run the following command in the terminal:
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+  ```bash
+  $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  ```
 
 * Fifth, enter the administrator password into the desired location. 
 
