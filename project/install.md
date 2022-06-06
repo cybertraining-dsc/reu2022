@@ -103,7 +103,7 @@ cms help
 touch .bashrc
 echo "source ~/ENV3/bin/activate" >> .bashrc
 echo "cd cm" >> .bashrc
-echo "source ~/ENV3/bin/activate" >> .zrofile
+echo "source ~/ENV3/bin/activate" >> .zprofile
 echo "cd cm" >> .zprofile
 ```
 
