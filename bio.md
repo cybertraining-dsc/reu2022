@@ -28,29 +28,26 @@ UVA Chapter of the QuestBridge Scholars Network.
 
 ## Alison Lu
 
-Alison Lu has completed her second year at the University of Virginia pursuing a
-double major in CS and Chemistry with a minor in Japanese.
-She is currently participating in research.
+Alison Lu has completed her second year (Class of 2024) at the University of Virginia pursuing a
+double major in CS and Chemistry with a minor in Japanese. She is conducting research with the
+physics department studying quantum computing and photon resolution using machine learning. In 
+addition, she works with UVA's Repair Lab to study gentrification in Norfolk, VA. \
+She is currently participating in the Biocomplexity Institute's C4GC REU program. Her interests
+include computer architecture, machine learning, and quantum computing alongside quantum mechanics.
 
 ## Jackson Miskill
 
 Jackson Miskill has completed his second year at the University
 of Virginia where he is studying Computer Science and Cognitive
 Science. He will receive a Bachelor of Arts degree from UVa in
-Spring of 2024. 
+Spring of 2024. Jackson has studied python and java in his courses,
+delving into concepts from basic syntax to data structures and algorithms. 
 
-Jackson has worked in a variety of different environments:
-restaurant, coffee shop, environmental science organization,
-and nonprofit. He is currently working in research at the 
-UVA Biocomplexity Institute where he is planning to learn as much
-as possible about programming, data science, and academic research.
-
-
-At UVA, Jackson is active in organizations that he is passionate
-about. He volunteers for the National Alliance on Mental 
-Illness in the outreach committee, served as recruitment chair
-for Phi Delta Theta and treasurer of Phi Alpha Delta, and 
-volunteers with Madison House in the Casa Alma organization. 
+Jackson is currently working at the UVa Biocomplexity Institute 
+under Dr. Gregor von Laszewski as a part of the Computing for 
+Global Challenges program. He is studying the intersection
+between python and cloud computing. In the future, Jackson plans
+to continue research. 
 
 ## Jacques Fleischer
 
@@ -91,7 +88,25 @@ performance computing solutions using Raspberry Pis.
 TBD
 
 ## Abdulbaqiy Diyaolu
-
+ 
 AbdulBaqiy Diyaolu is a Computer science and Mathematics Major from
-Mississippi Valley State University.
+Mississippi Valley State University. He will be receiving his bachelor's 
+degrees in both Computer science and Mathematics in the year 2025. 
+AbdulBaqiy is currently a presidential scholar at 
+Mississippi Valley State University and he maintains a 4.0 GPA.
+
+
+AbdulBaqiy currently works at Fedex Logistics at MVSU. He helps in
+data entry and data Analysis. He is hoping to polish his data analysis
+skills with this opportunity. In the summer of 2022, he joins the Bio 
+complexity research program at UVA where he will be able to use his skills
+in support of different researches, and also learn more research skills along
+the way.
+
+Abdulbaqiy participates in several extracurricular activities in MVSU he
+is a member of African Student Union(ASU), National Society of Black engineers
+(NSBE), and the google developer's club. He is also a Strada scholar at MVSU
+where he participates in several leadership development activities.
+
+
 
