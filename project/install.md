@@ -10,7 +10,8 @@ Improve the instalation instructions for python in the book.
 
 ### Git Bash install
 
-* Open a web browser and search``` git```. Look for the result that is from ```git-scm.com``` and click Downloads.
+* Install gitbash from <https://git-scm.com/downloads>
+ 
 * Click ```Download``` for Windows. The download will commence. Please open the file once it is finished downloading.
 
 * The UAC Prompt will appear. Click ```Yes``` because Git is a safe program. It will show you Git’s license: a GNU General Public License. Click ```Next```.
@@ -30,8 +31,6 @@ Improve the instalation instructions for python in the book.
 * Click ```Next``` again to enable file system caching, and then
 * Click ```Install``` because we do not need experimental features.
 
-Install gitbash from <https://git-scm.com/downloads>
-
 A video tutorial on how to install Git and Git Bash on Windows 10 is located at <https://youtu.be/HCotEx_xCfA>
 
 A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
@@ -41,11 +40,14 @@ A video tutorial on how to install Professional PyCharm is located at <https://y
 ### python 3.10 install
 * Install python from <https://python.org>
 
+* Click ```Download``` . The download will commence. Please open the file once it is finished downloading
+
+* Click ``` Add python 3.10 to path ```
+
+* Click ```Install now ```
 Document the options, e.g. switch on path, icon on desktop, allow path longer then 256 chars
 
 Start gitbash
-
-TODO fix as appropriate and document here
 
 ```bash
 python -m venv ~/ENV3
