@@ -86,8 +86,18 @@ echo "cd cm" >> .zshrc
 echo "source ~/ENV3/Scripts/activate" >> .zshrc
 echo "cd cm" >> .zprofile
 echo "source ~/ENV3/Scripts/activate" >> .zprofile
-
 ```
-
+## Choco install 
+There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
+```bash
+choco install make
+choco install emacs
+choco install pycharm
+choco install firefox
+choco install vscode
+choco install zoom
+...
+```
+even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
 
 
