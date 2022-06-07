@@ -87,6 +87,66 @@ $ source ~/ENV3/Scripts/activate
 $ cd cm
 ```
 
+## Choco install 
+
+There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
+
+```bash
+$ choco install make
+$ choco install emacs
+$ choco install pycharm
+$ choco install firefox
+$ choco install vscode
+$ choco install zoom
+```
+
+even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
+
+## Choco install pycharm
+
+* Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
+
+2. In PowerShell execute the following command:
+   
+   ```
+   PS C:\Windows\system32> Set-ExecutionPolicy AllSigned
+   ``` 
+   
+   Then type `y`.
+
+3. Next type in the command (copy and paste to not make a mistake)
+   
+   ```
+   PS C:\Windows\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   ```
+
+4. Wait for the installation to complete; once you see 
+   
+  ```
+  PS C:\Windows\system32> 
+  ``` 
+  
+   with a blinking cursor again, and lines have stopped appearing, 
+   then the Chocolatey installation has finished. Type `choco` 
+   and you should see Chocolatey in green text. 
+
+Now you can install many programs by launching PowerShell as Administrator or gitbash.
+
+A list of programs that you can install with `choco` can be found at
+
+* <https://community.chocolatey.org/packages/>
+
+## Installing Pycharm
+
+PyCharm can be installed in gitbash with choco while typing 
+
+```
+$ choco install pycharm -y
+``` 
+
+Once teh install completes PyCharm will be ready for you to use. You can install many programs 
+this way, and the 
+
 
 ## Linux 
 
@@ -158,65 +218,6 @@ $ python -V
 $ which python
 ```
 
-## Choco install 
-
-There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
-
-```bash
-$ choco install make
-$ choco install emacs
-$ choco install pycharm
-$ choco install firefox
-$ choco install vscode
-$ choco install zoom
-```
-
-even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
-
-## Choco install pycharm
-
-* Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
-
-2. In PowerShell execute the following command:
-   
-   ```
-   PS C:\Windows\system32> Set-ExecutionPolicy AllSigned
-   ``` 
-   
-   Then type `y`.
-
-3. Next type in the command (copy and paste to not make a mistake)
-   
-   ```
-   PS C:\Windows\system32> Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-   ```
-
-4. Wait for the installation to complete; once you see 
-   
-  ```
-  PS C:\Windows\system32> 
-  ``` 
-  
-   with a blinking cursor again, and lines have stopped appearing, 
-   then the Chocolatey installation has finished. Type `choco` 
-   and you should see Chocolatey in green text. 
-
-Now you can install many programs by launching PowerShell as Administrator or gitbash.
-
-A list of programs that you can install with `choco` can be found at
-
-* <https://community.chocolatey.org/packages/>
-
-## Installing Pycharm
-
-PyCharm can be installed in gitbash with choco while typing 
-
-```
-$ choco install pycharm -y
-``` 
-
-Once teh install completes PyCharm will be ready for you to use. You can install many programs 
-this way, and the 
 
 ## macOS
 
@@ -324,9 +325,6 @@ install packages directly to the operating system:
 $ brew install [package name]
 ```
 
-Most of this documentation was found at the following link:
-
-[Phoenix Nap](https://phoenixnap.com/kb/install-homebrew-on-mac)
 
 
 
