@@ -227,8 +227,6 @@ To show a legend, use the command:
 plt.legend()
 ```
 
-## Exporting
-
 ### Saving Chart as Files
 After a chart is created and displayed, it can be exported as a file outside the
 code using this command:
@@ -253,7 +251,6 @@ type:
 ```python
 plt.show()
 ```
-
 
 
 ## Bokeh
@@ -319,6 +316,109 @@ Figure *Figure*: Figure created using Bokeh
 * <b>width</b> and <b>height</b>: width and height of your graph in pixels
 * <b>background_fill_color</b>: the background of the figure (takes any CSS colors)
 
+### Bar Chart
+
+In Bokeh, the `hbar()` and `vbar()` functions can be used to display
+horizontal and vertical bar graphs, respectively.
+
+```python
+from bokeh.io import show, export_png, export_svg
+from bokeh.plotting import figure
+
+data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
+x = list(data.keys())
+y = list(data.values())
+
+p = figure(x_range = x, title="Bar Chart")
+
+p.vbar(x=x, top = y, line_color = 'black',color='orange', width = 0.9, line_width = 2)
+
+show(p)
+```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-bar.py)
+
+The output of the program is showcased in Figure *Bar Chart*.
+
+![Bar Chart](examples/images/bokeh-bar.png)
+
+Figure *Bar Chart*: Bar Chart created using Bokeh
+
+### Line Chart
+
+The library provides a series of functions for creating various 
+types of line graphs ranging from a single line chart, step line 
+chart, stacked line chart, multiple line chart, and so on.
+
+```python
+from bokeh.io import show, export_png, export_svg
+from bokeh.plotting import figure
+import random
+
+x = []
+for i in range(0, 100):
+    value = random.random() * 10000
+    x.append(value)
+
+# creating a list of 100 numbers in order from 0 to 100
+y = []
+for j in range(0, 100):
+    y.append(j)
+
+
+p = figure(title="Plot Test", x_axis_label = "x", y_axis_label = "y")
+p.line(x,y)
+
+show(p)
+```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-line.py)
+
+This output of this program is showcased in Figure *Line Chart*.
+
+![Line Chart](examples/images/bokeh-linechart.png)
+
+Figure *Line Chart*: Line Chart created using Bokeh from random variables
+
+You can find the source code for other types of line plots here:
+<http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+
+### Scatter Plot
+
+The Bokeh library provides various marker shapes for marking
+points on the scatter plot. The example below demonstrates
+how to create a scatter plot with two points at locations 
+(1,3) and (2,4) respectively with circular and square marker
+shapes. The size parameter controls the size of the marker.
+
+```python
+from bokeh.io import show
+from bokeh.plotting import figure
+
+p = figure(title="Scatter Plot")
+
+# Circle
+p.circle([0,3], [4,5], size = 10)
+
+# Square
+p.square([1,2], [3,4], size = 10)
+
+show(p)
+```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py)
+
+This output of this program is showcased in Figure *Scatter Plot*.
+
+![Scatter Plot](examples/images/bokeh-scatter.png)
+
+Figure *Scatter Plot*: Scatter Plot created using Bokeh
+
+The list of all possible marker types and the functions used 
+to create them can be found here:
+<http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+
+
 ### Saving Figures
 
 Bokeh also supports outputs to a static HTML file with a
@@ -364,103 +464,24 @@ export_svg(fig, filename="file-name.svg")
 Note that Chromium tends to be slow and this process may take
 some time depending on proessing power.
 
-### Scatter Plot
+#### Condensing Exporting into a Function
 
-The Bokeh library provides various marker shapes for marking
-points on the scatter plot. The example below demonstrates
-how to create a scatter plot with two points at locations 
-(1,3) and (2,4) respectively with circular and square marker
-shapes. The size parameter controls the size of the marker.
-
-```python
-from bokeh.io import show
-from bokeh.plotting import figure
-
-p = figure(title="Scatter Plot")
-
-# Circle
-p.circle([0,3], [4,5], size = 10)
-
-# Square
-p.square([1,2], [3,4], size = 10)
-
-show(p)
-```
-
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py)
-
-![Scatter Plot](examples/images/bokeh-scatter.png)
-
-Figure *Scatter Plot*: Scatter Plot created using Bokeh
-
-The list of all possible marker types and the functions used 
-to create them can be found here:
-<http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-
-### Line Plots
-
-The library provides a series of functions for creating various 
-types of line graphs ranging from a single line graph, step line 
-graph, stacked line graph, multiple line graph, and so on.
-
+To simplify the process, it is highly suggested to write a function `show(p)`
+to automatically save the images with the same name as the python function into
+the folder called `images`. To do this, you must `import os` and use
+`os.path.basename(__file__)` to get the base name of the file.
 
 ```python
-from bokeh.io import show, export_png, export_svg
-from bokeh.plotting import figure
-import random
+from selenium import webdriver
+import chromedriver_binary
+import os
 
-x = []
-for i in range(0, 100):
-    value = random.random() * 10000
-    x.append(value)
-
-# creating a list of 100 numbers in order from 0 to 100
-y = []
-for j in range(0, 100):
-    y.append(j)
-
-
-p = figure(title="Plot Test", x_axis_label = "x", y_axis_label = "y")
-p.line(x,y)
-
-show(p)
+def save (p):
+    name = os.path.basename(__file__).replace(".py", "")
+    export_png(p, filename=f"images/{name}.png")
+    export_svg(p, filename=f"images/{name}.svg")
+    show(p)
 ```
-
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-line.py)
-
-![Line Plot](examples/images/bokeh-linechart.png)
-
-Figure *Line Plot*: Line Plot created using Bokeh
-
-You can find the source code for other types of line plots here:
-<http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-
-
-### Bar Chart
-
-Similarly, the `hbar()` and `vbar()` functions can be used to display
-horizontal and vertical bar graphs, respectively.
-
-```python
-from bokeh.io import show, export_png, export_svg
-from bokeh.plotting import figure
-
-data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
-x = list(data.keys())
-y = list(data.values())
-
-p = figure(x_range = x, title="Bar Chart")
-
-p.vbar(x=x, top = y, line_color = 'black',color='orange', width = 0.9, line_width = 2)
-
-show(p)
-```
-
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-bar.py)
-
-![Bar Chart](examples/images/bokeh-bar.png)
-
-Figure *Bar Chart*: Bar Chart created using Bokeh
 
 ## Seaborn
 
