@@ -1,2 +1,2 @@
 import glob
-open('Updates/Patches/patch3.txt', 'w')
+open('Updates/version2+.txt', 'w')
