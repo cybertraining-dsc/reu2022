@@ -1,17 +1,15 @@
 from bokeh.io import show, export_png, export_svg
 from bokeh.plotting import figure
-from matplotlib import pyplot as plt
-
 import random
+from matplotlib import pyplot as plt
 import os
 
 
 def save(p):
     name = os.path.basename(__file__).replace(".py", "")
-    plt.savefig(f'images/{name}.png')
-    plt.savefig(f'images/{name}.pdf')
-    plt.savefig(f'images/{name}.svg')
-    show(p)
+    export_png(p, filename=f"images/{name}.png")
+    export_svg(p, filename=f"images/{name}.svg")
+    plt.show(p)
 
 
 x = []
