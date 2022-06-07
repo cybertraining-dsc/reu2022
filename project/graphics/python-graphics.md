@@ -71,8 +71,6 @@ The output of this program is showcased in Figure *barchart*.
 
 Figure *barchart*: Barchart created from data from Spotify
 
-
-
 ### Line Chart 
 
 The matplotlib library in python allows for comprehensive line plots
@@ -85,14 +83,11 @@ import matplotlib.pyplot as plt
 import random
 
 x = []
-for i in range(0, 100):
-    value = random.random() * 10000
-    x.append(value)
-
-# creating a list of 100 numbers in order from 0 to 100
 y = []
-for j in range(0, 100):
-    y.append(j)
+for i in range(0, 100):
+    x.append(i)
+    value = random.random() * 100
+    y.append(value)
 
 # creating the plot and labeling axes and title
 plt.plot(x, y)
@@ -273,6 +268,25 @@ type after such as `.pdf`, `.png`, `svg`, etc.
 The parameter `dpi` sets the DPI (Dots per Inch) of the image being saved. Specify 
 this number in the form of a float. For example, set `dpi=300`.
 
+Additionally, there is another way to save files that may be faster than calling a
+specific method for each file. The following code showcases this:
+
+```python
+import matplotlib.pyplot as plt
+import os
+from matplotlib import pyplot
+
+
+def save(p):
+    name = os.path.basename(__file__).replace(".py", "")
+    plt.savefig(f'/filepath/{name}.png')
+    plt.savefig(f'filepath/{name}.pdf')
+    plt.savefig(f'filepath/{name}.svg')
+    plt.show(p)
+```
+
+This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
+
 #### Display
 
 The very last command that should be written is `plt.show()`,
@@ -282,8 +296,6 @@ type:
 ```python
 plt.show()
 ```
-
-
 
 ## Bokeh
 
@@ -337,7 +349,7 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 
 ![figure](examples/images/bokeh-figure.png)
 
-Figure *Figure*: Figure created using Bokeh
+Figure *lineplot*: Figure created with Bokeh. 
 
 
 ### Figure Parameters Example
@@ -390,8 +402,21 @@ export_png(fig, filename="file-name.png")
 export_svg(fig, filename="file-name.svg")
 ```
 
-Note that Chromium tends to be slow and this process may take
-some time depending on proessing power.
+Similarly to matplotlib, Bokeh can utilize a function to save all created images. 
+
+```python
+from matplotlib import pyplot as plt
+from bokeh.io import export_png, export_svg
+import os
+
+def save(p):
+    name = os.path.basename(__file__).replace(".py", "")
+    export_png(p, filename=f"images/{name}.png")
+    export_svg(p, filename=f"images/{name}.svg")
+    plt.show(p)
+```
+
+This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py).
 
 ### Scatter Plot
 
@@ -420,11 +445,11 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 
 ![Scatter Plot](examples/images/bokeh-scatter.png)
 
-Figure *Scatter Plot*: Scatter Plot created using Bokeh
+Figure *Scatter Plot*: Scatter Plot created with user Spotify data.
 
 The list of all possible marker types and the functions used 
-to create them can be found here:
-<http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+to create them can be found [here](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html)
+
 
 ### Line Plots
 
@@ -439,16 +464,12 @@ from bokeh.plotting import figure
 import random
 
 x = []
-for i in range(0, 100):
-    value = random.random() * 10000
-    x.append(value)
-
-# creating a list of 100 numbers in order from 0 to 100
 y = []
-for j in range(0, 100):
-    y.append(j)
-
-
+for i in range(0, 100):
+    x.append(i)
+    value = random.random() * 100
+    y.append(value)
+    
 p = figure(title="Plot Test", x_axis_label = "x", y_axis_label = "y")
 p.line(x,y)
 
@@ -459,7 +480,7 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 
 ![Line Plot](examples/images/bokeh-linechart.png)
 
-Figure *Line Plot*: Line Plot created using Bokeh
+Figure *Line Plot*: Line Plot created with user Spotify data. 
 
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -489,7 +510,7 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 
 ![Bar Chart](examples/images/bokeh-bar.png)
 
-Figure *Bar Chart*: Bar Chart created using Bokeh
+Figure *Bar Chart*: Bar Chart created with user Spotify data. 
 
 ## Seaborn
 
@@ -523,30 +544,17 @@ $ pip install seaborn
 
 The user will need to supply these import statements at the top
 of their code in order for Seaborn to be imported. 
+Additionally, the data created for the examples represents
+a user's Liked songs from Spotify. 
 
 ```python
 import seaborn as sns
 import matplotlib.pyplot as plt
-```
 
-Two unique sets of data will be created. The first set of data 
-represents how a user's phone storage is allocated and the second
-set represents how a user has used the photos application over 
-the past 5 months. 
-
-```python
-# the data represents how storage is allocated on a user's phone
-
-source = ['Spotify', 'System Services', 'Uninstalled Apps', 'FaceTime', 'Instagram', 'Safari',
-          'Maps', 'Gmail', 'Photos', 'GroupMe', 'Podcasts']
-
-value = [19.1, 10.9, 7.4, 4.3, 4.1, 3.9, 3.0, 1.8, 1.6, 1.3, 1.0]
-use = ['Yes', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'No']
-
-# creating a different set of data that reflects how many photos a user took in each month of 2022 up to June
-
-months = [1, 2, 3, 4, 5]
-photos = [91, 151, 138, 101, 49]
+data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
+categories = list(data.keys())
+count = list(data.values())
+personal_rank = [3, 4, 2, 1, 5]
 ```
 
 ### Relational Plots
@@ -570,7 +578,7 @@ The output of this program is showcased in Figure *lineplot*
 
 ![lineplot](examples/images/seaborn-lineplot.svg)
 
-Figure *lineplot*: Lineplot created from user phone photo data. 
+Figure *lineplot*: Lineplot created from user Spotify data.
 
 ### Distribution Plots
 
@@ -592,7 +600,7 @@ The output of this program is showcased in Figure *displot*
 
 ![displot](examples/images/seaborn-displot.svg)
 
-Figure *displot*: Displot created from user phone storage data. 
+Figure *displot*: Displot created from user Spotify data. 
 
 
 ### Categorical Plots
@@ -618,7 +626,7 @@ The output from the program is showcased in Figure *catplot*
 
 ![catplot](examples/images/seaborn-catplot.svg)
 
-Figure *catplot*: Created from user phone storage data 
+Figure *catplot*: Created from user Spotify data. 
 
 ### Regression Plots
 
@@ -640,7 +648,7 @@ The output of this program is showcased in Figure *regplot*
 
 ![regplot](examples/images/seaborn-regplot.svg)
 
-Figure *regplot*: Created from user phone photo data. 
+Figure *regplot*: Created from user Spotify data. 
 
 Each of these plots can be manipulated to the users 
 needs via the API that is listed in the sources section. 
