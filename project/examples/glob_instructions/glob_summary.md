@@ -28,14 +28,14 @@ Updates/version2-1.txt
 Updates/version2-2.txt
 Updates/version2-a.txt
 Updates/version2-b.txt
-
 ```
 
 For this case and other cases, use the command `glob` to search for the files.
 In this case, an asterisk (*) can be used to search for any files in a given
 directory. 
 
-Shown here is an example of the `glob` command with the asterisk being used.
+Shown here is an [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/glob_instructions/glob_asterisk.py)
+of the `glob` command with the asterisk being used.
 
 ```python
 import glob
