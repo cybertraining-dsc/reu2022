@@ -1,9 +1,9 @@
 import pickle
-import pprint
 
-data = [{'a': 'A', 'b': 2, 'c': 3.0}]
-print('DATA:', end=' ')
-pprint.pprint(data)
+# Creating dictionary of data
+votes = [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
+print('Votes:', votes)
 
-data_string = pickle.dumps(data)
-print('PICKLE: {!r}'.format(data_string))
+# Pickling the data
+pickle_votes = pickle.dumps(votes)
+print('Pickle:', pickle_votes)
