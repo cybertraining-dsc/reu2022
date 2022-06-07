@@ -10,12 +10,17 @@ cms ramdisk --... --size=SIZE
 use humanize so we can us 1GB for size ...
 
 showcase 
-a) dynamic ramdisk no reboot needed, but if reboot, ramdisk needs to be set up new
+
+a) dynamic ramdisk no reboot needed, but if reboot, ramdisk needs to
+be set up new
+
 b) ramdisk integrated in fstab with reboot
+
 c) backu and load ramdisk
 
 
-On macOS a RAM disk with 512MB space can be created with the following command:
+On macOS a RAM disk with 512MB space can be created with the following
+command:
 
 ```
 n = 512 * 2048
