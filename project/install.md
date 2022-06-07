@@ -151,7 +151,8 @@ then reinstall it.
 An easy way to do all of this with a command is the following:
 
 ```bash
-$ pip install cloudmesh-installer
+$ cd ~/cm
+$ pip install cloudmesh-installer -U
 $ cloudmesh-installer new ~/ENV3 cmd5 --python=/usr/local/bin/python3.10
 $ source ~/ENV3/bin/activate
 $ python -V
