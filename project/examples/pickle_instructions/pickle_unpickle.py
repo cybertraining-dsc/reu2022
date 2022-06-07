@@ -1,15 +1,16 @@
 import pickle
-import pprint
 
-data1 = [{'a': 'A', 'b': 2, 'c': 3.0}]
-print('BEFORE: ', end=' ')
-pprint.pprint(data1)
+# Creating dictionary of data
+votes1 = [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
+print('Before:', votes1)
 
-data1_string = pickle.dumps(data1)
+# Encoding the data
+pickle_votes = pickle.dumps(votes1)
 
-data2 = pickle.loads(data1_string)
-print('AFTER : ', end=' ')
-pprint.pprint(data2)
+# Decoding the data
+votes2 = pickle.loads(pickle_votes)
+print('After:', votes2)
 
-print('SAME? :', (data1 is data2))
-print('EQUAL?:', (data1 == data2))
+# Checking authenticity
+print('Same:', (votes1 is votes2))
+print('Equal:', (votes1 == votes2))

@@ -9,17 +9,13 @@ def save():
     plt.savefig(f"images/{name}.pdf")
     plt.savefig(f"images/{name}.svg")
     plt.show()
-    
+
 
 data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
 categories = data.keys()
 count = data.values()
 
-df = pd.DataFrame(data=(categories, count))
-df = df.transpose()
-
-df.columns = ["Categories","Count"]
-df.set_index("Categories")
+df = pd.DataFrame({'Count':count, 'Categories':categories})
 
 # Creating the bar chart
 df.plot.bar(
