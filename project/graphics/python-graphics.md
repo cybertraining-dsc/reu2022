@@ -313,8 +313,7 @@ Figure *Figure*: Figure created using Bokeh
 
 ### Figure Parameters Example
 
-* <b>x_axis_label</b> and <b>y_axis_label</b>: labels for the
-x and y axis
+* <b>x_axis_label</b> and <b>y_axis_label</b>: labels for the x and y axis
 * <b>x_range</b> and <b>y_range</b>: specifications for the range of the x and y axis
 * <b>title</b>: text title for your graph
 * <b>width</b> and <b>height</b>: width and height of your graph in pixels
@@ -403,31 +402,33 @@ to create them can be found here:
 The library provides a series of functions for creating various 
 types of line graphs ranging from a single line graph, step line 
 graph, stacked line graph, multiple line graph, and so on.
-You can create a simple linear line graph connecting the 
-points (1,1), (2,2), and (3,3) with the following.
 
-types of line plots ranging from a single line plot, step line 
-plot, stacked line plot, multiple line plot and so on.
-You can create a simple linear line plot connecting the 
-points (1,1), (2,2) and (3,3) with the following.
 
 ```python
-from bokeh.io import show
+from bokeh.io import show, export_png, export_svg
 from bokeh.plotting import figure
+import random
 
-p = figure(title="Line Plot")
+x = []
+for i in range(0, 100):
+    value = random.random() * 10000
+    x.append(value)
 
-# The line_width parameter sets the width of the line plot.
-x = [1,2,3]
-y = [1,2,3]
-p.line(x, y, line_width = 1)
+# creating a list of 100 numbers in order from 0 to 100
+y = []
+for j in range(0, 100):
+    y.append(j)
+
+
+p = figure(title="Plot Test", x_axis_label = "x", y_axis_label = "y")
+p.line(x,y)
 
 show(p)
 ```
 
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-line.py)
 
-![Line Plot](examples/images/bokeh-line.png)
+![Line Plot](examples/images/bokeh-linechart.png)
 
 Figure *Line Plot*: Line Plot created using Bokeh
 
@@ -441,15 +442,16 @@ Similarly, the `hbar()` and `vbar()` functions can be used to display
 horizontal and vertical bar graphs, respectively.
 
 ```python
-from bokeh.io import show
+from bokeh.io import show, export_png, export_svg
 from bokeh.plotting import figure
 
-p = figure(title="Bar Chart")
+data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
+x = list(data.keys())
+y = list(data.values())
 
-# The line_width parameter sets the width of the line plot.
-x = [1,2,3]
-y = [1,2,3]
-p.vbar(x, top = y, line_color = 'black')
+p = figure(x_range = x, title="Bar Chart")
+
+p.vbar(x=x, top = y, line_color = 'black',color='orange', width = 0.9, line_width = 2)
 
 show(p)
 ```
