@@ -83,14 +83,12 @@ import pandas as pd
 import random
 
 x = []
-for i in range(0, 100):
-    value = random.random() * 10000
-    x.append(value)
-
-# creating a list of 100 numbers in order from 0 to 100
 y = []
-for j in range(0, 100):
-    y.append(j)
+for i in range(0, 100):
+    x.append(i)
+    value = random.random() * 100
+    y.append(value)
+
 
 df = pd.DataFrame({'x':x, 'y':y})
 
@@ -108,7 +106,7 @@ The output of this program is showcased in Figure *linechart*.
 
 ![linechart](examples/images/pandas-linechart.svg)
 
-Figure *barchart*: Barchart created from random number generation.
+Figure *linechart*: Barchart created from random number generation.
 
 
 ## Pie Chart
@@ -144,4 +142,29 @@ remove the legend by setting the parameter `legend=None` in `plot.pie()`.
 
 ## Exporting
 
-To export your graph as 
+Note that this is the same as the Matplotlib tutorial found [here]((https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py))
+on Github.
+To export your graph as an image file, you can use the Matplotlib function `savefig("fname.x")`. You can specify the
+file type by filling in `.x` with `.pdf`, `.png`, `svg`, etc.
+
+The parameter `dpi` sets the DPI (Dots per Inch) of the image being saved. Specify 
+this number in the form of a float. For example, set `dpi=300`.
+
+Additionally, there is another way to save files that may be faster than calling a
+specific method for each file. The following code showcases this:
+
+```python
+import matplotlib.pyplot as plt
+import os
+from matplotlib import pyplot
+
+
+def save(p):
+    name = os.path.basename(__file__).replace(".py", "")
+    plt.savefig(f'/filepath/{name}.png')
+    plt.savefig(f'filepath/{name}.pdf')
+    plt.savefig(f'filepath/{name}.svg')
+    plt.show(p)
+```
+
+This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
