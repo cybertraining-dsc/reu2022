@@ -1,12 +1,48 @@
-# importing both seaborn and matplotlib
-
 import seaborn as sns
 import matplotlib.pyplot as plt
-import random
 
 # creating unique data that can be used for the documentation
-# the data represents how storage is allocated on a user's phone
+# the data represents different a user Spotify Liked Songs break down
+data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
+categories = list(data.keys())
+count = list(data.values())
+personal_rank = [3, 4, 2, 1, 5]
 
+#  Relational Plot- line plot
+'''
+sns.relplot(x=categories, y=count)
+plt.xlabel("Month of the year")
+plt.ylabel("Amount of photos taken")
+plt.savefig('images/seaborn-lineplot.png')
+plt.savefig('images/seaborn-lineplot.svg')
+plt.savefig('images/seaborn-lineplot.pdf')
+plt.show()
+'''
+# Distribution Plot -
+'''
+sns.displot(x=categories, y=count)
+plt.savefig('images/seaborn-displot.png')
+plt.savefig('images/seaborn-displot.svg')
+plt.savefig('images/seaborn-displot.pdf')
+plt.show()
+'''
+# Categorical Plot
+'''
+sns.barplot(x=categories, y=count)
+plt.savefig('images/seaborn-catplot.png')
+plt.savefig('images/seaborn-catplot.svg')
+plt.savefig('images/seaborn-catplot.pdf')
+plt.show()'''
+
+# Regression Plot
+
+sns.regplot(x=personal_rank, y=count)
+plt.savefig('images/seaborn-regplot.png')
+plt.savefig('images/seaborn-regplot.svg')
+plt.savefig('images/seaborn-regplot.pdf')
+plt.show()
+
+'''
 source = ['Spotify', 'System Services', 'Uninstalled Apps', 'FaceTime', 'Instagram', 'Safari',
           'Maps', 'Gmail', 'Photos', 'GroupMe', 'Podcasts']
 
@@ -18,10 +54,7 @@ use = ['Yes', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'No']
 months = [1, 2, 3, 4, 5]
 photos = [91, 151, 138, 101, 49]
 
-'''
-# Load the miles per gallon dataset
-# The code below that is commented out is code that uses the load_dataset method in Seaborn
-# It loads in data that exists on the internet via GitHub- made by the creator of Seaborn. 
+# You can also use the seaborn built in data to practice creating the visualizations. 
 
 data = sns.load_dataset("mpg")
 sns.set_theme()
@@ -37,37 +70,3 @@ independent_3 = data.acceleration
 hue_1 = data.origin
 hue_2 = data.model_year
 '''
-
-#  Relational Plot- line plot
-
-sns.relplot(x=months, y=photos)
-plt.xlabel("Month of the year")
-plt.ylabel("Amount of photos taken")
-plt.savefig('images/seaborn-lineplot.png')
-plt.savefig('images/seaborn-lineplot.svg')
-plt.savefig('images/seaborn-lineplot.pdf')
-plt.show()
-
-# Distribution Plot -
-
-sns.displot(x=value, y= source)
-plt.savefig('images/seaborn-displot.png')
-plt.savefig('images/seaborn-displot.svg')
-plt.savefig('images/seaborn-displot.pdf')
-plt.show()
-
-# Categorical Plot
-
-sns.barplot(x=source, y=value)
-plt.savefig('images/seaborn-catplot.png')
-plt.savefig('images/seaborn-catplot.svg')
-plt.savefig('images/seaborn-catplot.pdf')
-plt.show()
-
-# Regression Plot
-
-sns.regplot(x=months, y=photos)
-plt.savefig('images/seaborn-regplot.png')
-plt.savefig('images/seaborn-regplot.svg')
-plt.savefig('images/seaborn-regplot.pdf')
-plt.show()

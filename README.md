@@ -49,13 +49,13 @@
 * 80 char: <https://intellij-support.jetbrains.com/hc/en-us/community/posts/206070859-How-do-I-enable-the-80-column-guideline-change>
 * background to white as i can not read white on black when in meetings with me I will not support anyone that has black background: <https://www.jetbrains.com/help/pycharm/user-interface-themes.html> use intelliJ Light. After the meeting you can set it to whatever.
 
-## Bibliography Management:
+## Bibliography Management
 
 * jabref: <https://www.jabref.org/>
 * bibtex: <https://en.wikipedia.org/wiki/BibTeX>
 * draft bibtex from urls: <https://addons.mozilla.org/en-US/firefox/addon/bibitnow/> (has to be modified once copied. Not everything will work.
 
-## GitHub repo:
+## GitHub repo
 
 * <https://github.com/cybertraining-dsc/reu2022>
 * Sandra, JP: <https://github.com/cloudmesh/cloudmesh-mpi>
