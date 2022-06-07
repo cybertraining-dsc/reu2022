@@ -162,11 +162,18 @@ $ which python
 
 We assume you use zsh which is the default on macOS
 
+### Creating a virtual environment
+
+Before any of the following, make sure to download the current version of python. At
+the time of this writing, it is python 3.10.5
+
+Second, execute the following commands in your terminal. Make sure to do this in order. 
+
 ```bash
 $ cd
 $ python3.10 -m venv ~/ENV3
 $ source ~/ENV/bin/activate
-# mkdir cm
+$ mkdir cm
 $ cd cm
 $ pip install cloudmesh-installer 
 $ cloudmesh-installer get cmd5 
@@ -177,6 +184,10 @@ $ echo "source ~/ENV3/bin/activate" >> .zprofile
 $ echo "cd cm" >> .zprofile
 ```
 
+In a short summary, this essentially creates the virtual environment, 
+creates another directory called `cm`, then installs `cloudmesh`. Following
+this, it sets the macOS startup commands `.zshrc` and `.zprofile` to 
+start up in the virtual environment `ENV3`. 
 
 ### Uninstall
 
