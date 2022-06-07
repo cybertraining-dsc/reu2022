@@ -194,9 +194,9 @@ come in the form of a list or dictionary or as an equation.
 The `levels` parameter determines the number of contour lines
 that can be drawn. 
 
-## Titles, Labels, and Legends 
+### Titles, Labels, and Legends 
 
-### Titles
+#### Titles
 
 Titles are necessary to let the reader know about your graph or 
 plot is exactly about. To give a title to your whole graph in 
@@ -206,7 +206,7 @@ matplotlib, simply type:
 plt.title("Title you want to set").
 ```
 
-### x-axis labels and y-axis labels
+#### x-axis labels and y-axis labels
 
 Within the matplotlib library are the functions `plt.xlabel()` and 
 `plt.ylabel()`. All these functions do is set a string to the two 
@@ -217,7 +217,7 @@ plt.xlabel("Label you want to set")
 plt.ylabel("Label you want to set")
 ```
 
-### Legend
+#### Legend
 
 Sometimes, a legend may be necessary to let the reader know which
 part of the graph/plot corresponds to each part of the data shown.
@@ -227,9 +227,18 @@ To show a legend, use the command:
 plt.legend()
 ```
 
-## Exporting
+### Rotating Ticks
+After making a graph in matplotlib, ticks will automatically be set horizontally.
+However, it's possible to rotate the ticks using `plt.xticks(rotation=degrees)` for
+the `x-axis` or `plt.yticks(rotation=degrees)` for the `y-axis`.
 
-### Saving Chart as Files
+This can be shown in this simple [example]
+
+
+
+### Exporting
+
+#### Saving Chart as Files
 After a chart is created and displayed, it can be exported as a file outside the
 code using this command:
 
@@ -244,7 +253,7 @@ type after such as `.pdf`, `.png`, `svg`, etc.
 The parameter `dpi` sets the DPI (Dots per Inch) of the image being saved. Specify 
 this number in the form of a float. For example, set `dpi=300`.
 
-### Display
+#### Display
 
 The very last command that should be written is `plt.show()`,
 as this command displays the graph that you made. To show, simply
