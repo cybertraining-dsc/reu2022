@@ -521,24 +521,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 
-Two unique sets of data will be created. The first set of data 
-represents how a user's phone storage is allocated and the second
-set represents how a user has used the photos application over 
-the past 5 months. 
+The data below is the same data as used in the matplotlib and 
+bokeh sections; it is the Spotify Liked songs organized by genre.
+
 
 ```python
-# the data represents how storage is allocated on a user's phone
-
-source = ['Spotify', 'System Services', 'Uninstalled Apps', 'FaceTime', 'Instagram', 'Safari',
-          'Maps', 'Gmail', 'Photos', 'GroupMe', 'Podcasts']
-
-value = [19.1, 10.9, 7.4, 4.3, 4.1, 3.9, 3.0, 1.8, 1.6, 1.3, 1.0]
-use = ['Yes', 'No', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', 'No']
-
-# creating a different set of data that reflects how many photos a user took in each month of 2022 up to June
-
-months = [1, 2, 3, 4, 5]
-photos = [91, 151, 138, 101, 49]
+data = {'Rock': 136, 'Rap': 112, 'Folk': 110, 'Indie': 90, 'Jazz': 25}
+categories = list(data.keys())
+count = list(data.values())
+personal_rank = [3, 4, 2, 1, 5]
 ```
 
 ### Relational Plots
