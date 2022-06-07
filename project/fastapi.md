@@ -178,35 +178,6 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
-The @app.get("/") tells FastAPI that the function right below is in charge of handling requests that go to:
-
-the path /
-using a get operation
-@decorator Info
-
-That @something syntax in Python is called a "decorator".
-
-You put it on top of a function. Like a pretty decorative hat (I guess that's where the term came from).
-
-A "decorator" takes the function below and does something with it.
-
-In our case, this decorator tells FastAPI that the function below corresponds to the path / with an operation get.
-
-It is the "path operation decorator".
-
-You can also use the other operations:
-
-@app.post()
-@app.put()
-@app.delete()
-And the more exotic ones:
-
-@app.options()
-@app.head()
-@app.patch()
-@app.trace()
-
-
 
 ### Step 4: define the path operation function
 
@@ -262,3 +233,4 @@ You can also return Pydantic models .
 There are many other objects and models that will be automatically converted to JSON (including ORMs, etc). Try using your favorite ones, it's highly probable that they are already supported.
 
 
+References: https://fastapi.tiangolo.com/tutorial/first-steps/
