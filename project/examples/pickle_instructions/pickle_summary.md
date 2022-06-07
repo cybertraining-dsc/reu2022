@@ -14,7 +14,8 @@ import pickle
 ## Encoding Data
 
 A data structure can be encoded into a string by using the command 
-`pickle.dumps(data)`. In this [example], a dictionary is being encoded. 
+`pickle.dumps(data)`. In this [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/pickle_instructions/pickle_string.py),
+a dictionary is being encoded. 
 
 ```python
 import pickle
@@ -36,7 +37,8 @@ Pickle: b'\x80\x04\x95$\x00\x00\x00\x00\x00\x00\x00]\x94}\x94(\x8c\x03Red\x94K\x
 
 ## Decoding Data
 
-The encoded data can then be decoded using the command `pickle.loads(data)`.
+The encoded data can then be decoded using the command `pickle.loads(data)`, as shown
+in this [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/pickle_instructions/pickle_unpickle.py).
 
 ```python
 import pickle
