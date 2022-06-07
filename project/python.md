@@ -30,8 +30,6 @@ Then, the data structures can be built as follows:
 
 ### FIFO Queue
 
-
-
 ### LIFO Queue
 
 ### Priority Queue

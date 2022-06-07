@@ -2,14 +2,11 @@ import matplotlib.pyplot as plt
 import random
 
 x = []
-for i in range(0, 100):
-    value = random.random() * 10000
-    x.append(value)
-
-# creating a list of 100 numbers in order from 0 to 100
 y = []
-for j in range(0, 100):
-    y.append(j)
+for i in range(0, 100):
+    x.append(i)
+    value = random.random() * 100
+    y.append(value)
 
 # creating the plot and labeling axes and title
 plt.plot(x, y)
