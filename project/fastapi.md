@@ -1,25 +1,20 @@
 # FastAPI 
+
 FastAPI ia a framework in python that allows developers to use restinterface to call function that implement application, it uses RestAPI to call the common building block of an application.
 
 ## FastAPI Install
+
 To install the FastAPI they are two steps one might need to install it fully with the `uvicorn` or install both the `FastAPI ` and the `uvicorn` by part
 
-#### Step 1
+```bash
+$ pip install "fastapi[all]"
+$ pip install "uvicorn[standard]"
+```
 
-`$ pip install "fastapi[all]" `
-
-#### Step 2
-
-`$ pip install fastapi:`
-
-`$ pip install "uvicorn[standard]" `
-
-## FastAPI UserGuide
-
-
-### Step 1: import FastAPI
+## FastAPI Example
 
 The simplest FastAPI file could look like this:
+
 ```
 from fastapi import FastAPI
 
@@ -34,6 +29,7 @@ Copy that to a file `main.py`
 
 Run the live server:
 ```
+
 $ uvicorn main:app --reload 
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
@@ -45,7 +41,9 @@ INFO:     Application startup complete.
 ```
 In the output, there's a line with something like:
 
-` INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit) `
+```
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
 
 That line shows the URL where your app is being served, in your local machine.
 
@@ -55,11 +53,13 @@ Open your browser at http://127.0.0.1:8000
 
 You will see the JSON response as:
 
-`{"message": "Hello World"}`
+```
+{"message": "Hello World"}
+```
 
 Interactive API docs
 
-* go to http://127.0.0.1:8000/docs.
+* Go to http://127.0.0.1:8000/docs.
 
 * Then go to http://127.0.0.1:8000/redoc.
 
@@ -75,9 +75,8 @@ Interactive API docs
 You can see it directly at: http://127.0.0.1:8000/openapi.json.
 
 It will show a JSON starting with something like:
-```
 
-
+```json
 {
     "openapi": "3.0.2",
     "info": {
@@ -96,7 +95,8 @@ It will show a JSON starting with something like:
 
 ```
 
-### Step 2: create a FastAPI "instance"
+### Step 2: create a FastAPI instance
+
 ```
 from fastapi import FastAPI
 
