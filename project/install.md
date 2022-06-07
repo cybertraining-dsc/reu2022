@@ -159,40 +159,6 @@ $ python -V
 $ which python
 ```
 
-## macOS
-
-We assume you use zsh which is the default on macOS
-
-```bash
-$ cd
-$ python3.10 -m venv ~/ENV3
-$ source ~/ENV/bin/activate
-# mkdir cm
-$ cd cm
-$ pip install cloudmesh-installer 
-$ cloudmesh-installer get cmd5 
-$ cms help
-$ echo "source ~/ENV3/bin/activate" >> .zshrc
-$ echo "cd cm" >> .zshrc
-$ echo "source ~/ENV3/bin/activate" >> .zprofile
-$ echo "cd cm" >> .zprofile
-```
-
-
-### Uninstall
-
-```bash
-$ rm -f ~/ENV3
-```
-
-Edit the .zshrc and .zprofile file and delete the lines
-
-```
-$ source ~/ENV3/bin/activate
-$ cd cm
-```
-
-
 ## Choco install 
 
 There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
@@ -253,7 +219,70 @@ $ choco install pycharm -y
 Once teh install completes PyCharm will be ready for you to use. You can install many programs 
 this way, and the 
 
-## Homebrew install 
+## macOS
+
+We assume you use zsh which is the default on macOS
+
+### Cloudmesh
+
+#### Install
+
+Before any of the following, make sure to download the current version of python. At
+the time of this writing, it is python 3.10.5
+
+Second, execute the following commands in your terminal. Make sure to do this in order. 
+
+```bash
+$ cd
+$ python3.10 -m venv ~/ENV3
+$ source ~/ENV/bin/activate
+$ mkdir cm
+$ cd cm
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+$ echo "source ~/ENV3/bin/activate" >> .zshrc
+$ echo "cd cm" >> .zshrc
+$ echo "source ~/ENV3/bin/activate" >> .zprofile
+$ echo "cd cm" >> .zprofile
+```
+
+In a short summary, this essentially creates the virtual environment, 
+creates another directory called `cm`, then installs `cloudmesh`. Following
+this, it sets the macOS startup commands `.zshrc` and `.zprofile` to 
+start up in the virtual environment `ENV3`. 
+
+#### Uninstall
+
+```bash
+$ rm -f ~/ENV3
+```
+
+### Updating Python
+
+Before starting this process, ensure that python is in the correct path. 
+This can be checked by following the scripting below:
+
+```bash
+$ which python # should print user/ENV3/bin/python
+
+$ python3.10 --version # should print the current version of python in the venv
+```
+Then, follow the directions below: 
+
+* First, download the latest version of [python](https://www.python.org/) 
+* Second, follow the download instructions from the python launcher that is created. 
+* Third, navigate into the virtual environment directory: `ENV3`
+* Fourth, execute the following command:
+
+  ```bash
+  $ python -m venv --upgrade ENV3
+  ```
+This will properly update the virtual environment python to the correct python version. 
+Run the `which python` and `python --version` commands once again to ensure that the 
+correct version has been installed. 
+
+### Homebrew install 
 
 Homebrew (`brew`) like `choco` is a package management software. Unlike
 choco`, it is used by macOS devices rather than Windows devices.

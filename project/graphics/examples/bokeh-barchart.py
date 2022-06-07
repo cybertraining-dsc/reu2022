@@ -16,10 +16,7 @@ y = list(data.values())
 
 p = figure(x_range = x, title="Bar Chart")
 
-p.vbar(x=x, top = y, line_color = 'black',color='orange',
-    width = 0.9,
-    line_width = 2
-       )
+p.vbar(x=x, top = y, line_color = 'black',color='orange', width = 0.9, line_width = 2)
 
 save(p)
 
