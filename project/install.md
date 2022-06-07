@@ -96,14 +96,14 @@ $ cd cm
 ```bash
 $ mkdir -p ~/tmp
 $ cd ~/tmp
-$  wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tar.xz
-$  tar xvf Python-3.10.5.tar.xz 
-$  cd Python-3.10.5/
-$  ./configure --enable-optimizations
-$  make -j $(nproc)
-$  sudo make altinstall
-$  pip install pip -U
-$  python3.10 -V
+$ wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tar.xz
+$ tar xvf Python-3.10.5.tar.xz 
+$ cd Python-3.10.5/
+$ ./configure --enable-optimizations
+$ make -j $(nproc)
+$ sudo make altinstall
+$ pip install pip -U
+$ python3.10 -V
 ```
 
 ### Setting up the a venv
