@@ -169,7 +169,11 @@ can install many programs this way, and the
 
 ## Linux 
 
+.
+
 ### Install Python 3.10.5
+
+The instalatiton form source can be done easily as shown next
 
 ```bash
 $ mkdir -p ~/tmp
