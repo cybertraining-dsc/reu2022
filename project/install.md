@@ -2,7 +2,6 @@
 
 TODO: Abdul
 
-
 Improve the installation instructions for python in the book.
 
 ## Windows
