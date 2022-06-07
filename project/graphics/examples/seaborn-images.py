@@ -37,6 +37,8 @@ plt.show()'''
 # Regression Plot
 
 sns.regplot(x=personal_rank, y=count)
+plt.xlabel("Personal Rank of Favorite Genre")
+plt.ylabel("Count")
 plt.savefig('images/seaborn-regplot.png')
 plt.savefig('images/seaborn-regplot.svg')
 plt.savefig('images/seaborn-regplot.pdf')

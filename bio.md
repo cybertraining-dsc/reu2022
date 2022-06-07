@@ -87,7 +87,21 @@ performance computing solutions using Raspberry Pis.
 
 ## Eric He
 
-TBD
+Junyang (Eric) He is a rising second year majoring in Computer Science
+at the University of Virginia. He will receive his B.S. in Computer 
+Science in 2025. He is currently a member of the Engineering Student
+Council and the Chinese Student and Scholars Society at UVA.
+
+In the summer of 2021, Eric worked as a Data Analyst intern at Nint (Shanghai)
+Co., Ltd, a company that provides market data analysis products for E-commerce
+His work included time series data cleaning and natural language processing.
+
+Eric is currently conducting research with Prof. Geoffrey C. Fox on a 
+Deep Learning model based on LSTM networks trained to predict hydrological 
+features like streamflow, precipitation, and temperature at different locations 
+in the US. He focused primarily on the possibilities of extending the model to 
+countries outside of the US such as Chile and UK. 
+
 
 ## Abdulbaqiy Diyaolu
  
