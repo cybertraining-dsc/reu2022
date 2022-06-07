@@ -478,7 +478,7 @@ show(p)
 
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-line.py)
 
-![Line Plot](examples/images/bokeh-linechart.svg)
+![Line Plot](examples/images/bokeh-linechart.png)
 
 Figure *Line Plot*: Line Plot created with user Spotify data. 
 
