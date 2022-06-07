@@ -10,13 +10,18 @@ Improve the installation instructions for python in the book.
 
 * Install gitbash from <https://git-scm.com/downloads>
  
-* Click `Download` for Windows. The download will commence. Please open the file once it is finished downloading.
+* Click `Download` for Windows. The download will commence. Please
+  open the file once it is finished downloading.
 
-* The UAC Prompt will appear. Click `Yes` because Git is a safe program. It will show you Git’s license: a GNU General Public License. Click `Next`.
+* The UAC Prompt will appear. Click `Yes` because Git is a safe
+  program. It will show you Git’s license: a GNU General Public
+  License. Click `Next`.
 
-* Click `Next` to confirm that `C:\Program Files\Git` is the directory where you want Git to be installed.
+* Click `Next` to confirm that `C:\Program Files\Git` is the directory
+  where you want Git to be installed.
 
-* Click `Next` unless you would like an icon for Git on the desktop (in which case you can check the box and then click `Next`).
+* Click `Next` unless you would like an icon for Git on the desktop
+  (in which case you can check the box and then click `Next`).
 
 * Click `Next` to accept the text editor,
 * Click `Next` again to Let Git decide the default branch name
@@ -29,26 +34,33 @@ Improve the installation instructions for python in the book.
 * Click `Next` again to enable file system caching, and then
 * Click `Install` because we do not need experimental features.
 
-A video tutorial on how to install Git and Git Bash on Windows 10 is located at <https://youtu.be/HCotEx_xCfA>
+A video tutorial on how to install Git and Git Bash on Windows 10 is
+located at <https://youtu.be/HCotEx_xCfA>
 
-A written tutorial on how to install Git and Git Bash on Windows 10 is located at <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
+A written tutorial on how to install Git and Git Bash on Windows 10 is
+located at
+<https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
 
 ### Python 3.10 install
 
 * Install python from <https://python.org>
 
-* Click `Download`. The download will commence. Please open the file once it is finished downloading
+* Click `Download`. The download will commence. Please open the file
+  once it is finished downloading
 
 * Click `Add python 3.10 to path`
 
 * Click `Install now`
 
-A video tutorial on how to install Professional PyCharm is located at <https://youtu.be/QPESX-VBnEU>
+A video tutorial on how to install Professional PyCharm is located at
+<https://youtu.be/QPESX-VBnEU>
 
-A video on how to configure PyCharm with cloudmesh is located at <https://youtu.be/eb1IQBx0D50>
+A video on how to configure PyCharm with cloudmesh is located at
+<https://youtu.be/eb1IQBx0D50>
 
-Document the options, e.g. switch on path, icon on desktop, allow path longer then 256 chars
+Document the options, e.g. switch on path, icon on desktop, allow path
+longer then 256 chars
 
 Start gitbash
 
@@ -67,12 +79,14 @@ $ echo "source ~/ENV3/Scripts/activate" >> .bashrc
 $ echo "cd ~/cm" >> .bashrc
 ```
 
-start new gitbash and remove the first gitbash window, see if you see (ENV3) and continue. Git bash will initialize the environment
+start new gitbash and remove the first gitbash window, see if you see
+(ENV3) and continue. Git bash will initialize the environment
 
-start now again gitbash and remove the second gitbash you created. Now gitbash is properly created.
+start now again gitbash and remove the second gitbash you created. Now
+gitbash is properly created.
 
-If you do not want to always start in the directory `cm` do replace the line in your `.bashrc`
-`cd cm` with `cd`
+If you do not want to always start in the directory `cm` do replace
+the line in your `.bashrc` `cd cm` with `cd`
 
 ### Uninstall
 
@@ -89,7 +103,8 @@ $ cd cm
 
 ## Choco install 
 
-There are a number of usefull packages that you can install via choco this includes visual code, pychram, emacs, and make
+There are a number of usefull packages that you can install via choco
+this includes visual code, pychram, emacs, and make
 
 ```bash
 $ choco install make
@@ -100,7 +115,10 @@ $ choco install vscode
 $ choco install zoom
 ```
 
-even python could be installed with it however we have not tested, if it adds python to the path or sets the maxmunm oath to greated then 256. For that reason we recommend to install python the regular way as documented in the video ... jps video
+Even python could be installed with it however we have not tested, if
+it adds python to the path or sets the maxmunm oath to greated then
+256. For that reason we recommend to install python the regular way as
+documented in the video ... jps video
 
 ## Choco install pycharm
 
@@ -126,11 +144,12 @@ even python could be installed with it however we have not tested, if it adds py
   PS C:\Windows\system32> 
   ``` 
   
-   with a blinking cursor again, and lines have stopped appearing, 
-   then the Chocolatey installation has finished. Type `choco` 
-   and you should see Chocolatey in green text. 
+   with a blinking cursor again, and lines have stopped appearing,
+   then the Chocolatey installation has finished. Type `choco` and you
+   should see Chocolatey in green text.
 
-Now you can install many programs by launching PowerShell as Administrator or gitbash.
+Now you can install many programs by launching PowerShell as
+Administrator or gitbash.
 
 A list of programs that you can install with `choco` can be found at
 
@@ -144,8 +163,8 @@ PyCharm can be installed in gitbash with choco while typing
 $ choco install pycharm -y
 ``` 
 
-Once teh install completes PyCharm will be ready for you to use. You can install many programs 
-this way, and the 
+Once teh install completes PyCharm will be ready for you to use. You
+can install many programs this way, and the
 
 
 ## Linux 
@@ -200,12 +219,13 @@ $ cd cm
 
 ### Update
 
-In case you need to update the Python version it is sufficient to follow the 
-instructions provided in the section `Install Python 3.10.5`, while replacing 
-the version number with the current python release number.
+In case you need to update the Python version it is sufficient to
+follow the instructions provided in the section `Install Python
+3.10.5`, while replacing the version number with the current python
+release number.
 
-In case you need to create a new virtual ENV3. You can first uninstall it and 
-then reinstall it.
+In case you need to create a new virtual ENV3. You can first uninstall
+it and then reinstall it.
 
 An easy way to do all of this with a command is the following:
 
@@ -227,10 +247,11 @@ We assume you use zsh which is the default on macOS
 
 #### Install
 
-Before any of the following, make sure to download the current version of python. At
-the time of this writing, it is python 3.10.5
+Before any of the following, make sure to download the current version
+of python. At the time of this writing, it is python 3.10.5
 
-Second, execute the following commands in your terminal. Make sure to do this in order. 
+Second, execute the following commands in your terminal. Make sure to
+do this in order.
 
 ```bash
 $ cd
@@ -247,10 +268,11 @@ $ echo "source ~/ENV3/bin/activate" >> .zprofile
 $ echo "cd cm" >> .zprofile
 ```
 
-In a short summary, this essentially creates the virtual environment, 
-creates another directory called `cm`, then installs `cloudmesh`. Following
-this, it sets the macOS startup commands `.zshrc` and `.zprofile` to 
-start up in the virtual environment `ENV3`. 
+In a short summary, this essentially creates the virtual environment,
+creates another directory called `cm`, then installs
+`cloudmesh`. Following this, it sets the macOS startup commands
+`.zshrc` and `.zprofile` to start up in the virtual environment
+`ENV3`.
 
 #### Uninstall
 
@@ -260,8 +282,8 @@ $ rm -f ~/ENV3
 
 ### Updating Python
 
-Before starting this process, ensure that python is in the correct path. 
-This can be checked by following the scripting below:
+Before starting this process, ensure that python is in the correct
+path.  This can be checked by following the scripting below:
 
 ```bash
 $ which python # should print user/ENV3/bin/python
@@ -270,25 +292,29 @@ $ python3.10 --version # should print the current version of python in the venv
 ```
 Then, follow the directions below: 
 
-* First, download the latest version of [python](https://www.python.org/) 
-* Second, follow the download instructions from the python launcher that is created. 
+* First, download the latest version of
+  [python](https://www.python.org/)
+* Second, follow the download instructions from the python launcher
+  that is created.
 * Third, navigate into the virtual environment directory: `ENV3`
 * Fourth, execute the following command:
 
   ```bash
   $ python -m venv --upgrade ENV3
   ```
-This will properly update the virtual environment python to the correct python version. 
-Run the `which python` and `python --version` commands once again to ensure that the 
-correct version has been installed. 
+  
+This will properly update the virtual environment python to the
+correct python version.  Run the `which python` and `python --version`
+commands once again to ensure that the correct version has been
+installed.
 
 ### Homebrew install 
 
-Homebrew (`brew`) like `choco` is a package management software. Unlike
-choco`, it is used by macOS devices rather than Windows devices.
-`brew` is used to more easily download packages to an operating
-system; simply put, it eliminates the need for the user to search for
-and download the desired package. 
+Homebrew (`brew`) like `choco` is a package management
+software. Unlike choco`, it is used by macOS devices rather than
+Windows devices.  `brew` is used to more easily download packages to
+an operating system; simply put, it eliminates the need for the user
+to search for and download the desired package.
 
 Installing `brew` is simple. 
 
@@ -314,11 +340,11 @@ Installing `brew` is simple.
 
 * Fifth, enter the administrator password into the desired location. 
 
-* It may take a moment for the software to install, but it will 
-  eventually say **"Installation successful!"** in the terminal. After that,
-  Homebrew is installed onto the device. 
+* It may take a moment for the software to install, but it will
+  eventually say **"Installation successful!"** in the terminal. After
+  that, Homebrew is installed onto the device.
 
-After the user has correctly installed Homebrew, it is simple to 
+After the user has correctly installed Homebrew, it is simple to
 install packages directly to the operating system:
 
 ```bash

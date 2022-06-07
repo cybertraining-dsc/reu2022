@@ -18,7 +18,7 @@
 ## The many UVA technical help ticket systems
 
 * ITS: <https://virginia.edusupportcenter.com/shp/uva/helpcenter>
-* Rivanna: <https://varesearchhelp.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all[…]tatusPIds=1&statusPIds=1&statuses=open&statuses=closed>
+* Rivanna: <https://varesearchhelp.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all>
 * BII: <https://uva-biocomplexity.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all&statuses=open&statuses=closed>
 
 ## Our technical slack
@@ -47,13 +47,17 @@
 * (optional) extension makefile: <https://plugins.jetbrains.com/plugin/9333-makefile-language>
 * (optional) rst: <https://www.jetbrains.com/help/pycharm/restructured-text.html>
 * 80 char: <https://intellij-support.jetbrains.com/hc/en-us/community/posts/206070859-How-do-I-enable-the-80-column-guideline-change>
-* background to white as i can not read white on black when in meetings with me I will not support anyone that has black background: <https://www.jetbrains.com/help/pycharm/user-interface-themes.html> use intelliJ Light. After the meeting you can set it to whatever.
+* background to white as i can not read white on black when in meetings with me 
+  I will not support anyone that has black background: 
+  <https://www.jetbrains.com/help/pycharm/user-interface-themes.html> 
+  use intelliJ Light. After the meeting you can set it to whatever. 
 
 ## Bibliography Management
 
 * jabref: <https://www.jabref.org/>
 * bibtex: <https://en.wikipedia.org/wiki/BibTeX>
-* draft bibtex from urls: <https://addons.mozilla.org/en-US/firefox/addon/bibitnow/> (has to be modified once copied. Not everything will work.
+* draft bibtex from urls: <https://addons.mozilla.org/en-US/firefox/addon/bibitnow/> 
+  (has to be modified once copied. Not everything will work.
 
 ## GitHub repo
 
