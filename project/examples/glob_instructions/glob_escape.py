@@ -1,10 +1,8 @@
 import glob
 
-specials = '?*['
+specials = '!+('
 
 for char in specials:
-    pattern = 'dir/*' + glob.escape(char) + '.txt'
-    print('Searching for: {!r}'.format(pattern))
+    pattern = 'Updates/*' + glob.escape(char) + '.txt'
     for name in sorted(glob.glob(pattern)):
         print(name)
-    print()

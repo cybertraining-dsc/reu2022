@@ -30,7 +30,7 @@ with shelve.open('fav_color.db') as s:
 
 ## Accessing a Shelf
 
-After it's been created, it can be accessed as shown here:
+After it's been created, it can be accessed as shown [here](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_existing.py):
 ```python
 with shelve.open('fav_color.db') as s:
     existing = s['votes']
@@ -50,7 +50,7 @@ as shown:
 `shelve.open('shelf_name', flag='r')`
 
 That way, when a user tries to modify it, it produces an error, as shown in this
-example:
+[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_readonly.py):
 
 ```python
 import dbm
@@ -77,7 +77,8 @@ In order to modify a shelf, use the parameter `writeback=True` as shown:
 
 Make sure to use this before making the modification, or else it won't work.
 
-Here is an example of how it can be modified:
+Here is an [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_writeback.py)
+of how it can be modified:
 
 ```python
 import shelve

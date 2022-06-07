@@ -1,2 +1,2 @@
 import glob
-open('Years/.txt', 'w')
+open('Updates/Patches/patch3.txt', 'w')

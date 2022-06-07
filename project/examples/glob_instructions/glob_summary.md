@@ -15,19 +15,20 @@ import glob
 ## Wildcard (*)
 
 The example shown here showcases different states under a single directory and 
-counties under subdirectories. The files consist of `.txt` files named after
-different states/counties.
+counties under subdirectories. The files consist of `.txt` files consisting of 
+different versions of a program under a single directory.
 
 The following files have been created:
 ```python
-States
-States/CT!.txt
-States/CT1.txt
-States/NJ1.txt
-States/NJ2.txt
-States/VA1.txt
-States/VA Counties
-States/VA Counties/Albemarle.txt
+Updates
+Updates/Patches
+Updates/Patches/patch3.txt
+Updates/version2-!.txt
+Updates/version2-1.txt
+Updates/version2-2.txt
+Updates/version2-a.txt
+Updates/version2-b.txt
+
 ```
 
 For this case and other cases, use the command `glob` to search for the files.
