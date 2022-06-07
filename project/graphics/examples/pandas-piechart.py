@@ -16,5 +16,5 @@ categories = data.keys()
 count = data.values()
 
 df = pd.DataFrame({'Count':count},index=categories)
-plot = df.plot.pie(y='Count')
+plot = df.plot.pie(y='Count',legend=None)
 save()
