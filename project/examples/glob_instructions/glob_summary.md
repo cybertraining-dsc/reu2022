@@ -1,7 +1,7 @@
-# Glob Summary
+# Summary of `glob`
  
-Glob is a small module that searches for files by reading the patterns of filenames.
-However, Glob doesn't work in the same way regular expressions do as they follow
+`glob` is a small module that searches for files by reading the patterns of filenames.
+However, `glob` doesn't work in the same way regular expressions do as they follow
 standard Unix path expansion rules.
 
 ## Import Statement
@@ -82,7 +82,7 @@ Updates\version2-b.txt
 
 ## Escape Characters
 
-Glob can also search for files that contain a specific character through using 
+`glob` can also search for files that contain a specific character through using 
 the command `glob.escape(char)`. This can be shown in this [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/glob_instructions/glob_escape.py).
 
 ```python
@@ -105,7 +105,7 @@ Updates\version2+.txt
 
 ## Subdirectories
 
-Not only Glob can search for files in a single directory, but it can also
+Not only `glob` can search for files in a single directory, but it can also
 search for files in subdirectories, which are directories in directories.
 It can be done either through specifying the name of the subdirectory in 
 the code or through using an asterisk `*` as a wildcard. This can be shown in this 

@@ -2,7 +2,7 @@ import mmap
 import shutil
 
 # Copy the example file
-shutil.copyfile('lorem.txt', 'lorem_copy.txt')
+shutil.copyfile('story.txt', 'lorem_copy.txt')
 
 word = b'consectetuer'
 reversed = word[::-1]
