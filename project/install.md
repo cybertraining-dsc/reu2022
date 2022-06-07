@@ -7,7 +7,6 @@ Improve the installation instructions for python in the book.
 
 ## Windows
 
-
 ### Git Bash install
 
 * Install gitbash from <https://git-scm.com/downloads>
@@ -37,6 +36,7 @@ A written tutorial on how to install Git and Git Bash on Windows 10 is located a
 
 
 ### Python 3.10 install
+
 * Install python from <https://python.org>
 
 * Click `Download`. The download will commence. Please open the file once it is finished downloading
@@ -91,13 +91,30 @@ $ cd cm
 
 ## Linux 
 
+### Install Python 3.10.5
+
+```bash
+$ mkdir -p ~/tmp
+$ cd ~/tmp
+$ wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tar.xz
+$ tar xvf Python-3.10.5.tar.xz 
+$ cd Python-3.10.5/
+$ ./configure --enable-optimizations
+$ make -j $(nproc)
+$ sudo make altinstall
+$ pip install pip -U
+$ python3.10 -V
+```
+
+### Setting up the a venv
+
 We assume you use bash
 
 ```bash
-$ cd
 $ python3.10 -m venv ~/ENV3
 $ source ~/ENV/bin/activate
-# mkdir cm
+$ cd
+$ mkdir cm
 $ cd cm
 $ pip install cloudmesh-installer 
 $ cloudmesh-installer get cmd5 
@@ -105,8 +122,8 @@ $ cms help
 $ touch .bashrc
 $ echo "source ~/ENV3/bin/activate" >> .bashrc
 $ echo "cd cm" >> .bashrc
-$ echo "source ~/ENV3/bin/activate" >> .zprofile
-$ echo "cd cm" >> .zprofile
+$ echo "source ~/ENV3/bin/activate" >> .bash_profile
+$ echo "cd cm" >> .bash_profile
 ```
 
 ### Uninstall
@@ -120,6 +137,25 @@ Edit the .zshrc and .zprofile file and delete the lines
 ```
 $ source ~/ENV3/bin/activate
 $ cd cm
+```
+
+### Update
+
+In case you need to update the Python version it is sufficient to follow the 
+instructions provided in the section `Install Python 3.10.5`, while replacing 
+the version number with the current python release number.
+
+In case you need to create a new virtual ENV3. You can first uninstall it and 
+then reinstall it.
+
+An easy way to do all of this with a command is the following:
+
+```bash
+$ pip install cloudmesh-installer
+$ cloudmesh-installer new ~/ENV3 cmd5 --python=/usr/local/bin/python3.10
+$ source ~/ENV3/bin/activate
+$ python -V
+$ which python
 ```
 
 ## macOS
