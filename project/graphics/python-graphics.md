@@ -173,7 +173,7 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 The output of this program is showcased in Figure *contourplot*.
 
 
-![piechart](examples/images/matplotlib-contour.svg)
+![contour](examples/images/matplotlib-contour.svg)
 
 Figure *contourplot*: Multivariable (x, y, z) Equation Plotted
 
@@ -228,6 +228,32 @@ plt.legend()
 ```
 
 ### Rotating Ticks
+
+When a chart is created, ticks are automatically created on the axes. By default,
+they are set horizontally; however, they can be rotated using `plt.xticks(degrees)`
+for the `x-axis` or `plt.yticks(degrees)` for the `y-axis`. This can be shown by
+this simple [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py).
+
+```python
+import matplotlib.pyplot as plt
+
+x = range(0,4)
+y = x
+plt.plot(x,y)
+
+# Rotating Ticks
+plt.xticks(rotation=90)
+plt.yticks(rotation=45)
+
+plt.xlabel('x values')
+plt.ylabel('y values')
+plt.title(r'$y=x$')
+plt.show()
+```
+
+![ticks](examples/images/matplotlib-rotatingticks.svg)
+
+Figure *ticks* `x-axis` ticks rotated by 90° and `y-axis` ticks rotated by 45°
 
 
 ### Exporting
