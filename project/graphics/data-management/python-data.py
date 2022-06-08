@@ -28,23 +28,6 @@ for i in range(0, 100):
 
 '''
 
-x = []
-y = []
-
-with open('/Users/jacksonmiskill/Downloads/biostats.csv', 'r') as csvfile:
-    plots = csv.reader(csvfile, delimiter=',')
-
-    for row in plots:
-        x.append(row[0])
-        y.append(int(row[2]))
-
-plt.bar(x, y, color='g', width=0.72, label="Age")
-plt.xlabel('Names')
-plt.ylabel('Ages')
-plt.title('Ages of different persons')
-plt.legend()
-plt.show()
-
 # CSV Files
 
 # P'''ython CSV Module
@@ -62,31 +45,44 @@ with open('/Users/jacksonmiskill/Downloads/biostats.csv',
         if each_row:  # you have to check for blank lines within the document
 
             names.append(each_row[0])
-            if each_row[1] != str:
-                sex_data.append(each_row[1])
-            if each_row[2] != str:
-                age_data.append(each_row[2])
-            if each_row[3] != str:
-                height_data.append(each_row[3])
-            if each_row[4] != str:
-                weight_data.append(each_row[4])
+            sex_data.append(each_row[1])
+            age_data.append(each_row[2])
+            height_data.append(each_row[3])
+            weight_data.append(each_row[4])
 
+
+names.pop(0)
+height_data.pop(0)
+for i in range(0, len(height_data)):
+    height_data[i] = int(height_data[i])
+print(type(height_data[0]))
 print(height_data)
-print(weight_data)
-'''
+
+
+
 # let's plot the heights and weight of everyone. We could maybe use a hue here to denote who it is
 plt.plot(names, height_data)
-plt.xlabel("Names")
-plt.ylabel("Weight")
+plt.xlabel("Name")
+plt.ylabel("Height")
+plt.xticks(rotation=90)
+plt.savefig('images/csv-lineplot.png')
+plt.savefig('images/csv-lineplot.svg')
+plt.savefig('images/pandas-lineplot.pdf')
 plt.legend()
-plt.title("Corresponding Heights and Names")
+plt.title("Names and Corresponding Height")
 plt.show()
 
 # Pandas Library
 
-'''
 file = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
 biostats = pd.DataFrame(file)
-
-print(biostats)
+plt.plot(biostats['Name'], biostats[' "Height (in)"'])
+plt.xlabel("Name")
+plt.ylabel("Height")
+plt.xticks(rotation=90)
+plt.savefig('images/pandas-lineplot.png')
+plt.savefig('images/pandas-lineplot.svg')
+plt.savefig('images/pandas-lineplot.pdf')
+plt.title("Names and Corresponding Height")
+plt.show()
 
