@@ -172,15 +172,30 @@ print(data)
 ```
 
 For the `pandas` module, it is less complicated to access that values. This 
-is because the module includes a function that converts the data into 
-
-### Updating Values
-
-
-
-### Python Built-In Methods
+is because the module includes a function that converts the data into a dataframe. 
+After converting, you can use the various methods that are within the dataframe
+to essentially pass in the correct values. 
 
 ### Examples
+
+Once the `csv` values have been accessed, creation of the graphics can begin. Starting 
+with the `csv` module and then moving into `pandas` the following will demonstrate this
+action. 
+
+The `csv` file that will be utilized for the following examples can be found
+[here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). It represents made up data
+on a group of made up people such as age, height, and weight. 
+
+It is relatively easy, but slow, to create graphs with the `csv` module:
+
+```python
+from matplotlib import pyplot as plt
+import seaborn as sns
+```
+
+
+It is quite simple with the `pandas` library:
+
 
 ## Sources
 
@@ -203,3 +218,5 @@ is because the module includes a function that converts the data into
 * <https://docs.python.org/3/library/functions.html#open>
 * <https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737#extracting-information-from-a-csv-file>
 * <https://stackoverflow.com/questions/13039392/csv-list-index-out-of-range>
+* <https://www.geeksforgeeks.org/visualize-data-from-csv-file-in-python/>
+

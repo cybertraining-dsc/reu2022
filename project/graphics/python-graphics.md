@@ -50,7 +50,7 @@ count = data.values()
 # Creating the bar chart
 plt.bar(categories, 
         count, 
-        align='edge', 
+        align='center', 
         color='darkorange', 
         width=0.4, 
         edgecolor="royalblue", 
