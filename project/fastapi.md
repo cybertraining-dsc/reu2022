@@ -1,10 +1,11 @@
 # FastAPI 
 
-FastAPI ia a framework in python that allows developers to use restinterface to call function that implement application, it uses RestAPI to call the common building block of an application.
-
+FastAPI is a Python framework that allows developers to use the RestAPI interface to call 
+functions that implement applications. RestAPI is used to call the common building block of an application.
 ## FastAPI Install
 
-To install the FastAPI they are two steps one might need to install it fully with the `uvicorn` or install both the `FastAPI ` and the `uvicorn` by part
+There are two ways to install the FastAPI: either completely with the `uvicorn` or partially 
+with both the `FastAPI` and the `uvicorn`.
 
 ```bash
 $ pip install "fastapi[all]"
@@ -25,11 +26,11 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
-Copy that to a file `main.py`
+Copy it in a file called `main.py`.
 
-Run the live server:
-```
+Start the live server as follows:
 
+``` bash
 $ uvicorn main:app --reload 
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
@@ -39,42 +40,30 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 
 ```
-In the output, there's a line with something like:
+There's a line that output something like:
 
 ```
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
+This line displays the URL where your app is served on your local machine.
 
-That line shows the URL where your app is being served, in your local machine.
+Navigate to http://127.0.0.1:8000 in your browser.
 
-Check it
-
-Open your browser at http://127.0.0.1:8000
-
-You will see the JSON response as:
+The JSON response will appear as:
 
 ```
 {"message": "Hello World"}
 ```
 
-Interactive API docs
-
 * Go to http://127.0.0.1:8000/docs.
 
-* Then go to http://127.0.0.1:8000/redoc.
+*  OpenAPI :
 
-* OpenAPI:
+  Using the `OpenAPI` standard for defining APIs, FastAPI creates a `schema` with all of your APIs.
 
-  FastAPI generates a `schema` with all your API using the `OpenAPI` standard for defining APIs.
+  You can see it directly at: http://127.0.0.1:8000/openapi.json.
 
-
-* OpenAPI and JSON Schema
-
-  OpenAPI defines an API schema for your API. And that schema includes definitions (or "schemas") of the data sent and received by your API using JSON Schema, the standard for JSON data schemas.
-
-You can see it directly at: http://127.0.0.1:8000/openapi.json.
-
-It will show a JSON starting with something like:
+It will display a JSON that starts with:
 
 ```json
 {
@@ -108,21 +97,21 @@ async def root():
     return {"message": "Hello World"}
 ```
 
-Here the `app` variable will be an "instance" of the class `FastAPI`.
+The variable `app` will be a "instance" of the class `FastAPI` in this case.
 
-This will be the main point of interaction to create all your API.
+This will be the primary point of contact for all API creation.
 
-This` app` is the same one referred by `uvicorn` in the command:
+This is the same app that `uvicorn` refers to in the command:
 
-```
+``` bash
 $ uvicorn main:app --reload
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
 
 If you create your app like:
-```
 
+```
 from fastapi import FastAPI
 
 my_awesome_api = FastAPI()
@@ -132,9 +121,9 @@ my_awesome_api = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
-And put it in a file `main.py` then you would call `uvicorn` like:
+And copy it in a file `main.py` then you would call `uvicorn` like:
 
-```
+``` bash
 $ uvicorn main:my_awesome_api --reload
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)

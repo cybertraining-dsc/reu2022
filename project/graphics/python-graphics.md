@@ -277,12 +277,12 @@ import os
 from matplotlib import pyplot
 
 
-def save(p):
+def save():
     name = os.path.basename(__file__).replace(".py", "")
     plt.savefig(f'/filepath/{name}.png')
     plt.savefig(f'filepath/{name}.pdf')
     plt.savefig(f'filepath/{name}.svg')
-    plt.show(p)
+    plt.show()
 ```
 
 This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
@@ -374,15 +374,20 @@ After importing the Bokeh plotting interface, it is possible to be
 able to create different types of plots utilizing the figure
 created with the figure function.
 
-#### Saving Figures as PNG and SVG
+#### Saving Figures as PNG
 
-In order to save figures as a PNG or a SVG, both Selenium and a web
+In order to save figures as a PNG, both Selenium and a web
 driver will need to be installed. We will use Chromium here for our
-web driver. To install both at once, use the command:
+web driver. To install both at once, use the commands:
 
+(Windows)
 ```bash
 $ pip install selenium chromedriver-binary
+$ pip install chromedriver-binary-auto
 ```
+
+There seems to be issues installing `chromedriver-binary` on Mac computers due to the built-in security, so it is
+recommended to simply save Bokeh figures as a `.html` file.
 
 When writing a program, Chromium must be added to the PATH through these import
 statements:
@@ -392,8 +397,8 @@ from selenium import webdriver
 import chromedriver_binary
 ```
 
-In addition, the `export_png()` and `export_svg()` functions must be imported,
-and can be used as follows:
+Bokeh appears to support saving files as a `.svg` but it seems to have bugs and is not recommended. To use the functions,
+`export_png()` and `export_svg()` must be imported, and can be used as follows:
 
 ```python
 from bokeh.io import export_png, export_svg
@@ -401,6 +406,8 @@ from bokeh.io import export_png, export_svg
 export_png(fig, filename="file-name.png")
 export_svg(fig, filename="file-name.svg")
 ```
+
+Note that Chromium is slow and this process may take delay the execution and performance of the program.
 
 Similarly to matplotlib, Bokeh can utilize a function to save all created images. 
 
@@ -676,6 +683,14 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 * <https://www.activestate.com/resources/quick-reads/what-is-matplotlib-in-python-how-to-use-it-for-plotting/>
 * <https://www.geeksforgeeks.org/bar-plot-in-matplotlib/>
 
+### Bokeh
+
+* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+* <http://docs.bokeh.org/en/latest/>
+* <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
+* <https://docs.bokeh.org/en/latest/docs/user_guide/export.html>
+
 ### Seaborn
 
 * <https://seaborn.pydata.org/api.html>
@@ -684,15 +699,3 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 * <https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/>
 * <https://stackoverflow.com/questions/30336324/seaborn-load-dataset>
 * <https://github.com/mwaskom/seaborn-data/blob/master/planets.csv>
-
-### Bokeh
-
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-* <http://docs.bokeh.org/en/latest/>
-* <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
-
-
-
-
-

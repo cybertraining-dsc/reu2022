@@ -144,6 +144,7 @@ remove the legend by setting the parameter `legend=None` in `plot.pie()`.
 
 Note that this is the same as the Matplotlib tutorial found [here]((https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py))
 on Github.
+
 To export your graph as an image file, you can use the Matplotlib function `savefig("fname.x")`. You can specify the
 file type by filling in `.x` with `.pdf`, `.png`, `svg`, etc.
 
@@ -159,12 +160,24 @@ import os
 from matplotlib import pyplot
 
 
-def save(p):
+def save():
     name = os.path.basename(__file__).replace(".py", "")
     plt.savefig(f'/filepath/{name}.png')
     plt.savefig(f'filepath/{name}.pdf')
     plt.savefig(f'filepath/{name}.svg')
-    plt.show(p)
+    plt.show()
 ```
 
 This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
+
+The very last command is `plt.show()`, as this command displays the graph that you made. To show, simply type:
+
+```python
+plt.show()
+```
+
+## Sources
+
+* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html>
+* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html>
+* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html>

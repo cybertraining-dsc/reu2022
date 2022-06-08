@@ -1,6 +1,6 @@
 # Communications with C4GC Students
-* weekly meetings with Ben Hurt every Tuesday and Wednesday from 11-11:45 am on Zoom and in room 4402.
-* weekly presentations during these Tuesday and Wednesday meetings. Every student presents twice and the link to the schedule can be found [at this link.](https://docs.google.com/document/d/1_A4Gp7HL4EV4WvQpnFMiMAAArnFcfZDCyEhJ85NxG1c/edit)
+* There are weekly meetings with Ben Hurt every Tuesday and Wednesday from 11-11:45 am on Zoom and in room 4402.
+* Around 4 students present each at the meetings. Every student presents twice and the link to the schedule can be found [at this link.](https://docs.google.com/document/d/1_A4Gp7HL4EV4WvQpnFMiMAAArnFcfZDCyEhJ85NxG1c/edit)
     * first presentation is about the student's goals and the introduction to the project: 
         * How you define success for this summer
         * Who you’re working with
