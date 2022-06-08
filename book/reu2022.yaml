@@ -58,4 +58,4 @@ BOOK:
   #- PRESENTATIONS:
     #- "{file.chapter}/doc/ppt.md"
   - REFERENCES:
-    - "{file.chapters}/empty.md"
+    - "{file.reu2022}/empty.md"
