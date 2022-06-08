@@ -87,9 +87,9 @@ performance computing solutions using Raspberry Pis.
 
 ## Eric He
 
-Junyang (Eric) He is a rising second year majoring in Computer Science
-at the University of Virginia. He will receive his B.S. in Computer 
-Science in 2025. He is currently a member of the Engineering Student
+Junyang (Eric) He completed his first year of study at the University of 
+Virginia majoring in Computer Science. He anticipates to receive his B.S. in 
+Computer Science in 2025. He is currently a member of the Engineering Student
 Council and the Chinese Student and Scholars Society at UVA.
 
 In the summer of 2021, Eric worked as a Data Analyst intern at Nint (Shanghai)
