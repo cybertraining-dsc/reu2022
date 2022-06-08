@@ -2,14 +2,14 @@ import mmap
 import shutil
 
 # Copy the example file
-shutil.copyfile('story.txt', 'lorem_copy.txt')
+shutil.copyfile('story.txt', 'story_copy.txt')
 
-word = b'consectetuer'
+word = b'time'
 reversed = word[::-1]
 print('Looking for    :', word)
 print('Replacing with :', reversed)
 
-with open('lorem_copy.txt', 'r+') as f:
+with open('story_copy.txt', 'r+') as f:
     with mmap.mmap(f.fileno(), 0) as m:
         print('Before:\n{}'.format(m.readline().rstrip()))
         m.seek(0)  # rewind
