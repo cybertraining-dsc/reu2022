@@ -1,10 +1,10 @@
-# Python Data Management
+# Python Data Management for Visualizations
 
 In python, there are several ways that data can be interpreted
 in order to generate the graphics for data visualization. 
 
 Through several examples, we will show how to manage different
-types of data and how to best manage them. They are lists, dictionaries
+types of data and how to best interact with them. They are lists, dictionaries
 and CSV files.
 
 ## Lists
@@ -50,6 +50,8 @@ Python has several built-in methods for lists. These include `append()`, `clear(
 and `sort()`. 
 
 A user can utilize these methods to make changes in the necessary ways to the list. 
+
+### Examples
 
 ## Dictionaries
 
@@ -101,6 +103,8 @@ There are several built-in methods that allow for more dictionary manipulation:
 They are `clear()`, `copy()`, `fromkeys()`, `items()`, `pop()`, `popitem()`, and 
 `setdefault()`.
 
+### Examples
+
 
 ## CSV Files 
 
@@ -136,8 +140,8 @@ Following are two examples showcasing how exactly to do this.
 For the `csv` module:
 
 ```python
-biostats = open('/Users/jacksonmiskill/Downloads/biostats.csv') # opens the csv and creates the reader object for it
-reader = csv.reader(biostats)
+file = open('/Users/jacksonmiskill/Downloads/biostats.csv') # opens the csv and creates the reader object for it
+reader = csv.reader(file)
 ```
 
 The `reader` is an object that was created by python developers to help parse through
@@ -146,38 +150,125 @@ the `csv` files.
 For the `pandas` module:
 
 ```python
-biostats = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
-df = pd.DataFrame(biostats)
+file = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
+df = pd.DataFrame(file)
 ```
-
-
 
 ### Accessing Values
 
 For the `csv` module:
 
 It is more challenging to access files using the `csv` module as opposed to the 
-pandas library. To make it more simple, it is necessary to convert the values 
+`pandas` library. To make it more simple, it is necessary to convert the values 
 that lie within the `csv` into a list in order to access. 
 
-The `csv` file is a file with several categories of statistics for a group of made-up
-people. The xample focuses on accessing the values that are in the `age` category. 
-
 ```python
-age_data = []
+data = []
 for each_row in reader:
     if each_row: # you have to check for blank lines within the document
-        age_data.append(each_row[2])
+        data.append(each_row[2])
 
-print(age_data)
-biostats.close()
+print(data)
 ```
 
-### Updating Values
+For the `pandas` module, it is less complicated to access that values. This 
+is because the module includes a function that converts the data into a dataframe. 
+After converting, you can use the various methods that are within the dataframe
+to essentially pass in the correct values. 
+
+### Examples
+
+Once the `csv` values have been accessed, creation of the graphics can begin. Starting 
+with the `csv` module and then moving into `pandas` the following will demonstrate this
+action. 
+
+The `csv` file that will be utilized for the following examples can be found
+[here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). It represents made up data
+on a group of made up people such as age, height, and weight. 
+
+It is relatively easy, but slow, to create graphs with the `csv` module:
+
+```python
+from matplotlib import pyplot as plt
+import seaborn as sns
+
+names = []
+sex_data = []
+age_data = []
+height_data = []
+weight_data = []
+
+with open('/Users/jacksonmiskill/Downloads/biostats.csv',
+          'r') as file:  # opens the csv and creates the reader object for it
+    reader = csv.reader(file, delimiter=',')
+
+    for each_row in reader:
+        if each_row:  # you have to check for blank lines within the document
+
+            names.append(each_row[0])
+            sex_data.append(each_row[1])
+            age_data.append(each_row[2])
+            height_data.append(each_row[3])
+            weight_data.append(each_row[4])
+
+# Have to clean the data in order to actually create the graphs. 
+names.pop(0)
+height_data.pop(0)
+for i in range(0, len(height_data)):
+    height_data[i] = int(height_data[i])
+
+# let's plot the heights and weight of everyone. We could maybe use a hue here to denote who it is
+plt.plot(names, height_data)
+plt.xlabel("Name")
+plt.ylabel("Height")
+plt.xticks(rotation=90)
+plt.savefig('images/csv-lineplot.png')
+plt.savefig('images/csv-lineplot.svg')
+plt.savefig('images/pandas-lineplot.pdf')
+plt.legend()
+plt.title("Names and Corresponding Height")
+plt.show()
+```
+
+This code can be access from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
+
+This code produces Figure *csv-lineplot*:
+
+![lineplot](images/csv-lineplot.svg)
+
+Figure *csv-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
 
 
+***How do we use csv module without having to clean the data? ***
 
-### Python Built-In Methods
+
+It is so much more simple to accomplish this with the `pandas` library:
+
+```python
+file = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
+biostats = pd.DataFrame(file)
+
+plt.plot(biostats['Name'], biostats[' "Height (in)"'])
+plt.xlabel("Name")
+plt.ylabel("Height")
+plt.xticks(rotation=90)
+plt.savefig('images/pandas-lineplot.png')
+plt.savefig('images/pandas-lineplot.svg')
+plt.savefig('images/pandas-lineplot.pdf')
+plt.title("Names and Corresponding Height")
+plt.show()
+```
+
+This code can be accessed from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
+
+This code produces the Figure *pandas-lineplot*:
+
+![lineplot](images/pandas-lineplot.svg)
+
+Figure *pandas-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
+Figure *pandas-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
+
+
 
 ## Sources
 
@@ -200,3 +291,4 @@ biostats.close()
 * <https://docs.python.org/3/library/functions.html#open>
 * <https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737#extracting-information-from-a-csv-file>
 * <https://stackoverflow.com/questions/13039392/csv-list-index-out-of-range>
+* <https://www.geeksforgeeks.org/visualize-data-from-csv-file-in-python/>

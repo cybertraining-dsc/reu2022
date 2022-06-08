@@ -131,30 +131,23 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 ### Step 3: create a path operation
 
-Path here refers to the last part of the URL starting from the first .
-
+Path refers to the last part of the URL beginning with the first.
 So, in a URL like:
-`https://example.com/items/foo`
-...the path would be:
+`https://example.com/purple/flc` ...the path would be: `/purple/flc`
 
-
-`/items/foo`
-
-" While building an API, the "path" is the main way to separate "concerns" and "resources"."
+"When developing an API, the "path" is the primary means of separating "concerns" and "resources."
 
 Operation
-"Operation" here refers to one of the HTTP "methods".
+The term "operation" refers to one of the HTTP "methods."
 
-When building APIs, you normally use these specific HTTP methods to perform a specific action.
-Normally you use:
-* POST: to create data.
-* GET: to read data.
-* PUT: to update data.
-* DELETE: to delete data.
-
-In the HTTP protocol, you can communicate to each path using one (or more) of these "methods".
-
-So, in OpenAPI, each of the HTTP methods is called an "operation".
+When creating APIs, these specific HTTP methods are typically used to perform a specific action.
+Normally, you would use:
+* POST: to generate data
+* GET:  data retrieval.
+* PUT:  updates data.
+* DELETE: deletes data.
+The HTTP protocol allows you to communicate with each path by using one (or more) of these "methods."
+As a result, in OpenAPI, each HTTP method is referred to as a "operation."
 
 #### Define a path operation decorator¶
 ```
@@ -169,12 +162,11 @@ async def root():
 ```
 
 ### Step 4: define the path operation function
-
-This is our "path operation function":
+Our "path operation function" is as follows:
 
 path: is /.
 operation: is get.
-function: is the function below the "decorator" (below @app.get("/")).
+function: the function that comes after the "decorator" (below @app.get("/")).
 ```
 from fastapi import FastAPI
 
@@ -185,13 +177,13 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
-This is a Python function.
+This is an example of a Python function.
 
-It will be called by FastAPI whenever it receives a request to the URL "/" using a GET operation.
+It will be called by FastAPI whenever it receives a GET operation request to the URL "/".
 
-In this case, it is an async function.
+It is an async function in this case.
 
-You could also define it as a normal function instead of async def:
+Instead of async def, you could define it as a normal function:
 ```
 from fastapi import FastAPI
 
@@ -215,11 +207,11 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
-You can return a dict, list, singular values as str, int, etc.
+You can return a dict, a list, or singular values such as str, int, and so on.
 
-You can also return Pydantic models .
+Pydantic models can also be returned.
 
-There are many other objects and models that will be automatically converted to JSON (including ORMs, etc). Try using your favorite ones, it's highly probable that they are already supported.
+Many more objects and models will be automatically converted to JSON (including ORMs, etc). Try using your favorites; they are almost certainly already supported.
 
 
 References: https://fastapi.tiangolo.com/tutorial/first-steps/
