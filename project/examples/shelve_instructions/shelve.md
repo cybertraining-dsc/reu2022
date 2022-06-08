@@ -1,6 +1,6 @@
-# Shelve Summary
+# Summary of `shelve`
 
-Shelve is a library that gives users the ability to create, store, modify, and
+`shelve` is a library that gives users the ability to create, store, modify, and
 control the accessibility of data without a relational database.
 
 ## Import Statement
