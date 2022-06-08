@@ -1,30 +1,42 @@
 # Install
 
-TODO: Abdul
+In this section, we present an easy to follw instalation for a 
+recent version of python and cloudmesh. 
 
-Improve the installation instructions for python in the book.
+Before you start doing the install, please read the entire section and develop a plan for installation.
 
 ## Windows
 
+The instalation of cloudmesh benefits from using gitbash as it allows us to have a terminal that is similar to that of macOS and Linux.
+
+Hence before we install python and cloudmesh we install gitbash.
+
+Furthermore, we provide the option to use chocolatey to install packages in similar fashion as on linus. 
+
 ### Git Bash install
 
-* Install gitbash from <https://git-scm.com/downloads>
- 
-* Click `Download` for Windows. The download will commence. Please
-  open the file once it is finished downloading.
+To install gitbash, pleas download it forst from 
 
-* The UAC Prompt will appear. Click `Yes` because Git is a safe
-  program. It will show you Git’s license: a GNU General Public
-  License. Click `Next`.
+* <https://git-scm.com/downloads>
+
+Click `Download` for Windows. The download will commence. Please
+open the file once it is finished downloading.
+ 
+Next you start the downloaded program and follw the install screens carfully. 
+
+TODO: what is a UAC?
+
+* The UAC Prompt will appear. Click `Yes`. It will show you Git’s  license: a GNU General Public License. Read it and Click `Next`.
 
 * Click `Next` to confirm that `C:\Program Files\Git` is the directory
   where you want Git to be installed.
 
-* Click `Next` unless you would like an icon for Git on the desktop
-  (in which case you can check the box and then click `Next`).
+* Select the  box to create a shortcut icon on the desktop. 
+  Click `Next`  to continue with the install.
 
-* Click `Next` to accept the text editor,
-* Click `Next` again to Let Git decide the default branch name
+* Click `Next` to accept the default text editor which is vim, 
+* TODO: THIS IS WRONG, you do want the one with main 
+  Click `Next` again to Let Git decide the default branch name
 * Click `Next` again to run Git from the command line and 3rd party software,
 * Click `Next` again to use the OpenSSL library
 * Click `Next` again to checkout Windows-style,
@@ -34,17 +46,23 @@ Improve the installation instructions for python in the book.
 * Click `Next` again to enable file system caching, and then
 * Click `Install` because we do not need experimental features.
 
+TODO: the 256 path length is missing which will be done at the end.
+
 A video tutorial on how to install Git and Git Bash on Windows 10 is
 located at <https://youtu.be/HCotEx_xCfA>
 
-A written tutorial on how to install Git and Git Bash on Windows 10 is
-located at
+A written tutorial on how to install Git and Git Bash on Windows 10 is located at
 <https://cybertraining-dsc.github.io/docs/tutorial/reu/github/git/>
 
 
 ### Python 3.10 install
 
-* Install python from <https://python.org>
+
+To install python 3.10 please go to 
+
+* <https://python.org>
+
+and download the latest version.
 
 * Click `Download`. The download will commence. Please open the file
   once it is finished downloading
@@ -53,16 +71,18 @@ located at
 
 * Click `Install now`
 
+TODO: veriify if the pathlength option appears here or in gitbash or both.
+
 A video tutorial on how to install Professional PyCharm is located at
 <https://youtu.be/QPESX-VBnEU>
 
 A video on how to configure PyCharm with cloudmesh is located at
 <https://youtu.be/eb1IQBx0D50>
 
-Document the options, e.g. switch on path, icon on desktop, allow path
-longer then 256 chars
 
-Start gitbash
+### Installing cloudmesh
+
+Cloudmesh can be installed in any shell that has python and git access. HOwever it is convenient t use gitbash as it simplifies the documentation and allows us to interact with linux commands with the windows file system. The installation is done with a Pyython `venv` so you do not effect your computres python install. Here are the steps:
 
 ```bash
 $ python -m venv ~/ENV3
@@ -79,11 +99,11 @@ $ echo "source ~/ENV3/Scripts/activate" >> .bashrc
 $ echo "cd ~/cm" >> .bashrc
 ```
 
-start new gitbash and remove the first gitbash window, see if you see
-(ENV3) and continue. Git bash will initialize the environment
-
-start now again gitbash and remove the second gitbash you created. Now
-gitbash is properly created.
+To activate it, start new gitbash and terminate the first gitbash window.  If you see in the new window
+`(ENV3)`, continue. Git bash will initialize the environment.
+It will set now up some envireonment and thus you will start 
+again gitbash and terminate the second gitbash you created. Now
+gitbash is properly created and configures.
 
 If you do not want to always start in the directory `cm` do replace
 the line in your `.bashrc` `cd cm` with `cd`
@@ -94,7 +114,7 @@ the line in your `.bashrc` `cd cm` with `cd`
 $ rm -f ~/ENV3
 ```
 
-Edit the .zshrc and .zprofile file and delete the lines
+Edit the .bashrc and .bash_profile file and delete the lines
 
 ```
 $ source ~/ENV3/Scripts/activate
@@ -106,23 +126,11 @@ $ cd cm
 There are a number of usefull packages that you can install via choco
 this includes visual code, pychram, emacs, and make
 
-```bash
-$ choco install make
-$ choco install emacs
-$ choco install pycharm
-$ choco install firefox
-$ choco install vscode
-$ choco install zoom
-```
+Even python could be installed with it however we have not tested the install of python via choco. However we tested the install of emacs, pychram, and make.
 
-Even python could be installed with it however we have not tested, if
-it adds python to the path or sets the maxmunm oath to greated then
-256. For that reason we recommend to install python the regular way as
-documented in the video ... jps video
+## Install Chocolatey
 
-## Choco install pycharm
-
-* Press the Windows key and type powershell. Click Run as Administrator. Click Yes.
+To install pycharm, pleas esatrt a gitbash terminal as administrator: To do so press the `Windows` key and type powershell. Click Run as Administrator. Click Yes.
 
 2. In PowerShell execute the following command:
    
@@ -155,12 +163,17 @@ A list of programs that you can install with `choco` can be found at
 
 * <https://community.chocolatey.org/packages/>
 
-## Installing Pycharm
+## Installing Useful Developer Programs
 
-PyCharm can be installed in gitbash with choco while typing 
+The following useful developer programs can be installed. Select the once you like and install them with the appropriate command
 
-```
+```bash
+$ choco install make -y
+$ choco install emacs -y
 $ choco install pycharm -y
+$ choco install firefox -y
+$ choco install vscode -y
+$ choco install zoom -y
 ``` 
 
 Once teh install completes PyCharm will be ready for you to use. You
@@ -168,8 +181,6 @@ can install many programs this way, and the
 
 
 ## Linux 
-
-.
 
 ### Install Python 3.10.5
 
@@ -272,8 +283,7 @@ $ echo "source ~/ENV3/bin/activate" >> .zprofile
 $ echo "cd cm" >> .zprofile
 ```
 
-In a short summary, this essentially creates the virtual environment,
-creates another directory called `cm`, then installs
+It creates the virtual environment, a directory called `cm`, then installs
 `cloudmesh`. Following this, it sets the macOS startup commands
 `.zshrc` and `.zprofile` to start up in the virtual environment
 `ENV3`.
@@ -287,30 +297,34 @@ $ rm -f ~/ENV3
 ### Updating Python
 
 Before starting this process, ensure that python is in the correct
-path.  This can be checked by following the scripting below:
+path.  Test in gitshell 
+
+To do so remove the existing ENV3 first and start a new terminal in which you will be working.
 
 ```bash
-$ which python # should print user/ENV3/bin/python
-
-$ python3.10 --version # should print the current version of python in the venv
+$ rm ~/ENV3
 ```
-Then, follow the directions below: 
 
-* First, download the latest version of
-  [python](https://www.python.org/)
-* Second, follow the download instructions from the python launcher
-  that is created.
-* Third, navigate into the virtual environment directory: `ENV3`
-* Fourth, execute the following command:
+Start the new terminal and execute the commands to verify if youhave the right updated version of python
+`
+```bash
+$ which python3.10
+$ where python3.10
+$ python3.10 -V
+```
 
-  ```bash
-  $ python -m venv --upgrade ENV3
-  ```
-  
-This will properly update the virtual environment python to the
-correct python version.  Run the `which python` and `python --version`
-commands once again to ensure that the correct version has been
-installed.
+Now execute
+
+```bash
+$ cd ~/cm
+$ python3.10 -m venv ~/ENV3
+$ source ~/ENV/bin/activate
+$ pip install cloudmesh-installer 
+$ cloudmesh-installer get cmd5 
+$ cms help
+```
+
+As `zsh` is already configured previously, we do not have to set it up again.
 
 ### Homebrew install 
 
