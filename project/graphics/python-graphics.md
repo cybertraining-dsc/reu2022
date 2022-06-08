@@ -277,12 +277,12 @@ import os
 from matplotlib import pyplot
 
 
-def save(p):
+def save():
     name = os.path.basename(__file__).replace(".py", "")
     plt.savefig(f'/filepath/{name}.png')
     plt.savefig(f'filepath/{name}.pdf')
     plt.savefig(f'filepath/{name}.svg')
-    plt.show(p)
+    plt.show()
 ```
 
 This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
