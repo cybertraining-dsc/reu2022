@@ -97,21 +97,21 @@ async def root():
     return {"message": "Hello World"}
 ```
 
-Here the `app` variable will be an "instance" of the class `FastAPI`.
+The variable `app` will be a "instance" of the class `FastAPI` in this case.
 
-This will be the main point of interaction to create all your API.
+This will be the primary point of contact for all API creation.
 
-This` app` is the same one referred by `uvicorn` in the command:
+This is the same app that `uvicorn` refers to in the command:
 
-```
+``` bash
 $ uvicorn main:app --reload
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
 
 If you create your app like:
-```
 
+```
 from fastapi import FastAPI
 
 my_awesome_api = FastAPI()
@@ -121,9 +121,9 @@ my_awesome_api = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
-And put it in a file `main.py` then you would call `uvicorn` like:
+And copy it in a file `main.py` then you would call `uvicorn` like:
 
-```
+``` bash
 $ uvicorn main:my_awesome_api --reload
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
