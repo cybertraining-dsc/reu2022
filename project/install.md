@@ -291,7 +291,7 @@ It creates the virtual environment, a directory called `cm`, then installs
 #### Uninstall
 
 ```bash
-$ sudo rm -rf ~/ENV3
+$ rm -rf ~/ENV3
 ````
 
 You may need to enter your system password. 
@@ -304,7 +304,7 @@ path. Test in the terminal.
 To do so remove the existing ENV3 first and start a new terminal in which you will be working.
 
 ```bash
-$ sudo rm -rf ~/ENV3
+$ rm -rf ~/ENV3
 ```
 
 Start the new terminal and execute the commands to verify if you have the right updated version of python
