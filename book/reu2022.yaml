@@ -58,4 +58,4 @@ BOOK:
   #- PRESENTATIONS:
     #- "{file.chapter}/doc/ppt.md"
   - REFERENCES:
-    - "{git.chapters}/empty.md"
+    - "{file.chapters}/empty.md"

@@ -6,7 +6,9 @@ HOME=..
 
 include makefile.sys
 
-all: epub pdf authors
+all: epub pdf
+
+# authors
 
 info:
 	ls ${CM}
