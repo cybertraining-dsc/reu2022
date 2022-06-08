@@ -683,6 +683,14 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 * <https://www.activestate.com/resources/quick-reads/what-is-matplotlib-in-python-how-to-use-it-for-plotting/>
 * <https://www.geeksforgeeks.org/bar-plot-in-matplotlib/>
 
+### Bokeh
+
+* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+* <http://docs.bokeh.org/en/latest/>
+* <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
+* <https://docs.bokeh.org/en/latest/docs/user_guide/export.html>
+
 ### Seaborn
 
 * <https://seaborn.pydata.org/api.html>
@@ -691,15 +699,3 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 * <https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/>
 * <https://stackoverflow.com/questions/30336324/seaborn-load-dataset>
 * <https://github.com/mwaskom/seaborn-data/blob/master/planets.csv>
-
-### Bokeh
-
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-* <http://docs.bokeh.org/en/latest/>
-* <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
-
-
-
-
-
