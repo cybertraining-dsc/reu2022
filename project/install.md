@@ -292,21 +292,26 @@ $ python3.10 --version # should print the current version of python in the venv
 ```
 Then, follow the directions below: 
 
-* First, download the latest version of
-  [python](https://www.python.org/)
-* Second, follow the download instructions from the python launcher
-  that is created.
-* Third, navigate into the virtual environment directory: `ENV3`
-* Fourth, execute the following command:
-
-  ```bash
-  $ python -m venv --upgrade ENV3
-  ```
+```bash
+$ mkdir -p ~/tmp
+$ cd ~/tmp
+$ wget https://www.python.org/ftp/python/3.10.5/Python-3.10.5.tar.xz
+$ tar xvf Python-3.10.5.tar.xz 
+$ cd Python-3.10.5/
+$ ./configure --enable-optimizations
+$ make -j $(nproc)
+$ sudo make altinstall
+$ pip install pip -U
+$ python3.10 -V
+```
   
-This will properly update the virtual environment python to the
-correct python version.  Run the `which python` and `python --version`
-commands once again to ensure that the correct version has been
-installed.
+Essentially, what this does is it updates everything within the virtual environment that
+you have set up and retains the py cache that has already been established in the 
+environment. 
+
+`venv` comes with a built-in function called `--upgrade`. This will upgrade everything in 
+the virtual environment, but it will not retain the py cache that has been established. Thus,
+it is necessary to follow the first set of commands. 
 
 ### Homebrew install 
 
