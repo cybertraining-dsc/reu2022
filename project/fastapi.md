@@ -1,10 +1,11 @@
 # FastAPI 
 
-FastAPI ia a framework in python that allows developers to use restinterface to call function that implement application, it uses RestAPI to call the common building block of an application.
-
+FastAPI is a Python framework that allows developers to use the RestAPI interface to call 
+functions that implement applications. RestAPI is used to call the common building block of an application.
 ## FastAPI Install
 
-To install the FastAPI they are two steps one might need to install it fully with the `uvicorn` or install both the `FastAPI ` and the `uvicorn` by part
+There are two ways to install the FastAPI: either completely with the `uvicorn` or partially 
+with both the `FastAPI` and the `uvicorn`.
 
 ```bash
 $ pip install "fastapi[all]"
@@ -25,11 +26,11 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
-Copy that to a file `main.py`
+Copy it in a file called `main.py`.
 
-Run the live server:
-```
+Start the live server as follows:
 
+``` bash
 $ uvicorn main:app --reload 
 
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
@@ -39,15 +40,12 @@ INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 
 ```
-In the output, there's a line with something like:
+There's a line that output something like:
 
 ```
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
-
-That line shows the URL where your app is being served, in your local machine.
-
-Check it
+This line displays the URL where your app is served on your local machine.
 
 Open your browser at http://127.0.0.1:8000
 
