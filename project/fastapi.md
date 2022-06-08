@@ -47,32 +47,23 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
 This line displays the URL where your app is served on your local machine.
 
-Open your browser at http://127.0.0.1:8000
+Navigate to http://127.0.0.1:8000 in your browser.
 
-You will see the JSON response as:
+The JSON response will appear as:
 
 ```
 {"message": "Hello World"}
 ```
 
-Interactive API docs
-
 * Go to http://127.0.0.1:8000/docs.
 
-* Then go to http://127.0.0.1:8000/redoc.
+*  OpenAPI :
 
-* OpenAPI:
+  Using the `OpenAPI` standard for defining APIs, FastAPI creates a `schema` with all of your APIs.
 
-  FastAPI generates a `schema` with all your API using the `OpenAPI` standard for defining APIs.
+  You can see it directly at: http://127.0.0.1:8000/openapi.json.
 
-
-* OpenAPI and JSON Schema
-
-  OpenAPI defines an API schema for your API. And that schema includes definitions (or "schemas") of the data sent and received by your API using JSON Schema, the standard for JSON data schemas.
-
-You can see it directly at: http://127.0.0.1:8000/openapi.json.
-
-It will show a JSON starting with something like:
+It will display a JSON that starts with:
 
 ```json
 {
