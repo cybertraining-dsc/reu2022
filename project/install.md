@@ -26,8 +26,12 @@ Next you start the downloaded program and follw the install screens carfully.
 
 TODO: what is a UAC?
 
-* The UAC Prompt will appear. Click `Yes`. It will show you Git’s  license: a GNU General Public License. Read it and Click `Next`.
 
+* The UAC Prompt will appear. Click `Yes`. It will show you Git’s  license: a GNU General Public License. Read it and Click `Next`.
+  To ensure security of the operating system a UAC prompt allows 
+  operating systems, particularly windows, to prompt for consent
+  or credentials from local administrators before starting a 
+  program.
 * Click `Next` to confirm that `C:\Program Files\Git` is the directory
   where you want Git to be installed.
 
