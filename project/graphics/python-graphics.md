@@ -382,6 +382,7 @@ web driver. To install both at once, use the command:
 
 ```bash
 $ pip install selenium chromedriver-binary
+$ pip install chromedriver-binary-auto
 ```
 
 When writing a program, Chromium must be added to the PATH through these import
