@@ -131,3 +131,8 @@ Named explicitly:
 Named with wildcard:
   Updates\Patches\patch3.txt
 ```
+
+## Sources
+
+* <https://pymotw.com/3/glob/index.html>
+

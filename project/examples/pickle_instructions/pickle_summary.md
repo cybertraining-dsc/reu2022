@@ -73,3 +73,8 @@ Same: False
 Equal: True
 ```
 
+## Sources
+
+* <https://pymotw.com/3/pickle/index.html>
+
+
