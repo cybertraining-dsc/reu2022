@@ -49,7 +49,7 @@ biostats.close()
 file = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
 biostats = pd.DataFrame(file)
 
-print(biostats
+print(biostats)
 
 
 

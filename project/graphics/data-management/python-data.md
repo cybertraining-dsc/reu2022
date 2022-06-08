@@ -1,10 +1,10 @@
-# Python Data Management
+# Python Data Management for Visualizations
 
 In python, there are several ways that data can be interpreted
 in order to generate the graphics for data visualization. 
 
 Through several examples, we will show how to manage different
-types of data and how to best manage them. They are lists, dictionaries
+types of data and how to best interact with them. They are lists, dictionaries
 and CSV files.
 
 ## Lists
@@ -50,6 +50,8 @@ Python has several built-in methods for lists. These include `append()`, `clear(
 and `sort()`. 
 
 A user can utilize these methods to make changes in the necessary ways to the list. 
+
+### Examples
 
 ## Dictionaries
 
@@ -101,6 +103,8 @@ There are several built-in methods that allow for more dictionary manipulation:
 They are `clear()`, `copy()`, `fromkeys()`, `items()`, `pop()`, `popitem()`, and 
 `setdefault()`.
 
+### Examples
+
 
 ## CSV Files 
 
@@ -136,8 +140,8 @@ Following are two examples showcasing how exactly to do this.
 For the `csv` module:
 
 ```python
-biostats = open('/Users/jacksonmiskill/Downloads/biostats.csv') # opens the csv and creates the reader object for it
-reader = csv.reader(biostats)
+file = open('/Users/jacksonmiskill/Downloads/biostats.csv') # opens the csv and creates the reader object for it
+reader = csv.reader(file)
 ```
 
 The `reader` is an object that was created by python developers to help parse through
@@ -146,38 +150,37 @@ the `csv` files.
 For the `pandas` module:
 
 ```python
-biostats = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
-df = pd.DataFrame(biostats)
+file = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
+df = pd.DataFrame(file)
 ```
-
-
 
 ### Accessing Values
 
 For the `csv` module:
 
 It is more challenging to access files using the `csv` module as opposed to the 
-pandas library. To make it more simple, it is necessary to convert the values 
+`pandas` library. To make it more simple, it is necessary to convert the values 
 that lie within the `csv` into a list in order to access. 
 
-The `csv` file is a file with several categories of statistics for a group of made-up
-people. The xample focuses on accessing the values that are in the `age` category. 
-
 ```python
-age_data = []
+data = []
 for each_row in reader:
     if each_row: # you have to check for blank lines within the document
-        age_data.append(each_row[2])
+        data.append(each_row[2])
 
-print(age_data)
-biostats.close()
+print(data)
 ```
+
+For the `pandas` module, it is less complicated to access that values. This 
+is because the module includes a function that converts the data into 
 
 ### Updating Values
 
 
 
 ### Python Built-In Methods
+
+### Examples
 
 ## Sources
 
