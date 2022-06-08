@@ -291,22 +291,24 @@ It creates the virtual environment, a directory called `cm`, then installs
 #### Uninstall
 
 ```bash
-$ rm -f ~/ENV3
-```
+$ sudo rm -rf ~/ENV3
+````
+
+You may need to enter your system password. 
 
 ### Updating Python
 
 Before starting this process, ensure that python is in the correct
-path.  Test in gitshell 
+path. Test in the terminal. 
 
 To do so remove the existing ENV3 first and start a new terminal in which you will be working.
 
 ```bash
-$ rm ~/ENV3
+$ sudo rm -rf ~/ENV3
 ```
 
-Start the new terminal and execute the commands to verify if youhave the right updated version of python
-`
+Start the new terminal and execute the commands to verify if you have the right updated version of python
+
 ```bash
 $ which python3.10
 $ where python3.10
@@ -318,7 +320,7 @@ Now execute
 ```bash
 $ cd ~/cm
 $ python3.10 -m venv ~/ENV3
-$ source ~/ENV/bin/activate
+$ source ~/ENV3/bin/activate
 $ pip install cloudmesh-installer 
 $ cloudmesh-installer get cmd5 
 $ cms help
