@@ -266,6 +266,7 @@ This code produces the Figure *pandas-lineplot*:
 ![lineplot](images/pandas-lineplot.svg)
 
 Figure *pandas-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
+Figure *pandas-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
 
 
 
