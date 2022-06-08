@@ -50,7 +50,7 @@ TODO: what is a UAC?
 * Click `Next` again to enable file system caching, and then
 * Click `Install` because we do not need experimental features.
 
-TODO: the 256 path length is missing which will be done at the end.
+
 
 A video tutorial on how to install Git and Git Bash on Windows 10 is
 located at <https://youtu.be/HCotEx_xCfA>
@@ -71,11 +71,11 @@ and download the latest version.
 * Click `Download`. The download will commence. Please open the file
   once it is finished downloading
 
-* Click `Add python 3.10 to path`
+* Click the checkbox `Add Python 3.10 to PATH`
 
-* Click `Install now`
+* Click `Install Now`
 
-TODO: veriify if the pathlength option appears here or in gitbash or both.
+* At the end of the installation click the option to `Disable path length limit`
 
 A video tutorial on how to install Professional PyCharm is located at
 <https://youtu.be/QPESX-VBnEU>
