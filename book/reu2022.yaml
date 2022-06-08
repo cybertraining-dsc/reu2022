@@ -1,0 +1,61 @@
+---
+metadata:
+  image: "cover.png"
+  title: "Proceedings of the REU2022"
+  subtitle: "Cybertraining"
+  author: "Gregor von Laszewski"
+  subauthor: "Editor"
+  email: "laszewski@gmail.com"
+  url: "https:/cloudmesh-community.github.io/pub/vonlaszewski-reu2022.epub"
+  description: ""
+  abstract: ""
+  keywords: "REU"
+  stylesheet: "epub.css"
+  dest: "./dest/book"
+  filename: "vonLaszewski-reu2022.epub"
+  rights: (c) Gregor von Laszewski, 2022
+  date: 04 June, 2022
+git:
+  "chapters": "https://github.com/cloudmesh-community/book/blob/main/chapters"
+  "credit": "https:/raw.githubusercontent.com/cyberaide/bookmanager/main/bookmanager/template"
+file:
+  "mpi": "https:/raw.githubusercontent.com/cloudmesh/cloudmesh-mpi/main/docs"
+  "reu2022": "file:.."
+https:
+  "reu2022": "https://raw.githubusercontent.com/cybertraining-dsc/reu2022/main"
+BOOK:
+  - INTRODUCTION:
+    - "{file.reu2022}/project/introduction.md"
+    - "{file.reu2022}/README.md"
+    - "{file.reu2022}/c4gc-students.md"
+  - INSTALL:
+    - "{file.reu2022}/project/install.md"
+    - "{file.reu2022}/project/ramdisk.md"
+  - GRAPH_VIZUALIZATION:
+    - "{https.reu2022}/project/graphics/data-management/python-data.md"
+    - "{https.reu2022}/project/graphics/python-graphics.md"
+    - "{https.reu2022}/project/graphics/pandas-graphics.md"
+  - PYTHON:
+    - "{file.reu2022}/project/cloudmesh-common-StopWatch.md"
+    - "{file.reu2022}/project/cms-command.md"
+    - "{file.reu2022}/project/linux.md"
+    - "{file.reu2022}/project/pandas.md"
+    - "{file.reu2022}/project/python.md"
+    - "{file.reu2022}/project/fastapi.md"
+  - RIVANNA:
+    - "{https.reu2022}/project/rivanna.md"
+    - "{file.reu2022}/project/rivanna-run-mpi-programs.md"
+  - AI:
+    - "{https.reu2022}/project/dl-timeseries.md"
+  - BIOS:
+    - "{https.reu2022}/bio.md"
+  #- COMMUNICATION:
+    #- "{file.chapter}/doc/communicate.md"
+    #- "{file.mpi}/report-group.md"
+    # - "{file.chapter}/doc/piazza.md"
+    # - "{file.chapter}/git/github.md"
+    #- "{file.chapter}/preface/git.md"
+  #- PRESENTATIONS:
+    #- "{file.chapter}/doc/ppt.md"
+  - REFERENCES:
+    - "{git.chapters}/empty.md"
