@@ -31,10 +31,16 @@
 
 ## Rivanna Information
 
-* <https://www.rc.virginia.edu/>
-* <https://www.rc.virginia.edu/userinfo/rivanna/overview/>
+* Research Computing: <https://www.rc.virginia.edu/>
+* Rivanna Overview: <https://www.rc.virginia.edu/userinfo/rivanna/overview/>
+* Research Computing Support Center: <https://www.rc.virginia.edu/support/#office-hours>
 * access through ssh: <https://www.rc.virginia.edu/userinfo/rivanna/login/>
 * access through Web Browser: <https://shibidp.its.virginia.edu/idp/profile/SAML2/Redirect/SSO?execution=e2s1>
+* Rivanna Slide Show: <https://learning.rc.virginia.edu/notes/rivanna-intro/>
+* Globus Data Transfer (not using for reu2022) <https://www.rc.virginia.edu/userinfo/globus/>
+* Slurm Job Manager Documentation <https://www.rc.virginia.edu/userinfo/rivanna/slurm/>
+* Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
+
 
 ## GitBash (Windows only)
 
