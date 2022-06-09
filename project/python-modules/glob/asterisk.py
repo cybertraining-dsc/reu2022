@@ -1,4 +1,4 @@
 import glob
 
-for name in sorted(glob.glob('Updates/*')):
+for name in sorted(glob.glob('updates/*')):
     print(name)

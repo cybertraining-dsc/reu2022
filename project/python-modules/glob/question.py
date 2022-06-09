@@ -1,4 +1,4 @@
 import glob
 
-for name in sorted(glob.glob('Updates/version2-?.txt')):
+for name in sorted(glob.glob('updates/version2-?.txt')):
     print(name)

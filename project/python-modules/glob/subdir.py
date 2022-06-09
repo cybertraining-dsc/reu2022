@@ -1,9 +1,9 @@
 import glob
 
 print('Named explicitly:')
-for name in sorted(glob.glob('Updates/Patches/*')):
+for name in sorted(glob.glob('updates/patches/*')):
     print('  {}'.format(name))
 
 print('Named with wildcard:')
-for name in sorted(glob.glob('Updates/*/*')):
+for name in sorted(glob.glob('updates/*/*')):
     print('  {}'.format(name))
