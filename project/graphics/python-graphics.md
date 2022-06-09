@@ -462,11 +462,11 @@ show(p)
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-line.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
 
 ![Line Plot](examples/images/bokeh-linechart.png)
 
-Figure *Line Plot*: Line Plot created with user Spotify data. 
+Figure *bokeh-linechart*: Line Chart created with user Spotify data. 
 
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -493,11 +493,11 @@ show(p)
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-bar.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py)
 
-![Bar Chart](examples/images/bokeh-bar.png)
+![bokeh-barchart](examples/images/bokeh-barchart.png)
 
-Figure *Bar Chart*: Bar Chart created with user Spotify data. 
+Figure *bokeh-barchart*: Bokeh Bar Chart created with user Spotify data. 
 
 ### Saving Figures
 
@@ -639,11 +639,11 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output of this program is showcased in Figure *lineplot*
+The output of this program is showcased in Figure *seaborn-lineplot*
 
-![lineplot](examples/images/seaborn-lineplot.svg)
+![seaborn-lineplot](examples/images/seaborn-lineplot.svg)
 
-Figure *lineplot*: Lineplot created from user Spotify data.
+Figure *seaborn-lineplot*: Seaborn Lineplot created from user Spotify data.
 
 ### Distribution Plots
 
@@ -663,11 +663,11 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output of this program is showcased in Figure *displot*
+The output of this program is showcased in Figure *seaborn-displot*
 
-![displot](examples/images/seaborn-displot.svg)
+![seaborn-displot](examples/images/seaborn-displot.svg)
 
-Figure *displot*: Displot created from user Spotify data. 
+Figure *seaborn-displot*: Seaborn Displot created from user Spotify data. 
 
 
 ### Categorical Plots
@@ -688,11 +688,11 @@ plt.show()
 ```
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output from the program is showcased in Figure *catplot*
+The output from the program is showcased in Figure *seaborn-catplot*
 
 ![catplot](examples/images/seaborn-catplot.svg)
 
-Figure *catplot*: Created from user Spotify data. 
+Figure *seaborn-catplot*: Created from user Spotify data. 
 
 ### Regression Plots
 
@@ -712,11 +712,11 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output of this program is showcased in Figure *regplot*
+The output of this program is showcased in Figure *seaborn-regplot*
 
 ![regplot](examples/images/seaborn-regplot.svg)
 
-Figure *regplot*: Created from user Spotify data. 
+Figure *seaborn-regplot*: Created from user Spotify data. 
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.
