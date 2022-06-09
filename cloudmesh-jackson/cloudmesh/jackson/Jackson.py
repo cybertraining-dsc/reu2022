@@ -32,7 +32,6 @@ class Jackson:
 
     def animate(self, percentage=50):
 
-
         dividor = 100 / percentage
         print(f"here is dividor {dividor}")
         if os_is_windows:

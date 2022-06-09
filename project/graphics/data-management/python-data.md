@@ -185,6 +185,8 @@ for each_row in reader:
 print(data)
 ```
 
+This code is available on [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
+
 For the `pandas` module, it is less complicated to access that
 values. This is because the module includes a function that converts
 the data into a dataframe.  After converting, you can use the various
@@ -203,7 +205,7 @@ found
 represents made up data on a group of made up people such as age,
 height, and weight.
 
-It is relatively easy, but slow, to create graphs with the `csv`
+It is slow and complicated to create graphs with the `csv`
 module:
 
 ```python
@@ -286,7 +288,6 @@ This code produces the Figure *pandas-lineplot*:
 
 ![lineplot](images/pandas-lineplot.svg)
 
-Figure *pandas-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
 Figure *pandas-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
 
 
