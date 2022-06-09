@@ -6,11 +6,11 @@
 
 * Learn how to install python from python.org
 * Learn how to use a python venv
-* Learn how to isntall cloudmesh Shell
+* Learn how to install cloudmesh Shell
 
 ---
 
-In this section, we present an easy-to-follow installation guidefor a 
+In this section, we present an easy-to-follow installation guide for a 
 recent version of python and cloudmesh. 
 
 Before you start, please read the entire section and develop a plan for installation.
