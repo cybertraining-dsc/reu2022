@@ -1,4 +1,4 @@
-## Comparision Table
+# Comparision Table
 
 | Value            | matlotlib | seaborn | bokeh | pandas |
 |------------------|-----------|---------|-------|--------|
@@ -6,5 +6,5 @@
 | linechart        | +         | +       | +     | +      |
 | scatterplot      | +         | +       | +     | +      |
 | piechart         | +         |         | +     | +      |
-| countourplot     | +         | +        |       |        |
+| countourplot     | +         | +       |       |        |
 | distributionplot | +         | +       |       | +      |

@@ -1,5 +1,14 @@
 # Ramdisk
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Learn how to set up a RAM disk
+* Learn how to use a DAM disk
+
+---
+
 how to set up aand manage a ramdisk on lunux
 
 develop cms program 
