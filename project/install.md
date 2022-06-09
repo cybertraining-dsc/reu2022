@@ -261,6 +261,7 @@ do this in order.
 $ cd
 $ python3.10 -m venv ~/ENV3
 $ source ~/ENV/bin/activate
+$ pip install pip -U
 $ mkdir cm
 $ cd cm
 $ pip install cloudmesh-installer 
@@ -307,6 +308,7 @@ Now execute:
 $ cd ~/cm
 $ python3.10 -m venv ~/ENV3
 $ source ~/ENV3/bin/activate
+$ pip install pip -U
 $ pip install cloudmesh-installer 
 $ cloudmesh-installer get cmd5 
 $ cms help

@@ -7,22 +7,28 @@ This code is available on GitHub at the following address: https://github.com/cy
 
 """
 
+import random
+import pandas as pd
+from matplotlib import pyplot as plt
+import csv
+from cloudmesh.common.util import path_expand
+import sys
 
 class ConvertCSV:
 
+    table = []
+    variables = 0
 
-    import random
-    import pandas as pd
-    from matplotlib import pyplot as plt
-    import csv
-    from cloudmesh.common.util import path_expand
-    import sys
+    def create_table(self, num_params):
+        filename = path_expand(f"{self}.csv")
+        with open(filename, 'r') as file:  # opens the csv and creates the reader object for it
+            table = list(csv.reader(self, delimiter=','))
+            variables = num_params
+        return table
 
-    def create_table(file):
+    def csv_read_to_list(self):
 
-    def csv_read_to_list(table):
-
-    def csv_read_to_dict(table):
+    def csv_read_to_dict(self):
 
 
 
