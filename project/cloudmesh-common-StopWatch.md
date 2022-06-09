@@ -1,5 +1,15 @@
 # Cloudmesh StopWatch
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Using timers in python
+* Using cloudmesh.common.StopWatch
+* Create benchmarkes from StopWatch
+
+---
+
 Improve the documentation of Cloudmesh StopWatch if needed
 
 <https://github.com/cloudmesh/cloudmesh-common/blob/main/cloudmesh/common/StopWatch.py>

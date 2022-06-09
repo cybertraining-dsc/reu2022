@@ -6,6 +6,14 @@ request with your contribution.
 
 ## Queue
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Learn how to use the build in Python queue
+
+---
+
 A queue is a data structure. Essentially, it is a list that has order,
 meaning that the queue has an object to be removed first and an 
 object to be removed last.

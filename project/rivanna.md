@@ -1,5 +1,15 @@
 # Rivanna 
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Leran how to use Rivanna
+* Learn how to set up VPN to access Rivanna from commandline
+* Learn how to access Rivanna from a terminal including Windows
+
+---
+
 Logging in to Rivanna via web interface
 
 Documentation: <https://www.rc.virginia.edu/userinfo/rivanna/login/#web-based-access>

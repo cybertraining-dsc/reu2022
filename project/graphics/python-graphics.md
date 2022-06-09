@@ -1,5 +1,26 @@
 # Python Graphics
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Introduction to plotting libraries
+
+  * Introduction to matplotlib
+  * Introduction to seaborn
+  * Introduction to bokeh
+  * Introduction to pandas plots
+
+* Introduction to graph plotting libraries
+
+  * Introduction to networkX
+  * Introduction to garphvis
+  * Introduction to mermaid
+  * Introduction to rackdiag
+
+* Identify which library to chose 
+
+---
 
 In Python, data and equations can be visually represented using graphs
 and plots.  Whereby showcasing how to use different plotting

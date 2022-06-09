@@ -1,5 +1,13 @@
 # DL Timeseries
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Learn how to use deep learning for time series analysis
+
+---
+
 craete and documenta simple time series command
 
 use cloudmesh sys command generate to create an extension so we can do a commandline tool 
