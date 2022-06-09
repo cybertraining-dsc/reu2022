@@ -67,11 +67,11 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py)
 
-The output of this program is showcased in Figure *barchart*.
+The output of this program is showcased in Figure *pandas-barchart*.
 
-![barchart](examples/images/pandas-barchart.svg)
+![pandas-barchart](examples/images/pandas-barchart.svg)
 
-Figure *barchart*: Barchart created from data from Spotify.
+Figure *pandas-barchart*: Pandas Barchart created from data from Spotify.
 
 Note the differences in creating the chart. Since data frames support
 multiple dimensions of data, the x and y we want to graph must be
@@ -115,11 +115,11 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
 
-The output of this program is showcased in Figure *linechart*.
+The output of this program is showcased in Figure *pandas-linechart*.
 
-![linechart](examples/images/pandas-linechart.svg)
+![pandas-linechart](examples/images/pandas-linechart.svg)
 
-Figure *linechart*: Barchart created from random number generation.
+Figure *pandas-linechart*: Pandas Barchart created from random number generation.
 
 
 ## Pie Chart
@@ -146,11 +146,11 @@ save()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py)
 
-The output of this program is showcased in Figure *piechart*.
+The output of this program is showcased in Figure *pandas-piechart*.
 
-![piechart](examples/images/pandas-piechart.svg)
+![pandas-piechart](examples/images/pandas-piechart.svg)
 
-Figure *piechart*: Barchart created from data from Spotify.
+Figure *pandas-piechart*: Barchart created from data from Spotify.
 
 Note that instead of listing both the Categories and the Count as
 data, we use the categories as index. This gets the proper labeling

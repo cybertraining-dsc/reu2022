@@ -1,5 +1,15 @@
 # Contribute
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Learn how to contribute
+* Identify who contributes what
+* Install and use `cms git` command
+
+---
+
 Before you do anything, check first if it is already in one of the
 books.  Evaluate if it needs to be expanded in the book, or if a new
 section is needed.  If a new section is needed, please consult with

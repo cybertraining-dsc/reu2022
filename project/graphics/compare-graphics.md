@@ -1,4 +1,4 @@
-## Comparision Table
+# Comparison Table
 
 Although Matplotlib is the main plotting interface, several other libraries include simple visualization options. We
 have created a comparison table to showcase the differences between Matplotlib, Seaborn, Bokeh, and Pandas.
@@ -18,6 +18,30 @@ have created a comparison table to showcase the differences between Matplotlib, 
 | interactive graph |           |         | +     |        |
 | data frame        |           |         |       | +      |
 
+bar graph
+grouped bar graph
+stacked bar graph
+
+line graph
+spline chart
+multiline graph
+compund line graph
+
+pie chart
+exploded pie chart
+
+donut chart
+
+histogram
+
+point graph
+scatter plot
+bubble chart
+
+radar chart
+
+box plot
+
 The full set of graphing options for Matplotlib is displayed in the 
 [Matplotlib Gallery](<https://matplotlib.org/3.3.0/gallery/index.html>).
 
@@ -28,3 +52,5 @@ Meanwhile, Pandas is a very popular data manipulation tool. Its special feature 
 store data. Thus, visualizing data created through Pandas requires understanding how data frames work.
 
 Next is a tutorial on some simple visualization tools we can use with each library.
+
+
