@@ -13,6 +13,7 @@ RestAPI interface to call functions that implement
 applications. RestAPI is used to call the common building block of an
 application.
 
+
 ## FastAPI Install
 
 There are two ways to install the FastAPI: either completely with the
@@ -184,8 +185,7 @@ async def root():
 
 ### Step 4: define the path operation function
 
-Our *path operation function* is as follows:
-
+Our `path operation function` is as follows:
 
 * path: is /.
 * operation: is get.
