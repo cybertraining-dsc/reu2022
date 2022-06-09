@@ -1,11 +1,13 @@
 # Pandas Graphics
 
-Pandas is a useful library for working with data. It relies on storing data in data frames. Instead of using a set of
-ordered pairs, a data frame in Pandas is similar to an Excel Spreadsheet or an SQL data frame and supports multiple rows
-and columns in a tabular fashion.
+Pandas is a useful library for working with data. It relies on storing
+data in data frames. Instead of using a set of ordered pairs, a data
+frame in Pandas is similar to an Excel Spreadsheet or an SQL data
+frame and supports multiple rows and columns in a tabular fashion.
 
-Visualization for Panda's data frames are an important tool for understanding the data set. Panda's visualization tools
-are based off of Matplotlib, so many of the plotting functions are the same.
+Visualization for Panda's data frames are an important tool for
+understanding the data set. Panda's visualization tools are based off
+of Matplotlib, so many of the plotting functions are the same.
 
 ## Installation
 To install Pandas, please use the command:
@@ -16,8 +18,9 @@ $ pip install pandas
 
 ## Import Statements
 
-The user will need to import both Pandas and Matplotlib in order to create and visualize data frames. In addition,
-Python's `numpy` may be a useful library for mathematical procedures on the data.
+The user will need to import both Pandas and Matplotlib in order to
+create and visualize data frames. In addition, Python's `numpy` may be
+a useful library for mathematical procedures on the data.
 
 ```python
 import matplotlib.pyplot as plt
@@ -27,9 +30,11 @@ import numpy as np
 
 ## Bar Chart
 
-Creating a bar chart with data frames is similar to creating bar charts with Matplotlib, with a couple differences in
-how you manipulate the data. In the following program, we use the same data and modifications as the [Matplotlib bar
-chart example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-barchart.py)
+Creating a bar chart with data frames is similar to creating bar
+charts with Matplotlib, with a couple differences in how you
+manipulate the data. In the following program, we use the same data
+and modifications as the [Matplotlib bar chart
+example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-barchart.py)
 that can be found on Github.
 
 ```python
@@ -59,7 +64,8 @@ plt.title("Distribution of Genres in My Liked Songs")
 plt.show()
 ```
 
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py)
+This program can be downloaded from
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py)
 
 The output of this program is showcased in Figure *barchart*.
 
@@ -67,15 +73,21 @@ The output of this program is showcased in Figure *barchart*.
 
 Figure *barchart*: Barchart created from data from Spotify.
 
-Note the differences in creating the chart. Since data frames support multiple dimensions of data, the x and y we want
-to graph must be specified in `df.plot.bar()`. However, editing the title and axes are the same as in Matplotlib.
+Note the differences in creating the chart. Since data frames support
+multiple dimensions of data, the x and y we want to graph must be
+specified in `df.plot.bar()`. However, editing the title and axes are
+the same as in Matplotlib.
 
 ## Line Chart
 
-A line chart is typically used for time series data and non-categorical data. Pandas supports line chart visualization
-with `plot.line()`. We use the same data and modifications as the [Matplotlib line chart example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-linechart.py)
-that can be found on Github. Note that since this data relies on random number generation the graphs will look slightly
-different each time.
+A line chart is typically used for time series data and
+non-categorical data. Pandas supports line chart visualization with
+`plot.line()`. We use the same data and modifications as the
+[Matplotlib line chart
+example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-linechart.py)
+that can be found on Github. Note that since this data relies on
+random number generation the graphs will look slightly different each
+time.
 
 ```python
 import matplotlib.pyplot as plt
@@ -100,7 +112,8 @@ plt.title("Plot Test")
 plt.show()
 ```
 
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
+This program can be downloaded from
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
 
 The output of this program is showcased in Figure *linechart*.
 
@@ -111,9 +124,11 @@ Figure *linechart*: Barchart created from random number generation.
 
 ## Pie Chart
 
-A pie chart is useful for showing a divison of a whole. Data that can be represented by a pie chart can also be used to
-make a bar chart, since both typically use categorical counts. Pandas uses `plot.pie()` to make a pie chart, in a manner
-similar to `plot.bar()`. We use the same data used to create the line chart for this visualization.
+A pie chart is useful for showing a divison of a whole. Data that can
+be represented by a pie chart can also be used to make a bar chart,
+since both typically use categorical counts. Pandas uses `plot.pie()`
+to make a pie chart, in a manner similar to `plot.bar()`. We use the
+same data used to create the line chart for this visualization.
 
 ```python
 import matplotlib.pyplot as plt
@@ -128,7 +143,8 @@ plot = df.plot.pie(y='Count',legend=None)
 save()
 ```
 
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py)
+This program can be downloaded from
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py)
 
 The output of this program is showcased in Figure *piechart*.
 
@@ -136,23 +152,29 @@ The output of this program is showcased in Figure *piechart*.
 
 Figure *piechart*: Barchart created from data from Spotify.
 
-Note that instead of listing both the Categories and the Count as data, we use the categories as index. This gets the 
-proper labeling for our pie chart. In addition, Pandas automatically adds a legend, but this is unnecessary so we can
-remove the legend by setting the parameter `legend=None` in `plot.pie()`.
+Note that instead of listing both the Categories and the Count as
+data, we use the categories as index. This gets the proper labeling
+for our pie chart. In addition, Pandas automatically adds a legend,
+but this is unnecessary so we can remove the legend by setting the
+parameter `legend=None` in `plot.pie()`.
 
 ## Exporting
 
-Note that this is the same as the Matplotlib tutorial found [here]((https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py))
+Note that this is the same as the Matplotlib tutorial found
+[here]((https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py))
 on Github.
 
-To export your graph as an image file, you can use the Matplotlib function `savefig("fname.x")`. You can specify the
-file type by filling in `.x` with `.pdf`, `.png`, `svg`, etc.
+To export your graph as an image file, you can use the Matplotlib
+function `savefig("fname.x")`. You can specify the file type by
+filling in `.x` with `.pdf`, `.png`, `svg`, etc.
 
-The parameter `dpi` sets the DPI (Dots per Inch) of the image being saved. Specify 
-this number in the form of a float. For example, set `dpi=300`.
+The parameter `dpi` sets the DPI (Dots per Inch) of the image being
+saved. Specify this number in the form of a float. For example, set
+`dpi=300`.
 
-Additionally, there is another way to save files that may be faster than calling a
-specific method for each file. The following code showcases this:
+Additionally, there is another way to save files that may be faster
+than calling a specific method for each file. The following code
+showcases this:
 
 ```python
 import matplotlib.pyplot as plt
@@ -168,9 +190,11 @@ def save():
     plt.show()
 ```
 
-This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
+This code can be accessed on
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
 
-The very last command is `plt.show()`, as this command displays the graph that you made. To show, simply type:
+The very last command is `plt.show()`, as this command displays the
+graph that you made. To show, simply type:
 
 ```python
 plt.show()

@@ -110,5 +110,7 @@ Preserved:
 {'blue': 3, 'green': 5, 'red': 5, 'yellow': 2}
 ```
 
+## Sources
+* <https://pymotw.com/3/shelve/index.html>
 
 

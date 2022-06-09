@@ -1,16 +1,16 @@
 # Python Data Management for Visualizations
 
-In python, there are several ways that data can be interpreted
-in order to generate the graphics for data visualization. 
+In python, there are several ways that data can be interpreted in
+order to generate the graphics for data visualization.
 
-Through several examples, we will show how to manage different
-types of data and how to best interact with them. They are lists, dictionaries
-and CSV files.
+Through several examples, we will show how to manage different types
+of data and how to best interact with them. They are lists,
+dictionaries and CSV files.
 
 ## Lists
 
-Lists are clumps of continuous values that are put directly next to each other
-in the computer memory system. 
+Lists are clumps of continuous values that are put directly next to
+each other in the computer memory system.
 
 ### Construction
 
@@ -20,21 +20,25 @@ In python, lists can be constructed like this:
 example_list = ['example' , 2, 'b', 45, False]
 ```
 
-Lists have order and can hold many types (bool, int, String, etc.) of values.
+Lists have order and can hold many types (bool, int, String, etc.) of
+values.
 
 ### Accessing Values
-In python, it is easy to access values within a list. The following code provides an 
-example of how to access certain values within a list:
+
+In python, it is easy to access values within a list. The following
+code provides an example of how to access certain values within a
+list:
 
 ```python
 index_4 = example_list[4]
 ```
 
-It is important to note that lists have indices, which range from 0 to 
-the length of the list - 1. The indices provide access to values within 
-the list. 
+It is important to note that lists have indices, which range from 0 to
+the length of the list - 1. The indices provide access to values
+within the list.
 
 ### Updating Values
+
 To update a value within a list, simply utilize same brackets:
 
 ```python
@@ -55,27 +59,30 @@ A user can utilize these methods to make changes in the necessary ways to the li
 
 ## Dictionaries
 
-Dictionaries are like specialized lists. They hold a key-value pair that allows for a user
-to look up a key and find the associated value. Dictionaries are useful for storing values
-in a way that is more organized than a linear list. Furthermore, dictionaries make it easy
-for users to look up the necessary information. 
+Dictionaries are like specialized lists. They hold a key-value pair
+that allows for a user to look up a key and find the associated
+value. Dictionaries are useful for storing values in a way that is
+more organized than a linear list. Furthermore, dictionaries make it
+easy for users to look up the necessary information.
 
 ### Construction
 
 In python, dictionaries are constructed as follows:
 
 ```python
-example_dictionary = {'motorcycles': 2, 'autocycles': 3, 'cars': 4, 'small_trucks': 6
+example_dictionary = {'motorcycles': 2, 'autocycles': 3,
+		      'cars': 4, 'small_trucks': 6
                       'large_trucks': '18'}
 ```
 
-The string values are the keys, which provide access to the values within the dictionary.
-The colon provides the computer with the command for assigning key-value pair. 
+The string values are the keys, which provide access to the values
+within the dictionary.  The colon provides the computer with the
+command for assigning key-value pair.
 
 ### Accessing Values
 
-There are several built-in commands to access both the keys and values in a dictionary. 
-They are as follows:
+There are several built-in commands to access both the keys and values
+in a dictionary.  They are as follows:
 
 ```python
 example_dictionary.get()
@@ -83,9 +90,10 @@ example_dicionary.keys()
 example_dictionary.values()
 ```
 
-The `.get()` method returns the value that is associated with the given key, the `.keys()` 
-method returns a list of the keys alone, and the `.values()` method returns a list 
-of the values alone. There are more methods (see the Python Built-In Methods section)
+The `.get()` method returns the value that is associated with the
+given key, the `.keys()` method returns a list of the keys alone, and
+the `.values()` method returns a list of the values alone. There are
+more methods (see the Python Built-In Methods section)
 
 ### Updating Values
 
@@ -99,24 +107,26 @@ This will update the value associated with this particular key-value pair.
 
 ### Python Built-In Methods
 
-There are several built-in methods that allow for more dictionary manipulation:
-They are `clear()`, `copy()`, `fromkeys()`, `items()`, `pop()`, `popitem()`, and 
-`setdefault()`.
+There are several built-in methods that allow for more dictionary
+manipulation: They are `clear()`, `copy()`, `fromkeys()`, `items()`,
+`pop()`, `popitem()`, and `setdefault()`.
 
 ### Examples
 
 
 ## CSV Files 
 
-CSV stands for "comma-separated-values" and is a data structure that is incredibly
-common for data management and analysis. There are many ways to access CSV files. 
-The most common way is to use pandas, a python library. However, python also has a 
-built-in CSV module that can be used. We will show examples of using both below. 
+CSV stands for *comma-separated-values* and is a data structure that
+is incredibly common for data management and analysis. There are many
+ways to access CSV files.  The most common way is to use pandas, a
+python library. However, python also has a built-in CSV module that
+can be used. We will show examples of using both below.
 
 ### Installing and Importing
 
-Before beginning with any of these CSV manipulation tasks, it is necessary to 
-install and import the correct modules and libraries. The following showcases this:
+Before beginning with any of these CSV manipulation tasks, it is
+necessary to install and import the correct modules and libraries. The
+following showcases this:
 
 ```bash
 $ pip install pandas
@@ -129,23 +139,26 @@ import csv
 
 ### Construction
 
-CSV files are files that exist elsewhere and have already been created. 
-Therefore, for creation, we are not creating a CSV files, but rather deconstructing it
-into something that is usable. 
+CSV files are files that exist elsewhere and have already been
+created.  Therefore, for creation, we are not creating a CSV files,
+but rather deconstructing it into something that is usable.
 
-In pandas, this means creating a dataframe, which is essentially and indexed table. 
-In the python `csv` module, this means using the `csvreader` object within the module. 
-Following are two examples showcasing how exactly to do this. 
+In pandas, this means creating a dataframe, which is essentially and
+indexed table.  In the python `csv` module, this means using the
+`csvreader` object within the module.  Following are two examples
+showcasing how exactly to do this.
 
 For the `csv` module:
 
 ```python
-file = open('/Users/jacksonmiskill/Downloads/biostats.csv') # opens the csv and creates the reader object for it
+# open the csv and creates the reader object for it
+file = open('/Users/jacksonmiskill/Downloads/biostats.csv')
+
 reader = csv.reader(file)
 ```
 
-The `reader` is an object that was created by python developers to help parse through
-the `csv` files. 
+The `reader` is an object that was created by python developers to
+help parse through the `csv` files.
 
 For the `pandas` module:
 
@@ -158,9 +171,10 @@ df = pd.DataFrame(file)
 
 For the `csv` module:
 
-It is more challenging to access files using the `csv` module as opposed to the 
-`pandas` library. To make it more simple, it is necessary to convert the values 
-that lie within the `csv` into a list in order to access. 
+It is more challenging to access files using the `csv` module as
+opposed to the `pandas` library. To make it more simple, it is
+necessary to convert the values that lie within the `csv` into a list
+in order to access.
 
 ```python
 data = []
@@ -171,22 +185,26 @@ for each_row in reader:
 print(data)
 ```
 
-For the `pandas` module, it is less complicated to access that values. This 
-is because the module includes a function that converts the data into a dataframe. 
-After converting, you can use the various methods that are within the dataframe
-to essentially pass in the correct values. 
+For the `pandas` module, it is less complicated to access that
+values. This is because the module includes a function that converts
+the data into a dataframe.  After converting, you can use the various
+methods that are within the dataframe to essentially pass in the
+correct values.
 
 ### Examples
 
-Once the `csv` values have been accessed, creation of the graphics can begin. Starting 
-with the `csv` module and then moving into `pandas` the following will demonstrate this
-action. 
+Once the `csv` values have been accessed, creation of the graphics can
+begin. Starting with the `csv` module and then moving into `pandas`
+the following will demonstrate this action.
 
-The `csv` file that will be utilized for the following examples can be found
-[here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). It represents made up data
-on a group of made up people such as age, height, and weight. 
+The `csv` file that will be utilized for the following examples can be
+found
+[here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). It
+represents made up data on a group of made up people such as age,
+height, and weight.
 
-It is relatively easy, but slow, to create graphs with the `csv` module:
+It is relatively easy, but slow, to create graphs with the `csv`
+module:
 
 ```python
 from matplotlib import pyplot as plt
@@ -230,7 +248,8 @@ plt.title("Names and Corresponding Height")
 plt.show()
 ```
 
-This code can be access from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
+This code can be access from
+[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
 
 This code produces Figure *csv-lineplot*:
 
@@ -242,7 +261,8 @@ Figure *csv-lineplot*: created using the data available [here](https://people.sc
 ***How do we use csv module without having to clean the data? ***
 
 
-It is so much more simple to accomplish this with the `pandas` library:
+It is so much more simple to accomplish this with the `pandas`
+library:
 
 ```python
 file = pd.read_csv("/Users/jacksonmiskill/Downloads/biostats.csv")
@@ -259,7 +279,8 @@ plt.title("Names and Corresponding Height")
 plt.show()
 ```
 
-This code can be accessed from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
+This code can be accessed from
+[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
 
 This code produces the Figure *pandas-lineplot*:
 
