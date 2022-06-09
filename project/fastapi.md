@@ -1,5 +1,13 @@
 # FastAPI 
 
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Leran how to use fastAPI
+
+---
+
 FastAPI is a Python framework that allows developers to use the
 RestAPI interface to call functions that implement
 applications. RestAPI is used to call the common building block of an

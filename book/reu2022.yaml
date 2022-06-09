@@ -34,6 +34,7 @@ BOOK:
     - "{file.reu2022}/project/install.md"
     - "{file.reu2022}/project/ramdisk.md"
   - GRAPH_VIZUALIZATION:
+    - "{https.reu2022}/project/graphics/compare-graphics.md"
     - "{https.reu2022}/project/graphics/data-management/python-data.md"
     - "{https.reu2022}/project/graphics/python-graphics.md"
     - "{https.reu2022}/project/graphics/pandas-graphics.md"
