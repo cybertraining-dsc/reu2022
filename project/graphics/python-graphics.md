@@ -85,11 +85,11 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py)
 
-The output of this program is showcased in Figure *barchart*.
+The output of this program is showcased in Figure *matplotlib-barchart*.
 
-![barchart](examples/images/matplotlib-barchart.svg)
+![matplotlib-barchart](examples/images/matplotlib-barchart.svg)
 
-Figure *barchart*: Barchart created from data from Spotify
+Figure *matplotlib-barchart*: Matplotlib Barchart created from data from Spotify
 
 ### Line Chart 
 
