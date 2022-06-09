@@ -27,6 +27,7 @@ BOOK:
   - INTRODUCTION:
     - "{file.reu2022}/project/introduction.md"
     - "{file.reu2022}/action.md"
+    - "{file.reu2022}/project/issues.md"
     - "{file.reu2022}/README.md"
     - "{file.reu2022}/c4gc-students.md"
   - INSTALL:
