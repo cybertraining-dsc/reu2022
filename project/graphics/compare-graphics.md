@@ -6,5 +6,5 @@
 | linechart        | +         | +       | +     | +      |
 | scatterplot      | +         | +       | +     | +      |
 | piechart         | +         |         | +     | +      |
-| countourplot     | +         |         |       |        |
+| countourplot     | +         | +        |       |        |
 | distributionplot | +         | +       |       | +      |

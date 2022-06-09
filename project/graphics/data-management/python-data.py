@@ -1,8 +1,6 @@
 import random
-import csv
 import pandas as pd
 from matplotlib import pyplot as plt
-import seaborn as sns
 
 """
 Purpose: python uses several different data structures. It is important to know how to operate these data structures.
@@ -15,33 +13,71 @@ This code is available on GitHub at the following address: https://github.com/cy
 
 # Lists
 
-''' x = []
-y = []
-for i in range(0, 100):
-    x.append(i)
-    value = random.random() * 10000
-    y.append(value)
-
-# to access values of a list
-
-
-
-'''
-
 # CSV Files
 
-# P'''ython CSV Module
+# Python CSV Module
+
+from cloudmesh.common import path_expand
+filename = path_expand("./biostats.csv")
+print(filename)
+
 names = []
 sex_data = []
 age_data = []
 height_data = []
 weight_data = []
 
-with open('/Users/jacksonmiskill/Downloads/biostats.csv',
-          'r') as file:  # opens the csv and creates the reader object for it
-    reader = csv.reader(file, delimiter=',')
+import sys
+import csv
+from pprint import pprint
 
-    for each_row in reader:
+with open(filename,'r') as file:  # opens the csv and creates the reader object for it
+    table = list(csv.reader(file, delimiter=','))
+
+
+
+pprint(table)
+'''for line in table[1:]:
+    names.append(line[0])
+    sex_data.append(line[1])
+    age_data.append(line[2])
+    height_data.append(line[3])
+    weight_data.append(line[4])'''
+
+pprint(table)
+# d = table[0]
+# def csv_read_to_list(table):
+d = {'Names': [],
+     'Sex': [],
+     'Age': [],
+     'Height': [],
+     'Weight': []}
+for line in table[1:]:
+    d['Names'].append(line[0])
+    d['Sex'].append(line[1])
+    d['Age'].append(line[2])
+    d['Height'].append(line[3])
+    d['Weight'].append(line[4])
+
+pprint(d)
+# d = table[0]
+
+# def csv_read_to_dict(table):
+column_names = table[0]
+d = {}
+for column in table[0]:
+    d[column] = []
+
+for line in table[1:]:
+    counter = 0
+    for column in column_names:
+        d[column].append(line[counter])
+        counter = counter + 1
+
+
+sys.exit()
+
+''' for each_row in reader:
         if each_row:  # you have to check for blank lines within the document
 
             names.append(each_row[0])
@@ -57,6 +93,7 @@ for i in range(0, len(height_data)):
     height_data[i] = int(height_data[i])
 print(type(height_data[0]))
 print(height_data)
+'''
 
 
 
