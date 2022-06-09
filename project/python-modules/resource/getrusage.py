@@ -15,5 +15,9 @@ RESOURCES = [
 usage = resource.getrusage(resource.RUSAGE_SELF)
 
 for name, desc in RESOURCES:
-    print('{:<25} ({:<10}) = {}'.format(
-        desc, name, getattr(usage, name)))
+    try:
+        print('{:<25} ({:<10}) = {}'.format(
+            desc, name, getattr(usage, name)))
+    except:
+        print('{:<25} ({:<10}) = {}'.format(
+            desc, name, "not found"))
