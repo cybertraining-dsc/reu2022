@@ -246,6 +246,7 @@ An easy way to do all of this with a command is the following:
 ```bash
 $ cd ~/cm
 $ pip install cloudmesh-installer -U
+$ pip install --upgrade pip
 $ cloudmesh-installer new ~/ENV3 cmd5 --python=/usr/local/bin/python3.10
 $ source ~/ENV3/bin/activate
 $ python -V
@@ -255,7 +256,23 @@ $ which python
 
 ## macOS
 
-We assume you use `zsh` which is the default on macOS
+We assume you use `~/zsh` which is the default on macOS
+
+### Xcode Install
+
+There are a number of digital tools that are needed before proceeding further. These
+tools include git, make, and a c compiler. All of these tools can be downloaded at
+[Xcode](https://apps.apple.com/us/app/xcode/id497799835), which is an IDE App on the 
+Apple App Store that includes all of these necessary elements. 
+
+Once installed, there is one simple command line command to run:
+
+```bash
+$ xcode-select --install
+```
+
+This will install all the necessary command line tools. Xcode can be used as an IDE, but for
+the most part will not be used outside the command line tools it provides. 
 
 ### Cloudmesh
 
@@ -283,8 +300,8 @@ $ echo "source ~/ENV3/bin/activate" >> .zprofile
 $ echo "cd cm" >> .zprofile
 ```
 
-It creates the virtual environment, a directory called `cm`, then installs `cloudmesh`. Following this, it sets the
-macOS startup commands `.zshrc` and `.zprofile` to start up in the virtual environment `ENV3`.
+It creates the virtual environment, a directory called `~/cm`, then installs `cloudmesh`. Following this, it sets the
+macOS startup commands `.zshrc` and `.zprofile` to start up in the virtual environment `~/ENV3`.
 
 #### Uninstall
 
@@ -324,7 +341,7 @@ $ cloudmesh-installer get cmd5
 $ cms help
 ```
 
-As `zsh` is already configured previously, we do not have to set it up again.
+As `~/zsh` is already configured previously, we do not have to set it up again.
 
 ### Homebrew install 
 
