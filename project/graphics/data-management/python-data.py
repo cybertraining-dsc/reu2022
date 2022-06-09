@@ -1,6 +1,7 @@
 import random
 import pandas as pd
 from matplotlib import pyplot as plt
+from cloudmesh.common.util import path_expand
 
 """
 
@@ -21,7 +22,6 @@ https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/data-man
 
 # Python CSV Module
 
-from cloudmesh.common import path_expand
 filename = path_expand("./biostats.csv")
 print(filename)
 
@@ -31,7 +31,7 @@ age_data = []
 height_data = []
 weight_data = []
 
-<<<<<<< HEAD
+
 import sys
 import csv
 from pprint import pprint
@@ -85,7 +85,7 @@ sys.exit()
 ''' for each_row in reader:
         if each_row:  # you have to check for blank lines within the document
 
-=======
+
 with open('/Users/jacksonmiskill/Downloads/biostats.csv',
           'r') as file:
     # opens the csv and creates the reader object for it
@@ -94,7 +94,7 @@ with open('/Users/jacksonmiskill/Downloads/biostats.csv',
     for each_row in reader:
         if each_row:
             # you have to check for blank lines within the document
->>>>>>> 66c706675440a0f27d3b7273d1f94e69f52e0c87
+
             names.append(each_row[0])
             sex_data.append(each_row[1])
             age_data.append(each_row[2])
