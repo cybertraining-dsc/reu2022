@@ -53,7 +53,7 @@ import numpy as np
 
 ### Bar Chart
 
-In matplotlib, it is easy to create bar charts. For example, this is a
+In Matplotlib, it is easy to create bar charts. For example, this is a
 demonstration of a simple bar chart using data from a user using
 Spotify.
 
@@ -187,7 +187,8 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py)
 
-The output of this program is showcased in Figure *matplotlib-contourplot*.
+The output of this program is showcased in Figure
+*matplotlib-contourplot*.
 
 
 ![contour](examples/images/matplotlib-contour.svg)
@@ -224,8 +225,8 @@ plt.title("Title you want to set").
 
 #### x-axis labels and y-axis labels
 
-Within the matplotlib library are the functions `plt.xlabel()` and 
-`plt.ylabel()`. All these functions do is set a string to the two 
+Within the Matplotlib library are the functions `plt.xlabel()` and
+`plt.ylabel()`. All these functions do is set a string to the two
 axes. To use these functions, simply type:
 
 ```python
@@ -277,9 +278,8 @@ rotated by 45°
 
 ### Exporting
 
-#### Saving Chart as Files
-After a chart is created and displayed, it can be exported as a file outside the
-code using this command:
+#### Saving Chart as Files After a chart is created and displayed, it
+can be exported as a file outside the code using this command:
 
 ```python
 plt.savefig("fname", dpi='figure')
@@ -396,11 +396,10 @@ Figure *lineplot*: Figure created with Bokeh.
 
 * **x_axis_label** and **y_axis_label**: labels for the x and y axis
 * **x_range** and **y_range**: specifications for the range of the x
-  and y axis
-* **title**: text title for your graph
-* **width** and **height**: width and height of your graph in pixels
+* **and y axis title**: text title for your graph width** and
+* ****height**: width and height of your graph in pixels
 * **background_fill_color**: the background of the figure (takes any
-  CSS colors)
+* **CSS colors)
 
 ### Scatter Plot
 
@@ -514,8 +513,10 @@ with the figure function.
 
 #### Saving Figures as PNG
 
-As the purpose of Bokeh is to create interactive `.html` visualizations, it's recommended to keep your visualizations
-in this format. However, it may sometime be necessary to save as an image file.
+As the purpose of Bokeh is to create interactive `.html`
+visualizations, it's recommended to keep your visualizations in this
+format. However, it may sometime be necessary to save as an image
+file.
 
 In order to save figures as a PNG, both Selenium and a web driver will
 need to be installed. We will use Chromium here for our web driver. To
@@ -539,8 +540,9 @@ from selenium import webdriver
 import chromedriver_binary
 ```
 
-Bokeh appears to support saving files as a `.svg` but it seems to have bugs and is not recommended. To use the functions,
-`export_png()` and `export_svg()` must be imported, and can be used as follows:
+Bokeh appears to support saving files as a `.svg` but it seems to have
+bugs and is not recommended. To use the functions, `export_png()` and
+`export_svg()` must be imported, and can be used as follows:
 
 ```python
 from bokeh.io import export_png, export_svg
@@ -549,9 +551,11 @@ export_png(fig, filename="file-name.png")
 export_svg(fig, filename="file-name.svg")
 ```
 
-Note that Chromium is slow and this process may take delay the execution and performance of the program.
+Note that Chromium is slow and this process may take delay the
+execution and performance of the program.
 
-Similarly to Matplotlib, Bokeh can utilize a function to save all created images.
+Similarly to Matplotlib, Bokeh can utilize a function to save all
+created images.
 
 ```python
 from matplotlib import pyplot as plt
