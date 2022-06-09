@@ -4,7 +4,7 @@
 
 ![](images/learning.png) **Learning Objectives**
 
-* Leran how to creat your own cloudmesh commands
+* Learn how to create your own cloudmesh commands
 
 ---
 

@@ -1,12 +1,9 @@
 """
-Purpose: python uses several different data structures. It is important to know how to operate these data structures.
-         The following is used to demonstrate how the structures work and how to use them to create the necessary
-         visuals for data analysis.
+    Purpose: to access the csv module and utilize it to create lists and dictionaries
 
-This code is available on GitHub at the following address: https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/data-management
-
+    Author: Jackson Miskill
+    Contact: jcm4bsq@virginia.edu
 """
-
 
 import csv
 from cloudmesh.common.util import path_expand
@@ -21,27 +18,17 @@ def create_table(filename):
 
 
 def csv_read_to_list(table, index):
-    column_names = table[0]
-
     ilist = []
-    for first in table[1: ]:
+    for first in range(1, len(table)):
         ilist.append(table[first][index])
 
     return ilist
 
-def csv_read_to_dict(table, index):
 
+def csv_read_to_dict(table, index):
     idict = {}
-    counter = 0
-    for x in table[1:]:
-        idict[table[x]].append(table[x][index])
+
+    for value in range(1, len(table)):
+        idict[table[value][0]] = int(table[value][index])
 
     return idict
-    
-
-
-
-
-
-
-

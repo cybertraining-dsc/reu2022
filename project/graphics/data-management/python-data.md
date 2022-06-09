@@ -255,7 +255,7 @@ This code can be access from
 
 This code produces Figure *csv-lineplot*:
 
-![lineplot](images/csv-lineplot.svg)
+![matplotlib lineplot](images/csv-lineplot.svg)
 
 Figure *csv-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
 
@@ -286,7 +286,7 @@ This code can be accessed from
 
 This code produces the Figure *pandas-lineplot*:
 
-![lineplot](images/pandas-lineplot.svg)
+![matplotlib lineplot](images/pandas-lineplot.svg)
 
 Figure *pandas-lineplot*: created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html). 
 

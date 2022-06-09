@@ -23,10 +23,14 @@ height_data = []
 weight_data = []
 
 table = ConvertCSV.create_table(filename)
-idict = ConvertCSV.csv_read_to_dict(table=table, index=3)
-sex_data = ConvertCSV.csv_read_to_list(table=table, index=1)
+print(table)
 
-print(idict)
+sex_data = ConvertCSV.csv_read_to_list(table=table, index=1)
 print(sex_data)
+
+idict = ConvertCSV.csv_read_to_dict(table=table, index=3)
+print(idict)
+
+
 
 
