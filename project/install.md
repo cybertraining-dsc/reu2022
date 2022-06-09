@@ -256,7 +256,7 @@ $ which python
 
 ## macOS
 
-We assume you use `/zsh` which is the default on macOS
+We assume you use `~/zsh` which is the default on macOS
 
 ### Xcode Install
 
@@ -271,7 +271,8 @@ Once installed, there is one simple command line command to run:
 $ xcode-select --install
 ```
 
-This will install all the necessary command line tools. 
+This will install all the necessary command line tools. Xcode can be used as an IDE, but for
+the most part will not be used outside the command line tools it provides. 
 
 ### Cloudmesh
 
@@ -299,8 +300,8 @@ $ echo "source ~/ENV3/bin/activate" >> .zprofile
 $ echo "cd cm" >> .zprofile
 ```
 
-It creates the virtual environment, a directory called `/cm`, then installs `cloudmesh`. Following this, it sets the
-macOS startup commands `.zshrc` and `.zprofile` to start up in the virtual environment `/ENV3`.
+It creates the virtual environment, a directory called `~/cm`, then installs `cloudmesh`. Following this, it sets the
+macOS startup commands `.zshrc` and `.zprofile` to start up in the virtual environment `~/ENV3`.
 
 #### Uninstall
 
@@ -340,7 +341,7 @@ $ cloudmesh-installer get cmd5
 $ cms help
 ```
 
-As `.zsh` is already configured previously, we do not have to set it up again.
+As `~/zsh` is already configured previously, we do not have to set it up again.
 
 ### Homebrew install 
 
