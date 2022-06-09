@@ -1,55 +1,43 @@
 # Install
 
-In this section, we present an easy to follw instalation for a 
+In this section, we present an easy-to-follow installation guidefor a 
 recent version of python and cloudmesh. 
 
-Before you start doing the install, please read the entire section and develop a plan for installation.
+Before you start, please read the entire section and develop a plan for installation.
 
 ## Windows
 
-The instalation of cloudmesh benefits from using gitbash as it allows us to have a terminal that is similar to that of macOS and Linux.
+The installation of cloudmesh benefits from using Git Bash as it allows us to have a terminal that is similar to that of
+macOS and Linux.
 
-Hence before we install python and cloudmesh we install gitbash.
+Hence, before we install python and cloudmesh we install Git Bash.
 
 Furthermore, we provide the option to use chocolatey to install packages in similar fashion as on linus. 
 
 ### Git Bash install
 
-To install gitbash, pleas download it forst from 
+To install Git Bash, pleas download it first from 
 
 * <https://git-scm.com/downloads>
 
-Click `Download` for Windows. The download will commence. Please
-open the file once it is finished downloading.
- 
-Next you start the downloaded program and follw the install screens carfully. 
+Click `Download` for Windows. The download will commence. Please open the file once it is finished downloading. Next,
+please start the downloaded program and follow the instructions carefully. 
 
-TODO: what is a UAC?
-
-
-* The UAC Prompt will appear. Click `Yes`. It will show you Git’s  license: a GNU General Public License. Read it and Click `Next`.
-  To ensure security of the operating system a UAC prompt allows 
-  operating systems, particularly windows, to prompt for consent
-  or credentials from local administrators before starting a 
-  program.
-* Click `Next` to confirm that `C:\Program Files\Git` is the directory
-  where you want Git to be installed.
-
-* Select the  box to create a shortcut icon on the desktop. 
-  Click `Next`  to continue with the install.
-
-* Click `Next` to accept the default text editor which is vim, 
-* TODO: THIS IS WRONG, you do want the one with main 
-  Click `Next` again to Let Git decide the default branch name
+* The administration window (UAC Prompt) will appear. Click `Yes`. It will show you Git’s  license: a GNU General Public
+  License. Read it and Click `Next`. To ensure security of the operating system, a UAC prompt allows operating systems,
+  particularly Windows, to prompt for consent or credentials from local administrators before starting a program.
+* Click `Next` to confirm that `C:\Program Files\Git` is the directory where you want Git to be installed.
+* Select the  box to create a shortcut icon on the desktop. Click `Next`  to continue with the install.
+* Click `Next` to accept the default text editor which is vim,
+* Replace the default branch name (`master`) with `main`
 * Click `Next` again to run Git from the command line and 3rd party software,
 * Click `Next` again to use the OpenSSL library
-* Click `Next` again to checkout Windows-style,
+* Click `Next` again to check out Windows-style,
 * Click `Next` again to use MinTTY,
 * Click `Next` again to use the default git pull,
 * Click `Next` again to use the Git Credential Manager Core,
 * Click `Next` again to enable file system caching, and then
 * Click `Install` because we do not need experimental features.
-
 
 
 A video tutorial on how to install Git and Git Bash on Windows 10 is
@@ -62,14 +50,13 @@ A written tutorial on how to install Git and Git Bash on Windows 10 is located a
 ### Python 3.10 install
 
 
-To install python 3.10 please go to 
+To install Python 3.10 please go to 
 
 * <https://python.org>
 
 and download the latest version.
 
-* Click `Download`. The download will commence. Please open the file
-  once it is finished downloading
+* Click `Download`. The download will commence. Please open the file once it is finished downloading
 
 * Click the checkbox `Add Python 3.10 to PATH`
 
@@ -86,13 +73,16 @@ A video on how to configure PyCharm with cloudmesh is located at
 
 ### Installing cloudmesh
 
-Cloudmesh can be installed in any shell that has python and git access. HOwever it is convenient t use gitbash as it simplifies the documentation and allows us to interact with linux commands with the windows file system. The installation is done with a Pyython `venv` so you do not effect your computres python install. Here are the steps:
+Cloudmesh can be installed in any shell that has python and `git` access. However, it is convenient to use Git Bash as
+it simplifies the documentation and allows us to interact with Linux commands with the Windows file system. The
+installation is done with a Python virtual environment `ENV3` using command `venv` so you do not affect your computer's
+current python configurations or settings. Here are the steps:
 
 ```bash
 $ python -m venv ~/ENV3
 $ source ~/ENV3/Scripts/activate
 $ cd
-# mkdir cm
+$ mkdir cm
 $ cd cm
 $ pip install pip -U
 $ pip install cloudmesh-installer 
@@ -103,22 +93,20 @@ $ echo "source ~/ENV3/Scripts/activate" >> .bashrc
 $ echo "cd ~/cm" >> .bashrc
 ```
 
-To activate it, start new gitbash and terminate the first gitbash window.  If you see in the new window
-`(ENV3)`, continue. Git bash will initialize the environment.
-It will set now up some envireonment and thus you will start 
-again gitbash and terminate the second gitbash you created. Now
-gitbash is properly created and configures.
+To activate it, start new Git Bash and terminate the first Git Bash window.  If you see in the new window `(ENV3)`,
+continue. Git Bash will initialize the environment.
 
-If you do not want to always start in the directory `cm` do replace
-the line in your `.bashrc` `cd cm` with `cd`
+If you do not want to always start in the directory `cm` do replace the line in your `.bashrc` `cd cm` with `cd`
 
 ### Uninstall
+
+To remove the virtual environment `ENV3`, use the following command:
 
 ```bash
 $ rm -f ~/ENV3
 ```
 
-Edit the .bashrc and .bash_profile file and delete the lines
+Next, edit the `.bashrc` and `.bash_profile` file and delete the lines:
 
 ```
 $ source ~/ENV3/Scripts/activate
@@ -127,14 +115,14 @@ $ cd cm
 
 ## Choco install 
 
-There are a number of usefull packages that you can install via choco
-this includes visual code, pychram, emacs, and make
-
-Even python could be installed with it however we have not tested the install of python via choco. However we tested the install of emacs, pychram, and make.
+There are a number of useful packages that you can install via choco. This includes Visual Code, Pycharm, Emacs, and
+make. Even Python could be installed with it; however, we have not tested the installation of python via choco, while
+we have tested the installation of Emacs, Pycharm, and make.
 
 ## Install Chocolatey
 
-To install pycharm, pleas esatrt a gitbash terminal as administrator: To do so press the `Windows` key and type powershell. Click Run as Administrator. Click Yes.
+To install, pleas start a Git Bash terminal as administrator: To do so press the `Windows` key and type powershell.
+Click `Run as Administrator`. Click `Yes`.
 
 2. In PowerShell execute the following command:
    
@@ -160,10 +148,9 @@ To install pycharm, pleas esatrt a gitbash terminal as administrator: To do so p
    then the Chocolatey installation has finished. Type `choco` and you
    should see Chocolatey in green text.
 
-Now you can install many programs by launching PowerShell as
-Administrator or gitbash.
+Now you can install many programs with choco by launching PowerShell as Administrator or Git Bash.
 
-A list of programs that you can install with `choco` can be found at
+A list of programs that you can install with `choco` can be found at:
 
 * <https://community.chocolatey.org/packages/>
 
@@ -180,15 +167,13 @@ $ choco install vscode -y
 $ choco install zoom -y
 ``` 
 
-Once teh install completes PyCharm will be ready for you to use. You
-can install many programs this way, and the
-
+Once the installation completes, your program will be ready for you to use.
 
 ## Linux 
 
 ### Install Python 3.10.5
 
-The instalatiton form source can be done easily as shown next
+The installation from source can be done easily as shown:
 
 ```bash
 $ mkdir -p ~/tmp
@@ -203,7 +188,7 @@ $ pip install pip -U
 $ python3.10 -V
 ```
 
-### Setting up the a venv
+### Setting up the venv
 
 We assume you use bash
 
@@ -229,7 +214,7 @@ $ echo "cd cm" >> .bash_profile
 $ rm -f ~/ENV3
 ```
 
-Edit the .zshrc and .zprofile file and delete the lines
+Edit the `.zshrc` and `.zprofile` file and delete the lines
 
 ```
 $ source ~/ENV3/bin/activate
@@ -260,14 +245,14 @@ $ which python
 
 ## macOS
 
-We assume you use zsh which is the default on macOS
+We assume you use `zsh` which is the default on macOS
 
 ### Cloudmesh
 
 #### Install
 
 Before any of the following, make sure to download the current version
-of python. At the time of this writing, it is python 3.10.5
+of python. At the time of this writing, it is python 3.10.5.
 
 Second, execute the following commands in your terminal. Make sure to
 do this in order.
@@ -288,10 +273,8 @@ $ echo "source ~/ENV3/bin/activate" >> .zprofile
 $ echo "cd cm" >> .zprofile
 ```
 
-It creates the virtual environment, a directory called `cm`, then installs
-`cloudmesh`. Following this, it sets the macOS startup commands
-`.zshrc` and `.zprofile` to start up in the virtual environment
-`ENV3`.
+It creates the virtual environment, a directory called `cm`, then installs `cloudmesh`. Following this, it sets the
+macOS startup commands `.zshrc` and `.zprofile` to start up in the virtual environment `ENV3`.
 
 #### Uninstall
 
@@ -303,8 +286,7 @@ You may need to enter your system password.
 
 ### Updating Python
 
-Before starting this process, ensure that python is in the correct
-path. Test in the terminal. 
+Before starting this process, ensure that python is in the correct path. Test in the terminal. 
 
 To do so remove the existing ENV3 first and start a new terminal in which you will be working.
 
@@ -320,7 +302,7 @@ $ where python3.10
 $ python3.10 -V
 ```
 
-Now execute
+Now execute:
 
 ```bash
 $ cd ~/cm
@@ -336,19 +318,16 @@ As `zsh` is already configured previously, we do not have to set it up again.
 
 ### Homebrew install 
 
-Homebrew (`brew`) like `choco` is a package management
-software. Unlike choco`, it is used by macOS devices rather than
-Windows devices.  `brew` is used to more easily download packages to
-an operating system; simply put, it eliminates the need for the user
-to search for and download the desired package.
+Homebrew (`brew`) like `choco` is a package management software. Unlike `choco`, it is used by macOS devices rather than
+Windows devices. `brew` is used to more easily download packages to an operating system; simply put, it eliminates the
+need for the user to search for and download the desired package.
 
 Installing `brew` is simple. 
 
 * First, make sure the computer that is downloading Homebrew is 
   up-to-date with the latest software for its OS. 
 
-* Second, ensure that `xcode` has been installed. `xcode`
-  can be installed from the Apple App Store.
+* Second, ensure that `xcode` has been installed. `xcode` can be installed from the Apple App Store.
 
 * Third, in the terminal, write out: 
 
@@ -376,7 +355,3 @@ install packages directly to the operating system:
 ```bash
 $ brew install [package name]
 ```
-
-
-
-
