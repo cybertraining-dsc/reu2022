@@ -1,4 +1,4 @@
-## Comparision Table
+# Comparision Table
 
 Although Matplotlib is the main plotting interface, several other libraries include simple visualization options. We
 have created a comparison table to showcase the differences between Matplotlib, Seaborn, Bokeh, and Pandas.
