@@ -2,16 +2,15 @@
 
 
 In Python, data and equations can be visually represented using graphs
-and plots.  Whereby showcasing how to use different plotting
-libraries, this includes Matplotlib, Bokeh, and Seaborn.
+and plots.  Here we showcase how to use the different plotting
+libraries Matplotlib, Bokeh, and Seaborn.
 
 ## Matplotlib
 
-Matplotlib is a library that allows the user to visualize data.  The
-library can create pie charts, bar charts, line plots, and other
-graphs specifically for data visualization.  Matplotlib creates
-figures that can be manipulated and transformed.  This includes
-manipulations of axes, labels, fonts, and the size of the images.
+Matplotlib is the main plotting library that allows the user to
+visualize data. Matplotlib creates figures that can be manipulated and
+transformed. This includes manipulations of axes, labels, fonts, and
+the size of the images.
 
 ### Installation
 
@@ -73,7 +72,7 @@ Figure *barchart*: Barchart created from data from Spotify
 
 ### Line Chart 
 
-The matplotlib library in python allows for comprehensive line plots
+The Matplotlib library in python allows for comprehensive line plots
 to be created.  Here a line chart was created using a for loop to
 generate random numbers in a range and plot it against the `x` and `y`
 axis to display the changes between two variables/data sets.
@@ -100,19 +99,19 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
 
-The output of this program is showcased in Figure *linechart*.
+The output of this program is showcased in Figure *matplotlib-linechart*.
 
 
-![linechart](examples/images/matplotlib-linechart.svg)
+![matplotlib-linechart](examples/images/matplotlib-linechart.svg)
 
-Figure *linechart*: Linechart created from random variables
+Figure *matplotlib-linechart*: Matplotlib Linechart created from random variables
 
 
 ### Pie Chart
 
 A pie chart is most commonly used when representing the division of
 components that form a whole thing e.g. showing how a budget is broken
-down into separate spending categories. In matplotlib, the function
+down into separate spending categories. In Matplotlib, the function
 `pie()`creates a pie chart.  In the following code example, a user's
 Spotify data will be displayed as a pie chart.
 
@@ -131,12 +130,12 @@ plt.show()
 
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py)
 
-The output of this program is showcased in Figure *piechart*.
+The output of this program is showcased in Figure *matplotlib-piechart*.
 
 
-![piechart](examples/images/matplotlib-piechart.svg)
+![matplotlib-piechart](examples/images/matplotlib-piechart.svg)
 
-Figure *piechart*: Barchart created from data from Spotify
+Figure *matplotlib-piechart*: Barchart created from data from Spotify
 
 ### Contour Plot
 
@@ -167,12 +166,12 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py)
 
-The output of this program is showcased in Figure *contourplot*.
+The output of this program is showcased in Figure *matplotlib-contourplot*.
 
 
 ![contour](examples/images/matplotlib-contour.svg)
 
-Figure *contourplot*: Multivariable (x, y, z) Equation Plotted
+Figure *matplotlib-contourplot*: Multivariable (x, y, z) Equation Plotted
 
 A contour plot allows data and equations consisting of three variables
 to be plotted through plotting 3D surfaces as 2D slices on a `xy`
@@ -304,6 +303,14 @@ command displays the graph that you made. To show, simply type:
 plt.show()
 ```
 
+### Matplotlib Sources
+
+* <https://matplotlib.org/>
+* <https://matplotlib.org/stable/api/pyplot_summary.html>
+* <https://www.activestate.com/resources/quick-reads/what-is-matplotlib-in-python-how-to-use-it-for-plotting/>
+* <https://www.geeksforgeeks.org/bar-plot-in-matplotlib/>
+
+
 ## Bokeh
 
 Bokeh is a Python library useful for generating visualizations for web
@@ -373,75 +380,6 @@ Figure *lineplot*: Figure created with Bokeh.
 * **width** and **height**: width and height of your graph in pixels
 * **background_fill_color**: the background of the figure (takes any
   CSS colors)
-
-### Saving Figures
-
-Bokeh also supports outputs to a static HTML file with a
-specific name.
-
-```python
-from bokeh.plotting import output_file
-output_file("name.html")
-```
-
-After importing the Bokeh plotting interface, it is possible to be
-able to create different types of plots utilizing the figure created
-with the figure function.
-
-#### Saving Figures as PNG
-
-In order to save figures as a PNG, both Selenium and a web driver will
-need to be installed. We will use Chromium here for our web driver. To
-install both at once, use the commands:
-
-(Windows)
-```bash
-$ pip install selenium chromedriver-binary
-$ pip install chromedriver-binary-auto
-```
-
-There seems to be issues installing `chromedriver-binary` on Mac
-computers due to the built-in security, so it is recommended to simply
-save Bokeh figures as a `.html` file.
-
-When writing a program, Chromium must be added to the PATH through
-these import statements:
-
-```python
-from selenium import webdriver
-import chromedriver_binary
-```
-
-Bokeh appears to support saving files as a `.svg` but it seems to have bugs and is not recommended. To use the functions,
-`export_png()` and `export_svg()` must be imported, and can be used as follows:
-
-```python
-from bokeh.io import export_png, export_svg
-
-export_png(fig, filename="file-name.png")
-export_svg(fig, filename="file-name.svg")
-```
-
-Note that Chromium is slow and this process may take delay the
-execution and performance of the program.
-
-Similarly to matplotlib, Bokeh can utilize a function to save all
-created images.
-
-```python
-from matplotlib import pyplot as plt
-from bokeh.io import export_png, export_svg
-import os
-
-def save(p):
-    name = os.path.basename(__file__).replace(".py", "")
-    export_png(p, filename=f"images/{name}.png")
-    export_svg(p, filename=f"images/{name}.svg")
-    plt.show(p)
-```
-
-This code can be accessed on
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py).
 
 ### Scatter Plot
 
@@ -539,6 +477,84 @@ This program can be downloaded from
 ![Bar Chart](examples/images/bokeh-bar.png)
 
 Figure *Bar Chart*: Bar Chart created with user Spotify data. 
+
+### Saving Figures
+
+Bokeh supports outputs to a static HTML file with a specific name.
+
+```python
+from bokeh.plotting import output_file
+output_file("name.html")
+```
+
+After importing the Bokeh plotting interface, it is possible to be
+able to create different types of plots utilizing the figure created
+with the figure function.
+
+#### Saving Figures as PNG
+
+As the purpose of Bokeh is to create interactive `.html` visualizations, it's recommended to keep your visualizations
+in this format. However, it may sometime be necessary to save as an image file.
+
+In order to save figures as a PNG, both Selenium and a web driver will
+need to be installed. We will use Chromium here for our web driver. To
+install both at once, use the commands:
+
+(Windows)
+```bash
+$ pip install selenium chromedriver-binary
+$ pip install chromedriver-binary-auto
+```
+
+There seems to be issues installing `chromedriver-binary` on Mac
+computers due to the built-in security, so it is recommended to simply
+save Bokeh figures as a `.html` file.
+
+When writing a program, Chromium must be added to the PATH through
+these import statements:
+
+```python
+from selenium import webdriver
+import chromedriver_binary
+```
+
+Bokeh appears to support saving files as a `.svg` but it seems to have bugs and is not recommended. To use the functions,
+`export_png()` and `export_svg()` must be imported, and can be used as follows:
+
+```python
+from bokeh.io import export_png, export_svg
+
+export_png(fig, filename="file-name.png")
+export_svg(fig, filename="file-name.svg")
+```
+
+Note that Chromium is slow and this process may take delay the execution and performance of the program.
+
+Similarly to Matplotlib, Bokeh can utilize a function to save all created images.
+
+```python
+from matplotlib import pyplot as plt
+from bokeh.io import export_png, export_svg
+import os
+
+def save(p):
+    name = os.path.basename(__file__).replace(".py", "")
+    export_png(p, filename=f"images/{name}.png")
+    export_svg(p, filename=f"images/{name}.svg")
+    plt.show(p)
+```
+
+This code can be accessed on
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py).
+
+### Bokeh Sources
+
+* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+* <http://docs.bokeh.org/en/latest/>
+* <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
+* <https://docs.bokeh.org/en/latest/docs/user_guide/export.html>
+
 
 ## Seaborn
 
@@ -699,24 +715,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
 
-## Sources
-
-### Matplotlib
-
-* <https://matplotlib.org/>
-* <https://matplotlib.org/stable/api/pyplot_summary.html>
-* <https://www.activestate.com/resources/quick-reads/what-is-matplotlib-in-python-how-to-use-it-for-plotting/>
-* <https://www.geeksforgeeks.org/bar-plot-in-matplotlib/>
-
-### Bokeh
-
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-* <http://docs.bokeh.org/en/latest/>
-* <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
-* <https://docs.bokeh.org/en/latest/docs/user_guide/export.html>
-
-### Seaborn
+### Seaborn Sources
 
 * <https://seaborn.pydata.org/api.html>
 * <https://www.geeksforgeeks.org/python-seaborn-tutorial/>
