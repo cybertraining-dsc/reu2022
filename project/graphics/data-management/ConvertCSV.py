@@ -17,11 +17,15 @@ def create_table(filename):
     return table
 
 
-def csv_read_to_list(table, index):
+def csv_read_to_list(table, index, convert):
     ilist = []
-    for first in range(1, len(table)):
-        ilist.append(table[first][index])
-
+    if convert:
+        for first in range(1, len(table)):
+            value = int(table[first][index])
+            ilist.append(value)
+    else:
+        for first in range(1, len(table)):
+            ilist.append(table[first][index])
     return ilist
 
 
