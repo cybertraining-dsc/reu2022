@@ -1,5 +1,9 @@
 # Calender
 
+* [dynamic calendar](https://docs.google.com/document/d/1_A4Gp7HL4EV4WvQpnFMiMAAArnFcfZDCyEhJ85NxG1c/edit)
+
+## Team presentations
+
 * June 2, Program start
 * June 13, JP: title TODO
 * June 15, Alison
