@@ -24,13 +24,14 @@ file:
 https:
   "reu2022": "https://raw.githubusercontent.com/cybertraining-dsc/reu2022/main"
 BOOK:
-  - INTRODUCTION:
-    - "{file.reu2022}/calendar.md"
-    - "{file.reu2022}/project/introduction.md"
-    - "{file.reu2022}/action.md"
-    - "{file.reu2022}/project/issues.md"
+  - CONTRIBUTE:
+      - "{file.reu2022}/contribute/contribute.md"
+      - "{file.reu2022}/contribute/calendar.md"
+      - "{file.reu2022}/action.md"
+      - "{file.reu2022}/contribute/issues.md"
+      - "{file.reu2022}/contribute/c4gc-students.md"
+  - USEFUL_LINKS:
     - "{file.reu2022}/README.md"
-    - "{file.reu2022}/c4gc-students.md"
   - INSTALL:
     - "{file.reu2022}/project/install.md"
     - "{file.reu2022}/project/ramdisk.md"
@@ -54,7 +55,7 @@ BOOK:
   - AI:
     - "{file.reu2022}/project/dl-timeseries.md"
   - BIOS:
-    - "{file.reu2022}/bio.md"
+    - "{file.reu2022}/contribute/bio.md"
   #- COMMUNICATION:
     #- "{file.chapter}/doc/communicate.md"
     #- "{file.mpi}/report-group.md"
