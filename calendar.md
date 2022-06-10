@@ -1,6 +1,7 @@
 # Calender
 
 * [dynamic calendar](https://docs.google.com/document/d/1_A4Gp7HL4EV4WvQpnFMiMAAArnFcfZDCyEhJ85NxG1c/edit)
+* [recorded meetings](https://docs.google.com/spreadsheets/d/1vHwF4ctXbDb3Nhx7CBE4w9AX1KcwfBDni6CD1aAdV1A/edit#gid=0)
 
 ## Team presentations
 
