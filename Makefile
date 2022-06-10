@@ -1,3 +1,6 @@
+fast:
+	cd book; make pdf
+
 all: action
 	cd book; make pdf
 

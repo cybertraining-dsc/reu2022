@@ -34,10 +34,10 @@ BOOK:
     - "{file.reu2022}/project/install.md"
     - "{file.reu2022}/project/ramdisk.md"
   - GRAPH_VIZUALIZATION:
-    - "{https.reu2022}/project/graphics/compare-graphics.md"
-    - "{https.reu2022}/project/graphics/data-management/python-data.md"
-    - "{https.reu2022}/project/graphics/python-graphics.md"
-    - "{https.reu2022}/project/graphics/pandas-graphics.md"
+    - "{file.reu2022}/project/graphics/compare-graphics.md"
+    - "{file.reu2022}/project/graphics/data-management/python-data.md"
+    - "{file.reu2022}/project/graphics/python-graphics.md"
+    - "{file.reu2022}/project/graphics/pandas-graphics.md"
   - PYTHON:
     - "{file.reu2022}/project/cloudmesh-common-StopWatch.md"
     - "{file.reu2022}/project/cms-command.md"
@@ -46,12 +46,12 @@ BOOK:
     - "{file.reu2022}/project/python.md"
     - "{file.reu2022}/project/fastapi.md"
   - RIVANNA:
-    - "{https.reu2022}/project/rivanna.md"
+    - "{file.reu2022}/project/rivanna.md"
     - "{file.reu2022}/project/rivanna-run-mpi-programs.md"
   - AI:
-    - "{https.reu2022}/project/dl-timeseries.md"
+    - "{file.reu2022}/project/dl-timeseries.md"
   - BIOS:
-    - "{https.reu2022}/bio.md"
+    - "{file.reu2022}/bio.md"
   #- COMMUNICATION:
     #- "{file.chapter}/doc/communicate.md"
     #- "{file.mpi}/report-group.md"
