@@ -61,8 +61,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 . The output of this program is showcased in[@fig:seaborn-lineplot].
 
-![Seaborn Lineplot created from user Spotify data.](examples/images/seaborn-lineplot.svg)
-{fig:seaborn-lineplot width=50%}
+![Seaborn Lineplot created from user Spotify data.](examples/images/seaborn-lineplot.svg){#fig:seaborn-lineplot width=50%}
 
 ## Distribution Plots
 
@@ -82,8 +81,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 . The output of this program is showcased in [@fig:seaborn-displot]
 
-![Seaborn Displot created from user Spotify data](examples/images/seaborn-displot.svg)
-{#fig:seaborn-displot width=50%}
+![Seaborn Displot created from user Spotify data](examples/images/seaborn-displot.svg){#fig:seaborn-displot width=50%}
 
 ## Categorical Plots
 
@@ -107,8 +105,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/gra
 
 The output from the program is showcased in [@fig:seaborn-catplot]
 
-![Seaborn Catplot created from user Spotify data.](examples/images/seaborn-catplot.svg)
-{#fig:seaborn-catplot width=50%}
+![Seaborn Catplot created from user Spotify data.](examples/images/seaborn-catplot.svg){#fig:seaborn-catplot width=50%}
 
 ## Regression Plots
 
@@ -129,10 +126,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 . The output of this program is showcased in [@fig:seaborn-regplot].
 
-![Seaborn regplot created from user Spotify data](examples/images/seaborn-regplot.svg)
-{@fig:seaborn-regplot width=50%}
-
-Figure *.
+![Seaborn regplot created from user Spotify data](examples/images/seaborn-regplot.svg){#fig:seaborn-regplot width=50%}
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.

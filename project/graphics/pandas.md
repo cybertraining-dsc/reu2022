@@ -67,8 +67,7 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py). The output of this program is showcased in Figure [@fig:pandas-barchart].
 
-![Pandas barchart created from data from Spotify.](examples/images/pandas-barchart.svg)
-{#fig:pandas-barchart width=50%}
+![Pandas barchart created from data from Spotify.](examples/images/pandas-barchart.svg){#fig:pandas-barchart width=50%}
 
 Note the differences in creating the chart. Since data frames support
 multiple dimensions of data, the x and y we want to graph must be
@@ -112,8 +111,7 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py). The output of this program is showcased in Figure [@fig:pandas-linechart].
 
-![Pandas linechart created from random number generation.](examples/images/pandas-linechart.svg)
-{#fig:pandas-linechart width=50%}
+![Pandas linechart created from random number generation.](examples/images/pandas-linechart.svg){#fig:pandas-linechart width=50%}
 
 
 ## Pie Chart
