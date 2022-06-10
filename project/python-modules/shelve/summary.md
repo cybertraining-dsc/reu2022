@@ -31,7 +31,10 @@ with shelve.open('fav_color.db') as s:
 ## Accessing a Shelf
 
 After it's been created, it can be accessed as shown [here](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_existing.py):
+
 ```python
+import shelve
+
 with shelve.open('fav_color.db') as s:
     existing = s['votes']
 
@@ -40,14 +43,18 @@ print(existing)
 
 This produces the following output:
 
-`{'red': 5, 'blue': 3, 'yellow': 2}`
+```
+{'red': 5, 'blue': 3, 'yellow': 2}
+```
 
 ## Making Shelf Read-Only
 
 The user can also make their data read-only by adding the `flag` parameter 
 as shown:
 
-`shelve.open('shelf_name', flag='r')`
+```
+shelve.open('shelf_name', flag='r')
+```
 
 That way, when a user tries to modify it, it produces an error, as shown in this
 [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_readonly.py):
@@ -66,14 +73,18 @@ with shelve.open('fav_color.db', flag='r') as s:
 
 The following output is produced:
 
-`Existing: {'red': 5, 'blue': 3, 'yellow': 2} 
-ERROR: The database is opened for reading only`
+```
+Existing: {'red': 5, 'blue': 3, 'yellow': 2} 
+ERROR: The database is opened for reading only
+```
 
 ## Modifying Shelves with Writeback
 
 In order to modify a shelf, use the parameter `writeback=True` as shown:
 
-`shelve.open('shelf_name', writeback=True)`
+```
+shelve.open('shelf_name', writeback=True)
+```
 
 Make sure to use this before making the modification, or else it won't work.
 
