@@ -21,6 +21,10 @@ There are two ways to install the FastAPI: either completely with the
 
 ```bash
 $ pip install "fastapi[all]"
+```
+
+```bash
+$ pip install "fastapi"
 $ pip install "uvicorn[standard]"
 ```
 
