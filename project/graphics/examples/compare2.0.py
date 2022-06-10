@@ -8,13 +8,12 @@ filename = 'compare-graphics'
 df = pd.read_csv(f'{filename}.csv')
 print(df)
 df = df.set_index('Value')
-df = df.transpose()
 
 content = df.to_markdown()
 writefile(f'{filename}.md', content)
 
 d = df.to_dict(orient='list')
-pprint(d)
+# pprint(d)
 
 
 with open(f'{filename}.yaml', 'w') as file:
