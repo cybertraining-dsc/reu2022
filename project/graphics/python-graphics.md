@@ -26,6 +26,19 @@ In Python, data and equations can be visually represented using graphs
 and plots.  Here we showcase how to use the different plotting
 libraries Matplotlib, Bokeh, and Seaborn.
 
+For each of these frameworks exist an extensive example set as part of Galleries included with the original documentation. We encourage to browse through these examples to identfy plots that you may want to generate.
+
+* [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html)
+* [seaborn gallery](https://seaborn.pydata.org/examples/index.html)
+* [bokeh gallery](https://docs.bokeh.org/en/latest/docs/gallery.html)
+* [pandas gallery](TODO)
+
+Another combined gallery is available as
+
+* (interactive selection)[https://www.python-graph-gallery.com/]
+
+And provides you with choices based on your selection.
+
 ## Matplotlib
 
 Matplotlib is the main plotting library that allows the user to
@@ -83,13 +96,10 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py). The output of this program is showcased in [@fig:matplotlib-barchart].
 
-The output of this program is showcased in Figure *matplotlib-barchart*.
+![Matplotlib Barchart created from data from Spotify](examples/images/matplotlib-barchart.svg){#fig:matplotlib-barchart width=50%}
 
-![matplotlib-barchart](examples/images/matplotlib-barchart.svg)
-
-Figure *matplotlib-barchart*: Matplotlib Barchart created from data from Spotify
 
 ### Line Chart 
 
@@ -118,14 +128,13 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py).
+The output of this program is showcased in 
+[@fig:matplotlib-linechart].
 
-The output of this program is showcased in Figure *matplotlib-linechart*.
 
+![Matplotlib Linechart created from random variables](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart width=50%}
 
-![matplotlib-linechart](examples/images/matplotlib-linechart.svg)
-
-Figure *matplotlib-linechart*: Matplotlib Linechart created from random variables
 
 
 ### Pie Chart
@@ -151,12 +160,11 @@ plt.show()
 
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py)
 
-The output of this program is showcased in Figure *matplotlib-piechart*.
+The output of this program is showcased in [@fig:matplotlib-piechart].
 
 
-![matplotlib-piechart](examples/images/matplotlib-piechart.svg)
+![Barchart created from data from Spotify](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart width=50%}
 
-Figure *matplotlib-piechart*: Barchart created from data from Spotify
 
 ### Contour Plot
 
@@ -185,15 +193,13 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py).
+The output of this program is showcased in 
+[@fig:matplotlib-contourplot].
 
-The output of this program is showcased in Figure
-*matplotlib-contourplot*.
 
+![Multivariable (x, y, z) Equation Plotted](examples/images/matplotlib-contour.svg){#fig:matplotlib-contourplot width=50%}
 
-![contour](examples/images/matplotlib-contour.svg)
-
-Figure *matplotlib-contourplot*: Multivariable (x, y, z) Equation Plotted
 
 A contour plot allows data and equations consisting of three variables
 to be plotted through plotting 3D surfaces as 2D slices on a `xy`
@@ -251,7 +257,7 @@ axes. By default, they are set horizontally; however, they can be
 rotated using `plt.xticks(degrees)` for the `x-axis` or
 `plt.yticks(degrees)` for the `y-axis`. This can be shown by this
 simple
-[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py).
+[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py). The output is shown in [@fig:ticks].
 
 ```python
 import matplotlib.pyplot as plt
@@ -270,11 +276,7 @@ plt.title(r'$y=x$')
 plt.show()
 ```
 
-![ticks](examples/images/matplotlib-rotatingticks.svg)
-
-Figure *ticks* `x-axis` ticks rotated by 90° and `y-axis` ticks
-rotated by 45°
-
+![`x-axis` ticks rotated by 90° and `y-axis` ticks rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:ticks width=50%}
 
 ### Exporting
 
@@ -385,11 +387,10 @@ p.circle(5,10, color = 'green')
 show(p)
 ```
 
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py)
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py). The output is shown in [@fig:bokeh-example]
 
-![figure](examples/images/bokeh-figure.png)
+![Figure created with Bokeh.](examples/images/bokeh-figure.png){#fig:bokeh-example width=50%}
 
-Figure *lineplot*: Figure created with Bokeh. 
 
 
 ### Figure Parameters Example
@@ -424,11 +425,10 @@ p.square([1,2], [3,4], size = 10)
 show(p)
 ```
 
-This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py)
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py). The output is shown in [@fig:bokeh-scatter]
 
-![Scatter Plot](examples/images/bokeh-scatter.png)
+![Scatter Plot created with user Spotify data.](examples/images/bokeh-scatter.png){#fig:bokeh-scatter witdh=50%}
 
-Figure *Scatter Plot*: Scatter Plot created with user Spotify data.
 
 The list of all possible marker types and the functions used to create
 them can be found
@@ -463,9 +463,7 @@ show(p)
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
 
-![Line Plot](examples/images/bokeh-linechart.png)
-
-Figure *bokeh-linechart*: Line Chart created with user Spotify data. 
+![Line Chart created with user Spotify data.](examples/images/bokeh-linechart.png){#fig:bokeh-linechart width=50%}
 
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -492,11 +490,10 @@ show(p)
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py). The output is shown in [@fig:bokeh-barchart]
 
-![bokeh-barchart](examples/images/bokeh-barchart.png)
-
-Figure *bokeh-barchart*: Bokeh Bar Chart created with user Spotify data. 
+![Bokeh Bar Chart created with user Spotify data. ](examples/images/bokeh-barchart.png){#fig:bokeh-barchart
+ width=50%}
 
 ### Saving Figures
 
@@ -641,13 +638,10 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). The output of this program is showcased in[@fig:seaborn-lineplot].
 
-The output of this program is showcased in Figure *seaborn-lineplot*
+![Seaborn Lineplot created from user Spotify data.](examples/images/seaborn-lineplot.svg){fig:seaborn-lineplot width=50%}
 
-![seaborn-lineplot](examples/images/seaborn-lineplot.svg)
-
-Figure *seaborn-lineplot*: Seaborn Lineplot created from user Spotify data.
 
 ### Distribution Plots
 
@@ -665,14 +659,9 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). The output of this program is showcased in [@fig:seaborn-displot]
 
-The output of this program is showcased in Figure *seaborn-displot*
-
-![seaborn-displot](examples/images/seaborn-displot.svg)
-
-Figure *seaborn-displot*: Seaborn Displot created from user Spotify data. 
-
+![Seaborn Displot created from user Spotify data](examples/images/seaborn-displot.svg){#fig:seaborn-displot width=50%}
 
 ### Categorical Plots
 
@@ -690,13 +679,13 @@ Categorical plots are relatively simple to implement.  If using the
 sns.barplot(x=source, y=value)
 plt.show()
 ```
+
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output from the program is showcased in Figure *seaborn-catplot*
+The output from the program is showcased in [@fig:seaborn-catplot]
 
-![catplot](examples/images/seaborn-catplot.svg)
-
-Figure *seaborn-catplot*: Created from user Spotify data. 
+![Seaborn Catplot created from user Spotify data.](examples/images/seaborn-catplot.svg)
+{#fig:seaborn-catplot width=50%}
 
 ### Regression Plots
 
@@ -714,13 +703,11 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). The output of this program is showcased in [@fig:seaborn-regplot].
 
-The output of this program is showcased in Figure *seaborn-regplot*
+![Seaborn regplot created from user Spotify data](examples/images/seaborn-regplot.svg){@fig:seaborn-regplot width=50%}
 
-![regplot](examples/images/seaborn-regplot.svg)
-
-Figure *seaborn-regplot*: Created from user Spotify data. 
+Figure *. 
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.
