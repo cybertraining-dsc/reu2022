@@ -170,7 +170,7 @@ The HTTP protocol allows you to communicate with each path by using
 one (or more) of these "methods."  As a result, in OpenAPI, each HTTP
 method is referred to as a "operation."
 
-#### Define a path operation decorator¶
+#### Define a path operation decorator
 
 ```
 from fastapi import FastAPI
@@ -215,7 +215,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-Reference: <https://fastapi.tiangolo.com/tutorial/first-steps/>
 @app.get("/")
 def root():
     return {"message": "Hello World"}
