@@ -6,11 +6,11 @@
 
 * Learn how to install python from python.org
 * Learn how to use a python venv
-* Learn how to isntall cloudmesh Shell
+* Learn how to install cloudmesh Shell
 
 ---
 
-In this section, we present an easy-to-follow installation guidefor a 
+In this section, we present an easy-to-follow installation guide for a 
 recent version of python and cloudmesh. 
 
 Before you start, please read the entire section and develop a plan for installation.
@@ -345,11 +345,8 @@ As `~/zsh` is already configured previously, we do not have to set it up again.
 
 ### Homebrew install 
 
-Homebrew (`brew`) like `choco` is a package management software. Unlike `choco`, it is used by macOS devices rather than
-Windows devices. `brew` is used to more easily download packages to an operating system; simply put, it eliminates the
-need for the user to search for and download the desired package.
-
-Installing `brew` is simple. 
+Homebrew is a package management software. The Homebrew command is called `brew`. It is used to install Linux packages
+on macOS. Installing `brew` is simple. 
 
 * First, make sure the computer that is downloading Homebrew is 
   up-to-date with the latest software for its OS. 

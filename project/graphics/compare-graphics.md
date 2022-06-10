@@ -1,46 +1,47 @@
-# Comparision Table
+# Comparison Table
 
 Although Matplotlib is the main plotting interface, several other libraries include simple visualization options. We
 have created a comparison table to showcase the differences between Matplotlib, Seaborn, Bokeh, and Pandas.
 
-| Value             | matlotlib | seaborn | bokeh | pandas |
-|-------------------|-----------|---------|-------|--------|
-| **simple charts** |
-| barchart          | +         | +       | +     | +      |
-| linechart         | +         | +       | +     | +      |
-| scatterplot       | +         | +       | +     | +      |
-| piechart          | +         |         | +     | +      |
-| countourplot      | +         | +       |       |        |
-| distributionplot  | +         | +       |       | +      |
-| **features**      |
-| easy png export   | +         | +       |       | +      |
-| color palettes    |           | +       |       |        |
-| interactive graph |           |         | +     |        |
-| data frame        |           |         |       | +      |
+```python
 
-bar graph
-grouped bar graph
-stacked bar graph
+import matplotlib as plt
+import pandas as pd
 
-line graph
-spline chart
-multiline graph
-compund line graph
+df = pd.DataFrame()
 
-pie chart
-exploded pie chart
+```
 
-donut chart
+| Value               | matlotlib    | seaborn | bokeh | pandas           |
+|---------------------|--------------|---------|-------|------------------|
+| **charts**          |
+| barchart            | plt.bar(...) | +       | +     | df.plot.bar(...) |
+| grouped barchart    |              |         |       |                  |
+| stacked barchart    |              |         |       |                  |
+| spline chart        |              |         |       |                  |
+| multiline chart     |              |         |       |                  |
+| compound line chart |              |         |       |                  |
+| histogram           |              |         |       |                  |
+| linechart           | +            | +       | +     | +                |
+| scatterplot         | +            | +       | +     | +                |
+| piechart            | +            |         | +     | +                |
+| exploded piechart   |              |         |       |                  |
+| donutchart          |              |         |       |                  |
+| countourplot        | +            | +       |       |                  |
+| distributionplot    | +            | +       |       | +                |
+| point chart         |              |         |       |                  |
+| scatterplot         |              |         |       |                  |
+| bubblechart         |              |         |       |                  |
+| radar chart         |              |         |       |                  |
+| boxplot             |              |         |       |                  |
+| **features**        |
+| easy png export     | +            | +       |       | +                |
+| color palettes      |              | +       |       |                  |
+| interactive graph   |              |         | +     |                  |
+| data frame          |[^abbr]       |         |       | +                |
 
-histogram
+[^abbr]: text
 
-point graph
-scatter plot
-bubble chart
-
-radar chart
-
-box plot
 
 The full set of graphing options for Matplotlib is displayed in the 
 [Matplotlib Gallery](<https://matplotlib.org/3.3.0/gallery/index.html>).

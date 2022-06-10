@@ -65,13 +65,10 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py). The output of this program is showcased in Figure [@fig:pandas-barchart].
 
-The output of this program is showcased in Figure *barchart*.
-
-![barchart](examples/images/pandas-barchart.svg)
-
-Figure *barchart*: Barchart created from data from Spotify.
+![Pandas barchart created from data from Spotify.](examples/images/pandas-barchart.svg)
+{#fig:pandas-barchart width=50%}
 
 Note the differences in creating the chart. Since data frames support
 multiple dimensions of data, the x and y we want to graph must be
@@ -113,13 +110,10 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py). The output of this program is showcased in Figure [@fig:pandas-linechart].
 
-The output of this program is showcased in Figure *linechart*.
-
-![linechart](examples/images/pandas-linechart.svg)
-
-Figure *linechart*: Barchart created from random number generation.
+![Pandas linechart created from random number generation.](examples/images/pandas-linechart.svg)
+{#fig:pandas-linechart width=50%}
 
 
 ## Pie Chart
@@ -144,13 +138,9 @@ save()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py). The output of this program is showcased in Figure [@fig:pandas-piechart].
 
-The output of this program is showcased in Figure *piechart*.
-
-![piechart](examples/images/pandas-piechart.svg)
-
-Figure *piechart*: Barchart created from data from Spotify.
+![Pandas piechart created from data from Spotify.](examples/images/pandas-piechart.svg){#fig:pandas-piechart width=50%}
 
 Note that instead of listing both the Categories and the Count as
 data, we use the categories as index. This gets the proper labeling

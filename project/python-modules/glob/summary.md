@@ -12,7 +12,7 @@ This should be the very first line a user must write before proceeding:
 import glob
 ```
 
-## Wildcard (*)
+## Wildcard
 
 The example shown here showcases different states under a single directory and 
 counties under subdirectories. The files consist of `.txt` files consisting of 
@@ -20,14 +20,14 @@ different versions of a program under a single directory.
 
 The following files have been created:
 ```python
-Updates
-Updates/Patches
-Updates/Patches/patch3.txt
-Updates/version2+.txt
-Updates/version2-1.txt
-Updates/version2-2.txt
-Updates/version2-a.txt
-Updates/version2-b.txt
+updates
+updates/Patches
+updates/Patches/patch3.txt
+updates/version2+.txt
+updates/version2-1.txt
+updates/version2-2.txt
+updates/version2-a.txt
+updates/version2-b.txt
 ```
 
 For this case and other cases, use the command `glob` to search for the files.
@@ -40,7 +40,7 @@ of the `glob` command with the asterisk `*` being used.
 ```python
 import glob
 
-for name in sorted(glob.glob('Updates/*')):
+for name in sorted(glob.glob('updates/*')):
     print(name)
 ```
 
@@ -48,12 +48,12 @@ The output shown here is a list of every single file under the directory `States
 in alphabetical order.
 
 ```
-Updates\Patches
-Updates\version2+.txt
-Updates\version2-1.txt
-Updates\version2-2.txt
-Updates\version2-a.txt
-Updates\version2-b.txt
+updates/Patches
+updates/version2+.txt
+updates/version2-1.txt
+updates/version2-2.txt
+updates/version2-a.txt
+updates/version2-b.txt
 ```
 
 ## Single Character Wildcard (?)
@@ -65,19 +65,19 @@ this [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/ex
 ```python
 import glob
 
-for name in sorted(glob.glob('Updates/version2-?.txt')):
+for name in sorted(glob.glob('updates/version2-?.txt')):
     print(name)
 ```
 
 The output shown here is a list of every single file that consists of the series of
-characters `version2-`. See here that this list doesn't include `Updates\version2+.txt`
+characters `version2-`. See here that this list doesn't include `updates/version2+.txt`
 as it doesn't consist the `-` in `version2-`.
 
 ```
-Updates\version2-1.txt
-Updates\version2-2.txt
-Updates\version2-a.txt
-Updates\version2-b.txt
+updates/version2-1.txt
+updates/version2-2.txt
+updates/version2-a.txt
+updates/version2-b.txt
 ```
 
 ## Escape Characters
@@ -91,7 +91,7 @@ import glob
 specials = '!+('
 
 for char in specials:
-    pattern = 'Updates/*' + glob.escape(char) + '.txt'
+    pattern = 'updates/*' + glob.escape(char) + '.txt'
     for name in sorted(glob.glob(pattern)):
         print(name)
 ```
@@ -100,7 +100,7 @@ The output shown here is a every file that specifically contains the characters
 `!`, `+`, or `(`. There is only file that does so which is `version2+.txt`.
 
 ```
-Updates\version2+.txt
+updates/version2+.txt
 ```
 
 ## Subdirectories
@@ -115,11 +115,11 @@ the code or through using an asterisk `*` as a wildcard. This can be shown in th
 import glob
 
 print('Named explicitly:')
-for name in sorted(glob.glob('Updates/Patches/*')):
+for name in sorted(glob.glob('updates/patches/*')):
     print('  {}'.format(name))
 
 print('Named with wildcard:')
-for name in sorted(glob.glob('Updates/*/*')):
+for name in sorted(glob.glob('updates/*/*')):
     print('  {}'.format(name))
 ```
 
@@ -127,9 +127,9 @@ In this example, both cases produce the same result.
 
 ```
 Named explicitly:
-  Updates/Patches\patch3.txt
+  updates/Patches/patch3.txt
 Named with wildcard:
-  Updates\Patches\patch3.txt
+  updates/Patches/patch3.txt
 ```
 
 ## Sources
