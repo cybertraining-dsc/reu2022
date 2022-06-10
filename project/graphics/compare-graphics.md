@@ -12,33 +12,33 @@ df = pd.DataFrame()
 
 ```
 
-| Value               | matlotlib    | seaborn | bokeh | pandas                                                                                                        |
-|---------------------|--------------|---------|-------|---------------------------------------------------------------------------------------------------------------|
+| Value               | matlotlib    | seaborn | bokeh | pandas                                                                                                                        |
+|---------------------|--------------|---------|-------|-------------------------------------------------------------------------------------------------------------------------------|
 | **charts**          |
-| barchart            | plt.bar(...) | +       | +     | [df.plot.bar(...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html) |
-| grouped barchart    |              |         |       |                                                                                                               |
-| stacked barchart    |              |         |       |                                                                                                               |
-| spline chart        |              |         |       |                                                                                                               |
-| multiline chart     |              |         |       |                                                                                                               |
-| compound line chart |              |         |       |                                                                                                               |
-| histogram           |              |         |       |                                                                                                               |
-| linechart           | +            | +       | +     | +                                                                                                             |
-| scatterplot         | +            | +       | +     | +                                                                                                             |
-| piechart            | +            |         | +     | +                                                                                                             |
-| exploded piechart   |              |         |       |                                                                                                               |
-| donutchart          |              |         |       |                                                                                                               |
-| countourplot        | +            | +       |       |                                                                                                               |
-| distributionplot    | +            | +       |       | +                                                                                                             |
-| point chart         |              |         |       |                                                                                                               |
-| scatterplot         |              |         |       |                                                                                                               |
-| bubblechart         |              |         |       |                                                                                                               |
-| radar chart         |              |         |       |                                                                                                               |
-| boxplot             |              |         |       |                                                                                                               |
+| barchart            | plt.bar(...) | +       | +     | [df.plot.bar(...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html)                 |
+| grouped barchart    |              |         |       | [df.plot.bar(...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html)                 |
+| stacked barchart    |              |         |       | [df.plot.bar(stacked=True)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html)        |
+| spline chart        |              |         |       |                                                                                                                               |
+| multiline chart     |              |         |       |                                                                                                                               |
+| compound line chart |              |         |       |                                                                                                                               |
+| histogram           |              |         |       |                                                                                                                               |
+| linechart           | +            | +       | +     | [df.plot.line(...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html)               |
+| scatterplot         | +            | +       | +     | [df.plot.scatter(...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.scatter.html)         |
+| piechart            | +            |         | +     | [df.plot.pie(...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html)                 |
+| exploded piechart   |              |         |       | -                                                                                                                             |
+| donutchart          |              |         |       | -                                                                                                                             |
+| countourplot        | +            | +       |       | -                                                                                                                             |
+| distributionplot    | +            | +       |       | +                                                                                                                             |
+| point chart         |              |         |       |                                                                                                                               |
+| scatterplot         |              |         |       |                                                                                                                               |
+| bubblechart         |              |         |       | [df.plot.scatter(s=...,c=...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.scatter.html) |
+| radar chart         |              |         |       | -                                                                                                                             |
+| boxplot             |              |         |       | [df.plot.boxplot(...)](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.boxplot.html)              |
 | **features**        |
-| easy png export     | +            | +       |       | +                                                                                                             |
-| color palettes      |              | +       |       |                                                                                                               |
-| interactive graph   |              |         | +     |                                                                                                               |
-| data frame          |              |         |       | [df](tbd)                                                                                                     |
+| easy png export     | +            | +       |       | +                                                                                                                             |
+| color palettes      |              | +       |       |                                                                                                                               |
+| interactive graph   |              |         | +     |                                                                                                                               |
+| data frame          |              |         |       | [df](tbd)                                                                                                                     |
 
 
 The full set of graphing options for Matplotlib is displayed in the 
