@@ -19,9 +19,15 @@ application.
 There are two ways to install the FastAPI: either completely with the
 `uvicorn` or partially with both the `FastAPI` and the `uvicorn`.
 
+
+##### Install 1
+
+  This command install both the FastAPI and uvicorn together withe one command.
 ```bash
 $ pip install "fastapi[all]"
 ```
+##### Install 2
+  This commands install the FastAPI and the uvicorn with different commands.
 
 ```bash
 $ pip install "fastapi"
@@ -103,31 +109,9 @@ It will display a JSON that starts with:
 
 ```
 
-### Step 2: create a FastAPI instance
-
-```
-from fastapi import FastAPI
-
-app = FastAPI()
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-```
-
-The variable `app` will be a "instance" of the class `FastAPI` in this
-case.
-
-This will be the primary point of contact for all API creation.
-
-This is the same app that `uvicorn` refers to in the command:
-
-``` bash
-$ uvicorn main:app --reload
-
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-```
+### FastAPI instance
 
 If you create your app like:
 
@@ -149,7 +133,7 @@ $ uvicorn main:my_awesome_api --reload
 INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
 
-### Step 3: create a path operation
+### Path operation
 
 Path refers to the last part of the URL beginning with the first.  So,
 in a URL like: `https://example.com/purple/flc` ...the path would be:
@@ -158,23 +142,8 @@ in a URL like: `https://example.com/purple/flc` ...the path would be:
 "When developing an API, the `path` is the primary means of separating
 "concerns" and "resources."
 
-Operation
 
-The term "operation" refers to one of the HTTP "methods."
-
-When creating APIs, these specific HTTP methods are typically used to
-perform a specific action.  Normally, you would use:
-
-* POST: to generate data
-* GET:  data retrieval.
-* PUT:  updates data.
-* DELETE: deletes data.
-
-The HTTP protocol allows you to communicate with each path by using
-one (or more) of these "methods."  As a result, in OpenAPI, each HTTP
-method is referred to as a "operation."
-
-#### Define a path operation decorator
+##### Define a path operation decorator
 
 ```
 from fastapi import FastAPI
@@ -186,46 +155,22 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
+The `@app.get("/")` tells FastAPI that the function right below is in
+charge of handling requests that go to:
 
-### Step 4: define the path operation function
+* the path /
+* using a `get` operation
+
+#####  Define the path operation function
 
 Our `path operation function` is as follows:
 
 * path: is /.
-* operation: is get.
-* function: the function that comes after the "decorator" (below @app.get("/")).
-
-```
-from fastapi import FastAPI
-
-app = FastAPI()
+* operation: is `get`.
+* function: the function that comes after the "decorator" (below @app.get("/")): `async def root()` .
 
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-```
-This is an example of a Python function.
-
-It will be called by FastAPI whenever it receives a GET operation
-request to the URL "/".
-
-It is an async function in this case.
-
-Instead of async def, you could define it as a normal function:
-
-```
-from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/")
-def root():
-    return {"message": "Hello World"}
-```
-
-
-### Step 5: return the content
+### Return the content
 ```
 from fastapi import FastAPI
 
@@ -239,12 +184,6 @@ async def root():
 
 You can return a dict, a list, or singular values such as str, int,
 and so on.
-
-Pydantic models can also be returned.
-
-Many more objects and models will be automatically converted to JSON
-(including ORMs, etc). Try using your favorites; they are almost
-certainly already supported.
 
 
 References: <https://fastapi.tiangolo.com/tutorial/first-steps/>
