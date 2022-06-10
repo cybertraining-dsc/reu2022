@@ -20,3 +20,6 @@ publish:
 
 issues:
 	cd .. ; cms git issues --repo=reu --refresh
+
+table:
+	python bin/generate-compare-table.py
