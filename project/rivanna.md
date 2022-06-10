@@ -10,6 +10,11 @@
 
 ---
 
+Presentation:
+ 
+* [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
+* [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
+
 Logging in to Rivanna via web interface
 
 Documentation: <https://www.rc.virginia.edu/userinfo/rivanna/login/#web-based-access>

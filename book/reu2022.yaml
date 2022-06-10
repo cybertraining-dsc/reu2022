@@ -25,6 +25,7 @@ https:
   "reu2022": "https://raw.githubusercontent.com/cybertraining-dsc/reu2022/main"
 BOOK:
   - INTRODUCTION:
+    - "{file.reu2022}/calendar.md"
     - "{file.reu2022}/project/introduction.md"
     - "{file.reu2022}/action.md"
     - "{file.reu2022}/project/issues.md"
@@ -36,13 +37,15 @@ BOOK:
   - GRAPH_VIZUALIZATION:
     - "{file.reu2022}/project/graphics/compare-graphics.md"
     - "{file.reu2022}/project/graphics/data-management/python-data.md"
-    - "{file.reu2022}/project/graphics/python-graphics.md"
-    - "{file.reu2022}/project/graphics/pandas-graphics.md"
+    - "{file.reu2022}/project/graphics/introduction.md"
+    - "{file.reu2022}/project/graphics/matplotlib.md"
+    - "{file.reu2022}/project/graphics/seaborn.md"
+    - "{file.reu2022}/project/graphics/bokeh.md"
+    - "{file.reu2022}/project/graphics/pandas.md"
   - PYTHON:
     - "{file.reu2022}/project/cloudmesh-common-StopWatch.md"
     - "{file.reu2022}/project/cms-command.md"
     - "{file.reu2022}/project/linux.md"
-    - "{file.reu2022}/project/pandas.md"
     - "{file.reu2022}/project/python.md"
     - "{file.reu2022}/project/fastapi.md"
   - RIVANNA:
