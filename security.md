@@ -68,7 +68,7 @@
 
 For more information please email `InfoSec-Training@virginia.edu`
 
-UVA Student security Hand book: https://security.virginia.edu/responsible-computing-students
+UVA Student security Hand book: [Student_Handbook](https://security.virginia.edu/responsible-computing-students)
 
 References: https://urlcc.cc/rasgn
 

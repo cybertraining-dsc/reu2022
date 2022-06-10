@@ -1,11 +1,12 @@
 # Summary of `mmap`
 
-`mmap` standards for memory-map files. Memory-mapping a file involves accessing
-files directly without the use of traditional I/O functions.
+`mmap` standards for memory-map files. Memory-mapping a file involves
+accessing files directly without the use of traditional I/O functions.
 
 ## Import Statement
 
-These should be the very first lines a user must write before proceeding:
+These should be the very first lines a user must write before
+proceeding:
 
 ```python
 import mmap
@@ -13,22 +14,25 @@ import mmap
 
 ## Reading
 
-The example shown here is a short, simple story that is contained in a `.txt`
-file. The file  can be accessed [here](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/mmap_instructions/story.txt)
-as `story.txt`. 
+The example shown here is a short, simple story that is contained in a
+`.txt` file. The file can be accessed
+[here](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/mmap_instructions/story.txt)
+as `story.txt`.
 
 ```
-Once upon a time there was an ugly barnacle. He was so ugly that everyone died. The end!
+Once upon a time there was an ugly barnacle. He was so ugly that
+everyone died. The end!
 ```
 
 First, the actual file should be opened using the `open` command with the parameter `'r'` for 
 reading and is indicated with the header `f`. 
 
-After that, memory-map file can be created using the command `mmap.mmap()` and can be indicated 
-with the header `m`. Within the parentheses `()`, various arguments should be made.
+After that, memory-map file can be created using the command `mmap.mmap()` 
+and can be indicated with the header `m`. Within the parentheses `()`, 
+various arguments should be made.
 
-The first argument should be `f.fileno()`, a file descriptor that opens and closes the `mmap`
-file.
+The first argument should be `f.fileno()`, a file descriptor that opens and 
+closes the `mmap` file.
 
 The second argument is the size in bytes, in the form of a float, of the portion of the file to 
 map. If it's `0`, like in this example, the entire file is mapped.
