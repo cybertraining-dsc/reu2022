@@ -255,16 +255,16 @@ plt.show()
 This code can be access from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
 
-This code produces Figure *csv-list-lineplot* and Figure *csv-dict-lienplot*:
+This code produces [@fig:csv-list-lineplot]. and Figure [@fig:csv-dict-lineplot].:
 
-![matplotlib csv list lineplot](images/csv-list-lineplot.svg)
+{#fig:csv-list-lineplot width=50%}
 
-Figure *csv-list-lineplot*: created using the data
+[@fig:csv-list-lineplot]: created using the data
 available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
-![matplotlib csv dict lineplot](images/csv-dict-lineplot.svg)
+{#fig:csv-dict-lineplot width=50%}
 
-Figure *csv-dict-lineplot*: created using the data
+[@fig:csv-dict-lineplot]: created using the data
 available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
 However, it is so much more simple to accomplish this with the `pandas`
@@ -288,11 +288,11 @@ plt.show()
 This code can be accessed from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
 
-This code produces the Figure *pandas-lineplot*:
+This code produces the [@fig:pandas-lineplot]:
 
-![matplotlib lineplot](images/pandas-lineplot.svg)
+{#fig:pandas-lineplot width=50%}
 
-Figure *pandas-lineplot*: created using the data
+[@fig:pandas-lineplot]: created using the data
 available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
 ## Sources
