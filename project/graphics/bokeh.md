@@ -56,8 +56,7 @@ This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py)
 . The output is shown in [@fig:bokeh-example]
 
-![Figure created with Bokeh.](examples/images/bokeh-figure.png){#fig:
-bokeh-example width=50%}
+![Figure created with Bokeh.](examples/images/bokeh-figure.png){#fig:bokeh-example width=50%}
 
 ## Figure Parameters Example
 
@@ -92,15 +91,13 @@ show(p)
 ```
 
 This program can be downloaded
-from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py)
-. The output is shown in [@fig:bokeh-scatter]
+from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py). The output is shown in [@fig:bokeh-scatter]
 
-![Scatter Plot created with user Spotify data.](examples/images/bokeh-scatter.png)
-{#fig:bokeh-scatter witdh=50%}
+![Scatter Plot created with user Spotify data.](examples/images/bokeh-scatter.svg){#fig:bokeh-scatter witdh=50%}
 
-The list of all possible marker types and the functions used to create
+The list  possible marker types and the functions used to create
 them can be found
-[here](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html)
+[here](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html).
 
 ## Line Plots
 
@@ -129,8 +126,7 @@ show(p)
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
 
-![Line Chart created with user Spotify data.](examples/images/bokeh-linechart.png)
-{#fig:bokeh-linechart width=50%}
+![Line Chart created with user Spotify data.](examples/images/bokeh-linechart.png){#fig:bokeh-linechart width=50%}
 
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -159,9 +155,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py)
 . The output is shown in [@fig:bokeh-barchart]
 
-![Bokeh Bar Chart created with user Spotify data. ](examples/images/bokeh-barchart.png)
-{#fig:bokeh-barchart
-width=50%}
+![Bokeh Bar Chart created with user Spotify data. ](examples/images/bokeh-barchart.png){#fig:bokeh-barchart width=50%}
 
 ## Saving Figures
 

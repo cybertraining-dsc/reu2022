@@ -91,8 +91,7 @@ This program can be downloaded from
 The output of this program is showcased in
 [@fig:matplotlib-linechart].
 
-![Matplotlib Linechart created from random variables](examples/images/matplotlib-linechart.svg)
-{#fig:matplotlib-linechart width=50%}
+![Matplotlib Linechart created from random variables](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart width=50%}
 
 ### Pie Chart
 
@@ -120,8 +119,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/gra
 
 The output of this program is showcased in [@fig:matplotlib-piechart].
 
-![Barchart created from data from Spotify](examples/images/matplotlib-piechart.svg)
-{#fig:matplotlib-piechart width=50%}
+![Barchart created from data from Spotify](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart width=50%}
 
 ### Contour Plot
 
@@ -154,8 +152,7 @@ This program can be downloaded from
 The output of this program is showcased in
 [@fig:matplotlib-contourplot].
 
-![Multivariable (x, y, z) Equation Plotted](examples/images/matplotlib-contour.svg)
-{#fig:matplotlib-contourplot width=50%}
+![Multivariable (x, y, z) Equation Plotted](examples/images/matplotlib-contour.svg){#fig:matplotlib-contourplot width=50%}
 
 A contour plot allows data and equations consisting of three variables
 to be plotted through plotting 3D surfaces as 2D slices on a `xy`
@@ -212,8 +209,7 @@ axes. By default, they are set horizontally; however, they can be
 rotated using `plt.xticks(degrees)` for the `x-axis` or
 `plt.yticks(degrees)` for the `y-axis`. This can be shown by this
 simple
-[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py)
-. The output is shown in [@fig:ticks].
+[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py). The output is shown in [@fig:ticks].
 
 ```python
 import matplotlib.pyplot as plt
@@ -232,8 +228,7 @@ plt.title(r'$y=x$')
 plt.show()
 ```
 
-![`x-axis` ticks rotated by 90° and `y-axis` ticks rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg)
-{#fig:ticks width=50%}
+![`x-axis` ticks rotated by 90° and `y-axis` ticks rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:ticks width=50%}
 
 ### Exporting
 
