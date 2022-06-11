@@ -18,7 +18,7 @@ action:
 	@echo "\`\`\`" >> action.md
 	@echo >> action.md
 
-publish:
+publish: all
 	cd ../pub/docs; git commit -m "update reu2022" vonLaszewski-reu2022.pdf vonLaszewski-reu2022.epub; git push
 
 issues:

@@ -1,21 +1,21 @@
 # Lines contributed
 
 ```
-+--------------------------------------+-------+
-| author                               | count |
-+--------------------------------------+-------+
-| Jackson Miskill                      | 9009  |
-| Alex Beck                            | 7425  |
-| Gregor von Laszewski                 | 2631  |
-| Alison Lu                            | 1420  |
-| J.P Fleischer                        | 545   |
-| AbdulBaqiy Diyaolu                   | 282   |
-| Robert Knuuti                        | 46    |
-| Binary file (standard input) matches | 39    |
-| Toble007                             | 24    |
-| Paul Kiattikhunphan                  | 17    |
-| Junyang He                           | 15    |
-| J.P Fleisher                         | 5     |
-+--------------------------------------+-------+
++-------+--------------------------------------+
+| count | author                               |
++-------+--------------------------------------+
+| 9008  | Jackson Miskill                      |
+| 7408  | Alex Beck                            |
+| 2547  | Gregor von Laszewski                 |
+| 1414  | Alison Lu                            |
+| 545   | J.P Fleischer                        |
+| 282   | AbdulBaqiy Diyaolu                   |
+| 45    | Robert Knuuti                        |
+| 38    | Binary file (standard input) matches |
+| 24    | Toble007                             |
+| 17    | Paul Kiattikhunphan                  |
+| 15    | Junyang He                           |
+| 5     | J.P Fleisher                         |
++-------+--------------------------------------+
 ```
 
