@@ -1,7 +1,7 @@
-fast:
+fast: table
 	cd book; make pdf
 
-all: action
+all: table action
 	cd book; make pdf
 
 view:
