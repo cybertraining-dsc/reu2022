@@ -145,7 +145,7 @@ plt.savefig('figure_path/figure_name')
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-## Seaborn Sources
+## Links
 
 * <https://seaborn.pydata.org/api.html>
 * <https://www.geeksforgeeks.org/python-seaborn-tutorial/>

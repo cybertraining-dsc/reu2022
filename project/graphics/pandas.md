@@ -188,7 +188,7 @@ graph that you made. To show, simply type:
 plt.show()
 ```
 
-## Sources
+## Links
 
 * <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html>
 * <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html>

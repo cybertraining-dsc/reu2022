@@ -3,48 +3,39 @@
 `shelve` is a library that gives users the ability to create, store, modify, and
 control the accessibility of data without a relational database.
 
-## Import Statement
-
-This should be the very first line a user must write before proceeding:
-
-```python
-import shelve
-```
-
 ## Creating a New Shelf
 
-A new shelf can be created using the command: `shelve.open('shelf_name')`. 
-User data can be inputted in the lines below as shown in this [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_create.py) where
-it's in the form of a dictionary:
+A new shelf can be created using the command: `shelve.open(filename)`.
+SHelv can store objects and thus you can for example insert a dictionary as shown next:
 
 ```python
 import shelve
 
-with shelve.open('fav_color.db') as s:
-    s['votes'] = {
-        'red': 5,
-        'blue': 3,
-        'yellow': 2,
+with shelve.open('computers.db') as computers:
+    computers['temperature'] = {
+        'red': 80,
+        'blue': 40,
+        'yellow': 50,
     }
 ```
 
 ## Accessing a Shelf
 
-After it's been created, it can be accessed as shown [here](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_existing.py):
+After it's been created, it can be accessed while readin objects into variables 
 
 ```python
 import shelve
 
-with shelve.open('fav_color.db') as s:
-    existing = s['votes']
+with shelve.open('computers.db') as computers:
+    t = computers['temperature']
 
-print(existing)
+print(t)
 ```
 
 This produces the following output:
 
 ```
-{'red': 5, 'blue': 3, 'yellow': 2}
+{'red': 80, 'blue': 40, 'yellow': 50}
 ```
 
 ## Making Shelf Read-Only
@@ -53,28 +44,27 @@ The user can also make their data read-only by adding the `flag` parameter
 as shown:
 
 ```
-shelve.open('shelf_name', flag='r')
+shelve.open('computers.db', flag='r')
 ```
 
-That way, when a user tries to modify it, it produces an error, as shown in this
-[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_readonly.py):
+That way, when a user tries to modify it, it produces an error:
 
 ```python
 import dbm
 import shelve
 
-with shelve.open('fav_color.db', flag='r') as s:
-    print('Existing:', s['votes'])
+with shelve.open('computers.db', flag='r') as computers:
+    print('Temperature:', computers['temperature'])
     try:
-        s['votes'] = 'green'
+        computers['temperature']['green'] = 100
     except dbm.error as err:
-        print('ERROR: {}'.format(err))
+        print('ERROR:', err)
 ```
 
 The following output is produced:
 
 ```
-Existing: {'red': 5, 'blue': 3, 'yellow': 2} 
+Temperature: {'red': 80, 'blue': 40, 'yellow': 50}
 ERROR: The database is opened for reading only
 ```
 
@@ -88,40 +78,34 @@ shelve.open('shelf_name', writeback=True)
 
 Make sure to use this before making the modification, or else it won't work.
 
-Here is an [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/shelve_instructions/shelve_writeback.py)
-of how it can be modified:
 
 ```python
 import shelve
-import pprint
+from pprint import pprint
 
-with shelve.open('fav_color.db', writeback=True) as s:
-    print('Initial data:')
-    pprint.pprint(s['votes'])
+with shelve.open('computers.db', writeback=True) as computers:
+    print('Initial temperature:')
+    pprint(computers['temperature'])
 
-    s['votes']['green'] = 5
-    print('\nModified:')
-    pprint.pprint(s['votes'])
+    computers['temperature']['green'] = 101
+    print()
+    print('Modified temperature:')
+    pprint(computers['temperature'])
 
-with shelve.open('fav_color.db', writeback=True) as s:
-    print('\nPreserved:')
-    pprint.pprint(s['votes'])
 ```
 
 Modifications are preserved as shown in this output:
 
 ```
-Initial data:
-{'blue': 3, 'red': 5, 'yellow': 2}`
+Initial temperature:
+{'red': 80, 'blue': 40, 'yellow': 50}
 
-Modified:
-{'blue': 3, 'green': 5, 'red': 5, 'yellow': 2}
+Modified temperature:
+{'red': 80, 'blue': 40, 'yellow': 50, 'green': 101}
 
-Preserved:
-{'blue': 3, 'green': 5, 'red': 5, 'yellow': 2}
 ```
 
-## Sources
+## Links
 
 * <https://pymotw.com/3/shelve/index.html>
 

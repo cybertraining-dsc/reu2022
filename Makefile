@@ -1,7 +1,10 @@
 fast: table
 	cd book; make pdf
 
-all: table action
+clean:
+	cd book; rm -rf dest
+
+all: clean table action
 	cd book; make pdf
 
 view:

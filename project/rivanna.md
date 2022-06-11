@@ -131,7 +131,13 @@ salloc: Waiting for resource configuration
 salloc: Nodes udc-an36-1 are ready for job
 
 $ nvidia-smi 
-Wed Jun  1 17:15:49 2022       
+```
+
+which will result in
+
+\footnotesize
+
+```
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 470.103.01   Driver Version: 470.103.01   CUDA Version: 11.4     |
 |-------------------------------+----------------------+----------------------+
@@ -153,6 +159,8 @@ Wed Jun  1 17:15:49 2022
 |    0   N/A  N/A     13639      G   /usr/bin/gnome-shell               21MiB |
 +-----------------------------------------------------------------------------+
 ```
+
+\normalsize
 
 ## SSH Config
 

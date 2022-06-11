@@ -235,7 +235,7 @@ This code can be accessed on
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
 .
 
-## Bokeh Sources
+## Links
 
 * <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 * <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>

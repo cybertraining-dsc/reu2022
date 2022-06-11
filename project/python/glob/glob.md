@@ -4,13 +4,7 @@
 However, `glob` doesn't work in the same way regular expressions do as they follow
 standard Unix path expansion rules.
 
-It needs to be imported with 
-
-```python
-import glob
-```
-
-## Demonstration of glob
+## Glob with asterisk
 
 The example showcases different states under a single directory and 
 counties under subdirectories. The files consist of `.txt` files consisting of 
@@ -115,7 +109,7 @@ tmp/b+.txt
 tmp/subdir/c.txt
 ```
 
-## Sources
+## Lins
 
 * <https://pymotw.com/3/glob/index.html>
 

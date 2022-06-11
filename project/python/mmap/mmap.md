@@ -3,15 +3,6 @@
 `mmap` standards for memory-map files. Memory-mapping a file involves
 accessing files directly without the use of traditional I/O functions.
 
-## Import Statement
-
-These should be the very first lines a user must write before
-proceeding:
-
-```python
-import mmap
-```
-
 ## Reading
 
 The example shown here is a short, simple story that is contained in a
@@ -171,6 +162,6 @@ File After:
 Once upon a time there was an ugly barnacle. He was so ugly that everyone died. The end!
 ```
 
-## Sources
+## Links
 
 * <https://pymotw.com/3/mmap/index.html>

@@ -295,7 +295,7 @@ This code produces the [@fig:pandas-lineplot]:
 [@fig:pandas-lineplot]: created using the data
 available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
-## Sources
+## Links
 
 ### Lists
 

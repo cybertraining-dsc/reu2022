@@ -3,14 +3,6 @@
 `pickle` is a module that turns Python objects into series of bytes that can be 
 transmitted, stored, or reconstructed.
 
-## Import Statement
-
-This should be the very first line a user must write before proceeding:
-
-```python
-import pickle 
-```
-
 ## Encoding Data
 
 A data structure can be encoded into a string by using the command 
@@ -21,48 +13,52 @@ a dictionary is being encoded.
 import pickle
 
 # Creating dictionary of data
-votes = [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
-print('Votes:', votes)
+temperatures = {
+    'red': 50,
+    'blue': 30,
+    'yellow': 20,
+}
+print('Temperatures:', temperatures)
 
 # Pickling the data
-pickle_votes = pickle.dumps(votes)
-print('Pickle:', pickle_votes)
+pickle_temperatures = pickle.dumps(temperatures)
+print('Pickle:', pickle_temperatures)
 ```
 
 This following output is produced:
+
 ```
-Votes: [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
-Pickle: b'\x80\x04\x95$\x00\x00\x00\x00\x00\x00\x00]\x94}\x94(\x8c\x03Red\x94K\x05\x8c\x04Blue\x94K\x03\x8c\x06Yellow\x94K\x02ua.'
+temperatures: [{'Red': 50, 'Blue': 30, 'Yellow': 20}]
+Pickle: b' ... A binary string that we ommitted here ... .'
 ```
 
 ## Decoding Data
 
-The encoded data can then be decoded using the command `pickle.loads(data)`, as shown
-in this [example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/examples/pickle_instructions/pickle_unpickle.py).
+The encoded data can then be decoded using the command `pickle.loads(data)`:
 
 ```python
 import pickle
 
 # Creating dictionary of data
-votes1 = [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
-print('Before:', votes1)
+temperatures_0 = {'red': 50, 'blue': 30, 'yellow': 20}]
+print('Initial temperatures:', temperatures_0)
 
 # Encoding the data
-pickle_votes = pickle.dumps(votes1)
+pickle_temperatures_0 = pickle.dumps(temperatures_0)
 
 # Decoding the data
-votes2 = pickle.loads(pickle_votes)
-print('After:', votes2)
+temperatures_1 = pickle.loads(pickle_temperatures_0)
+print('From pickle database:', temperatures_1)
 
 # Checking authenticity
-print('Same:', (votes1 is votes2))
-print('Equal:', (votes1 == votes2))
+print("Same:", temperatures1 is temperatures2)
+print("Equal:", temperatures1 == temperatures2)
 ```
 
 This can be shown in the following output:
 ```
-Before: [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
-After: [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
+Initial temperatures: [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
+From pickle database: [{'Red': 5, 'Blue': 3, 'Yellow': 2}]
 ```
 
 This command will produce data that is equal to the original data, but it's not
@@ -73,7 +69,7 @@ Same: False
 Equal: True
 ```
 
-## Sources
+## Links
 
 * <https://pymotw.com/3/pickle/index.html>
 

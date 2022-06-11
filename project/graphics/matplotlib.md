@@ -279,7 +279,7 @@ command displays the graph that you made. To show, simply type:
 plt.show()
 ```
 
-### Matplotlib Sources
+### Links
 
 * <https://matplotlib.org/>
 * <https://matplotlib.org/stable/api/pyplot_summary.html>
