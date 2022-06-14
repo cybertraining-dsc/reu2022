@@ -38,7 +38,7 @@ $ pip install "uvicorn[standard]"
 
 The simplest FastAPI file could look like this:
 
-```
+``` python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -115,7 +115,7 @@ It will display a JSON that starts with:
 
 If you create your app like:
 
-```
+``` python
 from fastapi import FastAPI
 
 my_awesome_api = FastAPI()
@@ -125,6 +125,7 @@ my_awesome_api = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
+
 And copy it in a file `main.py` then you would call `uvicorn` like:
 
 ``` bash
@@ -145,7 +146,7 @@ in a URL like: `https://example.com/purple/flc` ...the path would be:
 
 ##### Define a path operation decorator
 
-```
+``` python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -155,6 +156,7 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 ```
+
 The `@app.get("/")` tells FastAPI that the function right below is in
 charge of handling requests that go to:
 
@@ -171,7 +173,8 @@ Our `path operation function` is as follows:
 
 
 ### Return the content
-```
+
+``` python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -203,7 +206,7 @@ async def read_item(skip: int = 0, limit: int = 10):
     return fake_items_db[skip : skip + limit]
 ```
 
-The query is the set of key-value pairs that go after the? in a URL, separated by & characters.
+The query is the set of key-value pairs that go after the `?` in a URL, separated by & characters.
 For example, in the URL:
 ```
 http://127.0.0.1:8000/items/?skip=0&limit=10
