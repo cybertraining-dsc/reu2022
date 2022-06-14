@@ -6,7 +6,8 @@ control the accessibility of data without a relational database.
 ## Creating a New Shelf
 
 A new shelf can be created using the command: `shelve.open(filename)`.
-SHelv can store objects and thus you can for example insert a dictionary as shown next:
+`shelve` can store objects and thus you can for example insert a
+dictionary as shown next:
 
 ```python
 import shelve

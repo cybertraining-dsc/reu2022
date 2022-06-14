@@ -1,8 +1,9 @@
 #  glob
- 
-`glob` is a small module that searches for files by reading the patterns of filenames.
-However, `glob` doesn't work in the same way regular expressions do as they follow
-standard Unix path expansion rules.
+
+`glob` is a small module that searches for files by reading the
+patterns of filenames.  However, `glob` doesn't work in the same way
+regular expressions do as they follow standard Unix path expansion
+rules.
 
 ## Glob with asterisk
 
@@ -56,7 +57,8 @@ for name in sorted(glob.glob('tmp/a-?.txt')):
     print(name)
 ```
 
-This program lists the files starting with `a-`, a single character and as prefix `.txt`
+This program lists the files starting with `a-`, a single character
+and as prefix `.txt`
 
 ```
 tmp/a-1.txt
@@ -87,7 +89,8 @@ tm/b+.txt
 
 ## Subdirectories
 
-Not only `glob` can search for files recursively in directries with the `**` query
+Not only `glob` can search for files recursively in directries with
+the `**` query
 
 ```python
 import glob
