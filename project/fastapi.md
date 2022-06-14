@@ -4,7 +4,7 @@
 
 ![](images/learning.png) **Learning Objectives**
 
-* Leran how to use fastAPI
+* Learn how to use fastAPI
 
 ---
 
@@ -38,7 +38,7 @@ $ pip install "uvicorn[standard]"
 
 The simplest FastAPI file could look like this:
 
-``` python
+```python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -53,7 +53,7 @@ Copy it in a file called `main.py`.
 
 Start the live server as follows:
 
-``` bash
+```bash
 $ uvicorn main:app --reload 
 
 INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
@@ -110,12 +110,11 @@ It will display a JSON that starts with:
 ```
 
 
-
 ### FastAPI instance
 
 If you create your app like:
 
-``` python
+```python
 from fastapi import FastAPI
 
 my_awesome_api = FastAPI()
@@ -128,7 +127,7 @@ async def root():
 
 And copy it in a file `main.py` then you would call `uvicorn` like:
 
-``` bash
+```bash
 $ uvicorn main:my_awesome_api --reload
 
 INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
@@ -146,7 +145,7 @@ in a URL like: `https://example.com/purple/flc` ...the path would be:
 
 ##### Define a path operation decorator
 
-``` python
+```python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -174,7 +173,7 @@ Our `path operation function` is as follows:
 
 ### Return the content
 
-``` python
+```python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -188,12 +187,12 @@ async def root():
 You can return a dict, a list, or singular values such as str, int,
 and so on.
 
-## Query Parmaters
+## Query Parameters
 
 When you declare other function parameters that are not part of the path parameters, 
 they are automatically interpreted as "query" parameters.
 
-``` python
+```python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -208,9 +207,11 @@ async def read_item(skip: int = 0, limit: int = 10):
 
 The query is the set of key-value pairs that go after the `?` in a URL, separated by & characters.
 For example, in the URL:
+
 ```
 http://127.0.0.1:8000/items/?skip=0&limit=10
 ```
+
 the query parameters are:
 
 * skip: with a value of 0
