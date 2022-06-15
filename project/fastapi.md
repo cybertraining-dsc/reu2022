@@ -217,4 +217,65 @@ the query parameters are:
 * skip: with a value of 0
 * limit: with a value of 10
 
+### Searching in the fastapi
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+
+items = [{"name": "Foo"}, {"name": "Bar"}, {"name": "Baz"}]
+
+
+@app.get("/items/")
+async def read_item(skip: int = 0, limit: int = 10):
+    return items[skip : skip + limit]
+
+@app.get("/search/")
+async def search_item(name:str):
+    result = None
+    for item in items:
+        if item['name'] == name:
+            result = name
+    return result
+```
+For example, in the URL
+```
+http://127.0.0.1:8000/search/?name=Foo')
+```
+Output
+```
+"Foo"
+```
+
+### Running Through Git bash
+
+```python
+import requests
+
+result = requests.get('http://127.0.0.1:8000/search/?name=Foo')
+
+print(result.text)
+
+print(result.status_code)
+print(result.headers['content-type'])
+print(result.encoding)
+print(result.text)
+print(result.json())
+```
+Run python code on Git bash
+```bash
+$ python r.py
+```
+where r.py is the file name
+
+output
+```
+"Foo"
+200
+application/json
+utf-8
+"Foo"
+Foo
+```
 References: <https://fastapi.tiangolo.com/tutorial/first-steps/>
