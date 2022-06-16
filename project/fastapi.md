@@ -305,7 +305,7 @@ To Enter the docs url `http://127.0.0.1:8000/docs` on another window
 $ cms cc doc
 ```
 
-To stop the server you will stop the server on the windows in which you enter doc url
+To stop the server, you will stop it in the window server in which you enter doc url
 
 ```bash
 $ cms cc stop
