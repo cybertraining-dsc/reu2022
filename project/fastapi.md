@@ -194,35 +194,30 @@ utf-8
 Foo
 ```
 
-## Running the uvicorn server Through Git Bash
+## Running the cc FastAPI service
 
-```python
-import uvicorn
-from fastapi import FastAPI
-
-app = FastAPI()
-
-
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
-```
-
-Starting up the uvicorn server
+The cloudmesh cc FastAPI service can be started with 
 
 ```bash
 $ cms cc start
 ```
 
-To Enter the docs url `http://127.0.0.1:8000/docs` on another window
+To see the documentation you do not have to type in the URL in the browser, 
+but instead you can use the command 
 
 ```bash
 $ cms cc doc
 ```
 
-To stop the server, you will stop it in the window server in which you enter doc url
+which will open the url `http://127.0.0.1:8000/docs` in the browser.
+
+To stop the server, use the command
 
 ```bash
 $ cms cc stop
 ```
-References: <https://fastapi.tiangolo.com/tutorial/first-steps/>
+
+## Links 
+
+* <https://fastapi.tiangolo.com/tutorial/first-steps/>
+* cloudmesh cc TODO
