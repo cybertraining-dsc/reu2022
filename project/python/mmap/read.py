@@ -1,6 +1,6 @@
 import mmap
 
-with open('story.txt', 'r') as f:
+with open('example.txt', 'r') as f:
     with mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as m:
 
         # Reads the first ten characters

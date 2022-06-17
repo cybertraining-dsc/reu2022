@@ -5,11 +5,12 @@
 | count | author                               |
 +-------+--------------------------------------+
 | 9008  | Jackson Miskill                      |
-| 7408  | Alex Beck                            |
-| 2547  | Gregor von Laszewski                 |
-| 1414  | Alison Lu                            |
+| 7425  | Alex Beck                            |
+| 2526  | Gregor von Laszewski                 |
+| 1418  | Alison Lu                            |
 | 545   | J.P Fleischer                        |
-| 282   | AbdulBaqiy Diyaolu                   |
+| 196   | AbdulBaqiy Diyaolu                   |
+| 46    | Not Committed Yet                    |
 | 45    | Robert Knuuti                        |
 | 38    | Binary file (standard input) matches |
 | 24    | Toble007                             |
