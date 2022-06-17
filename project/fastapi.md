@@ -4,39 +4,30 @@
 
 ![](images/learning.png) **Learning Objectives**
 
-* Leran how to use fastAPI
+* Learn how to use fastAPI
 
 ---
-
-FastAPI is a Python framework that allows developers to use the
-RestAPI interface to call functions that implement
-applications. RestAPI is used to call the common building block of an
-application.
+stAPI is a Python framework that allows developers set up a REST service and 
+define its functionality with an easy to use API.
 
 
 ## FastAPI Install
 
-There are two ways to install the FastAPI: either completely with the
-`uvicorn` or partially with both the `FastAPI` and the `uvicorn`.
+As FatsAPI will need a web server, we use for development purposses `uvicron`. 
+In a production environment other more mature Web services are recommended.
+To install FastAPI and uvicorn simply use the command:
 
-
-##### Install 1
-
-  This command install both the FastAPI and uvicorn together withe one command.
 ```bash
 $ pip install "fastapi[all]"
 ```
-##### Install 2
-  This commands install the FastAPI and the uvicorn with different commands.
 
-```bash
-$ pip install "fastapi"
-$ pip install "uvicorn[standard]"
-```
+TODO: THERE ARE TOO MANY DIFFERENT EXAMPLES, PLEASE CREATE ONE THAT 
+BUILDS ON TOP OF EACH OTHER, USE  COMPUTERS WITH TEMPERATURES
 
-## FastAPI Example
+## FastAPI Quickstart
 
-The simplest FastAPI file could look like this:
+One of the simplest FastAPI file looks like this, which we assume is placed 
+in a file called `main.py`:
 
 ```
 from fastapi import FastAPI
@@ -46,144 +37,192 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"processor": "5950X"}
 ```
 
-Copy it in a file called `main.py`.
-
-Start the live server as follows:
+Start the live FastAPI `app` in the `uvicorn` server use the command:
 
 ``` bash
 $ uvicorn main:app --reload 
+```
 
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO: Started reloader process [28720]
-INFO: Started server process [28722]
-INFO: Waiting for application startup.
-INFO: Application startup complete.
+
+This will yield the output
+
+```
+1 INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2 INFO: Started reloader process [28720]
+3 INFO: Started server process [28722]
+4 INFO: Waiting for application startup.
+4 INFO: Application startup complete.
 
 ```
 
-There's a line that output something like:
-
-```
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-```
-
-This line displays the URL where your app is served on your local machine.
-
-Navigate to http://127.0.0.1:8000 in your browser.
-
+The first line includes information about which URL is used to contact it to 
+obtain a response. An easy way to view it is to enter <http://127.0.0.1:8000> 
+in your browser.
 The JSON response will appear as:
 
 ```
 {"message": "Hello World"}
 ```
 
-* Go to http://127.0.0.1:8000/docs.
+Oneo of the embedded features of FastAPI is its build in documentation 
+framework based on OpenAPI schema but also alternative formats such as redoc. 
+You can look at it while going with your browser to the URL 
 
-* OpenAPI :
-
-  Using the `OpenAPI` standard for defining APIs, FastAPI creates a `schema` with all of your APIs.
-
-  You can see it directly at: http://127.0.0.1:8000/openapi.json.
-
-It will display a JSON that starts with:
-
-```json
-{
-    "openapi": "3.0.2",
-    "info": {
-        "title": "FastAPI",
-        "version": "0.1.0"
-    },
-    "paths": {
-        "/items/": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "Successful Response",
-                        "content": {
-                            "application/json": {
+* OpenAPI: <http://127.0.0.1:8000/docs>.
+* OpenAPI json: <http://127.0.0.1:8000/openapi.json>
+* Redoc: <http://127.0.0.1:8000/redoc>
 
 
+### Path
+
+One of the mechanisms FastAPI provides it to easily specify the URL that is needed to 
+trigger the functionality of the defined function after its definotion.
+
+We have seen such an example in `@app.get("/")` which activates the `root` function when the
+URL of the server is specified followed by "/"
+
+You can add other path's and functions. Let us assume you add to our initial program the function 
+
+```
+@app.get("/temperature")
+async def temperature():
+    return {"temperature": 0}
+```
+
+The if you use the URL <http://127.0.0.1:8000/temperature>, we will see 
+
+```
+{"temperature": 0}
 ```
 
 
+## Query Parameters
 
-### FastAPI instance
+When you declare other function parameters that are not part of the path parameters, 
+they are automatically interpreted as URL "query" parameters.
 
-If you create your app like:
-
-```
+```python
 from fastapi import FastAPI
 
-my_awesome_api = FastAPI()
+app = FastAPI()
+jobs = [{"name": "Foo"}, 
+        {"name": "Bar"}, 
+        {"name": "Baz"}]
 
-
-@my_awesome_api.get("/")
-async def root():
-    return {"message": "Hello World"}
-```
-And copy it in a file `main.py` then you would call `uvicorn` like:
-
-``` bash
-$ uvicorn main:my_awesome_api --reload
-
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+@app.get("/jobs/")
+async def get_job(skip: int = 0, limit: int = 10):
+    return jobs[skip : skip + limit]
 ```
 
-### Path operation
-
-Path refers to the last part of the URL beginning with the first.  So,
-in a URL like: `https://example.com/purple/flc` ...the path would be:
-`/purple/flc`
-
-"When developing an API, the `path` is the primary means of separating
-"concerns" and "resources."
-
-
-##### Define a path operation decorator
+The query is the set of key-value pairs that go after the `?` in a URL, 
+separated by & characters.
+For example, in the URL:
 
 ```
+http://127.0.0.1:8000/jobs/?skip=0&limit=10
+```
+
+In this case the query parameters are:
+
+* skip: with a value of 0
+* limit: with a value of 10
+
+### Searching in the fastapi
+
+```python
+from fastapi import FastAPI
+
+app = FastAPI()
+jobs = [{"name": "Foo"}, 
+        {"name": "Bar"}, 
+        {"name": "Baz"}]
+
+@app.get("/job/")
+async def search_job(name:str):
+    result = None
+    for item in jobs:
+        if item['name'] == name:
+            result = name
+    return result
+```
+
+For example, in the URL
+
+```
+http://127.0.0.1:8000/job/?name=Foo')
+```
+
+Output
+
+```
+"Foo"
+```
+
+### Running Through Git bash
+
+```python
+import requests
+
+result = requests.get('http://127.0.0.1:8000/job/?name=Foo')
+
+print(result.text)
+
+print(result.status_code)
+print(result.headers['content-type'])
+print(result.encoding)
+print(result.text)
+print(result.json())
+```
+
+Run python code on Git bash
+
+```bash
+$ python r.py
+```
+
+where r.py is the file name, yeilding in the output
+
+```
+"Foo"
+200
+application/json
+utf-8
+"Foo"
+Foo
+```
+
+## Running the uvicorn server Through Git Bash
+
+```python
+import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI()
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello World"}
-```
-The `@app.get("/")` tells FastAPI that the function right below is in
-charge of handling requests that go to:
-
-* the path /
-* using a `get` operation
-
-#####  Define the path operation function
-
-Our `path operation function` is as follows:
-
-* path: is /.
-* operation: is `get`.
-* function: the function that comes after the "decorator" (below @app.get("/")): `async def root()` .
-
-
-### Return the content
-```
-from fastapi import FastAPI
-
-app = FastAPI()
-
-
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
+async def read_root():
+    return {"Hello": "World"}
 ```
 
-You can return a dict, a list, or singular values such as str, int,
-and so on.
+Starting up the uvicorn server
 
+```bash
+$ cms cc start
+```
 
+To Enter the docs url `http://127.0.0.1:8000/docs` on another window
+
+```bash
+$ cms cc doc
+```
+
+To stop the server, you will stop it in the window server in which you enter doc url
+
+```bash
+$ cms cc stop
+```
 References: <https://fastapi.tiangolo.com/tutorial/first-steps/>

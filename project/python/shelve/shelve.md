@@ -27,7 +27,6 @@ This creates three files `computers.db.bak`, `computers.db.dat`, and
 `computers.db.dir`. These `.bak`, `.dat`, and `.dir` files hold the
 shelf information that can be accessed for future use.
 
-
 ## Accessing a Shelf
 
 After it's been created, it can be accessed while reading objects into
@@ -94,10 +93,8 @@ caches the modifications and slows down the saving process. As seen,
 however, you can now directly access and modify the shelf entries as
 it was a two-dimensional dictionary.
 
-
 You can also delete shelf items using their keys with the `del`
 method.
-
 
 ```python
 import shelve

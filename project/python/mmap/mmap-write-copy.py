@@ -2,13 +2,13 @@ import mmap
 import shutil
 
 # Copy the example file
-shutil.copyfile('story.txt', 'story_copy.txt')
+shutil.copyfile('example.txt', 'example_copy.txt')
 
-word = b'barnacle'
+word = b'dog'
 
 # Changing access settings
 
-with open('story_copy.txt', 'r+') as f:
+with open('example_copy.txt', 'r+') as f:
     with mmap.mmap(f.fileno(), 0,
                    access=mmap.ACCESS_COPY) as m:
 
@@ -22,7 +22,7 @@ with open('story_copy.txt', 'r+') as f:
 
         m.seek(0)  # rewind
         loc = m.find(word)
-        m[loc:loc + len(word)] = b'seahorse'
+        m[loc:loc + len(word)] = b'cat'
 
         # Memory-map file after change
 
