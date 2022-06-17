@@ -278,4 +278,36 @@ utf-8
 "Foo"
 Foo
 ```
+
+## Running the uvicorn server Through Git Bash
+
+```python
+import uvicorn
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get("/")
+async def read_root():
+    return {"Hello": "World"}
+```
+
+Starting up the uvicorn server
+
+```bash
+$ cms cc start
+```
+
+To Enter the docs url `http://127.0.0.1:8000/docs` on another window
+
+```bash
+$ cms cc doc
+```
+
+To stop the server, you will stop it in the window server in which you enter doc url
+
+```bash
+$ cms cc stop
+```
 References: <https://fastapi.tiangolo.com/tutorial/first-steps/>
