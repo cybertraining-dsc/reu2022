@@ -6,7 +6,6 @@ import random
     data structure works. 
 '''
 
-
 # this queue is a FIFO queue
 fq = queue.Queue()
 
