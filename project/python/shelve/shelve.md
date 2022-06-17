@@ -23,9 +23,12 @@ computers['temperature'] = {
 }
 ```
 
+*On a Windows:*
 This creates three files `computers.db.bak`, `computers.db.dat`, and
 `computers.db.dir`. These `.bak`, `.dat`, and `.dir` files hold the
 shelf information that can be accessed for future use.
+
+For other computers, this creates the file 'computers.db'.
 
 ## Accessing a Shelf
 
