@@ -8,12 +8,14 @@
 
 ---
 
-FastAPI is a Python framework that allows developers set up a REST service and devine its functionality with an easye to use API.
+FastAPI is a Python framework that allows developers set up a REST service and
+define its functionality with an easy to use API.
 
 
 ## FastAPI Install
 
-As FatsAPI will need a wev server, we use for development purposses `uvicron`. IN a production environment other more mature Web services are recommended.
+As FatsAPI will need a web server, we use for development purposses `uvicron`.
+In a production environment other more mature Web services are recommended.
 To install FastAPI and uvicorn simply use the command:
 
 ```bash

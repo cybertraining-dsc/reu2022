@@ -7,38 +7,26 @@
 * Learn how to use fastAPI
 
 ---
-
-FastAPI is a Python framework that allows developers to use the
-RestAPI interface to call functions that implement
-applications. RestAPI is used to call the common building block of an
-application.
+stAPI is a Python framework that allows developers set up a REST service and 
+define its functionality with an easy to use API.
 
 
 ## FastAPI Install
 
-There are two ways to install the FastAPI: either completely with the
-`uvicorn` or partially with both the `FastAPI` and the `uvicorn`.
+As FatsAPI will need a web server, we use for development purposses `uvicron`. 
+In a production environment other more mature Web services are recommended.
+To install FastAPI and uvicorn simply use the command:
 
-
-##### Install 1
-
-  This command install both the FastAPI and uvicorn together withe one command.
 ```bash
 $ pip install "fastapi[all]"
 ```
-##### Install 2
-  This commands install the FastAPI and the uvicorn with different commands.
 
-```bash
-$ pip install "fastapi"
-$ pip install "uvicorn[standard]"
+
+## FastAPI Quickstart
+
+One of the simplest FastAPI file looks like this, which we assume is placed in a file called `main.py`:
+
 ```
-
-## FastAPI Example
-
-The simplest FastAPI file could look like this:
-
-```python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -49,86 +37,54 @@ async def root():
     return {"message": "Hello World"}
 ```
 
-Copy it in a file called `main.py`.
+Start the live FastAPI `app` in the `uvicorn` server use the command:
 
-Start the live server as follows:
-
-```bash
+``` bash
 $ uvicorn main:app --reload 
+```
 
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO: Started reloader process [28720]
-INFO: Started server process [28722]
-INFO: Waiting for application startup.
-INFO: Application startup complete.
+This will yield the output
+
+```
+1 INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2 INFO: Started reloader process [28720]
+3 INFO: Started server process [28722]
+4 INFO: Waiting for application startup.
+4 INFO: Application startup complete.
 
 ```
 
-There's a line that output something like:
-
-```
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-```
-
-This line displays the URL where your app is served on your local machine.
-
-Navigate to http://127.0.0.1:8000 in your browser.
-
+The first line includes information about which URL is used to contact it to obtain a response. An easy way to view it is to enter <http://127.0.0.1:8000> in your browser.
 The JSON response will appear as:
 
 ```
 {"message": "Hello World"}
 ```
 
-* Go to http://127.0.0.1:8000/docs.
+Oneo of the embedded features of FastAPI is its build in documentation framework based on OpenAPI schema. You can look at it while going with your browser to the URL 
 
-* OpenAPI :
+* <http://127.0.0.1:8000/docs>. 
 
-  Using the `OpenAPI` standard for defining APIs, FastAPI creates a `schema` with all of your APIs.
+* Other formats are also available, for example json:
 
-  You can see it directly at: http://127.0.0.1:8000/openapi.json.
+* <http://127.0.0.1:8000/openapi.json>
 
-It will display a JSON that starts with:
-
-```json
-{
-    "openapi": "3.0.2",
-    "info": {
-        "title": "FastAPI",
-        "version": "0.1.0"
-    },
-    "paths": {
-        "/items/": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "Successful Response",
-                        "content": {
-                            "application/json": {
-
+In case you like to have a different name than `app` you can just use a different 
+variable
 
 ```
-
-
-### FastAPI instance
-
-If you create your app like:
-
-```python
 from fastapi import FastAPI
 
-my_awesome_api = FastAPI()
+my_awesome_app = FastAPI()
 
-
-@my_awesome_api.get("/")
+@my_awesome_app.get("/")
 async def root():
     return {"message": "Hello World"}
 ```
-
 And copy it in a file `main.py` then you would call `uvicorn` like:
 
-```bash
-$ uvicorn main:my_awesome_api --reload
+``` bash
+$ uvicorn main:my_awesome_app --reload
 
 INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 ```
