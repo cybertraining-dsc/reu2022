@@ -8,9 +8,9 @@ database['queue2.job1'] = 'echo hello world'
 
 v = database.get('queue1', default=3)
 
-print(database.load(filename))
-print(database.save(filename))
-print(database.search('queue1'))
+database.load(filename)
+database.save(filename)
+database.search('queue1')
 
 
 # accessing the values in the yaml dictionary
