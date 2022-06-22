@@ -46,12 +46,52 @@ G.add_edges_from(edges)  # adds the edges from the dict we created
 print(G)  # prints: "Graph with 5 nodes and 4 edges"
 ```
 
+This code can be accessed from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-networkx/test-networkx.py)
+
 Thus, we have created the graph. 
 
-## Accessing nodes within the graph
+## Accessing
 
-There are several ways to access the nodes that have been successfully placed within the graph. Let's assume we still have this basic graph 
+It is necessary to be able to access the elements within the graph. There is a slightly strange way of going about doing this with `networkx`. Rather than being able to directly access the element you input, it will return the adjacent element. Thus, it seems to be necessary to have a dummy head, which makes it so that the first node inserted into the graph can be accessed. 
+
+The following looks into this:
+
+```python
+G = nx.Graph()
+
+# creating a list of nodes and edges- you have to be extremely careful not to typo
+nodes = ['job-1', 'job-2', 'job-3', 'job-4', 'job-5']
+
+edges = [('job-1', 'job-2'), ('job-2', 'job-3'), ('job-3', 'job-4'),
+         ('job-4', 'job-5')]
+
+print(G['job-1'])  # will return {'job-2' : {}}
+```
+
+This code can be accessed from [GitHub]()
 
 ## Removing nodes
+
+It is very easy to remove nodes and edges using `networkx`. This can be accomplished by executing the following:
+
+```python
+import networkx as nx
+
+G = nx.Graph()
+
+# creating a list of nodes and edges- you have to be extremely careful not to typo
+nodes = ['job-1', 'job-2', 'job-3', 'job-4', 'job-5']
+
+edges = [('job-1', 'job-2'), ('job-2', 'job-3'), ('job-3', 'job-4'),
+         ('job-4', 'job-5')]
+
+print(G)  # will return "Graph with 5 nodes and 4 edges".
+
+G.remove('job-1')
+
+print(G)  # will return "Graph with 4 nodes and 3 edges"
+```
+
+This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-networkx/test-networkx.py)
 
 ## Manipulating nodes
