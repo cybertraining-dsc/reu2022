@@ -12,3 +12,4 @@ f.edges([('job-1', 'job-2'), ('job-2', 'job-3'), ('job-3', 'job-4'),
          ('job-4', 'job-5')], )
 
 f.view()
+
