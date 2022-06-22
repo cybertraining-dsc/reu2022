@@ -1,7 +1,7 @@
 import graphviz
 
 
-f = graphviz.Graph('jobs in queues', filename='test-graphviz.png')
+f = graphviz.Graph('jobs in queues', filename='test-graphviz.gv')
 
 f.node('job-1', 'ls')
 f.node('job-2', 'echo hello world')
