@@ -1,7 +1,7 @@
 import graphviz
 
 
-f = graphviz.Graph('jobs in queues', filename='test-graphviz.gv')
+f = graphviz.Graph('jobs in queues', filename='test-graphviz.png')
 
 f.node('job-1', 'ls')
 f.node('job-2', 'echo hello world')
@@ -12,4 +12,6 @@ f.edges([('job-1', 'job-2'), ('job-2', 'job-3'), ('job-3', 'job-4'),
          ('job-4', 'job-5')], )
 
 f.view()
+
+
 
