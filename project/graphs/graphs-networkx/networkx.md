@@ -94,4 +94,4 @@ print(G)  # will return "Graph with 4 nodes and 3 edges"
 
 This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-networkx/test-networkx.py)
 
-## Manipulating nodes
+There are many other ways to manipulate the nodes and edges. These ways can be accessed from the official [documentation](https://networkx.org/documentation/stable/index.html)
