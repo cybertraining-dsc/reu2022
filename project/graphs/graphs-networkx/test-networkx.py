@@ -1,4 +1,5 @@
 import networkx as nx
+from matplotlib import pyplot as plt
 
 """
     This is a python file to test how the networkx library functions. It will
@@ -16,17 +17,15 @@ nodes = {'job-1': 'ls', 'job-2': 'echo hello world', 'job-3': 'cd ~',
 edges = [('job-1', 'job-2'), ('job-2', 'job-3'), ('job-3', 'job-4'),
          ('job-4', 'job-5')]
 
-G.add_nodes_from(nodes)
+G.add_node('queue1', nodes_for_adding=nodes)
 G.add_edges_from(edges)
 #G.remove_node('job-1')  # super cool, it removes the node AND the edge associated with the node
 
 print(G)
 print("Graph nodes: ", G.nodes)
 print("Graph edges: ", G.edges)
+print(G['job-2'])
 
-DG = nx.DiGraph()
-DG.add_nodes_from(nodes)
-DG.add_edges_from(edges)
 
-print(DG)
-
+#nx.draw(G)
+#plt.show()
