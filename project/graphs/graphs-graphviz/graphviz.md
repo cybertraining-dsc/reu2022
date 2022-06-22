@@ -62,7 +62,7 @@ This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2
 
 Shown here is the graph produced from the code:
 
-![Graphviz example chart](graphs-graphviz/test-graphviz.gv.png)
+![Graphviz example chart](graphs-graphviz/test-graphviz-expng)
 
 
 
