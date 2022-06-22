@@ -27,5 +27,5 @@ print("Graph edges: ", G.edges)
 print(G['job-2'])
 
 
-#nx.draw(G)
-#plt.show()
+# nx.draw(G)
+# plt.show()
