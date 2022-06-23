@@ -57,7 +57,7 @@ This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2
 
 Shown here is the graph produced from the code:
 
-![Graphviz example chart](images/test-graphviz-ex.png)
+![Basic example](images/basic-graphviz-ex.png)
 
 
 ## Subgraphs
@@ -107,9 +107,33 @@ g.node('end', shape='square')
 g.view()
 ```
 
-This code can be accessed via [Github]()
+This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/subgraph-graphviz.py).
+
+![Subgraph example](images/subgraph-graphviz-ex.png)
+
 
 ## Data Structures
 
+Square data structures can be created in `graphviz` when the shape of the nodes
+is set to `'record'`. This specific type of data structure allows for nodes 
+to be clustered together in the same rectangle. The following code shows a 
+diagram of different files and directories.
 
+```python
+import graphviz
+
+s = graphviz.Digraph('files in directories', filename='structure-graphviz.gv')
+s.node_attr={'shape' : 'record'}
+
+
+s.node('s1', '<d1> cloudmesh-cc | <d2> reu2022')
+s.node('s2', '{<d1> cloudmesh | <d2> tests}')
+s.node('s3', '<d1> contribute | {<d2> graphs |{<d3> graphviz | <d4> networkx}}')
+
+s.edges([('s1:d1', 's2:d2'), ('s1:d2', 's3:d4')])
+
+s.view()
+```
+
+This code can be accessed via [Github]()
 
