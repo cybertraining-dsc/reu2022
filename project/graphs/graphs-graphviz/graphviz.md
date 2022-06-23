@@ -18,13 +18,6 @@ Next, go onto GitBash and type in the following:
 $ pip install graphviz
 ```
 
-In order for `graphviz` to be imported into their Python code,
-simply type in the following import statement:
-
-```python
-import graphviz
-```
-
 ## Creating the graph, adding nodes, and adding edges
 
 Creating a basic graph with nodes and edges is very simple using `graphviz`.
@@ -62,7 +55,7 @@ This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2
 
 Shown here is the graph produced from the code:
 
-![Graphviz example chart](graphs-graphviz/test-graphviz-expng)
+![Graphviz example chart](test-graphviz-ex.png)
 
 
 
