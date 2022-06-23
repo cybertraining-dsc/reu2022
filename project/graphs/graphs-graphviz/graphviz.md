@@ -109,6 +109,8 @@ g.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/subgraph-graphviz.py).
 
+Shown here are the subgraphs produced by the code.
+
 ![Subgraph example](images/subgraph-graphviz-ex.png)
 
 
@@ -135,5 +137,47 @@ s.edges([('s1:d1', 's2:d2'), ('s1:d2', 's3:d4')])
 s.view()
 ```
 
-This code can be accessed via [Github]()
+This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/structure-graphviz.py).
 
+Shown here are the data structures produced by the code.
+
+![Structure example](images/structure-graphviz-ex.png)
+
+## Colors and Labels
+
+It is super simple to add colors and labels to graphs, nodes, and edges in 
+`graphviz`. 
+
+In terms of labels, just add the parameter `label=''` inside the `attr()`, 
+`node()`, or `edge()` commands. The font color of the label can be set using 
+`fontcolor=`. 
+
+In terms of color, just add the parameter `color=''` inside the `attr()` or
+`node()` commands. This will change the color of the perimeter. In order to 
+fill, use the parameter `style='filled'` and set the fill color using 
+`fillcolor=''`.
+
+Gradients can also be added by setting a colon `:` between two different 
+colors. Furthermore, the angle of the gradient can be set using the 
+parameter `gradientangle=''`. 
+
+The following code demonstrates many of the features explained.
+
+```python
+import graphviz
+
+g = graphviz.Digraph('Colors', filename='color-graphviz.gv')
+g.attr(bgcolor='red:pink', label='Red Graph', fontcolor='white')
+
+with g.subgraph(name='cluster') as c:
+    c.attr(color='cyan', style='filled', label='Cyan Cluster',
+           fontcolor='white')
+    c.node('n1', 'Orange Node', shape='circle', fillcolor='red:yellow',
+           style='filled', gradientangle='90')
+    c.node('n2', 'Yellow Node', shape='diamond', color='yellow', style='filled')
+    c.edge('n2', 'n1', label='Edge 1')
+
+g.view()
+```
+
+This code can be accessed via [GitHub]
