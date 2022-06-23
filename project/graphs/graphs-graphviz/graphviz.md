@@ -180,4 +180,14 @@ with g.subgraph(name='cluster') as c:
 g.view()
 ```
 
-This code can be accessed via [GitHub]
+This code can be accessed via [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/color-graphviz.py).
+
+Shown here is what the code produced.
+
+![Color and labels example](images/color-graphviz-ex.png)
+
+## Sources
+
+* https://pypi.org/project/graphviz/
+* https://graphviz.readthedocs.io/en/stable/examples.html
+* https://graphviz.readthedocs.io/en/stable/api.html
