@@ -56,7 +56,7 @@ f.edges([('job-1', 'job-2'), ('job-2', 'job-3'), ('job-3', 'job-4'),
 f.view()
 ```
 
-This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/test-graphviz.py).
+This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/basic-graphviz.py).
 
 Shown here is the graph produced from the code:
 
