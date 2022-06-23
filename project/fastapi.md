@@ -1,7 +1,5 @@
 # FastAPI 
 
----
-
 ![](images/learning.png) **Learning Objectives**
 
 * Learn how to use fastAPI
@@ -194,33 +192,24 @@ utf-8
 Foo
 ```
 
-## Running the uvicorn server Through Git Bash
+## Running the cc FastAPI service
 
-```python
-import uvicorn
-from fastapi import FastAPI
-
-app = FastAPI()
-
-
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
-```
-
-Starting up the uvicorn server
+The cloudmesh cc FastAPI service can be started with 
 
 ```bash
 $ cms cc start
 ```
 
-To Enter the docs url `http://127.0.0.1:8000/docs` on another window
+To see the documentation you do not have to type in the URL in the browser, 
+but instead you can use the command 
 
 ```bash
 $ cms cc doc
 ```
 
-To stop the server, you will stop it in the window server in which you enter doc url
+which will open the url `http://127.0.0.1:8000/docs` in the browser.
+
+To stop the server, use the command
 
 ```bash
 $ cms cc stop
@@ -280,7 +269,9 @@ The `await` functions sends the asynchronous request.
 This can once again be run with pytest, and additional async or sync test functions
 can be added as well.
 
-## References:
+## Links
+
 * <https://fastapi.tiangolo.com/tutorial/first-steps/>
 * <https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>
 * <https://fastapi.tiangolo.com/advanced/async-tests/>
+* cloudmesh cc TODO
