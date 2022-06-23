@@ -62,11 +62,10 @@ Shown here is the graph produced from the code:
 
 ![Basic example](images/basic-graphviz-ex.png)
 
-
 ## Subgraphs
 
 Subgraphs are clusters of nodes and edges that can be created using the 
-`subgraph()` command. However, it's important to have the prefix `'cluster'` in 
+`subgraph()` command. However, it's required to have the prefix `'cluster'` in 
 the name of it.
 
 The following code shows the usage of subgraphs by expanding on the last 
@@ -95,7 +94,6 @@ with g.subgraph(name='cluster_2') as s:
     s.edges([('job-6', 'job-7'), ('job-7', 'job-8'), ('job-8', 'job-9'),
              ('job-9', 'job-10')], )
 
-
 g.edge('start', 'job-1')
 g.edge('start', 'job-6')
 g.edge('end', 'job-5')
@@ -116,12 +114,11 @@ Shown here are the subgraphs produced by the code.
 
 ![Subgraph example](images/subgraph-graphviz-ex.png)
 
-
 ## Data Structures
 
-Square data structures can be created in `graphviz` when the shape of the nodes
-is set to `'record'`. This specific type of data structure allows for nodes 
-to be clustered together in the same rectangle. The following code shows a 
+Rectangular data structures can be created in `graphviz` when the shape of the 
+nodes is set to `'record'`. This specific type of data structure allows for 
+nodes to be clustered together in the same rectangle. The following code shows a 
 diagram of different files and directories.
 
 ```python
@@ -129,7 +126,6 @@ import graphviz
 
 s = graphviz.Digraph('files in directories', filename='structure-graphviz.gv')
 s.node_attr={'shape' : 'record'}
-
 
 s.node('s1', '<d1> cloudmesh-cc | <d2> reu2022')
 s.node('s2', '{<d1> cloudmesh | <d2> tests}')
@@ -157,7 +153,7 @@ In terms of labels, just add the parameter `label=''` inside the `attr()`,
 
 In terms of color, just add the parameter `color=''` inside the `attr()` or
 `node()` commands. This will change the color of the perimeter. In order to 
-fill, use the parameter `style='filled'` and set the fill color using 
+fill, use the parameter `style='filled'` or set the fill color using 
 `fillcolor=''`.
 
 Gradients can also be added by setting a colon `:` between two different 

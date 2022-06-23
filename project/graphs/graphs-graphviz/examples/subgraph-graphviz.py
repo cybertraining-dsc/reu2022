@@ -20,7 +20,6 @@ with g.subgraph(name='cluster_2') as s:
     s.edges([('job-6', 'job-7'), ('job-7', 'job-8'), ('job-8', 'job-9'),
              ('job-9', 'job-10')], )
 
-
 g.edge('start', 'job-1')
 g.edge('start', 'job-6')
 g.edge('end', 'job-5')
@@ -30,6 +29,5 @@ g.edge('job-4', 'job-9')
 
 g.node('start', shape='square')
 g.node('end', shape='square')
-
 
 g.view()
