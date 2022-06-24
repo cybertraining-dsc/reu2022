@@ -10,19 +10,15 @@ Thankfully, `networkx` can be super easily downloaded. Simply execute the follow
 $ pip install networkx
 ```
 
-In order to import `networkx` into an actual python script, simply code up the following (the `nx` is a typical abbreviation for the library): 
-
-```python
-import networkx as nx
-```
-
-## Creating the graph, adding nodes, and adding edges
+## Creating a graph
 
 It is super simple to create a graph, add nodes to the graph, and add edges to the graph. For the purposes of this tutorial, we will be working with a synthetic job queueing service. Each node represents a job and the edges are the edges that connect each job. 
 
 The following is the code that was created:
 
 ```python
+import networkx as nx
+
 # creating a list of nodes and edges- you have to be extremely careful not to typo
 nodes = ['job-1', 'job-2', 'job-3','job-4', 'job-5']
 
@@ -35,14 +31,14 @@ This code can be accessed from [GitHub](https://github.com/cybertraining-dsc/reu
 To create the graph and add the above nodes and edges, `networkx` provides super simple methods.
 
 ```python
-import networkx as nx 
-
-G = nx.Graph()  # creates the graph that we will use
-
-G.add_nodes_from(nodes)  # adds the nodes from the dict we created
-G.add_edges_from(edges)  # adds the edges from the dict we created
-
-print(G)  # prints: "Graph with 5 nodes and 4 edges"
+1 import networkx as nx 
+2 
+3 graph = nx.Graph()  # creates the graph that we will use
+4 
+5 graph.add_nodes_from(nodes)  # adds the nodes from the dict we created
+6 graph.add_edges_from(edges)  # adds the edges from the dict we created
+7 
+8 print(graph)  # prints: "Graph with 5 nodes and 4 edges"
 ```
 
 This code can be accessed from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-networkx/test-networkx.py)
@@ -56,15 +52,7 @@ It is necessary to be able to access the elements within the graph. There is a s
 The following looks into this:
 
 ```python
-G = nx.Graph()
-
-# creating a list of nodes and edges- you have to be extremely careful not to typo
-nodes = ['job-1', 'job-2', 'job-3', 'job-4', 'job-5']
-
-edges = [('job-1', 'job-2'), ('job-2', 'job-3'), ('job-3', 'job-4'),
-         ('job-4', 'job-5')]
-
-print(G['job-1'])  # will return {'job-2' : {}}
+9 print(graph['job-1'])  # will return {'job-2' : {}}
 ```
 
 This code can be accessed from [GitHub]()
