@@ -25,6 +25,12 @@ color_map = []
 for n in nodes:
     color_map.append('lightblue')
 
+<<<<<<< HEAD
+
+# nx.draw(G)
+# plt.show()
+=======
 nx.draw(G, node_color=color_map, with_labels=True)
 plt.savefig('images/network.png')
 plt.show()
+>>>>>>> b889b97983671ad618b4a0b330469dfa981e3902

@@ -1,0 +1,9 @@
+digraph Colors {
+	bgcolor="red:pink" fontcolor=white label="Red Graph"
+	subgraph cluster {
+		color=cyan fontcolor=white label="Cyan Cluster" style=filled
+		n1 [label="Orange Node" fillcolor="red:yellow" gradientangle=90 shape=circle style=filled]
+		n2 [label="Yellow Node" color=yellow shape=diamond style=filled]
+		n2 -> n1 [label="Edge 1"]
+	}
+}
