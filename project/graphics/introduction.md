@@ -2,7 +2,7 @@
 
 ---
 
-![](images/learning.png) **Learning Objectives**
+![](../images/learning.png) **Learning Objectives**
 
 * Introduction to plotting libraries
 
