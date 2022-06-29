@@ -58,9 +58,11 @@ f.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/basic-graphviz.py).
 
-Shown here is the graph produced from the code:
+Shown here in [Fig. 1.] is the graph produced from the code:
 
-![Basic example](images/basic-graphviz-ex.png)
+![Fig. 1.](images/basic-graphviz-ex.png)
+
+[Fig. 1.](images/basic-graphviz-ex.png): Sequence of Bash Command Path
 
 ## Subgraphs
 
@@ -110,9 +112,12 @@ g.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/subgraph-graphviz.py).
 
-Shown here are the subgraphs produced by the code.
+Shown here in [Fig. 2.]() are the subgraphs produced by the code.
 
-![Subgraph example](images/subgraph-graphviz-ex.png)
+![Fig. 2.](images/subgraph-graphviz-ex.png)
+
+[Fig. 2.](images/subgraph-graphviz-ex.png): Sequence of Two Bash Different 
+Command Paths 
 
 ## Data Structures
 
@@ -138,9 +143,12 @@ s.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/structure-graphviz.py).
 
-Shown here are the data structures produced by the code.
+Shown here in [Fig. 3.]() are the data structures produced by the code.
 
-![Structure example](images/structure-graphviz-ex.png)
+![Fig. 3.](images/structure-graphviz-ex.png)
+
+[Fig. 3.](images/structure-graphviz-ex.png): Data Structure of 
+Various Directories and Files
 
 ## Colors and Labels
 
@@ -181,12 +189,16 @@ g.view()
 
 This code can be accessed via [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/color-graphviz.py).
 
-Shown here is what the code produced.
+Shown here in [Fig. 4.]() is what the code produced.
 
-![Color and labels example](images/color-graphviz-ex.png)
+![Fig. 4.](images/color-graphviz-ex.png)
+
+[Fig. 4.](images/color-graphviz-ex.png) Label Directed Graph with Various 
+Colored Nodes 
 
 ## Sources
 
 * https://pypi.org/project/graphviz/
 * https://graphviz.readthedocs.io/en/stable/examples.html
 * https://graphviz.readthedocs.io/en/stable/api.html
+

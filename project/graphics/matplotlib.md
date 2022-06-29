@@ -57,7 +57,7 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py). The output of this program is showcased in [@fig:matplotlib-barchart].
 
-![Matplotlib Barchart created from data from Spotify.](examples/images/matplotlib-barchart.svg){#fig:matplotlib-barchart width=50%}
+![Matplotlib Barchart created from data from Spotify.](examples/images/matplotlib-barchart.svg){#fig:matplotlib-barchart width=100%}
 
 ### Line Chart
 

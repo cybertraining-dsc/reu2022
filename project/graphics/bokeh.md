@@ -54,7 +54,7 @@ show(p)
 
 This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py)
-. The output is shown in [@fig:bokeh-example]
+. The output is shown in [Figure created with Bokeh.](#fig:bokeh-example)
 
 ![Figure created with Bokeh.](examples/images/bokeh-figure.png){#fig:bokeh-example width=50%}
 
