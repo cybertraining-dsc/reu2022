@@ -2,7 +2,7 @@ digraph "jobs in queues" {
 	subgraph cluster_1 {
 		"job-1" [label=ls]
 		"job-2" [label="echo hello world"]
-		"job-3" [label="cd ~"]
+		"job-3" [label=cd]
 		"job-4" [label="cd cm/cloudmesh-cc"]
 		"job-5" [label="pytest tests"]
 		"job-1" -> "job-2"
@@ -23,8 +23,8 @@ digraph "jobs in queues" {
 	}
 	start -> "job-1"
 	start -> "job-6"
-	end -> "job-5"
-	end -> "job-10"
+	"job-5" -> end
+	"job-10" -> end
 	"job-3" -> "job-7"
 	"job-4" -> "job-9"
 	start [shape=square]
