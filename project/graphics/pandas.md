@@ -67,7 +67,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py). 
 The output of this program is showcased in [Fig. 1.](examples/images/pandas-barchart.svg)
 
-<img src="examples/images/pandas-barchart.svg" width="400" height="350">
+<img src="examples/images/pandas-barchart.svg" width="500" height="450">
 
 [Fig. 1.](examples/images/pandas-barchart.svg) Spotify Data Shown in Bar 
 Chart
@@ -116,7 +116,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py). 
 The output of this program is showcased in [Fig. 2.](examples/images/pandas-linechart.svg)
 
-<img src='examples/images/pandas-linechart.svg' width='400'>
+<img src='examples/images/pandas-linechart.svg' width="500" height="450">
 
 [Fig. 2.](examples/images/pandas-linechart.svg) Sample Randomized Line Plot
 
@@ -145,7 +145,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py). 
 The output of this program is showcased in [Fig. 3.](examples/images/pandas-piechart.svg)
 
-<img src="examples/images/pandas-piechart.svg" width='400'>
+<img src="examples/images/pandas-piechart.svg" width="500" height="450">
 
 [Fig. 3.](examples/images/pandas-piechart.svg) Genres of Music from Spotify 
 Distributed on a Pie Chart

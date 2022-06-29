@@ -61,7 +61,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). 
 The output of this program is showcased in [Fig. 1.](examples/images/seaborn-lineplot.svg)
 
-<img src='examples/images/seaborn-lineplot.svg' width='400'>
+<img src='examples/images/seaborn-lineplot.svg' width='500'>
 
 [Fig. 1.](examples/images/seaborn-lineplot.svg) Line Plot Created 
 from User Spotify Data.
@@ -84,7 +84,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py).
 The output of this program is showcased in [Fig. 2.](examples/images/seaborn-displot.svg)
 
-<img src='examples/images/seaborn-displot.svg' width='400'>
+<img src='examples/images/seaborn-displot.svg' width='500'>
 
 [Fig. 2.](examples/images/seaborn-displot.svg) Distribution Plot 
 Created from User Spotify Data
@@ -112,7 +112,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/gra
 
 The output from the program is showcased in [Fig. 3.](examples/images/seaborn-catplot.svg)
 
-<img src='examples/images/seaborn-catplot.svg' width='400'>)
+<img src='examples/images/seaborn-catplot.svg' width='500'>
 
 [Fig. 3.](examples/images/seaborn-catplot.svg) Categorical Plot Created 
 from User Spotify Data.
@@ -136,7 +136,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 . The output of this program is showcased in [Fig. 4.](examples/images/seaborn-regplot.svg)
 
-<img src='examples/images/seaborn-regplot.svg' width='400'>
+<img src='examples/images/seaborn-regplot.svg' width='500'>
 
 [Fig. 4.](examples/images/seaborn-regplot.svg) Regression Plot Created from 
 User Spotify Data
