@@ -58,7 +58,10 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py). 
 The output of this program is showcased in [Fig. 1.](examples/images/matplotlib-barchart.svg).
 
-![e.](examples/images/matplotlib-barchart.svg){width=100%}
+<img src='examples/images/matplotlib-barchart.png' width="500">
+
+[Fig. 1.](examples/images/matplotlib-barchart.svg) Spotify Data Shown in Bar 
+Chart
 
 ### Line Chart
 
@@ -89,10 +92,12 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
 .
-The output of this program is showcased in
-[@fig:matplotlib-linechart].
+The output of this program is showcased in [Fig. 2.](examples/images/matplotlib-linechart.svg)
 
-![Matplotlib Linechart created from random variables](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart width=50%}
+<img src='examples/images/matplotlib-linechart.svg' width="500">
+
+[Fig. 2.](examples/images/matplotlib-linechart.svg) Line Chart on `xy` Axes.
+
 
 ### Pie Chart
 
@@ -118,9 +123,12 @@ plt.show()
 This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py)
 
-The output of this program is showcased in [@fig:matplotlib-piechart].
+The output of this program is showcased in [Fig. 3.](examples/images/matplotlib-piechart.svg)
 
-![Barchart created from data from Spotify](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart width=50%}
+<img src='examples/images/matplotlib-piechart.svg' width="500">
+
+[Fig. 3.](examples/images/matplotlib-piechart.svg) Genres of Music 
+Distributed on a Pie Chart
 
 ### Contour Plot
 
@@ -150,10 +158,12 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py)
 .
-The output of this program is showcased in
-[@fig:matplotlib-contourplot].
+The output of this program is showcased in [Fig. 4.](examples/images/matplotlib-contour.svg)
 
-![Multivariable (x, y, z) Equation Plotted](examples/images/matplotlib-contour.svg){#fig:matplotlib-contourplot width=50%}
+<img src='examples/images/matplotlib-contour.svg' width="500">
+
+[Fig. 4.](examples/images/matplotlib-contour.svg) Multivariable Math 
+Equation Shown on a Contour Plot
 
 A contour plot allows data and equations consisting of three variables
 to be plotted through plotting 3D surfaces as 2D slices on a `xy`
