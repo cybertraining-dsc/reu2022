@@ -14,7 +14,7 @@ with g.subgraph(name='cluster_1') as s:
 with g.subgraph(name='cluster_2') as s:
     s.node('job-6', 'cd')
     s.node('job-7', 'cd cm')
-    s.node('job-8', 'cd cm/reu2022')
+    s.node('job-8', 'cd cm/cloudmesh-alex')
     s.node('job-9', 'git status')
     s.node('job-10', 'git pull')
     s.edges([('job-6', 'job-7'), ('job-7', 'job-8'), ('job-8', 'job-9'),

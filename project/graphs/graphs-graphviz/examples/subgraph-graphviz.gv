@@ -13,7 +13,7 @@ digraph "jobs in queues" {
 	subgraph cluster_2 {
 		"job-6" [label=cd]
 		"job-7" [label="cd cm"]
-		"job-8" [label="cd cm/reu2022"]
+		"job-8" [label="cd cm/cloudmesh-alex"]
 		"job-9" [label="git status"]
 		"job-10" [label="git pull"]
 		"job-6" -> "job-7"
