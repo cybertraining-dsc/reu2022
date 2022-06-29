@@ -20,17 +20,17 @@ git:
   "credit": "https:/raw.githubusercontent.com/cyberaide/bookmanager/main/bookmanager/template"
 file:
   "mpi": "https:/raw.githubusercontent.com/cloudmesh/cloudmesh-mpi/main/docs"
-  "reu2022": "file:.."
-  "nlp": "file:../../cloudmesh-nlp"
+  "reu2022": "file://.."
+  "nlp": "file://../../cloudmesh-nlp"
 https:
   "reu2022": "https://raw.githubusercontent.com/cybertraining-dsc/reu2022/main"
 BOOK:
-  - CONTRIBUTE:
-      - "{file.reu2022}/contribute/contribute.md"
-      - "{file.reu2022}/contribute/calendar.md"
-      - "{file.reu2022}/action.md"
-      - "{file.reu2022}/contribute/issues.md"
-      - "{file.reu2022}/contribute/c4gc-students.md"
+#  - CONTRIBUTE:
+#      - "{file.reu2022}/contribute/contribute.md"
+#      - "{file.reu2022}/contribute/calendar.md"
+#      - "{file.reu2022}/action.md"
+#      - "{file.reu2022}/contribute/issues.md"
+#      - "{file.reu2022}/contribute/c4gc-students.md"
   - USEFUL_LINKS:
     - "{file.reu2022}/README.md"
   - INSTALL:
