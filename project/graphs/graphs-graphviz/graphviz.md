@@ -58,12 +58,12 @@ f.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/basic-graphviz.py).
 
-Shown here in [Fig. 1.](images/basic-graphviz-ex.png) is the graph produced  
+Shown here in [Fig. 1.](images/basic-graphviz-ex.png) is the graph produced
 from the code:
 
 ![Fig. 1.](images/basic-graphviz-ex.png)
 
-[Fig. 1.](images/basic-graphviz-ex.png): Sequence of Bash Command Path
+[Fig. 1.](images/basic-graphviz-ex.png) Sequence of Bash Command Path
 
 ## Subgraphs
 
@@ -113,12 +113,12 @@ g.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/subgraph-graphviz.py).
 
-Shown here in [Fig. 2.](images/subgraph-graphviz-ex.png) are the subgraphs  
+Shown here in [Fig. 2.](images/subgraph-graphviz-ex.png) are the subgraphs 
 produced by the code.
 
 ![Fig. 2.](images/subgraph-graphviz-ex.png)
 
-[Fig. 2.](images/subgraph-graphviz-ex.png): Sequence of Two Bash Different 
+[Fig. 2.](images/subgraph-graphviz-ex.png) Sequence of Two Bash Different 
 Command Paths 
 
 ## Data Structures
@@ -145,12 +145,12 @@ s.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/structure-graphviz.py).
 
-Shown here in [Fig. 3.](images/structure-graphviz-ex.png) are the data  
+Shown here in [Fig. 3.](images/structure-graphviz-ex.png) are the data 
 structures produced by the code.
 
 ![Fig. 3.](images/structure-graphviz-ex.png)
 
-[Fig. 3.](images/structure-graphviz-ex.png): Data Structure of 
+[Fig. 3.](images/structure-graphviz-ex.png) Data Structure of 
 Various Directories and Files
 
 ## Colors and Labels
