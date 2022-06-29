@@ -58,7 +58,8 @@ f.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/basic-graphviz.py).
 
-Shown here in [Fig. 1.] is the graph produced from the code:
+Shown here in [Fig. 1.](images/basic-graphviz-ex.png) is the graph produced  
+from the code:
 
 ![Fig. 1.](images/basic-graphviz-ex.png)
 
@@ -112,7 +113,8 @@ g.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/subgraph-graphviz.py).
 
-Shown here in [Fig. 2.]() are the subgraphs produced by the code.
+Shown here in [Fig. 2.](images/subgraph-graphviz-ex.png) are the subgraphs  
+produced by the code.
 
 ![Fig. 2.](images/subgraph-graphviz-ex.png)
 
@@ -143,7 +145,8 @@ s.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/structure-graphviz.py).
 
-Shown here in [Fig. 3.]() are the data structures produced by the code.
+Shown here in [Fig. 3.](images/structure-graphviz-ex.png) are the data  
+structures produced by the code.
 
 ![Fig. 3.](images/structure-graphviz-ex.png)
 
@@ -189,7 +192,7 @@ g.view()
 
 This code can be accessed via [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/color-graphviz.py).
 
-Shown here in [Fig. 4.]() is what the code produced.
+Shown here in [Fig. 4.](images/color-graphviz-ex.png) is what the code produced.
 
 ![Fig. 4.](images/color-graphviz-ex.png)
 
