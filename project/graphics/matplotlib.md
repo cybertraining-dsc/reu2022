@@ -96,7 +96,7 @@ The output of this program is showcased in [Fig. 2.](examples/images/matplotlib-
 
 <img src='examples/images/matplotlib-linechart.svg' width="500">
 
-[Fig. 2.](examples/images/matplotlib-linechart.svg) Line Chart on `xy` Axes.
+[Fig. 2.](examples/images/matplotlib-linechart.svg) Sample Randomized Line Plot
 
 
 ### Pie Chart
@@ -127,7 +127,7 @@ The output of this program is showcased in [Fig. 3.](examples/images/matplotlib-
 
 <img src='examples/images/matplotlib-piechart.svg' width="500">
 
-[Fig. 3.](examples/images/matplotlib-piechart.svg) Genres of Music 
+[Fig. 3.](examples/images/matplotlib-piechart.svg) Genres of Music from Spotify
 Distributed on a Pie Chart
 
 ### Contour Plot
@@ -220,7 +220,8 @@ axes. By default, they are set horizontally; however, they can be
 rotated using `plt.xticks(degrees)` for the `x-axis` or
 `plt.yticks(degrees)` for the `y-axis`. This can be shown by this
 simple
-[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py). The output is shown in [@fig:ticks].
+[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py). 
+The output is shown in [Fig. 5.](examples/images/matplotlib-rotatingticks.svg)
 
 ```python
 import matplotlib.pyplot as plt
@@ -239,7 +240,10 @@ plt.title(r'$y=x$')
 plt.show()
 ```
 
-![`x-axis` ticks rotated by 90° and `y-axis` ticks rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:ticks width=50%}
+<img src="examples/images/matplotlib-rotatingticks.svg" width="500">
+
+[Fig. 5.](examples/images/matplotlib-rotatingticks.svg) Line Plot with 
+`x-axis` Ticks Rotated by 90° & `y-axis` Ticks Rotated by 45°
 
 ### Exporting
 
