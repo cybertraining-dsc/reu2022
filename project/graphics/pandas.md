@@ -33,9 +33,8 @@ import numpy as np
 Creating a bar chart with data frames is similar to creating bar
 charts with Matplotlib, with a couple differences in how you
 manipulate the data. In the following program, we use the same data
-and modifications as the [Matplotlib bar chart
-example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-barchart.py)
-that can be found on Github.
+and modifications as the Matplotlib bar chart example that can be found on 
+[Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-barchart.py).
 
 ```python
 import matplotlib.pyplot as plt

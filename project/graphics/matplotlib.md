@@ -56,7 +56,7 @@ plt.show()
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py). 
-The output of this program is showcased in [Fig. 1.](examples/images/matplotlib-barchart.svg).
+The output of this program is showcased in [Fig. 1.](examples/images/matplotlib-barchart.svg)
 
 <img src='examples/images/matplotlib-barchart.png' width="500">
 
@@ -121,8 +121,7 @@ plt.show()
 ```
 
 This program can be downloaded
-from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py)
-
+from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py).
 The output of this program is showcased in [Fig. 3.](examples/images/matplotlib-piechart.svg)
 
 <img src='examples/images/matplotlib-piechart.svg' width="500">
@@ -218,10 +217,7 @@ plt.legend()
 When a chart is created, ticks are automatically created on the
 axes. By default, they are set horizontally; however, they can be
 rotated using `plt.xticks(degrees)` for the `x-axis` or
-`plt.yticks(degrees)` for the `y-axis`. This can be shown by this
-simple
-[example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py). 
-The output is shown in [Fig. 5.](examples/images/matplotlib-rotatingticks.svg)
+`plt.yticks(degrees)` for the `y-axis`. 
 
 ```python
 import matplotlib.pyplot as plt
@@ -239,6 +235,9 @@ plt.ylabel('y values')
 plt.title(r'$y=x$')
 plt.show()
 ```
+
+This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py).
+The output of this program is showcased in [Fig. 5.](examples/images/matplotlib-rotatingticks.svg)
 
 <img src="examples/images/matplotlib-rotatingticks.svg" width="500">
 

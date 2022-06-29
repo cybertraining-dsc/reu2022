@@ -56,7 +56,7 @@ This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py)
 . The output is shown in [Fig. 1.](examples/images/bokeh-figure.png)
 
-<img src='examples/images/bokeh-figure.png' width='350'>
+<img src='examples/images/bokeh-figure.png' width='400'>
 
 [Fig. 1.](examples/images/bokeh-figure.png) Line and Point Plotted on a Chart
 
@@ -96,7 +96,7 @@ This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py). 
 The output is shown in [Fig. 2.](examples/images/bokeh-scatter.svg)
 
-<img src='examples/images/bokeh-scatter.svg' width='350'>
+<img src='examples/images/bokeh-scatter.svg' width='400'>
 
 [Fig. 2.](examples/images/bokeh-scatter.svg) Sample Scatter Plot with 
 Various Point Shapes
@@ -131,8 +131,9 @@ show(p)
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
+The output is shown in [Fig. 3.](examples/images/bokeh-linechart.png)
 
-<img src='examples/images/bokeh-linechart.png' width='350'>
+<img src='examples/images/bokeh-linechart.png' width='400'>
 
 [Fig. 3.](examples/images/bokeh-linechart.png) Sample Randomized Line Plot
 
@@ -163,7 +164,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py)
 . The output is shown in [Fig. 4.](examples/images/bokeh-barchart.png)
 
-<img src="examples/images/bokeh-barchart.png" width="350">
+<img src="examples/images/bokeh-barchart.png" width="400">
 
 [Fig. 4.](examples/images/bokeh-barchart.png) Spotify Data Shown in Bar 
 Chart
