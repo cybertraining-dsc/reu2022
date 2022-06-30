@@ -31,3 +31,4 @@ g.node('start', shape='square')
 g.node('end', shape='square')
 
 g.view()
+
