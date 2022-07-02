@@ -33,8 +33,9 @@ cd ~/cm
 
 Then, using Git Bash, run `nano ~/.bashrc`, use the down arrow key to ensure you
 are at the bottom of the file on a new line, and then paste the contents using
-`Shift + Insert`. Consider even deleting the `.bashrc` if you have a preexisting
-script that may conflict with the new additions.
+`Shift + Insert`. Consider, beforehand, even deleting the `.bashrc` if you have a 
+preexisting script that may conflict with the new additions and then creating a
+new `.bashrc` with the above contents.
 
 Keep in mind that if emacs is not installed using choco, the emacs alias will not
 function. You can install emacs using choco by running `choco install emacs`. This
