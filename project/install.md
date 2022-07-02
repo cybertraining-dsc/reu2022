@@ -26,6 +26,14 @@ Furthermore, we provide the option to use chocolatey to install packages in simi
 
 ### Git Bash install
 
+First, make sure you completly uninstall previous versions of gitbash. If you do not have it installed, you can skip this step.
+
+```
+Go to Start Menu > Add Or Remove Programs
+```
+
+In the search bar that is located on that page, type Git. Then just click on Uninstall and follow the instructions.
+
 To install Git Bash, pleas download it first from 
 
 * <https://git-scm.com/downloads>
