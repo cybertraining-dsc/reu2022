@@ -1,5 +1,11 @@
 # How to Kill a Process using Command Line on Windows
 
+To see the list of running processes and their PIDs on Windows,
+press `Windows key + X` and then press the `T` key. Then,
+click on the `Details` tab. You may also run `tasklist` on the
+command line, but with many processes, it may be difficult to
+sort through.
+
 ## Using PID
 
 If using Git Bash, replace all slashes in the command with
