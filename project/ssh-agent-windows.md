@@ -39,7 +39,8 @@ new `.bashrc` with the above contents.
 
 Keep in mind that if emacs is not installed using choco, the emacs alias will not
 function. You can install emacs using choco by running `choco install emacs`. This
-will not work if you have not installed choco.
+will not work if you have not installed choco, which you can do by following
+<https://chocolatey.org/install>
 
 Additionally, the source command will not work if you have not created a virtual
 Python environment named `ENV3` in your home dir.
