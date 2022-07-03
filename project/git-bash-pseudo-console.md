@@ -1,4 +1,4 @@
-# How to Set Up Git Bash with Pseudo Console Support
+# How to Set Up Git Bash with Pseudo Console Support on Windows
 
 If you already have Git Bash installed, then uninstall it
 by hitting the Windows key, searching for `Add or remove

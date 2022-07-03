@@ -1,4 +1,4 @@
-# How to Install WSL Ubuntu 22.04 on Command Line
+# How to Install WSL Ubuntu 22.04 on Command Line for Windows
 
 Execute each command on Git Bash:
 
