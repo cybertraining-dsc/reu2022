@@ -46,8 +46,10 @@ If connecting through SSH, then a VPN is required. Follow the
 instructions to download UVA Anywhere at the following link:
 <https://in.virginia.edu/vpn>
 
-To log in to Rivanna, ensure you are connected to UVA Anywhere
-and issue the following (make sure you replace `abc123` with your
+To log in to Rivanna, ensure you are connected to UVA Anywhere.
+You will be prompted to enter your UVA password (not your ssh-key
+password).
+Issue the following (make sure you replace `abc123` with your
 UVA id):
 
 ```bash
