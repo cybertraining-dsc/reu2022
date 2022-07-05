@@ -27,3 +27,5 @@ git.install v2.33.0.2 already installed.
 ```
 
 then append `--force` to the end of the `choco install` command.
+The `already installed` message may appear even though
+Git has been uninstalled, but the `--force` should solve this.
