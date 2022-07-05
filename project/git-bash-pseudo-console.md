@@ -16,3 +16,14 @@ support for pseudo consoles`.
 
 Now you can use `wsl` and other commands that would otherwise
 require `winpty` prepended to the command.
+
+## Troubleshooting
+
+If an `already installed` message appears, such as
+
+```bash
+git.install v2.33.0.2 already installed.
+ Use --force to reinstall, specify a version to install, or try upgrade.
+```
+
+then append `--force` to the end of the `choco install` command.
