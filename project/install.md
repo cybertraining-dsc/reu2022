@@ -26,6 +26,14 @@ Furthermore, we provide the option to use chocolatey to install packages in simi
 
 ### Git Bash install
 
+First, make sure you completly uninstall previous versions of gitbash. If you do not have it installed, you can skip this step.
+
+```
+Go to Start Menu > Add Or Remove Programs
+```
+
+In the search bar that is located on that page, type Git. Then just click on Uninstall and follow the instructions.
+
 To install Git Bash, pleas download it first from 
 
 * <https://git-scm.com/downloads>
@@ -40,13 +48,14 @@ please start the downloaded program and follow the instructions carefully.
 * Select the  box to create a shortcut icon on the desktop. Click `Next`  to continue with the install.
 * Click `Next` to accept the default text editor which is vim,
 * Replace the default branch name (`master`) with `main`
-* Click `Next` again to run Git from the command line and 3rd party software,
-* Click `Next` again to use the OpenSSL library
-* Click `Next` again to check out Windows-style,
-* Click `Next` again to use MinTTY,
-* Click `Next` again to use the default git pull,
-* Click `Next` again to use the Git Credential Manager Core,
-* Click `Next` again to enable file system caching, and then
+* Click `Next` and check on to run Git from the command line and 3rd party software,
+* Click `Next` and check on to use the OpenSSL library
+* Click `Next` and check on to check out Windows-style,
+* Click `Next` and check on to use MinTTY,
+* Click `Next` and check on to use the default git pull,
+* Click `Next` and check on to use the Git Credential Manager Core,
+* Click `Next` and check on enable file system caching, and then
+* Click 'Next' and check on Enble experiment support for pseudo consoles
 * Click `Install` because we do not need experimental features.
 
 

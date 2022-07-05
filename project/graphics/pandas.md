@@ -33,9 +33,8 @@ import numpy as np
 Creating a bar chart with data frames is similar to creating bar
 charts with Matplotlib, with a couple differences in how you
 manipulate the data. In the following program, we use the same data
-and modifications as the [Matplotlib bar chart
-example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-barchart.py)
-that can be found on Github.
+and modifications as the Matplotlib bar chart example that can be found on 
+[Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-barchart.py).
 
 ```python
 import matplotlib.pyplot as plt
@@ -65,9 +64,14 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py). The output of this program is showcased in Figure [@fig:pandas-barchart].
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py). 
+The output of this program is showcased in [Fig. 1.](examples/images/pandas-barchart.svg)
 
-![Pandas barchart created from data from Spotify.](examples/images/pandas-barchart.svg){#fig:pandas-barchart width=50%}
+<img src="examples/images/pandas-barchart.svg" width="500" height="450">
+
+[Fig. 1.](examples/images/pandas-barchart.svg) Spotify Data Shown in Bar 
+Chart
+
 
 Note the differences in creating the chart. Since data frames support
 multiple dimensions of data, the x and y we want to graph must be
@@ -109,10 +113,12 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py). The output of this program is showcased in Figure [@fig:pandas-linechart].
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py). 
+The output of this program is showcased in [Fig. 2.](examples/images/pandas-linechart.svg)
 
-![Pandas linechart created from random number generation.](examples/images/pandas-linechart.svg){#fig:pandas-linechart width=50%}
+<img src='examples/images/pandas-linechart.svg' width="500" height="450">
 
+[Fig. 2.](examples/images/pandas-linechart.svg) Sample Randomized Line Plot
 
 ## Pie Chart
 
@@ -136,9 +142,13 @@ save()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py). The output of this program is showcased in Figure [@fig:pandas-piechart].
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py). 
+The output of this program is showcased in [Fig. 3.](examples/images/pandas-piechart.svg)
 
-![Pandas piechart created from data from Spotify.](examples/images/pandas-piechart.svg){#fig:pandas-piechart width=50%}
+<img src="examples/images/pandas-piechart.svg" width="500" height="450">
+
+[Fig. 3.](examples/images/pandas-piechart.svg) Genres of Music from Spotify 
+Distributed on a Pie Chart
 
 Note that instead of listing both the Categories and the Count as
 data, we use the categories as index. This gets the proper labeling

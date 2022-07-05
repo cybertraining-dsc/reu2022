@@ -58,10 +58,13 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
-. The output of this program is showcased in[@fig:seaborn-lineplot].
+[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). 
+The output of this program is showcased in [Fig. 1.](examples/images/seaborn-lineplot.svg)
 
-![Seaborn Lineplot created from user Spotify data.](examples/images/seaborn-lineplot.svg){#fig:seaborn-lineplot width=50%}
+<img src='examples/images/seaborn-lineplot.svg' width='500'>
+
+[Fig. 1.](examples/images/seaborn-lineplot.svg) Line Plot Created 
+from User Spotify Data.
 
 ## Distribution Plots
 
@@ -78,10 +81,14 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
-. The output of this program is showcased in [@fig:seaborn-displot]
+[GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py).
+The output of this program is showcased in [Fig. 2.](examples/images/seaborn-displot.svg)
 
-![Seaborn Displot created from user Spotify data](examples/images/seaborn-displot.svg){#fig:seaborn-displot width=50%}
+<img src='examples/images/seaborn-displot.svg' width='500'>
+
+[Fig. 2.](examples/images/seaborn-displot.svg) Distribution Plot 
+Created from User Spotify Data
+
 
 ## Categorical Plots
 
@@ -103,9 +110,12 @@ plt.show()
 This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output from the program is showcased in [@fig:seaborn-catplot]
+The output from the program is showcased in [Fig. 3.](examples/images/seaborn-catplot.svg)
 
-![Seaborn Catplot created from user Spotify data.](examples/images/seaborn-catplot.svg){#fig:seaborn-catplot width=50%}
+<img src='examples/images/seaborn-catplot.svg' width='500'>
+
+[Fig. 3.](examples/images/seaborn-catplot.svg) Categorical Plot Created 
+from User Spotify Data.
 
 ## Regression Plots
 
@@ -124,9 +134,12 @@ plt.show()
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
-. The output of this program is showcased in [@fig:seaborn-regplot].
+. The output of this program is showcased in [Fig. 4.](examples/images/seaborn-regplot.svg)
 
-![Seaborn regplot created from user Spotify data](examples/images/seaborn-regplot.svg){#fig:seaborn-regplot width=50%}
+<img src='examples/images/seaborn-regplot.svg' width='500'>
+
+[Fig. 4.](examples/images/seaborn-regplot.svg) Regression Plot Created from 
+User Spotify Data
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.

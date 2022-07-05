@@ -1,0 +1,3 @@
+queue1: job1
+queue2:
+  job1: echo hello world

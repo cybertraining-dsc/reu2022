@@ -1,0 +1,8 @@
+digraph "files in directories" {
+	node [shape=record]
+	s1 [label="<d1> cloudmesh-cc | <d2> workflow"]
+	s2 [label="{<d1> cloudmesh | <d2> tests}"]
+	s3 [label="<d1> contribute | {<d2> graphs |{<d3> graphviz | <d4> networkx}}"]
+	s1:d1 -> s2:d2
+	s1:d2 -> s3:d4
+}
