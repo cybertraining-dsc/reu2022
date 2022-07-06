@@ -17,6 +17,16 @@ Presentation:
 
 Logging in to Rivanna via web interface
 
+Intro to Rivanna: <https://learning.rc.virginia.edu/notes/rivanna-intro/>
+
+Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
+
+Rivanna Dashboard: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard>
+
+Globus Transfer: <https://www.rc.virginia.edu/userinfo/globus/>
+
+Rivanna SLURM Overview: <https://www.rc.virginia.edu/userinfo/rivanna/slurm/>
+
 Documentation: <https://www.rc.virginia.edu/userinfo/rivanna/login/#web-based-access>
 
 Login: <https://rivanna-portal.hpc.virginia.edu/>
@@ -26,6 +36,8 @@ UVA VPN: <https://in.virginia.edu/vpn>
 Shell access: <https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna.hpc.virginia.edu>
 
 JupyterLab: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard/batch_connect/sys/jupyter_lab/session_contexts/new>
+
+UVA HPC Support Email: hpc-support@virginia.edu
 
 ![UVA Login](images/uva-login.png)
 
