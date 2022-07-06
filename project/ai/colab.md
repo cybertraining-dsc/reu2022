@@ -1,4 +1,4 @@
-# Google Colab Examples
+# Deep Learning Colab Examples
 
 ## Distributed Training for MNIST
 
@@ -7,10 +7,9 @@ Distributed Training for MNIST
    
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_with_distributed_training.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_with_distributed_training.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_with_distributed_training.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mnist_with_distributed_training.ipynb)
-   
 
 In this lesson we discuss in how to create a simple IPython Notebook to
 solve an image classification problem with Multi Layer Perceptron with
@@ -243,7 +242,7 @@ MLP + LSTM with MNIST on Google Colab
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_mlp_with_lstm.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_mlp_with_lstm.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_mlp_with_lstm.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mnist_mlp_with_lstm.ipynb)
 
@@ -444,7 +443,7 @@ MNIST Classification on Google Colab
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/google_colab_mnist_example.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/google_colab_mnist_example.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/google_colab_mnist_example.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/google_colab_mnist_example.ipynb)
 
@@ -659,7 +658,7 @@ MNIST With PyTorch
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_with_pytorch.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_with_pytorch.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_with_pytorch.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mnist_with_pytorch.ipynb)
 
@@ -875,7 +874,7 @@ MNIST with AutoEncoder: Classification on Google Colab
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_autoencoder.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_autoencoder.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_autoencoder.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mnist_autoencoder.ipynb)
 
@@ -1102,7 +1101,7 @@ MNIST with Convolutional Neural Networks: Classification on Google Colab
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_cnn.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_cnn.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_cnn.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mnist_cnn.ipynb)
 
@@ -1285,7 +1284,7 @@ MNIST-LSTM Classification on Google Colab
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_lstm.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_lstm.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_lstm.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mnist_lstm.ipynb)
 
@@ -1467,7 +1466,7 @@ MNIST-MLP Classification on Google Colab
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mlp_mnist.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mlp_mnist.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mlp_mnist.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mlp_mnist.ipynb)
 
@@ -1652,7 +1651,7 @@ MNIST with Recurrent Neural Networks: Classification on Google Colab
 
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_rnn.ipynb)
 
-* [Open in GitHub) View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_rnn.ipynb)
+* [Open in GitHub](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/mnist_rnn.ipynb)
 
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/mnist_rnn.ipynb)
 
