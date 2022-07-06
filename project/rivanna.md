@@ -15,8 +15,6 @@ Presentation:
 * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
 * [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
 
-Logging in to Rivanna via web interface
-
 Intro to Rivanna: <https://learning.rc.virginia.edu/notes/rivanna-intro/>
 
 Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
@@ -40,6 +38,8 @@ Shell access: <https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna
 JupyterLab: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard/batch_connect/sys/jupyter_lab/session_contexts/new>
 
 UVA HPC Support Email: hpc-support@virginia.edu
+
+## Logging in to Rivanna via web interface
 
 ![UVA Login](images/uva-login.png)
 
