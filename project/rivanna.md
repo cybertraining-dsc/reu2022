@@ -27,6 +27,8 @@ Globus Transfer: <https://www.rc.virginia.edu/userinfo/globus/>
 
 Rivanna SLURM Overview: <https://www.rc.virginia.edu/userinfo/rivanna/slurm/>
 
+Queues Documentation: <https://www.rc.virginia.edu/userinfo/rivanna/queues/>
+
 Documentation: <https://www.rc.virginia.edu/userinfo/rivanna/login/#web-based-access>
 
 Login: <https://rivanna-portal.hpc.virginia.edu/>
