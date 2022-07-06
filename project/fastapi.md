@@ -5,7 +5,7 @@
 
 ![](images/learning.png) **Learning Objectives**
 
-* Learn how to use fastAPI
+* Learn how to use FastAPI
 
 ---
 
@@ -92,7 +92,7 @@ And copy it in a file `main.py` then you would call `uvicorn` like:
 $ uvicorn main:my_awesome_app --reload
 ```
 
-### Path
+## Path
 
 One of the mechanisms FastAPI provides it to easily specify the URL that is needed to 
 trigger the functionality of the defined function after its definition.
@@ -114,13 +114,20 @@ The if you use the URL <http://127.0.0.1:8000/temperature>, we will see
 {"temperature": 0}
 ```
 
-## Arguments
+### Path Arguments
 
-TODO: use computers and temperature as model (see shelve)
+Not only can you call functions through the path, you can also pass arguments through the path.
+The arguments can be specified by type in the formal parameter. In this case, we specify
+that it should be an int. This helps FastAPI validate data, which is done through the package
+Pydantic.
 
-<https://fastapi.tiangolo.com/tutorial/path-params/>
+```python
+@app.get("/temperature/{temp_id}")
+async def temperature(temp_id: int):
+    return {"temperature": temp_id}
+```
 
-## Query and Search Parameters
+### Query and Search Parameters
 
 When you declare other function parameters that are not part of the path parameters, 
 they are automatically interpreted as URL "query" parameters, as seen in the function
@@ -146,7 +153,7 @@ You can use the URL to search the `jobs` variables like this:
 http://127.0.0.1:8000/job/?name=Job1
 ```
 
-Output
+Output:
 
 ```
 "Job1"
@@ -211,10 +218,6 @@ Job1
 TODO: user computer as model
 
 
-## Running through Docker
-
-TODO: figure out how to use FastAPI in Docker
-
 ## Running the cc FastAPI service
 
 The cloudmesh cc FastAPI service can be started with 
@@ -236,6 +239,69 @@ To stop the server, use the command
 
 ```bash
 $ cms cc stop
+```
+
+## Running through Docker
+
+In most cases, it is preferable to use a container to run the REST service, since there
+are many dependencies and packages. Here we will show you how to create and export an
+image for your FastAPI service to Docker.
+
+To start, create a project directory. We will call it `project`. In this folder create
+a subdirectory called `app`. This can be done through Git Bash.
+
+```bash
+$ mkdir project
+$ cd project
+$ mkdir app
+```
+
+In the `project` directory, create two files `requirements.txt` and `Dockerfile`.
+`requirements.txt` will have the necessary package dependencies. Depending on what
+packages are used, this will vary. This is an example of what it would look like.
+
+```
+fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn>=0.15.0,<0.16.0
+```
+
+In `Dockerfile`, copy this code:
+
+```dockerfile
+# 
+FROM python:3.9
+
+# 
+WORKDIR /code
+
+# 
+COPY ./requirements.txt /code/requirements.txt
+
+# 
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+# 
+COPY ./app /code/app
+
+# 
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+```
+
+In your `app` folder, add your FastAPI code. In this tutorial we have used the name
+`main.py`. In addition, create a python file `__init__.py`. This can be left empty.
+
+To build the Docker image, go back to the project directory and type the following
+code:
+
+```bash
+$ docker build -t myimage .
+```
+
+To create a running instance of this image, execute the following code:
+
+```bash
+$ docker run -d --name mycontainer -p 80:80 myimage
 ```
 
 ## Testing
@@ -295,6 +361,8 @@ can be added as well.
 ## Links
 
 * <https://fastapi.tiangolo.com/tutorial/first-steps/>
+* <https://fastapi.tiangolo.com/tutorial/path-params/>
+* <https://fastapi.tiangolo.com/deployment/docker/>
 * <https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>
 * <https://fastapi.tiangolo.com/advanced/async-tests/>
 * cloudmesh cc TODO
