@@ -1,4 +1,4 @@
-##   Overview to AI-Driven Digital Transformation
+#   Overview to AI-Driven Digital Transformation
 
 An introductory Lecture with Motivation
 for Big Data Applications and Analytics Class. 
@@ -23,7 +23,7 @@ The slides for this course can be found at
 [E534-Fall2020-Introduction](https://docs.google.com/presentation/d/1ztKIAb6GaIcaOtiyWEHuRdR9z2xPyucgbhw-EpiDIRI/edit#slide=id.g94cec20bdc_0_240)
 
 
-###  Big Data Applications and Analytics (A)
+##  Big Data Applications and Analytics (A)
 
 This lesson describes briefly the trends driving and consequent of the
 AI-Driven Digital Transformation. It discusses the organizational
@@ -35,7 +35,7 @@ is being done there.
 
 * Youtube Video: <http://youtube.com/watch?v=nCbJ-2kKf0s>
 
-###  Big Data Applications and Analytics (B)
+##  Big Data Applications and Analytics (B)
 
 This lesson goes through the technologies (AI Edge Cloud) from 2008-2020
 that are driving the AI-Driven Digital Transformation. we use Hype
@@ -45,7 +45,7 @@ Plateau of Productivity. We contrast clouds and AI.
 
 * Youtube Video: <http://youtube.com/watch?v=QN-rPFbUAwc>
 
-###  Big Data Applications and Analytics (C)
+##  Big Data Applications and Analytics (C)
 
 -   This gives illustrations of sources of big data.
 -   It gives key graphs of data sizes, images uploaded; computing, data,
@@ -56,7 +56,7 @@ Plateau of Productivity. We contrast clouds and AI.
 
 * Youtube Video: <http://youtube.com/watch?v=b_HeufZSEaE>
 
-###  Big Data Applications and Analytics (D)
+##  Big Data Applications and Analytics (D)
 
 -   Multicore revolution
 -   Overall Global AI and Modeling Supercomputer GAIMSC
@@ -65,7 +65,7 @@ Plateau of Productivity. We contrast clouds and AI.
 
 * Youtube Video: <http://youtube.com/watch?v=NxoOe5XKGyE>
 
-###  Big Data Applications and Analytics (E)
+##  Big Data Applications and Analytics (E)
 
 -   Applications and Analytics
 -   Cyberinfrastructure, e-moreorlessanything.
@@ -79,7 +79,7 @@ Plateau of Productivity. We contrast clouds and AI.
 
 * Youtube Video: <http://youtube.com/watch?v=C_jk161mQ_s>
 
-###  Big Data Applications and Analytics (F)
+##  Big Data Applications and Analytics (F)
 
 -   Clouds, Service-oriented architectures, HPC High Performance
     Computing, Apace Software
@@ -91,7 +91,7 @@ Plateau of Productivity. We contrast clouds and AI.
 
 * Youtube Video: <http://youtube.com/watch?v=V_iqzUXCcyg>
 
-###  Big Data Applications and Analytics (G)
+##  Big Data Applications and Analytics (G)
 
 AI grows in importance and industries transform with
 
@@ -104,7 +104,7 @@ AI grows in importance and industries transform with
 
 * Youtube Video: <http://youtube.com/watch?v=DAJw6mitjao>
 
-###  Big Data Applications and Analytics (H)
+##  Big Data Applications and Analytics (H)
 
 -   Job trends
 -   Become digitally savvy so you can take advantage of the

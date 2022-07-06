@@ -1,5 +1,4 @@
-
-## Overview AI-First Engineering Cybertraining 
+# Overview AI-First Engineering Cybertraining 
 
 An introductiory Lecture about the class. It was given in 2021 and is still relevant. [Introductory
 Lecture](https://docs.google.com/presentation/d/1esj3zXCswQm5n8kfF-BvRH2Ih6oqNpPQjq02UPzvIB0/edit?usp=sharing)
@@ -10,7 +9,7 @@ Assignment: please note the differences between the previous class and write the
 
 * TODO
 
-### Assignments
+## Assignments
 
 - Assignment Github: Get a github.com account 
 - Assignment Slack: Enroll in our slack (add link here)
@@ -19,7 +18,7 @@ Assignment: please note the differences between the previous class and write the
 - Add links to the Bios and gitrepo here:
   - Name, linkto bio, link to gitrepor
 
-### Introduction
+## Introduction
 
 An introductiory lecture is available: 
 
@@ -56,7 +55,7 @@ The slides and videos for deep learning are available:
   - Youtube Video: <http://youtube.com/watch?v=4Ma3SFFLhYY>
 
 
-### Deep Learning Examples, 1
+## Deep Learning Examples, 1
 
 We discuss deep learning examples covering first half of slides
 [DLBasic: Deep Learning - Some
@@ -64,7 +63,7 @@ examples](https://docs.google.com/presentation/d/1Kbojr5Qd7vZ2TcxdBA7RlmwJ5kG0NE
 
 * Youtube Video: <http://youtube.com/watch?v=whzCJUKJzN4>
 
-### Deep Learning Examples, 2 plus Components
+## Deep Learning Examples, 2 plus Components
 
 We continue with deep learning examples 
 [Deep Learning: More Examples and
@@ -72,7 +71,7 @@ Components](https://docs.google.com/presentation/d/1njxcgyZMVS846WS4FAyYn-sb4AUT
 
 * Youtube Video: <http://youtube.com/watch?v=tfDdb8mSL98>
 
-### Deep Learning Networks plus Overview of Optimization
+## Deep Learning Networks plus Overview of Optimization
 
 Next, we cover two topics
 
@@ -85,7 +84,7 @@ Next, we cover two topics
 
 * Youtube Video: <http://youtube.com/watch?v=hGUDURDMet8>
 
-### Deep Learning and AI Examples in Health and Medicine
+## Deep Learning and AI Examples in Health and Medicine
 
 2/3rds of the presentation [AI First Scenarios:
 Health and
@@ -108,7 +107,7 @@ are covered in the video
 
 * Youtube Video: <http://youtube.com/watch?v=EG6OH1cUN8c>
 
-### Deep Learning and AI Examples
+## Deep Learning and AI Examples
 
 -   We finished [AI First Scenarios -
     Energy](https://docs.google.com/presentation/d/1pSJs_HllfZsdk_iGKoCSUQjPceX3G1fm0oybDxw-2Zs/edit?usp=sharing)
@@ -119,7 +118,7 @@ are covered in the video
 
 * Youtube Video: <http://youtube.com/watch?v=\_mIBVwLLTmI>
 
-### Deep Learning and AI Examples
+## Deep Learning and AI Examples
 
 -   We ended [AI First Scenarios: Banking and
     FinTech](https://docs.google.com/presentation/d/1nK2cw542OERuHoxWGEsYH-Y1eSJMHO6yxh1tsFiUtNQ/edit?usp=sharing)
@@ -130,7 +129,7 @@ are covered in the video
 
 * Youtube Video: <http://youtube.com/watch?v=\_TbKRO5Tw4o>
 
-### GitHub for the Class project
+## GitHub for the Class project
 
 -   We explain how to use GitHub for the class project. A video is
     available on YouTube. Please note that we only uploaded the relevant
@@ -143,7 +142,7 @@ Note project guidelines are given
 
 * Youtube Video: <http://youtube.com/watch?v=PBMPWjavraU>
 
-### The Final Project
+## The Final Project
 
 -   We described the gidelines of final projects in
     [Slides](https://docs.google.com/presentation/d/1YqHJmamwPV0TNxjwn9Uh4BQcBXqKLCM0MY18raP3Zl4/edit?usp=sharing)
@@ -152,7 +151,7 @@ Note project guidelines are given
 
 * Youtube Video: <http://youtube.com/watch?v=gUhZdkke9A8>
 
-### Practical Issues in Deep Learning for Earthquakes
+## Practical Issues in Deep Learning for Earthquakes
 
 We used our research on Earthquake forecasting, to illustrate deep
 learning for Time Series with
@@ -160,7 +159,7 @@ learning for Time Series with
 
 * Youtube Video: <http://youtube.com/watch?v=nQBr2347Xqg>
 
-### Practical Issues in Deep Learning for Earthquakes
+## Practical Issues in Deep Learning for Earthquakes
 
 We continued discussion that illustrated deep learning for Time Series
 with the same

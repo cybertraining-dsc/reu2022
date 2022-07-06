@@ -193,7 +193,7 @@ Epoch 30/30
 ```
 
 
-####Test 
+### Test 
 
 
 ```
@@ -574,7 +574,7 @@ plot_model(model, to_file='mlp-mnist.png', show_shapes=True)
     Non-trainable params: 0
     _________________________________________________________________
 
-![images](nnn_files/output_20_1.png)
+Assignment: include image
 
 
 

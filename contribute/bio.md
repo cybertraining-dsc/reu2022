@@ -8,10 +8,6 @@ Review other peoples bios and improve or give improvement tips where needed.
 If it turns out you never contributed to anything, your bio will be removed 
 (as well as your name in this proceedings).
 
-## Paul Kiattikhunphan
-
-Paul Kiattikhunphan is a second year at the University of Virginia majoring in computer science. 
-
 ## Alex Beck
 
 Alex Beck has completed his first year at the University of Virginia where he is 
