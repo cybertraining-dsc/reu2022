@@ -24,15 +24,12 @@ To install FastAPI and uvicorn simply use the command:
 $ pip install "fastapi[all]"
 ```
 
-TODO: THERE ARE TOO MANY DIFFERENT EXAMPLES, PLEASE CREATE ONE THAT 
-BUILDS ON TOP OF EACH OTHER, USE  COMPUTERS WITH TEMPERATURES
-
 ## FastAPI Quickstart
 
 One of the simplest FastAPI file looks like this, which we assume is placed 
 in a file called `main.py`:
 
-```
+```python
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -48,7 +45,6 @@ Start the live FastAPI `app` in the `uvicorn` server use the command:
 ``` bash
 $ uvicorn main:app --reload 
 ```
-
 
 This will yield the output
 
@@ -67,17 +63,34 @@ in your browser.
 The JSON response will appear as:
 
 ```
-{"message": "Hello World"}
+{"processor": "5950X"}
 ```
 
 One of the embedded features of FastAPI is its build in documentation 
-framework based on OpenAPI schema but also alternative formats such as redoc. 
-You can look at it while going with your browser to the URL 
+framework based on OpenAPI schema, but it also has alternative formats such as
+json or redoc. You can look at it while going with your browser to the URL:
 
 * OpenAPI: <http://127.0.0.1:8000/docs>.
 * OpenAPI json: <http://127.0.0.1:8000/openapi.json>
 * Redoc: <http://127.0.0.1:8000/redoc>
 
+In case you like to have a different name than `app` you can just use a different 
+variable
+
+```python
+from fastapi import FastAPI
+
+my_awesome_app = FastAPI()
+
+@my_awesome_app.get("/")
+async def root():
+    return {"processor": "5950X"}
+```
+And copy it in a file `main.py` then you would call `uvicorn` like:
+
+``` bash
+$ uvicorn main:my_awesome_app --reload
+```
 
 ### Path
 
@@ -89,7 +102,7 @@ URL of the server is specified followed by "/"
 
 You can add other path's and functions. Let us assume you add to our initial program the function 
 
-```
+```python
 @app.get("/temperature")
 async def temperature():
     return {"temperature": 0}
@@ -101,24 +114,17 @@ The if you use the URL <http://127.0.0.1:8000/temperature>, we will see
 {"temperature": 0}
 ```
 
+## Arguments
 
-## Query Parameters
+TODO: use computers and temperature as model (see shelve)
+
+<https://fastapi.tiangolo.com/tutorial/path-params/>
+
+## Query and Search Parameters
 
 When you declare other function parameters that are not part of the path parameters, 
-they are automatically interpreted as URL "query" parameters.
-
-```python
-from fastapi import FastAPI
-
-app = FastAPI()
-jobs = [{"name": "Foo"}, 
-        {"name": "Bar"}, 
-        {"name": "Baz"}]
-
-@app.get("/jobs/")
-async def get_job(skip: int = 0, limit: int = 10):
-    return jobs[skip : skip + limit]
-```
+they are automatically interpreted as URL "query" parameters, as seen in the function
+`get_job()`.
 
 The query is the set of key-value pairs that go after the `?` in a URL, 
 separated by & characters.
@@ -133,15 +139,30 @@ In this case the query parameters are:
 * skip: with a value of 0
 * limit: with a value of 10
 
-### Searching in the fastapi
+In addition, this can be used to search in the FastAPI, as seen in `search_job()`.
+You can use the URL to search the `jobs` variables like this:
+
+```
+http://127.0.0.1:8000/job/?name=Job1
+```
+
+Output
+
+```
+"Job1"
+```
 
 ```python
 from fastapi import FastAPI
 
 app = FastAPI()
-jobs = [{"name": "Foo"}, 
-        {"name": "Bar"}, 
-        {"name": "Baz"}]
+jobs = [{"name": "Job1", "temperature": 0}, 
+        {"name": "Job2", "temperature": 30}, 
+        {"name": "Job3", "temperature": 10}]
+
+@app.get("/jobs/")
+async def get_job(skip: int = 0, limit: int = 10):
+    return jobs[skip : skip + limit]
 
 @app.get("/job/")
 async def search_job(name:str):
@@ -152,24 +173,12 @@ async def search_job(name:str):
     return result
 ```
 
-For example, in the URL
-
-```
-http://127.0.0.1:8000/job/?name=Foo')
-```
-
-Output
-
-```
-"Foo"
-```
-
-### Running Through Git bash
+## Running Through Git bash
 
 ```python
 import requests
 
-result = requests.get('http://127.0.0.1:8000/job/?name=Foo')
+result = requests.get('http://127.0.0.1:8000/job/?name=Job1')
 
 print(result.text)
 
@@ -186,16 +195,25 @@ Run python code on Git bash
 $ python r.py
 ```
 
-where r.py is the file name, yeilding in the output
+where r.py is the file name, yielding the output:
 
 ```
-"Foo"
+"Job1"
 200
 application/json
 utf-8
-"Foo"
-Foo
+"Job1"
+Job1
 ```
+
+## Integration with pedantic
+
+TODO: user computer as model
+
+
+## Running through Docker
+
+TODO: figure out how to use FastAPI in Docker
 
 ## Running the cc FastAPI service
 
