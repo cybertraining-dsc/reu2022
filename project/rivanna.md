@@ -15,7 +15,17 @@ Presentation:
 * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
 * [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
 
-Logging in to Rivanna via web interface
+Intro to Rivanna: <https://learning.rc.virginia.edu/notes/rivanna-intro/>
+
+Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
+
+Rivanna Dashboard: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard>
+
+Globus Transfer: <https://www.rc.virginia.edu/userinfo/globus/>
+
+Rivanna SLURM Overview: <https://www.rc.virginia.edu/userinfo/rivanna/slurm/>
+
+Queues Documentation: <https://www.rc.virginia.edu/userinfo/rivanna/queues/>
 
 Documentation: <https://www.rc.virginia.edu/userinfo/rivanna/login/#web-based-access>
 
@@ -27,6 +37,10 @@ Shell access: <https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna
 
 JupyterLab: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard/batch_connect/sys/jupyter_lab/session_contexts/new>
 
+UVA HPC Support Email: hpc-support@virginia.edu
+
+## Logging in to Rivanna via web interface
+
 ![UVA Login](images/uva-login.png)
 
 **Figure:** UVA Login
@@ -37,17 +51,20 @@ authentication service to approve logins.
 For security reasons we suggest never saving the password within
 the browser autofill.
 
-After logging in, you will receive an email through your UVA email
-inbox to create an account on Rivanna. Once completing the sign-up
-process, it will take around 1 hour for your account creation to be
+After logging in at <https://rivanna-portal.hpc.virginia.edu/>, 
+you will receive an email through your UVA email inbox to create 
+an account on Rivanna. Once completing the sign-up process, it 
+will take around 1 hour for your account creation to be
 finalized.
 
 If connecting through SSH, then a VPN is required. Follow the
 instructions to download UVA Anywhere at the following link:
 <https://in.virginia.edu/vpn>
 
-To log in to Rivanna, ensure you are connected to UVA Anywhere
-and issue the following (make sure you replace `abc123` with your
+To log in to Rivanna, ensure you are connected to UVA Anywhere.
+You will be prompted to enter your UVA password (not your ssh-key
+password).
+Issue the following (make sure you replace `abc123` with your
 UVA id):
 
 ```bash

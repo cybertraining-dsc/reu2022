@@ -1,10 +1,15 @@
 # FastAPI 
 
+
+---
+
 ![](images/learning.png) **Learning Objectives**
 
 * Learn how to use fastAPI
 
 ---
+
+
 FastAPI is a Python framework that allows developers set up a REST service and 
 define its functionality with an easy-to-use API.
 
