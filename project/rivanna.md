@@ -49,9 +49,10 @@ authentication service to approve logins.
 For security reasons we suggest never saving the password within
 the browser autofill.
 
-After logging in, you will receive an email through your UVA email
-inbox to create an account on Rivanna. Once completing the sign-up
-process, it will take around 1 hour for your account creation to be
+After logging in at <https://rivanna-portal.hpc.virginia.edu/>, 
+you will receive an email through your UVA email inbox to create 
+an account on Rivanna. Once completing the sign-up process, it 
+will take around 1 hour for your account creation to be
 finalized.
 
 If connecting through SSH, then a VPN is required. Follow the
