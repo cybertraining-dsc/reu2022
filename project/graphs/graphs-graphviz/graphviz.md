@@ -1,4 +1,4 @@
-# `graphviz` tutorial
+# Graphviz
 
 `graphviz` is a library that can be installed on Python which renders graphs 
 from the DOT languages, allowing for visualizations of data structures using

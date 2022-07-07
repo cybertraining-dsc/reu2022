@@ -1,4 +1,4 @@
-# networkx tutorial
+# Networkx
 
 `networkx` is a python library that allows a user to create graphs. The library allows the user to create different kinds of graphs, included directed and undirected. With this in mind, the following is a basic overview of the library. 
 
