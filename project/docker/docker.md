@@ -20,18 +20,16 @@ their official website and log on to the account on the application after.
 
 Next, go on Git Bash and create a directory called `cm` using the command:
 
-```
+```bash
+cd ~
 mkdir cm
 ```
 
 Go into the `cm` directory and create the `cloudmesh-cc` folder using the 
 following commands and let the folder install.
 
-```
+```bash
 cd cm
-```
-
-```
 git clone git@github.com:cloudmesh/cloudmesh-cc.git
 ```
 
@@ -39,26 +37,35 @@ git clone git@github.com:cloudmesh/cloudmesh-cc.git
 
 Using Git Bash, go into the docker directory using the command:
 
-```
-cd cm/cloudmesh-cc/docker/cloudmesh
+```bash
+cd ~/cm/cloudmesh-cc/docker/cloudmesh
 ```
 
 Now, install the `Make` tool using the command:
 
-```
+```bash
 choco install make -y
 ```
 
-After that's done, type in the commands :
+After that's done, type in the command"
 
-```
+```bash
 make image
 ```
 
+If the host operating system of the user computer is Windows, type:
+
+```bash
+make wshell
 ```
+
+If not, type:
+
+```bash
 make shell
 ```
 
+This will switch the command line to Ubuntu
 
 
 ## Sources
@@ -66,5 +73,6 @@ make shell
 * https://docs.docker.com/get-docker/
 * https://docs.docker.com/get-started/
 * https://docker-curriculum.com/
+* https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md
 
 
