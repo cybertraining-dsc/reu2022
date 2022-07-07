@@ -1,59 +1,70 @@
-# Docker Tutorial
+# Installing Cloudmesh Using Docker
+
+## Installing Docker 
 
 Docker is a platform that allows users to develop, publish, and run 
-software applications in packages known as containers. 
+software applications in packages known as containers.
 
-With Docker, users 
-are able to run software on its host operating system, removing the need for 
-virtual machines which consumes significantly more computing power.
-
-Users are also able to share their containers through images on Docker's 
-online platform: DockerHub. 
-
-## Installation
-
-Windows (Chocolatey): Go on Windows PowerShell and run as an 
+In order to install Docker, first go on Windows PowerShell and run as an 
 Administrator and type in the following:
 
 ```
 choco install docker-desktop -y
 ```
 
-If Chocolatey isn't installed: Go on Docker's official website and click on 
-which platform to install Docker on and download the installation file.
+Next, make sure open Docker Desktop. Wait for the `Docker Desktop Starting` 
+screen to finish. If it hasn't been done already, create a Docker account on 
+their official website and log on to the account on the application after.
 
-* https://docs.docker.com/get-docker/ 
+## Installing Cloudmesh
 
-The following shows the links of instructions of how to install Docker on 
-each type of operating system:
+Next, go on Git Bash and create a directory called `cm` using the command:
 
-* Windows (without Chocolatey): 
-https://docs.docker.com/desktop/windows/install/ 
+```
+mkdir cm
+```
 
-* MacOS:
-https://docs.docker.com/desktop/mac/install/
+Go into the `cm` directory and create the `cloudmesh-cc` folder using the 
+following commands and let the folder install.
 
-* Ubuntu:
-https://docs.docker.com/desktop/linux/install/ubuntu/
+```
+cd cm
+```
 
-After having Docker Desktop installed, if it hasn't been done already, 
-create a Docker account on their official website and log on to the account on 
-the application after.
+```
+git clone git@github.com:cloudmesh/cloudmesh-cc.git
+```
 
-## Images
+## Installing Ubuntu with Docker
 
-Images are essentially the blueprints of the containers. Already existing 
-images can be pulled onto the local computer from the Docker Registry. This 
-can be done using the `docker pull` command.
+Using Git Bash, go into the docker directory using the command:
+
+```
+cd cm/cloudmesh-cc/docker/cloudmesh
+```
+
+Now, install the `Make` tool using the command:
+
+```
+choco install make -y
+```
+
+After that's done, type in the commands :
+
+```
+make image
+```
+
+```
+make shell
+```
 
 
-
-## Containers
-
-## Sharing Images
 
 ## Sources
 
 * https://docs.docker.com/get-docker/
 * https://docs.docker.com/get-started/
 * https://docker-curriculum.com/
+
+
