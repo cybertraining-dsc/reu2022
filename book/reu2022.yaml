@@ -63,13 +63,32 @@ BOOK:
   - RIVANNA:
     - "{file.reu2022}/project/rivanna.md"
     - "{file.reu2022}/project/rivanna-run-mpi-programs.md"
-  - NLP:
-    - "{file.nlp}/documentation/README-aws.md"
-    - "{file.nlp}/documentation/README-azure.md"
-    - "{file.nlp}/documentation/README-google.md"
-    - "{file.nlp}/documentation/README-cli.md"
-  - AI:
-    - "{file.reu2022}/project/dl-timeseries.md"
+  - INTRODUCTION_TO_DEEP_LEARNING:
+    - "{file.reu2022}/project/ai/introduction-ai.md"
+    - OVERVIEW:
+      - "{file.reu2022}/project/ai/class.md"
+      - "{file.reu2022}/project/ai/1-transformation.md"
+      - "{file.reu2022}/project/ai/2-overview.md"
+    - APPLICATIONS:
+      - "{file.reu2022}/project/ai/3-health.md"
+      - "{file.reu2022}/project/ai/4-mobility.md"
+      - "{file.reu2022}/project/ai/5-energy.md"
+      - "{file.reu2022}/project/ai/6-banking.md"
+      - "{file.reu2022}/project/ai/8-transportation.md"
+      - "{file.reu2022}/project/ai/9-commerce.md"
+    - CLOUD_COMPUTING:
+      - "{file.reu2022}/project/ai/cloud.md"
+    - COLAB:
+      - "{file.reu2022}/project/ai/colab-intro.md"
+      - "{file.reu2022}/project/ai/python-on-colab.md"
+      - "{file.reu2022}/project/ai/colab-deep.md"
+    - NLP:
+      - "{file.nlp}/documentation/README-aws.md"
+      - "{file.nlp}/documentation/README-azure.md"
+      - "{file.nlp}/documentation/README-google.md"
+      - "{file.nlp}/documentation/README-cli.md"
+    - TIMESERIES:
+      - "{file.reu2022}/project/dl-timeseries.md"
   - OTHER:
     - "{file.reu2022}/project/books.md"
     - "{file.reu2022}/project/browser.md"
@@ -80,13 +99,13 @@ BOOK:
     - "{file.reu2022}/project/uva.md"
   - BIOS:
     - "{file.reu2022}/contribute/bio.md"
-  #- COMMUNICATION:
-    #- "{file.chapter}/doc/communicate.md"
-    #- "{file.mpi}/report-group.md"
-    # - "{file.chapter}/doc/piazza.md"
-    # - "{file.chapter}/git/github.md"
-    #- "{file.chapter}/preface/git.md"
-  #- PRESENTATIONS:
-    #- "{file.chapter}/doc/ppt.md"
+##  - COMMUNICATION:
+##    - "{file.chapter}/doc/communicate.md"
+##    - "{file.mpi}/report-group.md"
+##     - "{file.chapter}/doc/piazza.md"
+##     - "{file.chapter}/git/github.md"
+##    - "{file.chapter}/preface/git.md"
+##  - PRESENTATIONS:
+##    - "{file.chapter}/doc/ppt.md"
   - REFERENCES:
     - "{file.reu2022}/empty.md"

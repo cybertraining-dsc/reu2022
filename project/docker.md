@@ -1,5 +1,7 @@
 # Docker
 
+## Tutorial updated under docker directory
+
 there is loots of info in the book.
 
 here we focus only on the installation and a simple example with fastapi
