@@ -1,4 +1,5 @@
 NAME=reu2022
+AI=ai
 CM=../..
 BOOK=${CM}/book
 FINAL=${CM}/pub
@@ -23,6 +24,16 @@ epub: clean version bib
 pdf: epub
 	bookmanager $(NAME).yaml pdf
 	cp ./dest/vonLaszewski-$(NAME).pdf $(FINAL)/docs
+
+ai: clean version bib
+	mkdir -p dest
+	cat $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	bookmanager $(AI).yaml get
+	bookmanager $(AI).yaml epub
+	bookmanager $(AI).yaml pdf
+	cp ./dest/vonLaszewski-$(AI).epub $(FINAL)/docs
+	cp ./dest/vonLaszewski-$(AI).pdf $(FINAL)/docs
+
 
 draft: clean version
 	mkdir -p dest
@@ -66,7 +77,6 @@ authors:
 	$(HOME)/bin/authors.py > $(HOME)/chapters/authors.md
 
 clean:
-
 	rm -rf dest
 
 include ./Makefile.bibtex
