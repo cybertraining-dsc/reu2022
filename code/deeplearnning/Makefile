@@ -1,4 +1,16 @@
 LOCATION=https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/main/content/en/modules/notebooks
+# LOCATION=https://raw.githubusercontent.com/cybertraining-dsc/reu2022/main/code/deeplearnning
+
+notebooks = *.ipynb
+
+test:
+	echo ${notebooks}
+
+%.ipynb : %.py
+	jupyter nbconvert E534_Higgs_Discovery_A.ipynb --clear-output --output tmp.ipynb
+	jupyter nbconvert --to python tmp.ipynb --output tmp.py
+	fgrep -v "# In[ ]:" tmp.py > E534_Higgs_Discovery_A.py
+	rm -f tmp.ipynb tmp.py
 
 all: requirements download convert
 
@@ -90,6 +102,4 @@ convert:
 	rm -f tmp.ipynb tmp.py
 
 requirements:
-	pip install nbconvert
-	pip install ipython
 	pip install -r requirements.txt
