@@ -33,7 +33,6 @@ BOOK:
     - "{file.timeseries}//time-series-prediction/arima/arima.md"
     - "{file.timeseries}//time-series-prediction/autocorrelation/autocorrelation.md"
     - "{file.timeseries}//time-series-prediction/detrend/detrend.md"
-    - "{file.timeseries}//time-series-prediction/granger-casulty-test/granger-casulty-test.md"
     - "{file.timeseries}//time-series-prediction/lag-plot/lag-plot.md"
     - "{file.timeseries}//time-series-prediction/SampleEntropy/SampleEntropy.md"
     - "{file.timeseries}//time-series-prediction/seasonal-decomposition/seasonal.md"
