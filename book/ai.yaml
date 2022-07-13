@@ -28,17 +28,20 @@ https:
 BOOK:
   - USEFUL_LINKS:
     - "{file.reu2022}/README.md"
-  - CONTRIBUTION_TO_THE_PROJECT:
-    - "{file.timeseries}//time-series-prediction/lag-plot/lag-plot.md"
-    - "{file.timeseries}//time-series-prediction/autocorrelation/autocorrelation.md"
-    - "{file.timeseries}//time-series-prediction/arima/arima.md"
-    - "{file.timeseries}//time-series-prediction/refernce.md"
-    - "{file.timeseries}//time-series-prediction/seasonal-decomposition/seasonal.md"
-    - "{file.timeseries}//time-series-prediction/seasonal-decomposition/deseasonalize/deseasonalize.md"
-    - "{file.timeseries}//time-series-prediction/stationary-and-nonstationary-timeseries/stationary-and-nonstationary.md"
-    - "{file.timeseries}//time-series-prediction/TFT/Temporal-Fusion-Transformer.md"
+  - TIMESERIES_WITH_PYTHON:
     - "{file.timeseries}//time-series-prediction/anova/anova-timeseries.md"
+    - "{file.timeseries}//time-series-prediction/arima/arima.md"
+    - "{file.timeseries}//time-series-prediction/autocorrelation/autocorrelation.md"
     - "{file.timeseries}//time-series-prediction/detrend/detrend.md"
+    - "{file.timeseries}//time-series-prediction/granger-casulty-test/granger-casulty-test.md"
+    - "{file.timeseries}//time-series-prediction/lag-plot/lag-plot.md"
+    - "{file.timeseries}//time-series-prediction/SampleEntropy/SampleEntropy.md"
+    - "{file.timeseries}//time-series-prediction/seasonal-decomposition/seasonal.md"
+    - "{file.timeseries}//time-series-prediction/stationary-and-nonstationary-timeseries/stationary-and-nonstationary.md"
+    - "{file.timeseries}//time-series-prediction/smothen/smothen.md"
+    - "{file.timeseries}//time-series-prediction/TFT/Temporal-Fusion-Transformer.md"
+    - "{file.timeseries}//time-series-prediction/refernce.md"
+
 ##  - COMMUNICATION:
 ##    - "{file.chapter}/doc/communicate.md"
 ##    - "{file.mpi}/report-group.md"
