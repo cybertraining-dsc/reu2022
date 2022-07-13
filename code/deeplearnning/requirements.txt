@@ -1,0 +1,4 @@
+notebook
+jupyterlab
+nbconvert
+cloudmesh-common
