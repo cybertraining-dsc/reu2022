@@ -29,25 +29,25 @@ except:  # noqa: E722
 StopWatch.start("total")
 
 StopWatch.start("import")
-import time 
+import time    # noqa: E402
 
-import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
-from keras.utils import to_categorical, plot_model
-from keras.datasets import mnist
+import numpy as np    # noqa: E402
+from keras.models import Sequential    # noqa: E402
+from keras.layers import Dense, Activation, Dropout    # noqa: E402
+from keras.utils import to_categorical, plot_model    # noqa: E402
+from keras.datasets import mnist    # noqa: E402
 # import pydotplus
-from keras.utils.vis_utils import model_to_dot
+# from keras.utils.vis_utils import model_to_dot
 # from keras.utils.vis_utils import pydot
 StopWatch.stop("import")
 
 
-# StopWatch.progress(0)
+StopWatch.progress(0)
 
 StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 StopWatch.stop("data-load")
-# StopWatch.progress(1)
+StopWatch.progress(1)
 
 num_labels = len(np.unique(y_train))
 
@@ -87,18 +87,18 @@ model.add(Activation('softmax'))
 model.summary()
 plot_model(model, to_file='mlp-mnist.png', show_shapes=True)
 
-# StopWatch.progress(2)
+StopWatch.progress(2)
 StopWatch.start("compile")
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 StopWatch.stop("compile")
-# StopWatch.progress(3)
+StopWatch.progress(3)
 StopWatch.start("train")
 model.fit(x_train, y_train, epochs=5, batch_size=batch_size)
 StopWatch.stop("train")
 
-# StopWatch.progress(99)
+StopWatch.progress(99)
 StopWatch.start("test")
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
@@ -106,7 +106,7 @@ StopWatch.stop("test")
 StopWatch.stop("total")
 
 StopWatch.benchmark()
-# StopWatch.progress(100)
+StopWatch.progress(100)
 
 
 # # REFERENCES

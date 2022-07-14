@@ -5,23 +5,28 @@
 
 
 
-get_ipython().system('pip3 install cloudmesh-installer')
-get_ipython().system('pip3 install cloudmesh-common')
+try:
+    from cloudmesh.common.StopWatch import StopWatch
+except:  # noqa: E722
+    get_ipython().system(' pip install cloudmesh-common')
+    from cloudmesh.common.StopWatch import StopWatch
 
 
 
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+StopWatch.start("total")
+StopWatch.progress(0)
 
-import numpy as np
-import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Activation, SimpleRNN, InputLayer, LSTM, Dropout
-from tensorflow.keras.utils import to_categorical, plot_model
-from tensorflow.keras.datasets import mnist
-from cloudmesh.common.StopWatch import StopWatch
+StopWatch.start("import")
+import numpy as np    # noqa: E402
+import tensorflow as tf    # noqa: E402
+from keras.models import Sequential    # noqa: E402
+from keras.layers import Dense, Activation, SimpleRNN, InputLayer, LSTM, Dropout    # noqa: E402
+from keras.utils import to_categorical, plot_model    # noqa: E402
+from keras.datasets import mnist    # noqa: E402
+from cloudmesh.common.StopWatch import StopWatch    # noqa: E402
+StopWatch.stop("import")
+StopWatch.progress(1)
 
 
 # ## Data Pre-Process
@@ -31,6 +36,7 @@ from cloudmesh.common.StopWatch import StopWatch
 StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 StopWatch.stop("data-load")
+StopWatch.progress(2)
 
 
 StopWatch.start("data-pre-process")
@@ -47,6 +53,7 @@ x_test = np.reshape(x_test,[-1, image_size, image_size])
 x_train = x_train.astype('float32') / 255
 x_test = x_test.astype('float32') / 255
 StopWatch.stop("data-pre-process")
+StopWatch.progress(3)
 
 input_shape = (image_size, image_size)
 batch_size = 128
@@ -93,6 +100,7 @@ with strategy.scope():
                 optimizer='sgd',
                 metrics=['accuracy'])
 StopWatch.stop("compile")
+StopWatch.progress(4)
 
 
 # ## Train
@@ -102,6 +110,7 @@ StopWatch.stop("compile")
 StopWatch.start("train")
 model.fit(x_train, y_train, epochs=30, batch_size=batch_size)
 StopWatch.stop("train")
+StopWatch.progress(99)
 
 
 # ## Test
@@ -112,8 +121,10 @@ StopWatch.start("evaluate")
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
 StopWatch.stop("evaluate")
+StopWatch.stop("total")
 
 StopWatch.benchmark()
+StopWatch.progress(100)
 
 
 # # References

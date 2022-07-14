@@ -8,7 +8,7 @@ LOCATION=https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.g
 # rm -f tmp.ipynb tmp.py
 
 
-all: requirements mlp_mnist
+all: requirements mnist_rnn
 
 # download:
 # 	curl -o E534_Higgs_Discovery_A.ipynb ${LOCATION}/E534_Higgs_Discovery_A.ipynb
@@ -26,17 +26,17 @@ all: requirements mlp_mnist
 # 	curl -o mnist_with_pytorch.ipynb ${LOCATION}/mnist_with_pytorch.ipynb
 # 	curl -o python_warmup.ipynb ${LOCATION}/python_warmup.ipynb
 
-mlp_mnist:
-	jupyter nbconvert mlp_mnist.ipynb --clear-output --output tmp_mlp_mnist.ipynb
-	jupyter nbconvert --to python tmp_mlp_mnist.ipynb --output tmp_mlp_mnist.py
-	fgrep -v "# In[ ]:" tmp_mlp_mnist.py > mlp_mnist.py
-	rm -f tmp_mlp_mnist.ipynb tmp_mlp_mnist.py
+mnist_rnn:
+	jupyter nbconvert mnist_rnn.ipynb --clear-output --output tmp_mnist_rnn.ipynb
+	jupyter nbconvert --to python tmp_mnist_rnn.ipynb --output tmp_mnist_rnn.py
+	fgrep -v "# In[ ]:" tmp_mnist_rnn.py > mnist_rnn.py
+	rm -f tmp_mnist_rnn.ipynb tmp_mnist_rnn.ipynb.py
 	@echo "-----------------------------------------------------------"
-	-pycodestyle mlp_mnist.py
+	-pycodestyle mnist_rnn.py
 	@echo "-----------------------------------------------------------"
-	-autopep8 mlp_mnist.py > tmp_mlp_mnist.py
+	-autopep8 mnist_rnn.py > tmp_mnist_rnn.py
 	@echo "-----------------------------------------------------------"
-	-pycodestyle tmp_mlp_mnist.py
+	-pycodestyle tmp_mnist_rnn.py
 	@echo "-----------------------------------------------------------"
 
 
