@@ -3,3 +3,6 @@ jupyterlab
 nbconvert
 tensorflow
 cloudmesh-common
+pycodestyle
+pep8
+autopep8
