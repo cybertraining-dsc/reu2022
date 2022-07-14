@@ -2,6 +2,9 @@
 # coding: utf-8
 
 # # Multi-Layer Perceptron with MNIST
+# 
+# 
+# This program runs in about 33.795 seconds (Windows 11, i7, 16 GB)
 
 # ## Pre-requisites
 # 
@@ -12,18 +15,20 @@
 
 
 
-get_ipython().system(' pip3 install cloudmesh-installer')
-get_ipython().system(' pip3 install cloudmesh-common')
+try:
+    from cloudmesh.common.StopWatch import StopWatch
+except:  # noqa: E722
+    get_ipython().system(' pip install cloudmesh-common')
+    from cloudmesh.common.StopWatch import StopWatch
 
 
 # ## Sample MLP with Tensorflow Keras
 
 
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+StopWatch.start("total")
 
+StopWatch.start("import")
 import time 
 
 import numpy as np
@@ -31,16 +36,18 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.utils import to_categorical, plot_model
 from keras.datasets import mnist
-#import pydotplus
+# import pydotplus
 from keras.utils.vis_utils import model_to_dot
-#from keras.utils.vis_utils import pydot
+# from keras.utils.vis_utils import pydot
+StopWatch.stop("import")
 
 
-from cloudmesh.common.StopWatch import StopWatch
+# StopWatch.progress(0)
 
 StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 StopWatch.stop("data-load")
+# StopWatch.progress(1)
 
 num_labels = len(np.unique(y_train))
 
@@ -80,22 +87,26 @@ model.add(Activation('softmax'))
 model.summary()
 plot_model(model, to_file='mlp-mnist.png', show_shapes=True)
 
+# StopWatch.progress(2)
 StopWatch.start("compile")
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
 StopWatch.stop("compile")
+# StopWatch.progress(3)
 StopWatch.start("train")
 model.fit(x_train, y_train, epochs=5, batch_size=batch_size)
 StopWatch.stop("train")
 
+# StopWatch.progress(99)
 StopWatch.start("test")
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
 StopWatch.stop("test")
+StopWatch.stop("total")
 
 StopWatch.benchmark()
-
+# StopWatch.progress(100)
 
 
 # # REFERENCES

@@ -8,7 +8,7 @@ LOCATION=https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.g
 # rm -f tmp.ipynb tmp.py
 
 
-all: requirements convert
+all: requirements mlp_mnist
 
 # download:
 # 	curl -o E534_Higgs_Discovery_A.ipynb ${LOCATION}/E534_Higgs_Discovery_A.ipynb
@@ -25,6 +25,34 @@ all: requirements convert
 # 	curl -o mnist_with_distributed_training.ipynb ${LOCATION}/mnist_with_distributed_training.ipynb
 # 	curl -o mnist_with_pytorch.ipynb ${LOCATION}/mnist_with_pytorch.ipynb
 # 	curl -o python_warmup.ipynb ${LOCATION}/python_warmup.ipynb
+
+mlp_mnist:
+	jupyter nbconvert mlp_mnist.ipynb --clear-output --output tmp_mlp_mnist.ipynb
+	jupyter nbconvert --to python tmp_mlp_mnist.ipynb --output tmp_mlp_mnist.py
+	fgrep -v "# In[ ]:" tmp_mlp_mnist.py > mlp_mnist.py
+	rm -f tmp_mlp_mnist.ipynb tmp_mlp_mnist.py
+	@echo "-----------------------------------------------------------"
+	-pycodestyle mlp_mnist.py
+	@echo "-----------------------------------------------------------"
+	-autopep8 mlp_mnist.py > tmp_mlp_mnist.py
+	@echo "-----------------------------------------------------------"
+	-pycodestyle tmp_mlp_mnist.py
+	@echo "-----------------------------------------------------------"
+
+# *.py: *.ipynb
+# 	jupyter nbconvert mlp_mnist.ipynb --clear-output --output tmp.ipynb
+# 	jupyter nbconvert --to python tmp.ipynb --output tmp.py
+# 	fgrep -v "# In[ ]:" tmp.py > mlp_mnist.py
+# 	rm -f tmp.ipynb tmp.py
+# 	@echo "-----------------------------------------------------------"
+# 	-pycodestyle mlp_mnist.py
+# 	@echo "-----------------------------------------------------------"
+# 	-autopep8 mlp_mnist.py > tmp.py
+# 	@echo "-----------------------------------------------------------"
+# 	-pycodestyle tmp.py
+# 	@echo "-----------------------------------------------------------"
+
+
 
 convert:
 	jupyter nbconvert E534_Higgs_Discovery_A.ipynb --clear-output --output tmp.ipynb
