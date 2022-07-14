@@ -5,32 +5,48 @@
 # 
 # This file contains code for the unit:Number Theory.
 
+
+
+try:
+    from cloudmesh.common.StopWatch import StopWatch
+except:  # noqa: E722
+    get_ipython().system(' pip install cloudmesh-common')
+    from cloudmesh.common.StopWatch import StopWatch
+
+
 # ## Part 1 25 Events 40000 Times
 # 
 # Illustrating Gaussian errors
 
 
 
+StopWatch.start("total")
+StopWatch.start("import")
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.special import ndtri
+StopWatch.stop("import")
 
 
 # Method that returns returns value of the gaussian given an input array and mean and standard deviation
 
 
 
+StopWatch.start("Part 1")
 def Normal(x, mu,sigma):
     return np.exp(- (x-mu)**2/(2*sigma**2))/(sigma*np.sqrt(2*np.pi))
 
 '''Counting 25 events 40000 times'''
+StopWatch.start("data-create-1")
 Events25 = np.random.rand(1000000)              #generate 25*40000 = 1,000,000 random numbers
 Counters25 = np.zeros(40000)                    #generate an array with 40000 entries all set to 0
 for value in Events25:
     Place = int(40000 * value)                  #Scale the random values to range between 0 to 40000
     Counters25[Place] +=1                       #Increment counts for the value as per the scaled value
+StopWatch.stop("data-create-1")
 ####Plot- The result of counting 25 events 40000 times as well as the errors, one sigma, one percent, 99 percent
 ###See figure - Count 25 Events 40000 times
+StopWatch.start("data-plot-1")
 plt.figure("Count 25 Events 40000 times")
 Numcounts25, binedges25, patches = plt.hist(Counters25, bins = 50, range = (0,50), color = "green", alpha = 0.5)    #plot histogram with 50 bins. Store Number of counts/bin and bin edges
 centers25 = 0.5*(binedges25[1:] + binedges25[:-1])                                                                  #Computing bin centers as means of the bin edge values
@@ -57,6 +73,8 @@ plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (20,
 plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (30,ybar25[1]), xytext = (30,30), arrowprops=dict(facecolor='black', arrowstyle="->"))
 plt.title("25 Events Counted 40000 times", backgroundcolor = "white")
 plt.show()
+StopWatch.stop("data-plot-1")
+StopWatch.stop("Part 1")
 
 
 # ## Part 2 250 Events Counted 40000 times
@@ -67,13 +85,17 @@ plt.show()
 
 
 
+StopWatch.start("Part 2")
+StopWatch.start("data-create-2")
 Events250 = np.random.rand(10000000)
 Counters250 = np.zeros(40000)
 for value in Events250:
     Place = int(40000 * value)
     Counters250[Place] +=1
+StopWatch.stop("data-create-2")
 ####Plot- The result of counting 250 events 40000 times as well as the errors, one sigma, one percent, 99 percent. This is identocal to plotting described above. Refer to the documentation of the above section
 ###See figure - Count 250 Events 40000 times
+StopWatch.start("data-plot-2")
 plt.figure("Count 250 Events 40000 times")
 Numcounts250, binedges250, patches = plt.hist(Counters250, bins = 200, range = (150,350), color = "green", alpha = 0.5)
 centers250 = 0.5*(binedges250[1:] + binedges250[:-1])
@@ -98,6 +120,8 @@ plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xba
 plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xbar250[1],ybar250[1]), xytext = (30,30), arrowprops=dict(facecolor='black', arrowstyle="->"))
 plt.title("250 Events Counted 40000 times", backgroundcolor = "white")
 plt.show()
+StopWatch.stop("data-plot-2")
+StopWatch.stop("Part 2")
 
 
 # ## Part 3 250 (mean) events each 400 times
@@ -106,15 +130,18 @@ plt.show()
 
 
 
+StopWatch.start("Part 3")
 ####First random set
+StopWatch.start("data-create-3")
 Events250A = np.random.rand(100000)
 Counters250A = np.zeros(400)
 for value in Events250A:
     Place = int(400 * value)
     Counters250A[Place] +=1
-
+StopWatch.stop("data-create-3")
 ####Plot- The result of counting 250 events 400 times as well as the errors, one sigma, one percent, 99 percent. This is identical to plotting described above. Refer to the documentation of the above section
 ###See figure - Count 250 Events 400 times I
+StopWatch.start("data-plot-3")
 plt.figure("Count 250 Events 400 times I")
 Numcounts250A, binedges250A, patches = plt.hist(Counters250A, bins = 100, range = (200,300), color = "green", alpha = 0.5)
 centers250A = 0.5*(binedges250A[1:] + binedges250A[:-1])
@@ -166,6 +193,8 @@ plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xba
 plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xbar250A[1],ybar250A[1]), xytext = (40,30), arrowprops=dict(facecolor='black', arrowstyle="->"))
 plt.title("250 Events Counted 400 times. Another Seed", backgroundcolor = "white")
 plt.show()
+StopWatch.stop("data-plot-3")
+StopWatch.stop("Part 3")
 
 
 # ## Part 4 Different Seeds counting 250 events 400 times
@@ -174,14 +203,18 @@ plt.show()
 
 
 
+StopWatch.start("Part 4")
 ###First set of random numbers
+StopWatch.start("data-create-4.1")
 Events250C = np.random.rand(100000)
 Counters250C = np.zeros(400)
 for value in Events250C:
     Place = int(400 * value)
     Counters250C[Place] +=1
+StopWatch.stop("data-create-4.1")
 ####Plot- The result of counting 250 events 400 times as well as the errors, one sigma, one percent, 99 percent. The number of bins is decreased to 20. This is identical to plotting described above. Refer to the documentation of the above section
 ###See figure - Count 250 Events 400 times Larger Bins
+StopWatch.start("data-plot-4.1")
 plt.figure("Count 250 Events 400 times Larger Bins.")
 Numcounts250C, binedges250C, patches = plt.hist(Counters250C, bins = 20, range = (200,300), color = "green", alpha = 0.5)
 centers250C = 0.5*(binedges250C[1:] + binedges250C[:-1])
@@ -204,16 +237,20 @@ plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xba
 plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xbar250C[1],ybar250C[1]), xytext = (30,30), arrowprops=dict(facecolor='black', arrowstyle="->"))
 plt.title("250 Events Counted 400 times. Larger Bins(5).", backgroundcolor = "white")
 plt.show()
+StopWatch.stop("data-plot-4.1")
 
+StopWatch.start("data-create-4.2")
 #second set of random numbers
 Events250C = np.random.rand(100000)
 Counters250C = np.zeros(400)
 for value in Events250C:
     Place = int(400 * value)
     Counters250C[Place] +=1
-    
+StopWatch.stop("data-create-4.2")
+
 ####Plot- The result of counting 250 events 400 times as well as the errors, one sigma, one percent, 99 percent with separate seed. The number of bins is decreased to 20 The number of bins is decreased to 20. This is identical to plotting described above. Refer to the documentation of the above section
 ###See figure - Count 250 Events 400 times Larger Bins. Another Seed
+StopWatch.start("data-plot-4.2")
 plt.figure("Count 250 Events 400 times Larger Bins. Another Seed")
 Numcounts250C, binedges250C, patches = plt.hist(Counters250C, bins = 20, range = (200,300), color = "green", alpha = 0.5)
 centers250C = 0.5*(binedges250C[1:] + binedges250C[:-1])
@@ -236,6 +273,8 @@ plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xba
 plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xbar250C[1],ybar250C[1]), xytext = (30,30), arrowprops=dict(facecolor='black', arrowstyle="->"))
 plt.title("250 Events Counted 400 times. Larger Bins(5). Another Seed", backgroundcolor = "white")
 plt.show()
+StopWatch.stop("data-plot-4.2")
+StopWatch.stop("Part 4")
 
 
 # ## Part 5 counting 250 events 4000 times
@@ -244,15 +283,19 @@ plt.show()
 
 
 
+StopWatch.start("Part 5")
 ###Random set 1
+StopWatch.start("data-create-5.1")
 Events250B = np.random.rand(1000000)
 Counters250B = np.zeros(4000)
 for value in Events250B:
     Place = int(4000 * value)
     Counters250B[Place] +=1
+StopWatch.stop("data-create-5.1")
 
 ####Plot- The result of counting 250 events 4000 times as well as the errors, one sigma, one percent, 99 percent with separate seed.This is identical to plotting described above. Refer to the documentation of the above section
-###See figure - Count 250 Events 4000 times  
+###See figure - Count 250 Events 4000 times
+StopWatch.start("data-plot-5.1")
 plt.figure("Count 250 Events 4000 times")
 Numcounts250B, binedges250B, patches = plt.hist(Counters250B, bins = 100, range = (200,300), color = "green", alpha = 0.5)
 centers250B = 0.5*(binedges250B[1:] + binedges250B[:-1])
@@ -274,16 +317,20 @@ plt.annotate('99 percent', xycoords="data", textcoords='offset points', arrowpro
 plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xbar250B[0],ybar250B[0]), xytext = (-120,30), arrowprops=dict(facecolor='black', arrowstyle="->"))
 plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xbar250B[1],ybar250B[1]), xytext = (30,30), arrowprops=dict(facecolor='black', arrowstyle="->"))
 plt.title("250 Events Counted 4000 times.", backgroundcolor = "white")
+StopWatch.stop("data-plot-5.1")
 
 ###Second random set
+StopWatch.start("data-create-5.2")
 Events250B = np.random.rand(1000000)
 Counters250B = np.zeros(4000)
 for value in Events250B:
     Place = int(4000 * value)
     Counters250B[Place] +=1
+StopWatch.stop("data-create-5.2")
 
 ####Plot- The result of counting 250 events 4000 times as well as the errors, one sigma, one percent, 99 percent with separate seed. This is identical to plotting described above. Refer to the documentation of the above section
-###See figure - Count 250 Events 4000 times Another Seed 
+###See figure - Count 250 Events 4000 times Another Seed
+StopWatch.start("data-plot-5.2")
 plt.figure("Count 250 Events 4000 times Another Seed")
 Numcounts250B, binedges250B, patches = plt.hist(Counters250B, bins = 100, range = (200,300), color = "green", alpha = 0.5)
 centers250B = 0.5*(binedges250B[1:] + binedges250B[:-1])
@@ -307,4 +354,7 @@ plt.annotate('One Sigma', xycoords="data", textcoords='offset points', xy = (xba
 plt.title("250 Events Counted 4000 times. Another Seed", backgroundcolor = "white")
 #For Agg backen
 plt.show()
+StopWatch.stop("data-plot-5.2")
+StopWatch.stop("Part 5")
+StopWatch.stop("total")
 
