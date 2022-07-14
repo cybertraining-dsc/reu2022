@@ -5,8 +5,8 @@
 
 
 
-get_ipython().system('pip3 install cloudmesh-installer')
-get_ipython().system('pip3 install cloudmesh-common')
+# get_ipython().system('pip3 install cloudmesh-installer')
+# get_ipython().system('pip3 install cloudmesh-common')
 
 
 

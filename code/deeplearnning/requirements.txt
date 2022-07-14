@@ -1,4 +1,5 @@
 notebook
 jupyterlab
 nbconvert
+tensorflow
 cloudmesh-common
