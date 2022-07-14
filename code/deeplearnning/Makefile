@@ -8,23 +8,23 @@ LOCATION=https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.g
 # rm -f tmp.ipynb tmp.py
 
 
-all: requirements download convert
+all: requirements convert
 
-download:
-	curl -o E534_Higgs_Discovery_A.ipynb ${LOCATION}/E534_Higgs_Discovery_A.ipynb
-	curl -o E534_Higgs_Discovery_B.ipynb ${LOCATION}/E534_Higgs_Discovery_B.ipynb
-	curl -o E534_Higgs_Discovery_C.ipynb ${LOCATION}/E534_Higgs_Discovery_C.ipynb
-	curl -o E534_Higgs_Discovery_D.ipynb ${LOCATION}/E534_Higgs_Discovery_D.ipynb
-	curl -o google_colab_mnist_example.ipynb ${LOCATION}/google_colab_mnist_example.ipynb
-	curl -o mlp_mnist.ipynb ${LOCATION}/mlp_mnist.ipynb
-	curl -o mnist_autoencoder.ipynb ${LOCATION}/mnist_autoencoder.ipynb
-	curl -o mnist_cnn.ipynb ${LOCATION}/mnist_cnn.ipynb
-	curl -o mnist_lstm.ipynb ${LOCATION}/mnist_lstm.ipynb
-	curl -o mnist_mlp_with_lstm.ipynb ${LOCATION}/mnist_mlp_with_lstm.ipynb
-	curl -o mnist_rnn.ipynb ${LOCATION}/mnist_rnn.ipynb
-	curl -o mnist_with_distributed_training.ipynb ${LOCATION}/mnist_with_distributed_training.ipynb
-	curl -o mnist_with_pytorch.ipynb ${LOCATION}/mnist_with_pytorch.ipynb
-	curl -o python_warmup.ipynb ${LOCATION}/python_warmup.ipynb
+# download:
+# 	curl -o E534_Higgs_Discovery_A.ipynb ${LOCATION}/E534_Higgs_Discovery_A.ipynb
+# 	curl -o E534_Higgs_Discovery_B.ipynb ${LOCATION}/E534_Higgs_Discovery_B.ipynb
+# 	curl -o E534_Higgs_Discovery_C.ipynb ${LOCATION}/E534_Higgs_Discovery_C.ipynb
+# 	curl -o E534_Higgs_Discovery_D.ipynb ${LOCATION}/E534_Higgs_Discovery_D.ipynb
+# 	curl -o google_colab_mnist_example.ipynb ${LOCATION}/google_colab_mnist_example.ipynb
+# 	curl -o mlp_mnist.ipynb ${LOCATION}/mlp_mnist.ipynb
+# 	curl -o mnist_autoencoder.ipynb ${LOCATION}/mnist_autoencoder.ipynb
+# 	curl -o mnist_cnn.ipynb ${LOCATION}/mnist_cnn.ipynb
+# 	curl -o mnist_lstm.ipynb ${LOCATION}/mnist_lstm.ipynb
+# 	curl -o mnist_mlp_with_lstm.ipynb ${LOCATION}/mnist_mlp_with_lstm.ipynb
+# 	curl -o mnist_rnn.ipynb ${LOCATION}/mnist_rnn.ipynb
+# 	curl -o mnist_with_distributed_training.ipynb ${LOCATION}/mnist_with_distributed_training.ipynb
+# 	curl -o mnist_with_pytorch.ipynb ${LOCATION}/mnist_with_pytorch.ipynb
+# 	curl -o python_warmup.ipynb ${LOCATION}/python_warmup.ipynb
 
 convert:
 	jupyter nbconvert E534_Higgs_Discovery_A.ipynb --clear-output --output tmp.ipynb
