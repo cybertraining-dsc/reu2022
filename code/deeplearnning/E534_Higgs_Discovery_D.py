@@ -5,18 +5,24 @@
 # 
 # This notebook discusses aspects of random number generation including seeds.
 
+try:
+    from cloudmesh.common.StopWatch import StopWatch
+except:  # noqa: E722
+    get_ipython().system(' pip install cloudmesh-common')
+    from cloudmesh.common.StopWatch import StopWatch
 
-
+StopWatch.start("total")
+StopWatch.start("import")
 import numpy as np
 import matplotlib.pyplot as plt
-
+StopWatch.stop("import")
 
 # ## Part 1 Fixing Seed, fixes Random Numbers
 # 
 # Create two sets of random numbers with the same seed(1234567) and plot them on top of each other. As identical sets of random numbers are created with identical seeds, you will get two plots exactly on top of each other.
 
 
-
+StopWatch.start("data-create")
 np.random.seed(seed=1234567)                                            #set the seed of the random number generator to 1234567
 Base = 110 + 30* np.random.rand(42000)                                  #generate 42000 random numbers between 110 and 140
 plt.figure("On Top of Each Other")
