@@ -275,4 +275,10 @@ plt.show()
 StopWatch.stop("data-plot-7")
 StopWatch.stop("Part 7")
 StopWatch.stop("total")
+StopWatch.benchmark()
+
+
+
+
+
 
