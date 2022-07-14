@@ -6,3 +6,5 @@ cloudmesh-common
 pycodestyle
 pep8
 autopep8
+torch
+torchvision
