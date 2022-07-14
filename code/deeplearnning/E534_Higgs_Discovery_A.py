@@ -4,6 +4,8 @@
 # # A: Studying Higgs Boson Analysis. Signal and Background
 # 
 # Sloping background as in real experiment
+# 
+# This program runs in about 4.946 seconds (Windows 10, 16 GB)
 
 # ## Part 1 The Background
 # 
@@ -276,6 +278,11 @@ StopWatch.stop("data-plot-7")
 StopWatch.stop("Part 7")
 StopWatch.stop("total")
 StopWatch.benchmark()
+
+
+
+
+
 
 
 
