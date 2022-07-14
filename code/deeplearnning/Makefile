@@ -8,7 +8,7 @@ LOCATION=https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.g
 # rm -f tmp.ipynb tmp.py
 
 
-all: requirements mnist_mlp_with_lstm
+all: requirements higgs_a
 
 # download:
 # 	curl -o E534_Higgs_Discovery_A.ipynb ${LOCATION}/E534_Higgs_Discovery_A.ipynb
