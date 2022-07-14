@@ -39,6 +39,21 @@ mlp_mnist:
 	-pycodestyle tmp_mlp_mnist.py
 	@echo "-----------------------------------------------------------"
 
+
+higgs_a:
+	jupyter nbconvert E534_Higgs_Discovery_A.ipynb --clear-output --output tmp_E534_Higgs_Discovery_A.ipynb
+	jupyter nbconvert --to python tmp_E534_Higgs_Discovery_A.ipynb --output tmp_E534_Higgs_Discovery_A.py
+	fgrep -v "# In[ ]:" tmp_E534_Higgs_Discovery_A.py > E534_Higgs_Discovery_A.py
+	rm -f tmp_E534_Higgs_Discovery_A.ipynb tmp_E534_Higgs_Discovery_A.py
+	@echo "-----------------------------------------------------------"
+	-pycodestyle E534_Higgs_Discovery_A.py
+	@echo "-----------------------------------------------------------"
+	-autopep8 E534_Higgs_Discovery_A.py > tmp_E534_Higgs_Discovery_A.py
+	@echo "-----------------------------------------------------------"
+	-pycodestyle tmp_E534_Higgs_Discovery_A.py
+	@echo "-----------------------------------------------------------"
+
+
 # *.py: *.ipynb
 # 	jupyter nbconvert mlp_mnist.ipynb --clear-output --output tmp.ipynb
 # 	jupyter nbconvert --to python tmp.ipynb --output tmp.py
