@@ -179,6 +179,102 @@ which will result in
 
 \normalsize
 
+## Installing Python 3.10 on Rivanna
+
+### Activate Python3
+
+```
+$ ssh rivanna
+rivanna$ module load cuda cudnn
+rivanna$ module load anaconda
+rivanna$ conda create -y -n ENV3 python=3.10
+```
+
+### .bashrc
+
+```
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+PS1="\s-\v\$"
+alias vi='vim'
+# source ~/ENV3/bin/activate
+module load cuda cudnn
+module load anaconda
+# conda create -y -n ~/ENV3 python=3.10
+conda activate ~/ENV3
+```
+
+### Activation
+
+Now, the user must log out of all Rivanna windows and log back in to utilize
+this. When the user logs back in, they will automatically be in the Python 
+version installed.
+
+In order for the user to use batch scripts, they must include in their batch
+scripts the following line before executing your program:
+
+```
+module load cuda cudnn
+module load anaconda
+conda activate ~/ENV3
+```
+
+### Example Script for Using GPUs
+
+```
+#!/usr/bin/env bash
+#SBATCH --job-name=mydemojob
+#SBATCH --output=%u-%j.out
+#SBATCH --error=%u-%j.err
+#SBATCH --partition=gpu
+#SBATCH -c 1
+#SBATCH --gres=”gpu:v100:1”
+#SBATCH --mem=4GB
+#SBATCH --time=3:00
+#SBATCH --account=c4gc
+
+module load cuda cudnn
+module load anaconda
+conda activate ~/ENV3
+# your automation code here..
+python mydemojob.py
+```
+
+### How Do You Activate Different GPUs
+
+```
+#SBATCH --gres=”gpu:p100:1”
+#SBATCH --gres=”gpu:v100:1”
+#SBATCH --gres=”gpu:k80:1”
+#SBATCH --gres=”gpu:a100:1”
+#SBATCH --gres=”gpu:a100:1”
+#SBATCH --gres=”gpu:rtx2080:1”
+```
+
+* TODO: How can we use a100 w/ 40 GB vs. 80 GB?
+* TODO: How can we use Gregor's special a100?
+
+
+## Allocations
+
+```bash
+$ allocations
+```
+
+```
+Account                      Balance        Reserved       Available
+-----------------          ---------       ---------       ---------
+xyz_community                  99999               0           99999
+comp4gc                       146527               0          146527
+```
+
+```bash
+$ allocations -a comp4gc
+```
+
 ## SSH Config
 
 ```
