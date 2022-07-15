@@ -85,7 +85,7 @@ model.add(Dropout(dropout))
 model.add(Dense(num_labels))
 model.add(Activation('softmax'))
 model.summary()
-plot_model(model, to_file='mlp-mnist.png', show_shapes=True)
+plot_model(model, to_file='images/mlp-mnist.png', show_shapes=True)
 
 StopWatch.progress(2)
 StopWatch.start("compile")

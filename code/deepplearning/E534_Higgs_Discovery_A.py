@@ -4,7 +4,6 @@
 # # A: Studying Higgs Boson Analysis. Signal and Background
 # 
 # Sloping background as in real experiment.
-# This program runs in about 4.946 seconds (Windows 10, 16 GB)
 
 # ## Part 1 The Background
 # 
@@ -36,13 +35,13 @@ StopWatch.stop("import")
 
 
 def save(file):
-  name = os.path.basename(file).replace(".py", "")
-  cwd = Shell.map_filename(".")
-  Shell.mkdir(f"{cwd}/images")
-  plt.savefig(f'{cwd}/images/{name}.png',dpi=300)
-  plt.savefig(f'{cwd}/images/{name}.pdf')
-  plt.savefig(f'{cwd}/images/{name}.svg')
-  plt.show()
+    name = os.path.basename(file).replace(".py", "")
+    cwd = Shell.map_filename(".").path
+    Shell.mkdir(f"{cwd}/images")
+    plt.savefig(f'{cwd}/images/{name}.png',dpi=300)
+    plt.savefig(f'{cwd}/images/{name}.pdf')
+    plt.savefig(f'{cwd}/images/{name}.svg')
+    plt.show()
 
 
 
