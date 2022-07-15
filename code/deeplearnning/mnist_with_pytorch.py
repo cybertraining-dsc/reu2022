@@ -4,7 +4,8 @@
 # # MNIST With PyTorch Training
 # This program runs in about 52.337 seconds (Windows 11, i7, 16 GB)
 
-# ## Import Libraries
+# ## Prerequisites
+# Install the following packages
 
 
 
@@ -14,21 +15,20 @@ except:  # noqa: E722
     get_ipython().system(' pip install cloudmesh-common')
     from cloudmesh.common.StopWatch import StopWatch
 
-StopWatch.start('total')
 
+# ## Import Libraries
+
+
+
+StopWatch.start('total')
 StopWatch.start('import')
 StopWatch.progress(0)
 
-# import numpy as np
 import torch    # noqa: E402
-# import torchvision
-# import matplotlib.pyplot as plt
 from torchvision import datasets, transforms    # noqa: E402
 from torch import nn    # noqa: E402
 from torch import optim    # noqa: E402
-# from time import time
-# import os
-# from google.colab import drive
+
 StopWatch.stop('import')
 StopWatch.progress(2)
 
@@ -40,6 +40,7 @@ StopWatch.progress(2)
 
 
 StopWatch.start("preprocess")
+
 # Data transformation function
 transform = transforms.Compose([transforms.ToTensor(),
                               transforms.Normalize((0.5,), (0.5,)),
@@ -52,6 +53,7 @@ validation_data_set = datasets.MNIST('drive/My Drive/mnist/data/', download=True
 
 train_loader = torch.utils.data.DataLoader(train_data_set, batch_size=32, shuffle=True)
 validation_loader = torch.utils.data.DataLoader(validation_data_set, batch_size=32, shuffle=True)
+
 StopWatch.stop("preprocess")
 StopWatch.progress(3)
 
@@ -64,6 +66,7 @@ StopWatch.progress(3)
 
 
 StopWatch.start("network")
+
 input_size = 784
 hidden_sizes = [128, 128, 64, 64]
 output_size = 10
@@ -81,6 +84,7 @@ model = nn.Sequential(nn.Linear(input_size, hidden_sizes[0]),
 
                       
 print(model)
+
 StopWatch.stop("network")
 StopWatch.progress(4)
 
@@ -95,8 +99,13 @@ StopWatch.progress(4)
 
 
 
+StopWatch.start('loss')
+
 criterion = nn.NLLLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9)
+
+StopWatch.stop('loss')
+StopWatch.progress(5)
 
 
 # # Model Training
@@ -104,6 +113,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9)
 
 
 StopWatch.start('train')
+
 epochs = 5
 
 for epoch in range(epochs):
@@ -128,6 +138,7 @@ for epoch in range(epochs):
         loss_per_epoch += loss.item()
     average_loss = loss_per_epoch / len(train_loader)
     print("Epoch {} - Training loss: {}".format(epoch, average_loss))
+
 StopWatch.stop('train')
 StopWatch.progress(97)
 
@@ -139,6 +150,7 @@ StopWatch.progress(97)
 
 
 StopWatch.start('evaluation')
+
 correct_predictions, all_count = 0, 0
 # enumerate data from the data validation loader (loads a batch at a time)
 for batch_id, (images,labels) in enumerate(validation_loader):
@@ -162,6 +174,7 @@ for batch_id, (images,labels) in enumerate(validation_loader):
     all_count += 1
 
 print(f"Model Accuracy {(correct_predictions/all_count) * 100} %")
+
 StopWatch.stop('evaluation')
 StopWatch.stop('total')
 StopWatch.benchmark()
