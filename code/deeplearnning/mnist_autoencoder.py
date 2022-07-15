@@ -7,14 +7,19 @@
 
 
 
-get_ipython().system(' pip3 install cloudmesh-installer')
-get_ipython().system(' pip3 install cloudmesh-common')
+try:
+    from cloudmesh.common.StopWatch import StopWatch
+except:  # noqa: E722
+    get_ipython().system(' pip install cloudmesh-common')
+    from cloudmesh.common.StopWatch import StopWatch
 
 
 # ## Import Libraries
 
 
 
+StopWatch.start("total")
+StopWatch.start("import")
 import tensorflow as tf
 from keras.layers import Dense, Input
 from keras.layers import Conv2D, Flatten
@@ -26,13 +31,18 @@ from keras import backend as K
 
 import numpy as np
 import matplotlib.pyplot as plt
+StopWatch.stop("import")
+StopWatch.progress(0)
 
 
 # ## Pre-Process Data
 
 
 
+StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
+StopWatch.stop("data-load")
+StopWatch.progress(20)
 
 image_size = x_train.shape[1]
 x_train = np.reshape(x_train, [-1, image_size, image_size, 1])
@@ -51,6 +61,7 @@ hidden_units = [32, 64]
 
 
 
+StopWatch.start("define-model")
 inputs = Input(shape=input_shape, name='encoder_input')
 x = inputs
 x = Dense(hidden_units[0], activation='relu')(x)
@@ -91,32 +102,42 @@ autoencoder.summary()
 plot_model(autoencoder,
            to_file='autoencoder.png',
            show_shapes=True)
-
+StopWatch.start('compile')
 autoencoder.compile(loss='mse', optimizer='adam')
+StopWatch.stop('compile')
+StopWatch.stop("define-model")
+StopWatch.progress(40)
 
 
 # ## Train
 
 
 
+StopWatch.start("train")
 autoencoder.fit(x_train,
                 x_train,
                 validation_data=(x_test, x_test),
                 epochs=1,
                 batch_size=batch_size)
+StopWatch.stop("train")
+StopWatch.progress(60)
 
 
 # ## Test
 
 
 
+StopWatch.start("test")
 x_decoded = autoencoder.predict(x_test)
+StopWatch.stop("test")
+StopWatch.progress(80)
 
 
 # ## Visualize
 
 
 
+StopWatch.start("visualize")
 imgs = np.concatenate([x_test[:8], x_decoded[:8]])
 imgs = imgs.reshape((4, 4, image_size, image_size))
 imgs = np.vstack([np.hstack(i) for i in imgs])
@@ -126,4 +147,7 @@ plt.title('Input: 1st 2 rows, Decoded: last 2 rows')
 plt.imshow(imgs, interpolation='none', cmap='gray')
 plt.savefig('input_and_decoded.png')
 plt.show()
+StopWatch.stop("visualize")
+StopWatch.stop("total")
+StopWatch.progress(100)
 

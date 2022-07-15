@@ -14,18 +14,28 @@
 
 
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+try:
+    from cloudmesh.common.StopWatch import StopWatch
+except:  # noqa: E722
+    get_ipython().system(' pip install cloudmesh-common')
+    from cloudmesh.common.StopWatch import StopWatch
 
+
+
+
+StopWatch.start('total')
+# from __future__ import absolute_import
+# from __future__ import division
+# from __future__ import print_function
+StopWatch.start('import')
 import numpy as np
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.utils import to_categorical, plot_model
 from keras.datasets import mnist
+StopWatch.stop('import')
+StopWatch.progress(0)
 
-
-# ## Warm Up Exercise
 
 # ## Pre-process data
 
@@ -43,7 +53,10 @@ from keras.datasets import mnist
 
 
 
+StopWatch.start('data-load')
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
+StopWatch.stop('data-load')
+StopWatch.progress(20)
 
 
 # ### Identify Number of Classes
@@ -111,6 +124,7 @@ model.add(Dense(num_labels))
 model.add(Activation('softmax'))
 model.summary()
 plot_model(model, to_file='mlp-mnist.png', show_shapes=True)
+StopWatch.progress(40)
 
 
 # ## Compile and Train
@@ -134,11 +148,17 @@ plot_model(model, to_file='mlp-mnist.png', show_shapes=True)
 
 
 
+StopWatch.start('compile')
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
+StopWatch.progress(60)
+StopWatch.stop('compile')
 
+StopWatch.start('train')
 model.fit(x_train, y_train, epochs=3, batch_size=batch_size)
+StopWatch.progress(80)
+StopWatch.stop('train')
 
 
 # ## Testing 
@@ -153,6 +173,9 @@ model.fit(x_train, y_train, epochs=3, batch_size=batch_size)
 
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
 print("\nTest accuracy: %.1f%%" % (100.0 * acc))
+StopWatch.progress(100)
+StopWatch.stop('total')
+StopWatch.benchmark()
 
 
 # ## Final Note
@@ -172,3 +195,8 @@ print("\nTest accuracy: %.1f%%" % (100.0 * acc))
 # 
 # [Orignal Source to Source Code](https://github.com/PacktPublishing/Advanced-Deep-Learning-with-Keras)
 # 
+
+# 
+# ### Reference: 
+# 
+# [Orignal Source to Source Code](https://github.com/PacktPublishing/Advanced-Deep-Learning-with-Keras)

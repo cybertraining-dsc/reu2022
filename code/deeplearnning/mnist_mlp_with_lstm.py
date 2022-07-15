@@ -27,7 +27,7 @@ from keras.datasets import mnist    # noqa: E402
 from cloudmesh.common.StopWatch import StopWatch    # noqa: E402
 
 StopWatch.stop("import")
-StopWatch.progress(1)
+StopWatch.progress(20)
 
 
 # ## Data Pre-Process
@@ -37,7 +37,7 @@ StopWatch.progress(1)
 StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 StopWatch.stop("data-load")
-StopWatch.progress(2)
+StopWatch.progress(40)
 
 
 StopWatch.start("data-pre-process")
@@ -54,7 +54,6 @@ x_test = np.reshape(x_test,[-1, image_size, image_size])
 x_train = x_train.astype('float32') / 255
 x_test = x_test.astype('float32') / 255
 StopWatch.stop("data-pre-process")
-StopWatch.progress(3)
 
 input_shape = (image_size, image_size)
 batch_size = 128
@@ -66,7 +65,6 @@ dropout = 0.2
 
 
 
-StopWatch.start("compile")
 model = Sequential()
 # LSTM Layers
 model.add(LSTM(units=units,                      
@@ -91,12 +89,12 @@ model.add(Activation('softmax'))
 model.summary()
 plot_model(model, to_file='rnn-mnist.png', show_shapes=True)
 
-
+StopWatch.start("compile")
 model.compile(loss='categorical_crossentropy',
               optimizer='sgd',
               metrics=['accuracy'])
 StopWatch.stop("compile")
-StopWatch.progress(4)
+StopWatch.progress(60)
 
 
 # ## Train
@@ -106,7 +104,7 @@ StopWatch.progress(4)
 StopWatch.start("train")
 model.fit(x_train, y_train, epochs=30, batch_size=batch_size)
 StopWatch.stop("train")
-StopWatch.progress(99)
+StopWatch.progress(80)
 
 
 # ## Test

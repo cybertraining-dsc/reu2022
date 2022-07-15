@@ -116,5 +116,39 @@ StopWatch.progress(100)
 
 
 
+plt.figure("Different")
+# set the seed of the random number generator to 1234567 for the first
+# set of random numbers
+np.random.seed(seed=seed)
+# Generate a set of n random numbers between 110 and 140(first set)
+Base4 = 110 + 30 * np.random.rand(n)
+# plot histogram for the first set.
+plt.hist(Base4, bins=15, range=(110, 140), alpha=0.5, color="blue")
+
+# Generate the second set of n numbers between 110 and 140. Note that for this
+# set the seed set will depend on where the first set ends.
+Base1 = 110 + 30 * np.random.rand(n)
+
+# Plot the histogram for the first seed set.
+plt.hist(Base1, bins=15, range=(110, 140), alpha=0.5, color="green")
+# Set the seed value for the generator to be 7654321
+np.random.seed(seed=7654321)
+# Generate the third set of n numbers between 110 and 140.
+Base3 = 110 + 30 * np.random.rand(n)
+
+# Plot the third set.
+plt.hist(Base3, bins=15, range=(110, 140), alpha=0.5, color="red")
+plt.title("Three distinct histograms as different random numbers")
+# For Agg backend
+save("stacked-histograms-3")
+StopWatch.stop("calculate")
+
+StopWatch.stop("total")
+StopWatch.benchmark()
+StopWatch.progress(100)
+
+
+
+
 
 
