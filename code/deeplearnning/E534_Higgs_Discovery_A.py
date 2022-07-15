@@ -18,6 +18,7 @@ try:
 except:  # noqa: E722
     get_ipython().system(' pip install cloudmesh-common')
     from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.Shell import Shell
 
 
 
@@ -36,7 +37,8 @@ StopWatch.stop("import")
 
 def save(file):
   name = os.path.basename(file).replace(".py", "")
-  cwd = os.getcwd()
+  cwd = Shell.map_filename(".")
+  Shell.mkdir(f"{cwd}/images")
   plt.savefig(f'{cwd}/images/{name}.png',dpi=300)
   plt.savefig(f'{cwd}/images/{name}.pdf')
   plt.savefig(f'{cwd}/images/{name}.svg')
