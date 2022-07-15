@@ -17,6 +17,7 @@ try:
 except:  # noqa: E722
     get_ipython().system(' pip install cloudmesh-common')
     from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.Shell import Shell
 
 
 
@@ -26,7 +27,20 @@ StopWatch.start("total")
 StopWatch.start("import")
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 StopWatch.stop("import")
+
+
+
+
+def save(file):
+  name = os.path.basename(file).replace(".py", "")
+  cwd = Shell.map_filename(".")
+  Shell.mkdir(f"{cwd}/images")
+  plt.savefig(f'{cwd}/images/{name}.png',dpi=300)
+  plt.savefig(f'{cwd}/images/{name}.pdf')
+  plt.savefig(f'{cwd}/images/{name}.svg')
+  plt.show()
 
 
 # ## Part 1 Fixing Seed, fixes Random Numbers
@@ -58,7 +72,7 @@ plt.hist(Base2, bins=15, range=(110, 140), alpha=0.5, color="yellow")
 
 # Plot the histogram for the second set
 plt.title("Two histograms on top of each other as identical random numbers")
-plt.show()
+save("stacked-histograms-2")
 
 
 # ## Part 2 Varying Seed (randomly) gives distinct results
@@ -92,7 +106,7 @@ Base3 = 110 + 30 * np.random.rand(n)
 plt.hist(Base3, bins=15, range=(110, 140), alpha=0.5, color="red")
 plt.title("Three distinct histograms as different random numbers")
 # For Agg backend
-plt.show()
+save("stacked-histograms-3")
 StopWatch.stop("calculate")
 
 StopWatch.stop("total")
