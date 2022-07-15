@@ -37,7 +37,7 @@ StopWatch.stop("import")
 
 def save(file):
   name = os.path.basename(file).replace(".py", "")
-  cwd = Shell.map_filename(".")
+  cwd = Shell.map_filename(".").path
   Shell.mkdir(f"{cwd}/images")
   plt.savefig(f'{cwd}/images/{name}.png',dpi=300)
   plt.savefig(f'{cwd}/images/{name}.pdf')

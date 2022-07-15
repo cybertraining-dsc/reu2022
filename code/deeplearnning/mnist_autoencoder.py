@@ -12,6 +12,7 @@ try:
 except:  # noqa: E722
     get_ipython().system(' pip install cloudmesh-common')
     from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.Shell import Shell
 
 
 # ## Import Libraries
@@ -30,9 +31,22 @@ from keras.utils import plot_model
 from keras import backend as K
 
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 StopWatch.stop("import")
 StopWatch.progress(0)
+
+
+
+
+def save(file):
+    name = os.path.basename(file).replace(".py", "")
+    cwd = Shell.map_filename(".").path
+    Shell.mkdir(f"{cwd}/images")
+    plt.savefig(f'{cwd}/images/{name}.png',dpi=300)
+    plt.savefig(f'{cwd}/images/{name}.pdf')
+    plt.savefig(f'{cwd}/images/{name}.svg')
+    plt.show()
 
 
 # ## Pre-Process Data
@@ -79,7 +93,7 @@ encoder = Model(inputs,
                 name='encoder')
 encoder.summary()
 plot_model(encoder,
-           to_file='encoder.png',
+           to_file='images/encoder.png',
            show_shapes=True)
 
 
@@ -93,14 +107,14 @@ outputs = Dense(1, activation='relu')(x)
 
 decoder = Model(latent_inputs, outputs, name='decoder')
 decoder.summary()
-plot_model(decoder, to_file='decoder.png', show_shapes=True)
+plot_model(decoder, to_file='images/decoder.png', show_shapes=True)
 
 autoencoder = Model(inputs,
                     decoder(encoder(inputs)),
                     name='autoencoder')
 autoencoder.summary()
 plot_model(autoencoder,
-           to_file='autoencoder.png',
+           to_file='images/autoencoder.png',
            show_shapes=True)
 StopWatch.start('compile')
 autoencoder.compile(loss='mse', optimizer='adam')
@@ -145,9 +159,9 @@ plt.figure()
 plt.axis('off')
 plt.title('Input: 1st 2 rows, Decoded: last 2 rows')
 plt.imshow(imgs, interpolation='none', cmap='gray')
-plt.savefig('input_and_decoded.png')
-plt.show()
+save('input_and_decoded.png')
 StopWatch.stop("visualize")
 StopWatch.stop("total")
 StopWatch.progress(100)
+StopWatch.benchmark()
 

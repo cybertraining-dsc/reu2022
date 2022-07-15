@@ -28,7 +28,7 @@ StopWatch.stop("import")
 
 def save(file):
   name = os.path.basename(file).replace(".py", "")
-  cwd = Shell.map_filename(".")
+  cwd = Shell.map_filename(".").path
   Shell.mkdir(f"{cwd}/images")
   plt.savefig(f'{cwd}/images/{name}.png',dpi=300)
   plt.savefig(f'{cwd}/images/{name}.pdf')
@@ -50,7 +50,7 @@ simpletotal = np.concatenate((Base, gauss))
 StopWatch.stop(f"create-randomdata-{n}")
 StopWatch.progress(30)
 
-StopWatch.start("plot-wide-higgs-2gev")
+StopWatch.start("plot-higgs-graphs")
 plt.figure("Total Wide Higgs Bin 2 GeV")
 values, binedges, junk = plt.hist(simpletotal, bins=15, range=(110,140), alpha=0.5, color="blue")
 centers = 0.5 * (binedges[1:] + binedges[:-1])
@@ -69,10 +69,8 @@ plt.errorbar(centers, values, yerr = errors, ls='None', marker ='x', color = 'bl
 plt.title("Uniform Background from 42000 events; 2 Gev Higgs", backgroundcolor = "white")
 # For Agg backend
 save("wide-higgs-2gev")
-StopWatch.stop("plot-wide-higgs-2gev")
 StopWatch.progress(60)
 
-StopWatch.start("create-narrow-gauss")
 NarrowGauss = 0.5 * np.random.randn(300) + 126
 # NarrowGauss is Number of Higgs particles
 simpletotal = np.concatenate((Base, NarrowGauss))
@@ -80,19 +78,15 @@ plt.figure("Total Narrow Higgs Bin 2 GeV")
 values, binedges, junk = plt.hist(simpletotal, bins=15, range =(110,140), alpha = 0.5, color="blue")
 centers = 0.5*(binedges[1:] + binedges[:-1])
 errors =np.sqrt(values)
-StopWatch.stop("create-narrow-gauss")
 StopWatch.progress(80)
 
-StopWatch.start("plot-narrow-gauss")
 plt.hist(Base, bins=15, range=(110,140), alpha=0.5, color="green")
 plt.hist(NarrowGauss, bins=15, range=(110, 140), alpha=0.5, color="red")
 plt.errorbar(centers, values, yerr=errors, ls='None', marker ='x', color='black', markersize=6.0 )
 plt.title("Uniform Background from 42000 events; 0.5 Gev Higgs", backgroundcolor="white")
 save("narrow-gauss")
-StopWatch.stop("plot-narrow-gauss")
 StopWatch.progress(85)
 
-StopWatch.start("plot-total-narrow-higgs-0.5gev")
 plt.figure("Total Narrow Higgs Bin 0.5 GeV")
 values, binedges, junk = plt.hist(simpletotal, bins=60, range=(110, 140), alpha=0.5, color="blue")
 centers = 0.5*(binedges[1:] + binedges[:-1])
@@ -104,7 +98,7 @@ plt.hist(NarrowGauss, bins=60, range=(110,140), alpha=0.5, color="red")
 plt.errorbar(centers, values, yerr=errors, ls='None', marker ='x', color='black', markersize=6.0 )
 plt.title("Uniform Background from 42000 events; 0.5 Gev Higgs", backgroundcolor="white")
 save("total-narrow-higgs-0.5gev")
-StopWatch.stop("plot-total-narrow-higgs")
+StopWatch.stop("plot-higgs-graphs")
 StopWatch.stop("total")
 StopWatch.benchmark()
 StopWatch.progress(100)
