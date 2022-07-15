@@ -10,7 +10,7 @@
 
 
 
-get_ipython().system(' python --version')
+# get_ipython().system(' python --version')
 
 
 # ## Simple For Loop
