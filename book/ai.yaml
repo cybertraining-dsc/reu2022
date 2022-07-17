@@ -35,11 +35,11 @@ BOOK:
     - "{file.timeseries}//time-series-prediction/detrend/detrend.md"
     - "{file.timeseries}//time-series-prediction/granger/granger-test.md"
     - "{file.timeseries}//time-series-prediction/lag-plot/lag-plot.md"
-    - "{file.timeseries}//time-series-prediction/SampleEntropy/SampleEntropy.md"
+    - "{file.timeseries}//time-series-prediction/sample-entropy/sample-entropy.md"
     - "{file.timeseries}//time-series-prediction/seasonal-decomposition/seasonal.md"
     - "{file.timeseries}//time-series-prediction/stationary-and-nonstationary-timeseries/stationary-and-nonstationary.md"
     - "{file.timeseries}//time-series-prediction/smothen/smothen.md"
-    - "{file.timeseries}//time-series-prediction/TFT/Temporal-Fusion-Transformer.md"
+    - "{file.timeseries}//time-series-prediction/tft/temporal-fusion-transformer.md"
     - "{file.timeseries}//time-series-prediction/refernce.md"
 
 ##  - COMMUNICATION:
