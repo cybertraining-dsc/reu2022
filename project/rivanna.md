@@ -181,7 +181,14 @@ which will result in
 
 ## Installing Python 3.10 on Rivanna
 
+After you log in into Rivanna, there's a chance you're running Rivanna on an
+outdated version of Python, restricting you from being able to run Python
+files properly. In order to do so, you'll need a fully to up-to-date version
+of Python with the ENV3 virtual environment.
+
 ### Activate Python3
+
+First Python3, must be activated and can be done by typing in the following:
 
 ```
 $ ssh rivanna
@@ -192,6 +199,9 @@ rivanna$ conda create -y -n ENV3 python=3.10
 
 ### .bashrc
 
+Now, you must open your `.bashrc` file. If it doesn't exist, create one.
+Using any editor, open it and copy and paste the following: 
+
 ```
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -200,7 +210,7 @@ fi
 
 PS1="\s-\v\$"
 alias vi='vim'
-# source ~/ENV3/bin/activate
+source ~/ENV3/bin/activate
 module load cuda cudnn
 module load anaconda
 # conda create -y -n ~/ENV3 python=3.10
@@ -209,11 +219,11 @@ conda activate ~/ENV3
 
 ### Activation
 
-Now, the user must log out of all Rivanna windows and log back in to utilize
-this. When the user logs back in, they will automatically be in the Python 
+Now, you must log out of all Rivanna windows and log back in to utilize
+this. When you log back in, you will automatically be in the Python 
 version installed.
 
-In order for the user to use batch scripts, they must include in their batch
+In order to use batch scripts, you must include in your batch
 scripts the following line before executing your program:
 
 ```
@@ -260,9 +270,15 @@ python mydemojob.py
 
 ## Allocations
 
+The time you spend on Rivanna is allocated as Service Units (SUs) into the
+account you're using. When you type in the following command:
+
 ```bash
 $ allocations
 ```
+
+The results show you which accounts you're currently under and the amount of 
+SUs is in balance, reserved, and available as shown below. 
 
 ```
 Account                      Balance        Reserved       Available
@@ -270,6 +286,9 @@ Account                      Balance        Reserved       Available
 xyz_community                  99999               0           99999
 comp4gc                       146527               0          146527
 ```
+
+You are also able to access the information of all the users under the accounts
+you're under by typing in the following command:
 
 ```bash
 $ allocations -a comp4gc
