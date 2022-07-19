@@ -34,15 +34,22 @@ except:  # noqa: E722
 #
 jobs = ["E534_Higgs_Discovery_A"]
 
+# https://stackoverflow.com/questions/32538758/nameerror-name-get-ipython-is-not-defined
+
 
 for script in jobs:
-    pyfile = Job(name=script, host=host, username=username, type="python")
+    pyfile = Job(name=script, host=host, username=username, type="python", directory="~/cm/cloudmesh-cc/alisontest/experiment")
+    # print(pyfile)
     pyfile.sync()
+    # s, l, e = pyfile.run()
+    # pyfile.watch()
 
-    job = Job(name=script, host=host, username=username)
+    job = Job(name=script, host=host, username=username, directory="~/cm/cloudmesh-cc/alisontest/experiment")
     print(job)
     job.sync()
     s, l, e = job.run()
+    job.watch()
+
     print("State:", s)
     print("Log:", l)
     print("Error:", e)
