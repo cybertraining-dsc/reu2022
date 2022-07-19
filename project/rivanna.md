@@ -190,11 +190,11 @@ of Python with the ENV3 virtual environment.
 
 First Python3, must be activated and can be done by typing in the following:
 
-```
+```bash
 $ ssh rivanna
 rivanna$ module load cuda cudnn
 rivanna$ module load anaconda
-rivanna$ conda create -y -n ENV3 python=3.10
+rivanna$ conda create -n python_310_env -c conda-forge python=3.10.5
 ```
 
 ### .bashrc
@@ -202,18 +202,18 @@ rivanna$ conda create -y -n ENV3 python=3.10
 Now, you must open your `.bashrc` file. If it doesn't exist, create one.
 Using any editor, open it and copy and paste the following: 
 
-```
+```bash
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+
 PS1="\s-\v\$"
 alias vi='vim'
 module load cuda cudnn
 module load anaconda
-# conda create -y -n ENV3 python=3.10
-conda activate ~/ENV3
+source activate ENV3
 ```
 
 ### Activation
@@ -228,7 +228,15 @@ scripts the following line before executing your program:
 ```
 module load cuda cudnn
 module load anaconda
-conda activate ~/ENV3
+source activate ENV3
+```
+
+### Installing Cloudmesh into Rivanna
+
+```bash
+$ cd cm
+$ pip install cloudmesh-installer
+$ cloudmesh-installer --ssh get cc
 ```
 
 ### Example Script for Using GPUs
