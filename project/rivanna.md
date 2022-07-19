@@ -194,7 +194,7 @@ First Python3, must be activated and can be done by typing in the following:
 $ ssh rivanna
 rivanna$ module load cuda cudnn
 rivanna$ module load anaconda
-rivanna$ conda create -n python_310_env -c conda-forge python=3.10.5
+rivanna$ conda create -n ENV3 -c conda-forge python=3.10.5
 ```
 
 ### .bashrc
