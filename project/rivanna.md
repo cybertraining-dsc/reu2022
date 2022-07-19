@@ -210,10 +210,9 @@ fi
 
 PS1="\s-\v\$"
 alias vi='vim'
-source ~/ENV3/bin/activate
 module load cuda cudnn
 module load anaconda
-# conda create -y -n ~/ENV3 python=3.10
+# conda create -y -n ENV3 python=3.10
 conda activate ~/ENV3
 ```
 
