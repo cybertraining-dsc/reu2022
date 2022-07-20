@@ -50,7 +50,7 @@ for script in jobs:
     print(job)
     job.sync()
     s, l, e = job.run()
-    job.watch()
+    job.watch(20)
 
     print("State:", s)
     print("Log:", l)
