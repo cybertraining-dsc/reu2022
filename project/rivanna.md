@@ -179,6 +179,23 @@ which will result in
 
 \normalsize
 
+## Activating Rivanna on GitBash
+
+Once you have Rivanna installed locally on your computer with your account
+set up, if you have Cloudmesh installed, you can simply connect to Rivanna on
+the terminal using the following command. Make sure to run the terminal as
+Admin or else it won't work. 
+
+```bash
+$ cms vpn connect
+```
+
+In order to disconnect from Rivanna, simply use the command:
+
+```bash
+$ cms vpn disconnect
+```
+
 ## Installing Python 3.10 on Rivanna
 
 After you log in into Rivanna, there's a chance you're running Rivanna on an
@@ -194,7 +211,7 @@ First Python3, must be activated and can be done by typing in the following:
 $ ssh rivanna
 rivanna$ module load cuda cudnn
 rivanna$ module load anaconda
-rivanna$ conda create -n ENV3 -c conda-forge python=3.10.5
+rivanna$ conda create -n ENV3  -c conda-forge python=3.10.5
 ```
 
 ### .bashrc

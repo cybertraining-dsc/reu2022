@@ -13,13 +13,52 @@
 
 ## Activating Rivanna
 
+Once you have Rivanna installed locally on your computer with your account
+set up, if you have Cloudmesh installed, you can simply connect to Rivanna on
+GitBash using the following commands. Make sure to run the terminal as
+Admin or else the first command won't work. 
+
+```bash
+$ cms vpn connect
+$ ssh rivanna
+```
+
 ## Installing Tensorflow
+
+
 
 ## Copying Tensorflow Container Image
 
 ## Loading Singularity Module
 
 ## Running Container Image
+
+```nano
+#!/bin/sh
+#SBATCH --job-name=mlp_mnist.sh
+#SBATCH --output=test.log
+#SBATCH --error=test.error
+#SBATCH --partition=dev
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=4GB
+#SBATCH -p gpu
+#SBATCH --gres=gpu:1
+#SBATCH -t 00:01:00
+#SBATCH -A bii_dsc_community
+
+echo "# cloudmesh status=running progress=1 pid=$SLURM_JOB_ID"
+
+module purge
+module load singularity
+
+# Assuming that the container has been copied to the user's /scratch directory
+containerdir=$HOME
+singularity run --nv $containerdir/tensorflow-2.8.0.sif mlp_mnist.py
+
+echo " cloudmesh status=done progress=100 pid=$SLURM_JOB_ID"
+
+#
+```
 
 
 
