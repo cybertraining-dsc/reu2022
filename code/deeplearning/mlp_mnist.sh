@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/sh
 #SBATCH --job-name=mlp_mnist.sh
 #SBATCH --output=mlp_mnist.log

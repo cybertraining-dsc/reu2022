@@ -196,7 +196,7 @@ In order to disconnect from Rivanna, simply use the command:
 $ cms vpn disconnect
 ```
 
-## Installing Python 3.10 on Rivanna
+## Installing Python 3.10.5 on Rivanna
 
 After you log in into Rivanna, there's a chance you're running Rivanna on an
 outdated version of Python, restricting you from being able to run Python
@@ -214,6 +214,14 @@ rivanna$ module load anaconda
 rivanna$ conda create -n ENV3  -c conda-forge python=3.10.5
 ```
 
+The last command may take a while. After it's done installing, activate the 
+ENV3 virtual environment of Python 3.10.5 by typing in:
+
+```bash
+rivanna$ source activate ENV3
+```
+
+
 ### .bashrc
 
 Now, you must open your `.bashrc` file. If it doesn't exist, create one.
@@ -228,21 +236,6 @@ fi
 
 PS1="\s-\v\$"
 alias vi='vim'
-module load cuda cudnn
-module load anaconda
-source activate ENV3
-```
-
-### Activation
-
-Now, you must log out of all Rivanna windows and log back in to utilize
-this. When you log back in, you will automatically be in the Python 
-version installed.
-
-In order to use batch scripts, you must include in your batch
-scripts the following line before executing your program:
-
-```
 module load cuda cudnn
 module load anaconda
 source activate ENV3
