@@ -11,22 +11,17 @@ script = '''#!/bin/sh
 
 echo "# cloudmesh status=running progress=1 pid=$$"
 
-module load cuda cudnn
-module load anaconda
-source activate ENV3
-
 python {name}.py
 
 echo " cloudmesh status=done progress=100 pid=$$"#
 '''
 
 for file in glob.glob('*.ipynb'):
-	print()
-	name = file.replace('.ipynb', '')
-	f = open(f'{name}.sh', 'w')
-	f.write(script.format(name=name))
-	f.close()
+        print()
+        name = file.replace('.ipynb', '')
+        f = open(f'{name}.sh', 'w')
+        f.write(script.format(name=name))
+        f.close()
 
-## testing
 
 
