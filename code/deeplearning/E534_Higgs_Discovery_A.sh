@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/bin/sh
 #SBATCH --job-name=E534_Higgs_Discovery_A.sh
 #SBATCH --output=E534_Higgs_Discovery_A.log
