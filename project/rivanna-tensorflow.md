@@ -78,6 +78,12 @@ rivanna$ singularity shell tensorflow-2.8.0.sif
 
 Make sure you're running it from the same directory where the image is located.
 
+## Installing Cloudmesh in the Container
+
+```bash
+cp tensorflow-2.8.0.sif tensorflow-2.8.0-cms.sif
+singularity exec tensorflow-2.8.0-cms.sif pip install --user cloudmesh-common
+```
 
 ## Running Slurm Jobs
 
