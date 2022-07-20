@@ -34,19 +34,20 @@ $rivanna conda install -n ENV3 tensorflow-gpu cudatoolkit
 
 ## Loading and Running Singularity
 
-Once Tensorflow is installed, you can load the Tensorflow singularity using
-the following commands:
+Alternatively, you can use Rivanna's built-in containers for running Tensor-
+flow called Singularity. You can load using the following commands:
 
 ```bash
 rivanna$ module load singularity
 rivanna$ module load tensorflow/2.8.0
 ```
 
-To execute the default application inside the container, run:
+This will give you this output:
 
-```bash
+```
+To execute the default application inside the container, run:
 singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif
-````
+```
 
 You should get instructions on how to now run this Tensorflow container. The `--nv`
 flag is to load the NVIDIA graphic driver for use of GPU.
@@ -70,13 +71,13 @@ you copy the image file into your home directory.
 
 ## Running the Singularity Shell
 
-You can also run your own terminal inside the container using the command:
+Before you run this shell, make sure to install cloudmesh in the image. Run the
+following commands:
 
 ```bash
-rivanna$ singularity shell tensorflow-2.8.0.sif
+rivanna$ singularity shell $HOME/tensorflow-2.8.0.sif
+Singularity> pip install cloudmesh-common
 ```
-
-Make sure you're running it from the same directory where the image is located.
 
 
 ## Running Slurm Jobs
