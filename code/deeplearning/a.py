@@ -20,7 +20,7 @@ for file in glob.glob('*.ipynb'):
 	print(script.format(name=name))
 
 for file in glob.glob('*.ipynb'):
-	name = file.replace('.ipynb', '')
+	name = file.replace('.sh', '')
 	print(name, end=' ')
 
 
