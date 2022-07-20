@@ -9,13 +9,13 @@
 
 echo "# cloudmesh status=running progress=1 pid=$$"
 
-module purge
-module load singularity
+#module purge
+#module load singularity
+#
+## Assuming that the container has been copied to the user's /scratch directory
+#CONTAINERDIR=$HOME
+#singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif $HOME/experiment/python_warmup/python_warmup.py
 
-# Assuming that the container has been copied to the user's /scratch directory
-CONTAINERDIR=$HOME
-singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif $HOME/experiment/python_warmup/python_warmup.py
+python python_warmup.py
 
-#python python_warmup.py
-
-echo " cloudmesh status=done progress=100 pid=$$"#
+echo " cloudmesh status=done progress=100 pid=$$"

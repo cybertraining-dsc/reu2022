@@ -19,4 +19,4 @@ echo "# cloudmesh status=running progress=1 pid=$$"
 
 python mlp_mnist.py
 
-echo " cloudmesh status=done progress=100 pid=$$"#
+echo " cloudmesh status=done progress=100 pid=$$"

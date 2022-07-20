@@ -18,4 +18,4 @@ echo "# cloudmesh status=running progress=1 pid=$$"
 
 python E534_Higgs_Discovery_D.py
 
-echo " cloudmesh status=done progress=100 pid=$$"#
+echo " cloudmesh status=done progress=100 pid=$$"
