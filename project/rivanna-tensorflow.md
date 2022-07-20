@@ -25,13 +25,28 @@ $ ssh rivanna
 
 ## Installing Tensorflow Using Conda
 
-<<<<<<< HEAD
+
 Generally in Rivanna, Python is run in a Conda environment. Because of that,
 Tensorflow can be installed using Conda using the command:
 
 ```
 $rivanna conda install -n ENV3 tensorflow-gpu cudatoolkit
-=======
+```
+
+
+## Copying Tensorflow Container Image
+
+Once Tensorflow is installed, you first want to copy the Tensorflow container 
+image into your personal home directory. This can be done by typing in the 
+following commands:
+
+```bash
+rivanna$ module load singularity
+rivanna$ module load tensorflow/2.8.0
+rivanna$ cd $CONTAINERDIR
+rivanna$ cp tensorflow-2.8.0.sif $HOME
+```
+
 Once in Rivanna, use these commands to load the Singularity Tensorflow container.
 
 ```bash
@@ -45,10 +60,7 @@ flag is to load the NVIDIA graphic driver for use of GPU.
 ```bash
 To execute the default application inside the container, run:
 singularity run --nv $CONTAINERDIR/tensorflow-2.7.0.sif
->>>>>>> 763f2ae06ac22778a9c436b5f180598f3b907b44
-```
-
-## Copying Tensorflow Container Image
+``
 
 ## Loading Singularity Module
 
