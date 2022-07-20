@@ -34,8 +34,8 @@ except:  # noqa: E722
 # Jobs to run
 #
 
-jobs = ["E534_Higgs_Discovery_A"] #,"E534_Higgs_Discovery_B","E534_Higgs_Discovery_C","E534_Higgs_Discovery_D"]
-# jobs = ["example_mlp_mnist"]
+jobs = ["E534_Higgs_Discovery_A","E534_Higgs_Discovery_B","E534_Higgs_Discovery_C","E534_Higgs_Discovery_D"]
+# jobs = ["mlp_mnist"]
 w = Workflow()
 
 for script in jobs:
@@ -54,7 +54,13 @@ for script in jobs:
 
     print("State:", s)
     print("Log:", l)
-    print("Error:", e)
+
+    # deletes error file if empty and prints if there is an error
+    if os.path.getsize(f"{script}.error") == 0:
+        Shell.run(f"rm {script}.error")
+    else:
+        print("Error:", e)
+
     # progress = job.get_progress()
     # print("Progress:", progress)
     # status = job.get_status(refresh=True)
