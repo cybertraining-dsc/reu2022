@@ -3,6 +3,7 @@ import shutil
 import time
 
 from cloudmesh.cc.job.ssh.Job import Job
+from cloudmesh.cc.workflow import Workflow
 
 from cloudmesh.common.Shell import Shell
 from cloudmesh.common.util import path_expand
@@ -33,11 +34,9 @@ except:  # noqa: E722
 # Jobs to run
 #
 
-# jobs = ["E534_Higgs_Discovery_A"]
-jobs = ["mlp_mnist"]
-
-# https://stackoverflow.com/questions/32538758/nameerror-name-get-ipython-is-not-defined
-
+jobs = ["E534_Higgs_Discovery_A","E534_Higgs_Discovery_B","E534_Higgs_Discovery_C","E534_Higgs_Discovery_D"]
+# jobs = ["mlp_mnist"]
+w = Workflow()
 
 for script in jobs:
     pyfile = Job(name=script, host=host, username=username, type="python")
@@ -48,15 +47,20 @@ for script in jobs:
 
     job = Job(name=script, host=host, username=username)
     print(job)
+    # w.add_job(job)
     job.sync()
     s, l, e = job.run()
-    job.watch()
+    job.watch(30)
 
     print("State:", s)
     print("Log:", l)
-    print("Error:", e)
-    # log = job.get_log()
-    # print("Log:",log)
+
+    # deletes error file if empty and prints if there is an error
+    if os.path.getsize(f"{script}.error") == 0:
+        Shell.run(f"rm {script}.error")
+    else:
+        print("Error:", e)
+
     # progress = job.get_progress()
     # print("Progress:", progress)
     # status = job.get_status(refresh=True)

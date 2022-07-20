@@ -25,7 +25,6 @@ $ ssh rivanna
 
 ## Installing Tensorflow Using Conda
 
-
 Generally in Rivanna, Python is run in a Conda environment. Because of that,
 Tensorflow can be installed using Conda using the command:
 
@@ -33,12 +32,31 @@ Tensorflow can be installed using Conda using the command:
 $rivanna conda install -n ENV3 tensorflow-gpu cudatoolkit
 ```
 
+## Loading and Running Singularity
+
+Alternatively, you can use Rivanna's built-in containers for running Tensor-
+flow called Singularity. You can load using the following commands:
+
+```bash
+rivanna$ module load singularity
+rivanna$ module load tensorflow/2.8.0
+```
+
+This will give you this output:
+
+```
+To execute the default application inside the container, run:
+singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif
+```
+
+You should get instructions on how to now run this Tensorflow container. The `--nv`
+flag is to load the NVIDIA graphic driver for use of GPU.
 
 ## Copying Tensorflow Container Image
 
-Once Tensorflow is installed, you first want to copy the Tensorflow container 
-image into your personal home directory. This can be done by typing in the 
-following commands:
+Before running Tensorflow on any file, you first want to copy the Tensorflow
+container image into your personal home directory. This can be done by typing in
+the following commands:
 
 ```bash
 rivanna$ module load singularity
@@ -47,24 +65,23 @@ rivanna$ cd $CONTAINERDIR
 rivanna$ cp tensorflow-2.8.0.sif $HOME
 ```
 
-Once in Rivanna, use these commands to load the Singularity Tensorflow container.
+The first two commands loads you into the Singularity Tensorflow container. 
+You are then directed to the default location of the container image and then
+you copy the image file into your home directory.
+
+## Running the Singularity Shell
+
+Before you run this shell, make sure to install cloudmesh in the image. Run the
+following commands:
 
 ```bash
-rivanna $ module load singularity
-rivanna $ module load tensorflow/2.7.0
+rivanna$ singularity shell $HOME/tensorflow-2.8.0.sif
+Singularity> pip install cloudmesh-common
 ```
 
-You should get instructions on how to now run this Tensorflow container. The `--nv`
-flag is to load the NVIDIA graphic driver for use of GPU.
 
-```bash
-To execute the default application inside the container, run:
-singularity run --nv $CONTAINERDIR/tensorflow-2.7.0.sif
-``
+## Running Slurm Jobs
 
-## Loading Singularity Module
-
-## Running Container Image
 
 ```nano
 #!/bin/sh

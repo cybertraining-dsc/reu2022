@@ -34,7 +34,7 @@ import time    # noqa: E402
 import numpy as np    # noqa: E402
 from keras.models import Sequential    # noqa: E402
 from keras.layers import Dense, Activation, Dropout    # noqa: E402
-from keras.utils import to_categorical, plot_model    # noqa: E402
+from tensorflow.keras.utils import to_categorical, plot_model    # noqa: E402
 from keras.datasets import mnist    # noqa: E402
 # import pydotplus
 # from keras.utils.vis_utils import model_to_dot
