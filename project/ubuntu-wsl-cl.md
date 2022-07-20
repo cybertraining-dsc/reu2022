@@ -1,6 +1,6 @@
 # How to Install WSL Ubuntu 22.04 on Command Line for Windows
 
-We assume that you have installed gitbash with support for pseudo console. If not or you are not sure, we recommend that you reinstall gitbash with this tutorial: <https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md> We also need you to enable linux line ending support as some of our cloudmesh programs when interacting with wsl need this to be switched on too. After you have installed gitbash with the right options you can install wsl ubuntu 22.04.
+We assume that you have installed gitbash with support for pseudo console. If not or you are not sure, we recommend that you reinstall gitbash with this tutorial: <https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md> We also need you to enable linux line ending support through "NoAutoCrlf" (which is included in the previously linked tutorial) as some of our cloudmesh programs when interacting with wsl need this to be switched on too. After you have installed gitbash with the right options you can install wsl ubuntu 22.04.
 
 Execute each command on Git Bash:
 
