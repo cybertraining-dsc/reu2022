@@ -23,9 +23,14 @@ $ cms vpn connect
 $ ssh rivanna
 ```
 
-## Installing Tensorflow
+## Installing Tensorflow Using Conda
 
+Generally in Rivanna, Python is run in a Conda environment. Because of that,
+Tensorflow can be installed using Conda using the command:
 
+```
+$rivanna conda install -n ENV3 tensorflow-gpu cudatoolkit
+```
 
 ## Copying Tensorflow Container Image
 

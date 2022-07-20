@@ -196,7 +196,7 @@ In order to disconnect from Rivanna, simply use the command:
 $ cms vpn disconnect
 ```
 
-## Installing Python 3.10 on Rivanna
+## Installing Python 3.10.5 on Rivanna
 
 After you log in into Rivanna, there's a chance you're running Rivanna on an
 outdated version of Python, restricting you from being able to run Python
