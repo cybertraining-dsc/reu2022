@@ -9,10 +9,13 @@
 
 echo "# cloudmesh status=running progress=1 pid=$$"
 
-module load cuda cudnn
-module load anaconda
-source activate ENV3
+module purge
+module load singularity
 
-python mnist_cnn.py
+# Assuming that the container has been copied to the user's /scratch directory
+CONTAINERDIR=$HOME
+singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif $HOME/experiment/mnist_cnn/mnist_cnn.py
+
+#python mnist_cnn.py
 
 echo " cloudmesh status=done progress=100 pid=$$"#

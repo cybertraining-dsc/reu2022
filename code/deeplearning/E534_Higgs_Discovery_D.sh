@@ -9,10 +9,13 @@
 
 echo "# cloudmesh status=running progress=1 pid=$$"
 
-module load cuda cudnn
-module load anaconda
-source activate ENV3
+module purge
+module load singularity
 
-python E534_Higgs_Discovery_D.py
+# Assuming that the container has been copied to the user's /scratch directory
+CONTAINERDIR=$HOME
+singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif $HOME/experiment/E534_Higgs_Discovery_D/E534_Higgs_Discovery_D.py
+
+#python E534_Higgs_Discovery_D.py
 
 echo " cloudmesh status=done progress=100 pid=$$"#

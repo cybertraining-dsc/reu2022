@@ -33,8 +33,8 @@ except:  # noqa: E722
 # Jobs to run
 #
 
-# jobs = ["E534_Higgs_Discovery_A"]
-jobs = ["mlp_mnist"]
+jobs = ["E534_Higgs_Discovery_B"]
+# jobs = ["mlp_mnist"]
 
 # https://stackoverflow.com/questions/32538758/nameerror-name-get-ipython-is-not-defined
 

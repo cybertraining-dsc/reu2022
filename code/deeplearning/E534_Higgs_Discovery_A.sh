@@ -9,15 +9,15 @@
 #SBATCH --time=3:00
 #SBATCH -A bii_dsc_community
 
-echo "# cloudmesh status=running progress=1 pid=${SLURM_JOB_ID}"
+echo "# cloudmesh status=running progress=1 pid=$$"
 
 module purge
 module load singularity
 
 # Assuming that the container has been copied to the user's /scratch directory
-CONTAINERDIR=/scratch/$USER
-singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif /home/atl9rn/experiment/E534_Higgs_Discovery_A/E534_Higgs_Discovery_A.py
+CONTAINERDIR=$HOME
+singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif $HOME/experiment/E534_Higgs_Discovery_A/E534_Higgs_Discovery_A.py
 
 #python E534_Higgs_Discovery_A.py
 
-echo " cloudmesh status=done progress=100 pid=${SLURM_JOB_ID}"
+echo " cloudmesh status=done progress=100 pid=$$"
