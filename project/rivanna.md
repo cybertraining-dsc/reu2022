@@ -179,7 +179,24 @@ which will result in
 
 \normalsize
 
-## Installing Python 3.10 on Rivanna
+## Activating Rivanna on GitBash
+
+Once you have Rivanna installed locally on your computer with your account
+set up, if you have Cloudmesh installed, you can simply connect to Rivanna on
+the terminal using the following command. Make sure to run the terminal as
+Admin or else it won't work. 
+
+```bash
+$ cms vpn connect
+```
+
+In order to disconnect from Rivanna, simply use the command:
+
+```bash
+$ cms vpn disconnect
+```
+
+## Installing Python 3.10.5 on Rivanna
 
 After you log in into Rivanna, there's a chance you're running Rivanna on an
 outdated version of Python, restricting you from being able to run Python
@@ -190,11 +207,11 @@ of Python with the ENV3 virtual environment.
 
 First Python3, must be activated and can be done by typing in the following:
 
-```
+```bash
 $ ssh rivanna
 rivanna$ module load cuda cudnn
 rivanna$ module load anaconda
-rivanna$ conda create -y -n ENV3 python=3.10
+rivanna$ conda create -n ENV3  -c conda-forge python=3.10.5
 ```
 
 ### .bashrc
@@ -202,18 +219,18 @@ rivanna$ conda create -y -n ENV3 python=3.10
 Now, you must open your `.bashrc` file. If it doesn't exist, create one.
 Using any editor, open it and copy and paste the following: 
 
-```
+```bash
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+
 PS1="\s-\v\$"
 alias vi='vim'
 module load cuda cudnn
 module load anaconda
-# conda create -y -n ENV3 python=3.10
-conda activate ~/ENV3
+source activate ENV3
 ```
 
 ### Activation
@@ -228,7 +245,15 @@ scripts the following line before executing your program:
 ```
 module load cuda cudnn
 module load anaconda
-conda activate ~/ENV3
+source activate ENV3
+```
+
+### Installing Cloudmesh into Rivanna
+
+```bash
+$ cd cm
+$ pip install cloudmesh-installer
+$ cloudmesh-installer --ssh get cc
 ```
 
 ### Example Script for Using GPUs
