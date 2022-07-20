@@ -25,7 +25,20 @@ $ ssh rivanna
 
 ## Installing Tensorflow
 
+Once in Rivanna, use these commands to load the Singularity Tensorflow container.
 
+```bash
+rivanna $ module load singularity
+rivanna $ module load tensorflow/2.7.0
+```
+
+You should get instructions on how to now run this Tensorflow container. The `--nv`
+flag is to load the NVIDIA graphic driver for use of GPU.
+
+```bash
+To execute the default application inside the container, run:
+singularity run --nv $CONTAINERDIR/tensorflow-2.7.0.sif
+```
 
 ## Copying Tensorflow Container Image
 
