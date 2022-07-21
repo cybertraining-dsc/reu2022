@@ -42,7 +42,7 @@ for script in jobs:
     pyfile = Job(name=script, host=host, username=username, type="python")
     pyfile.sync()
 
-    job = Job(name=script, host=host, username=username)
+    job = Job(name=script, host=host, username=username, kind="slurm")
     print(job)
     # w.add_job(job)
     job.sync()
