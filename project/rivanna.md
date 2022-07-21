@@ -196,7 +196,7 @@ In order to disconnect from Rivanna, simply use the command:
 $ cms vpn disconnect
 ```
 
-## Installing Python 3.10.5 on Rivanna
+## Installing Python 3.10.5 on Rivanna with ENV3
 
 After you log in into Rivanna, there's a chance you're running Rivanna on an
 outdated version of Python, restricting you from being able to run Python
@@ -243,13 +243,32 @@ source activate ENV3
 
 ### Installing Cloudmesh into Rivanna
 
+Once Python 3.10.5 is installed with the ENV3 virutal environment. Cloudmesh
+can now be installed by first making a `cm` directory, installing the
+Cloudmesh Installer through pip and using the installer to get the Cloudmesh
+files into the `cm` directory. All of this can be done using the following 
+commands:
+
 ```bash
+$ mkdir cm
 $ cd cm
 $ pip install cloudmesh-installer
 $ cloudmesh-installer --ssh get cc
+$ cloudmesh-installer --ssh get cms
+```
+
+If the last command doesn't work due to access rights, type in:
+
+```bash
+$ cloudmesh-installer get cc
+$ cloudmesh-installer get cms
 ```
 
 ### Example Script for Using GPUs
+
+Slurm jobs can be run in Rivanna through `sbatch` scripts. Various arguments
+such as the job, output, GPU, time, account, etc. can be specified as shown
+in the example script below. 
 
 ```
 #!/usr/bin/env bash
@@ -263,14 +282,14 @@ $ cloudmesh-installer --ssh get cc
 #SBATCH --time=3:00
 #SBATCH --account=c4gc
 
-module load cuda cudnn
-module load anaconda
-conda activate ~/ENV3
 # your automation code here..
 python mydemojob.py
 ```
 
 ### How Do You Activate Different GPUs
+
+In the `sbatch` scripts, different GPUs can be activated by specifying it 
+through `gres` argument. 
 
 ```
 #SBATCH --gres=”gpu:p100:1”
