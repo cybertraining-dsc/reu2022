@@ -20,7 +20,17 @@ try:
 except:  # noqa: E722
     get_ipython().system(' pip install cloudmesh-common')
     from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.Shell import Shell    # noqa: E402
 
+## Exporting Output Graphs
+
+def save(file):
+    if os.path.exists("images"):
+        pass
+    else:
+        Shell.mkdir("images")
+    plot_model(file, to_file=f'images/mlp_mnist.png', show_shapes=True)
+    plot_model(file, to_file=f'images/mlp_mnist.pdf', show_shapes=True)
 
 # ## Sample MLP with Tensorflow Keras
 
@@ -34,8 +44,10 @@ import time    # noqa: E402
 import numpy as np    # noqa: E402
 from keras.models import Sequential    # noqa: E402
 from keras.layers import Dense, Activation, Dropout    # noqa: E402
-from tensorflow.keras.utils import to_categorical, plot_model    # noqa: E402
+from keras.utils import to_categorical, plot_model    # noqa: E402
 from keras.datasets import mnist    # noqa: E402
+from cloudmesh.common.StopWatch import StopWatch    # noqa: E402
+import os    # noqa: E402
 # import pydotplus
 # from keras.utils.vis_utils import model_to_dot
 # from keras.utils.vis_utils import pydot
@@ -85,7 +97,7 @@ model.add(Dropout(dropout))
 model.add(Dense(num_labels))
 model.add(Activation('softmax'))
 model.summary()
-plot_model(model, to_file='images/mlp-mnist.png', show_shapes=True)
+save(model)
 
 StopWatch.progress(2)
 StopWatch.start("compile")

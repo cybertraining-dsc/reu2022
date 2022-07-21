@@ -11,6 +11,8 @@ script = '''#!/bin/sh
 
 echo "# cloudmesh status=running progress=1 pid=$$"
 
+nvidia-smi
+source activate ENV3
 python {name}.py
 
 echo " cloudmesh status=done progress=100 pid=$$"#

@@ -9,13 +9,8 @@
 
 echo "# cloudmesh status=running progress=1 pid=$$"
 
-#module purge
-#module load singularity
-#
-## Assuming that the container has been copied to the user's /scratch directory
-#CONTAINERDIR=$HOME
-#singularity run --nv $CONTAINERDIR/tensorflow-2.8.0.sif $HOME/experiment/mnist_mlp_with_lstm/mnist_mlp_with_lstm.py
-
+nvidia-smi
+source activate ENV3
 python mnist_mlp_with_lstm.py
 
-echo " cloudmesh status=done progress=100 pid=$$"
+echo " cloudmesh status=done progress=100 pid=$$"#
