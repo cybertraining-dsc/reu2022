@@ -327,15 +327,39 @@ You are also able to access the information of all the users under the accounts
 you're under by typing in the following command:
 
 ```bash
-$ allocations -a comp4gc
+$rivanna allocations -a comp4gc
 ```
 
 ## SSH Config
 
+SSH Config makes it easier for users to connect to Rivanna by specifying 
+arguments in the `config` file instead of typing it in the terminal.
+
+The `.ssh` directory and `config` file can be created using the following
+commands:
+
+```bash
+$rivanna mkdir -p ~/.ssh && chmod 700 ~/.ssh
+$rivanna touch ~/.ssh/config
+$rivanna chmod 600 ~/.ssh/config
 ```
-$ cat ~/.ssh/config
+
+The `config` can then be edited using any terminal text editor of your choice,
+using the following command. Nano is used in this example.
+
+```bash
+$rivanna nano ~/.ssh/config
+```
+
+Inside the `config` file, copy and paste the following:
+
+```
 host rivanna
         User <USERNAME>
         HostName rivanna.hpc.virginia.edu
         IdentityFile ~/.ssh/id_rsa
 ```
+
+## Sources
+
+* https://linuxize.com/post/using-the-ssh-config-file/
