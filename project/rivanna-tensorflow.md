@@ -125,7 +125,37 @@ $rivanna: cd reu2022/code/deeplearning
 $rivanna: bash test1.sh
 ```
 
+Some users may want to generate modified `ipynb`'s to generate their
+Python programs. In order to do so, you can simply say:
 
+```bash
+$rivanna: make all
+```
+
+Also, if you do not want to modify them, they are already included.
+
+In case you would like to run an individual example, such as `mnist_autoencoder`,
+you can it in the following way:
+
+```bash
+$rivanna: cd cm/reu2022/code/deeplearning
+$rivanna: sbatch --gres:gpu:k80:1 mnist_autoencoder.sh
+```
+
+In case you would like to do Papermill, which allows you to run a Python
+notebook directly without GUI, you can do it as follows:
+
+```bash
+$rivanna: pip install papermill
+$rivanna: sbatch --gres:gpu:k80:1 mnist_autoencoder_papermill.sh
+```
+
+To see the results, all results are being prepended with a `# csv` string.
+You can `fgrep` the result as follows:
+
+```bash
+$rivanna: fgrep '# csv' mnist_autoencoder_output.py
+```
 
 ## Sources
 
