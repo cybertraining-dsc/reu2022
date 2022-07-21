@@ -145,7 +145,10 @@ cat:
 
 #### Time for GPUs
 
-| GPU | # Cores | Time to run mlp_mnist.sh |
-|:----|:--------|:-------------------------|
-| P8  | 1       |16.521 seconds           |
-| K80 | 1       |40.519 seconds           |
+| GPU  | # Cores | Time to run mlp_mnist.sh |
+|:-----|:--------|:-------------------------|
+| P8   | 1       | 16.521 seconds           |
+| K80  | 1       | 40.519 seconds           |
+| A100 | 1       | 24.557 seconds           |
+| V100 | 1       | 21.811 seconds           |
+| P100 | 1       | 31.927 seconds           |
