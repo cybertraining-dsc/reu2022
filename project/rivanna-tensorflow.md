@@ -95,7 +95,7 @@ specified as shown in the example script below.
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
 #SBATCH -p gpu
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:k80:1
 #SBATCH -t 00:01:00
 #SBATCH -A bii_dsc_community
 
@@ -110,6 +110,19 @@ singularity run --nv $containerdir/tensorflow-2.8.0.sif mydemojob.py
 echo " cloudmesh status=done progress=100 pid=$SLURM_JOB_ID"
 
 #
+```
+
+## Examples from GitHub
+
+Here we demonstrate how to run various examples from our GitHub:
+
+Log into Rivanna
+
+```bash
+$ ssh rivanna
+$rivanna: git clone https://github.com/cybertraining-dsc/reu2022.git
+$rivanna: cd reu2022/code/deeplearning
+$rivanna: bash test1.sh
 ```
 
 

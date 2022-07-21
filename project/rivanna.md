@@ -10,16 +10,21 @@
 
 ---
 
-Presentation:
+## Links
+
+Here is a comprehensive list of useful links on how to navigate
+the Rivanna system.
+
+* Presentations
  
-* [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
-* [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
+  * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
+  * [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
 
-Intro to Rivanna: <https://learning.rc.virginia.edu/notes/rivanna-intro/>
+* [Intro to Rivanna](https://learning.rc.virginia.edu/notes/rivanna-intro/)
 
-Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
+* Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
 
-Rivanna Dashboard: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard>
+* Rivanna Dashboard: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard>
 
 Globus Transfer: <https://www.rc.virginia.edu/userinfo/globus/>
 
@@ -363,4 +368,6 @@ host rivanna
 
 ## Sources
 
-* https://linuxize.com/post/using-the-ssh-config-file/
+* <https://linuxize.com/post/using-the-ssh-config-file/>
+* [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
+* [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
