@@ -42,7 +42,7 @@ rivanna$ module load singularity
 rivanna$ module load tensorflow/2.8.0
 ```
 
-This will give you this output:
+This will give you this output which you can run:
 
 ```
 To execute the default application inside the container, run:
@@ -82,12 +82,15 @@ Singularity> pip install cloudmesh-common
 
 ## Running Slurm Jobs
 
+Slurm jobs can be run through the Tensorflow container through `sbatch` scripts. 
+Various arguments such as the job, output, GPU, time, account, etc. can be 
+specified as shown in the example script below. 
 
 ```nano
 #!/bin/sh
-#SBATCH --job-name=mlp_mnist.sh
-#SBATCH --output=test.log
-#SBATCH --error=test.error
+#SBATCH --job-name=mydemojob
+#SBATCH --output=%u-%j.out
+#SBATCH --error=%u-%j.err
 #SBATCH --partition=dev
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
@@ -101,9 +104,8 @@ echo "# cloudmesh status=running progress=1 pid=$SLURM_JOB_ID"
 module purge
 module load singularity
 
-# Assuming that the container has been copied to the user's /scratch directory
 containerdir=$HOME
-singularity run --nv $containerdir/tensorflow-2.8.0.sif mlp_mnist.py
+singularity run --nv $containerdir/tensorflow-2.8.0.sif mydemojob.py
 
 echo " cloudmesh status=done progress=100 pid=$SLURM_JOB_ID"
 

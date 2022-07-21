@@ -136,7 +136,7 @@ ReservationName=bi_fox_dgx StartTime=2022-06-01T08:37:38 EndTime=2022-06-02T08:3
 
 ### Starting interactive job on special partition
 
-```
+```\footnotesize
 ssh $USERNAME@rivanna.hpc.virginia.edu
 
 $ ijob --reservation=bi_fox_dgx --account bii_dsc --partition=bii-gpu --gres=gpu:1
@@ -150,9 +150,11 @@ salloc: Nodes udc-an36-1 are ready for job
 $ nvidia-smi 
 ```
 
-which will result in
 
-\footnotesize
+
+which will result in
+{\normalsize}
+
 
 ```
 +-----------------------------------------------------------------------------+
@@ -177,7 +179,6 @@ which will result in
 +-----------------------------------------------------------------------------+
 ```
 
-\normalsize
 
 ## Activating Rivanna on GitBash
 
