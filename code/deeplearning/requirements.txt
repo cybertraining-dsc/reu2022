@@ -10,3 +10,6 @@ autopep8
 torch
 torchvision
 matplotlib
+pydot
+graphviz
+cpuinfo
