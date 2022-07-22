@@ -1,28 +1,20 @@
-fast: table
-	cd book; make pdf
+IMAGE=tensorflow-2.8.0
+image:
+	cp ${IMAGE}.sif ${IMAGE}-cms.sif
+	singularity exec ${IMAGE}-cms.sif pip install cloudmesh-common -U
 
-clean:
-	cd book; rm -rf dest
+sbatch:
+	# cd experiment/${filename}; sbatch p8.sh
+	cd experiment/${filename}; sbatch k80.sh
+	# cd experiment/${filename}; sbatch a100.sh
+	cd experiment/${filename}; sbatch v100.sh
+	cd experiment/${filename}; sbatch p100.sh
 
-all: clean table action
-	cd book; make pdf
+grep:
+	cd experiment/${filename}; grep '| total' *.log | cut -c -100 > time.txt
 
-view:
-	gopen book/dest/vonLaszewski-reu2022.pdf
+watch:
+	watch squeue -u ${USER}
 
-action:
-	@echo "# Lines contributed" > action.md
-	@echo >> action.md
-	@echo "\`\`\`" >> action.md
-	@cms git contribution | fgrep -v "# Timer" >> action.md
-	@echo "\`\`\`" >> action.md
-	@echo >> action.md
-
-publish: all
-	cd ../pub/docs; git commit -m "update reu2022" vonLaszewski-reu2022.pdf vonLaszewski-reu2022.epub; git push
-
-issues:
-	cd .. ; cms git issues --repo=reu --refresh
-
-table:
-	python bin/generate-compare-table.py
+cat:
+	cd experiment/${filename}; cat *.error *.log
