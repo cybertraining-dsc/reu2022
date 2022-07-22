@@ -3,7 +3,7 @@
 #SBATCH --output=python_warmup.log
 #SBATCH --error=python_warmup.error
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:k80:1
+#SBATCH --gres=gpu:a100:1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
 #SBATCH --time=3:00
