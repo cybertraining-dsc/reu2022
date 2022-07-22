@@ -2,7 +2,8 @@
 #SBATCH --job-name=example_mlp_mnist.sh
 #SBATCH --output=example_mlp_mnist.log
 #SBATCH --error=example_mlp_mnist.error
-#SBATCH --partition=dev
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:k80:1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
 #SBATCH --time=3:00

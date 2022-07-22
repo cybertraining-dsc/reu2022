@@ -2,7 +2,8 @@
 #SBATCH --job-name=google_colab_mnist_example.sh
 #SBATCH --output=google_colab_mnist_example.log
 #SBATCH --error=google_colab_mnist_example.error
-#SBATCH --partition=dev
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:k80:1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
 #SBATCH --time=3:00

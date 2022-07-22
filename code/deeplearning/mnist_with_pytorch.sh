@@ -2,7 +2,8 @@
 #SBATCH --job-name=mnist_with_pytorch.sh
 #SBATCH --output=mnist_with_pytorch.log
 #SBATCH --error=mnist_with_pytorch.error
-#SBATCH --partition=dev
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:k80:1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
 #SBATCH --time=3:00

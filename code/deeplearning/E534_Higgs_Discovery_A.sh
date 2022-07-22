@@ -2,7 +2,8 @@
 #SBATCH --job-name=E534_Higgs_Discovery_A.sh
 #SBATCH --output=E534_Higgs_Discovery_A.log
 #SBATCH --error=E534_Higgs_Discovery_A.error
-#SBATCH --partition=dev
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:k80:1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
 #SBATCH --time=3:00

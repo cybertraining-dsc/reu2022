@@ -91,11 +91,10 @@ specified as shown in the example script below.
 #SBATCH --job-name=mydemojob
 #SBATCH --output=%u-%j.out
 #SBATCH --error=%u-%j.err
-#SBATCH --partition=dev
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:k80:1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4GB
-#SBATCH -p gpu
-#SBATCH --gres=gpu:k80:1
 #SBATCH -t 00:01:00
 #SBATCH -A bii_dsc_community
 
