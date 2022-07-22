@@ -9,3 +9,4 @@ pep8
 autopep8
 torch
 torchvision
+matplotlib

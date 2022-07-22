@@ -10,7 +10,7 @@
 
 echo "# cloudmesh status=running progress=1 pid=$$"
 
-nvidia-smi
+nvidia-smi --list-gpus
 source activate ENV3
 python example_mlp_mnist.py
 
