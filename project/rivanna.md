@@ -10,16 +10,21 @@
 
 ---
 
-Presentation:
+## Links
+
+Here is a comprehensive list of useful links on how to navigate
+the Rivanna system.
+
+* Presentations
  
-* [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
-* [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
+  * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
+  * [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
 
-Intro to Rivanna: <https://learning.rc.virginia.edu/notes/rivanna-intro/>
+* [Intro to Rivanna](https://learning.rc.virginia.edu/notes/rivanna-intro/)
 
-Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
+* Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
 
-Rivanna Dashboard: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard>
+* Rivanna Dashboard: <https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard>
 
 Globus Transfer: <https://www.rc.virginia.edu/userinfo/globus/>
 
@@ -136,7 +141,7 @@ ReservationName=bi_fox_dgx StartTime=2022-06-01T08:37:38 EndTime=2022-06-02T08:3
 
 ### Starting interactive job on special partition
 
-```
+```\footnotesize
 ssh $USERNAME@rivanna.hpc.virginia.edu
 
 $ ijob --reservation=bi_fox_dgx --account bii_dsc --partition=bii-gpu --gres=gpu:1
@@ -150,9 +155,11 @@ salloc: Nodes udc-an36-1 are ready for job
 $ nvidia-smi 
 ```
 
-which will result in
 
-\footnotesize
+
+which will result in
+{\normalsize}
+
 
 ```
 +-----------------------------------------------------------------------------+
@@ -177,52 +184,97 @@ which will result in
 +-----------------------------------------------------------------------------+
 ```
 
-\normalsize
 
-## Installing Python 3.10 on Rivanna
+## Activating Rivanna on GitBash
+
+Once you have Rivanna installed locally on your computer with your account
+set up, if you have Cloudmesh installed, you can simply connect to Rivanna on
+the terminal using the following command. Make sure to run the terminal as
+Admin or else it won't work. 
+
+```bash
+$ cms vpn connect
+```
+
+In order to disconnect from Rivanna, simply use the command:
+
+```bash
+$ cms vpn disconnect
+```
+
+## Installing Python 3.10.5 on Rivanna with ENV3
+
+After you log in into Rivanna, there's a chance you're running Rivanna on an
+outdated version of Python, restricting you from being able to run Python
+files properly. In order to do so, you'll need a fully to up-to-date version
+of Python with the ENV3 virtual environment.
 
 ### Activate Python3
 
-```
+First Python3, must be activated and can be done by typing in the following:
+
+```bash
 $ ssh rivanna
 rivanna$ module load cuda cudnn
 rivanna$ module load anaconda
-rivanna$ conda create -y -n ENV3 python=3.10
+rivanna$ conda create -n ENV3  -c conda-forge python=3.10.5
 ```
+
+The last command may take a while. After it's done installing, activate the 
+ENV3 virtual environment of Python 3.10.5 by typing in:
+
+```bash
+rivanna$ source activate ENV3
+```
+
 
 ### .bashrc
 
-```
+Now, you must open your `.bashrc` file. If it doesn't exist, create one.
+Using any editor, open it and copy and paste the following: 
+
+```bash
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
 fi
 
+
 PS1="\s-\v\$"
 alias vi='vim'
-# source ~/ENV3/bin/activate
 module load cuda cudnn
 module load anaconda
-# conda create -y -n ~/ENV3 python=3.10
-conda activate ~/ENV3
+source activate ENV3
 ```
 
-### Activation
+### Installing Cloudmesh into Rivanna
 
-Now, the user must log out of all Rivanna windows and log back in to utilize
-this. When the user logs back in, they will automatically be in the Python 
-version installed.
+Once Python 3.10.5 is installed with the ENV3 virutal environment. Cloudmesh
+can now be installed by first making a `cm` directory, installing the
+Cloudmesh Installer through pip and using the installer to get the Cloudmesh
+files into the `cm` directory. All of this can be done using the following 
+commands:
 
-In order for the user to use batch scripts, they must include in their batch
-scripts the following line before executing your program:
-
+```bash
+$ mkdir cm
+$ cd cm
+$ pip install cloudmesh-installer
+$ cloudmesh-installer --ssh get cc
+$ cloudmesh-installer --ssh get cms
 ```
-module load cuda cudnn
-module load anaconda
-conda activate ~/ENV3
+
+If the last command doesn't work due to access rights, type in:
+
+```bash
+$ cloudmesh-installer get cc
+$ cloudmesh-installer get cms
 ```
 
 ### Example Script for Using GPUs
+
+Slurm jobs can be run in Rivanna through `sbatch` scripts. Various arguments
+such as the job, output, GPU, time, account, etc. can be specified as shown
+in the example script below. 
 
 ```
 #!/usr/bin/env bash
@@ -236,14 +288,14 @@ conda activate ~/ENV3
 #SBATCH --time=3:00
 #SBATCH --account=c4gc
 
-module load cuda cudnn
-module load anaconda
-conda activate ~/ENV3
 # your automation code here..
 python mydemojob.py
 ```
 
 ### How Do You Activate Different GPUs
+
+In the `sbatch` scripts, different GPUs can be activated by specifying it 
+through `gres` argument. 
 
 ```
 #SBATCH --gres=”gpu:p100:1”
@@ -260,9 +312,15 @@ python mydemojob.py
 
 ## Allocations
 
+The time you spend on Rivanna is allocated as Service Units (SUs) into the
+account you're using. When you type in the following command:
+
 ```bash
 $ allocations
 ```
+
+The results show you which accounts you're currently under and the amount of 
+SUs is in balance, reserved, and available as shown below. 
 
 ```
 Account                      Balance        Reserved       Available
@@ -271,16 +329,45 @@ xyz_community                  99999               0           99999
 comp4gc                       146527               0          146527
 ```
 
+You are also able to access the information of all the users under the accounts
+you're under by typing in the following command:
+
 ```bash
-$ allocations -a comp4gc
+$rivanna allocations -a comp4gc
 ```
 
 ## SSH Config
 
+SSH Config makes it easier for users to connect to Rivanna by specifying 
+arguments in the `config` file instead of typing it in the terminal.
+
+The `.ssh` directory and `config` file can be created using the following
+commands:
+
+```bash
+$rivanna mkdir -p ~/.ssh && chmod 700 ~/.ssh
+$rivanna touch ~/.ssh/config
+$rivanna chmod 600 ~/.ssh/config
 ```
-$ cat ~/.ssh/config
+
+The `config` can then be edited using any terminal text editor of your choice,
+using the following command. Nano is used in this example.
+
+```bash
+$rivanna nano ~/.ssh/config
+```
+
+Inside the `config` file, copy and paste the following:
+
+```
 host rivanna
         User <USERNAME>
         HostName rivanna.hpc.virginia.edu
         IdentityFile ~/.ssh/id_rsa
 ```
+
+## Sources
+
+* <https://linuxize.com/post/using-the-ssh-config-file/>
+* [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
+* [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
