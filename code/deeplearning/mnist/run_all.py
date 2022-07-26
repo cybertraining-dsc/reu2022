@@ -64,7 +64,6 @@ mnist_rnn
 mnist_with_distributed_training
 mnist_with_pytorch""").strip().splitlines()
 
-
 for script in scripts:
   if exec == "papermill":
     output = f"{script}-output"
@@ -77,7 +76,7 @@ for script in scripts:
   StopWatch.stop(script)
 
 
-StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user)
+StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
 
 
 
