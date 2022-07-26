@@ -88,7 +88,7 @@ for card in cards:
         StopWatch.start(sbatch)
 
 waiting_for_squeue = False
-get_squeue = 'squeue - $USER'
+get_squeue = 'squeue -u $USER'
 r = os.system(get_squeue)
 while user in r:
     time.sleep(2)
