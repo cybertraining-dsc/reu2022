@@ -56,12 +56,10 @@ plt.show()
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-barchart.py). 
-The output of this program is showcased in [Fig. 1.](examples/images/matplotlib-barchart.svg)
+The output of this program is showcased in @fig:matplotlib-barchart2.
 
-<img src='examples/images/matplotlib-barchart.png' width="500">
 
-[Fig. 1.](examples/images/matplotlib-barchart.svg) Spotify Data Shown in Bar 
-Chart
+![Spotify Data Shown in Bar Chart](examples/images/matplotlib-barchart.svg){#fig:matplotlib-barchart2} 
 
 ### Line Chart
 
@@ -92,11 +90,9 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
 .
-The output of this program is showcased in [Fig. 2.](examples/images/matplotlib-linechart.svg)
+The output of this program is showcased in @fig:matplotlib-linechart.
 
-<img src='examples/images/matplotlib-linechart.svg' width="500">
-
-[Fig. 2.](examples/images/matplotlib-linechart.svg) Sample Randomized Line Plot
+![Sample Randomized Line Plot](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart} 
 
 
 ### Pie Chart
@@ -122,12 +118,10 @@ plt.show()
 
 This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-piechart.py).
-The output of this program is showcased in [Fig. 3.](examples/images/matplotlib-piechart.svg)
+The output of this program is showcased in @fig:matplotlib-piechart.
 
-<img src='examples/images/matplotlib-piechart.svg' width="500">
 
-[Fig. 3.](examples/images/matplotlib-piechart.svg) Genres of Music from Spotify
-Distributed on a Pie Chart
+[Genres of Music from Spotify Distributed on a Pie Chart](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart} 
 
 ### Contour Plot
 
@@ -155,14 +149,9 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py)
-.
-The output of this program is showcased in [Fig. 4.](examples/images/matplotlib-contour.svg)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py). The output of this program is showcased in @fig:matplotlib-contour.
 
-<img src='examples/images/matplotlib-contour.svg' width="500">
-
-[Fig. 4.](examples/images/matplotlib-contour.svg) Multivariable Math 
-Equation Shown on a Contour Plot
+![Multivariable Math Equation Shown on a Contour Plot](examples/images/matplotlib-contour.svg) {#fig:matplotlib-contour}
 
 A contour plot allows data and equations consisting of three variables
 to be plotted through plotting 3D surfaces as 2D slices on a `xy`
@@ -237,12 +226,9 @@ plt.show()
 ```
 
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py).
-The output of this program is showcased in [Fig. 5.](examples/images/matplotlib-rotatingticks.svg)
+The output of this program is showcased in #fig:matplotlib-rotatingticks.
 
-<img src="examples/images/matplotlib-rotatingticks.svg" width="500">
-
-[Fig. 5.](examples/images/matplotlib-rotatingticks.svg) Line Plot with 
-`x-axis` Ticks Rotated by 90° & `y-axis` Ticks Rotated by 45°
+[Line Plot with `x-axis` Ticks Rotated by 90 degrees and `y-axis` Ticks Rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:matplotlib-rotatingticks}
 
 ### Exporting
 

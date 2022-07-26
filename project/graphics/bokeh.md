@@ -53,12 +53,10 @@ show(p)
 ```
 
 This program can be downloaded
-from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py)
-. The output is shown in [Fig. 1.](examples/images/bokeh-figure.png)
+from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py). The output is shown in @fig:bokeh-figure.
 
-<img src='examples/images/bokeh-figure.png' width='400'>
 
-[Fig. 1.](examples/images/bokeh-figure.png) Line and Point Plotted on a Chart
+![Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure}
 
 ## Figure Parameters Example
 
@@ -94,12 +92,10 @@ show(p)
 
 This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-scatter.py). 
-The output is shown in [Fig. 2.](examples/images/bokeh-scatter.svg)
+The output is shown in @fig:bokeh-scatter.
 
-<img src='examples/images/bokeh-scatter.svg' width='400'>
 
-[Fig. 2.](examples/images/bokeh-scatter.svg) Sample Scatter Plot with 
-Various Point Shapes
+![Sample Scatter Plot with Various Point Shapes](examples/images/bokeh-scatter.svg){#fig:bokeh-scatter} 
 
 The list  possible marker types and the functions used to create
 them can be found
@@ -131,11 +127,9 @@ show(p)
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
-The output is shown in [Fig. 3.](examples/images/bokeh-linechart.png)
+The output is shown in @fig:bokeh-linechart.
 
-<img src='examples/images/bokeh-linechart.png' width='400'>
-
-[Fig. 3.](examples/images/bokeh-linechart.png) Sample Randomized Line Plot
+![Sample Randomized Line Plot](examples/images/bokeh-linechart.png){#fig:bokeh-linechart} 
 
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -161,13 +155,10 @@ show(p)
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py)
-. The output is shown in [Fig. 4.](examples/images/bokeh-barchart.png)
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py). The output is shown in @fig:bokeh-barchart.
 
-<img src="examples/images/bokeh-barchart.png" width="400">
 
-[Fig. 4.](examples/images/bokeh-barchart.png) Spotify Data Shown in Bar 
-Chart
+![Spotify Data Shown in Bar Chart](examples/images/bokeh-barchart.png){#fig:bokeh-barchart}
 
 ## Saving Figures
 
