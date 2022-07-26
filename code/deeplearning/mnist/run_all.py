@@ -1,11 +1,16 @@
+import os
+import sys
+import torch
+import textwrap
+import socket
+import cpuinfo
 from cloudmesh.common.Shell import Shell
 from cloudmesh.common.util import banner
 from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.variables import Variables
 from cloudmesh.common.console import Console
-import textwrap
-import os
-import sys
+from cloudmesh.common.systeminfo import os_is_windows
+
 
 dryrun = False
 
@@ -43,12 +48,37 @@ if device is None:
   Console.error("device not set")
   error = True
 
-print (user)
+## USERNAME
+
+if os_is_windows():
+    user = os.environ["USERNAME"]
+else:
+    try:
+        user = os.environ['USER']
+    except:
+        user = os.system('basename $HOME')
+
+## HOST
+
+host = socket.gethostname()
+
+## GPU
+if torch.cuda.is_available() == True:
+    gpu = torch.cuda.get_device_name(0)
+else:
+    gpu='N/A'
+
+## CPU
+
+cpu = cpuinfo.get_cpu_info()['brand_raw']
+
+print(user)
 print(host)
 print(gpu)
 print(cpu)
 
 tag = f"{host}-{user}-{cpu}-{gpu}"
+print(tag)
 
 if error:
   sys.exit()
