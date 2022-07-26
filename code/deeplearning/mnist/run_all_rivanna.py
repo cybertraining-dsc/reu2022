@@ -14,6 +14,7 @@ from cloudmesh.common.Shell import Shell
 import time
 
 
+
 dryrun = False
 
 exec = "python"
@@ -85,13 +86,11 @@ for card in cards:
     v['host']='rivanna'
     v['gpu']=card
 
-
-
-    StopWatch.start(script)
     banner(command)
     if not dryrun:
-      os.system(command)
-    StopWatch.stop(script)
+      sbatch = os.system(command)
+    StopWatch.start(sbatch)
+    StopWatch.stop(sbatch)
 
 waiting_for_squeue = False
 get_squeue = 'squeue -u $USER'
@@ -107,6 +106,7 @@ while waiting_for_squeue:
 StopWatch.Stop()
 
 StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
+
 
 
 
