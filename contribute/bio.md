@@ -49,7 +49,7 @@ to continue research.
 
 ## Jacques Fleischer
 
-![Jacques Fleisher](./images/jacques.jpg)
+![Jacques Fleisher](images/jacques.jpg)
 
 Jacques Fleischer is a sophomore at the Miami Dade Honors College. 
 He is set to receive his associate degree in computer science in 

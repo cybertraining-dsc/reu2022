@@ -58,12 +58,10 @@ f.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/basic-graphviz.py).
 
-Shown here in [Fig. 1.](images/basic-graphviz-ex.png) is the graph produced
+Shown here in @fig:basic-graphviz-ex is the graph produced
 from the code:
 
-![test](images/basic-graphviz-ex.png)
-
-![Fig. 1.](images/basic-graphviz-ex.png) Sequence of Bash Command Path
+![Sequence of Bash Command Path](images/basic-graphviz-ex.png){#fig:basic-graphviz-ex}
 
 ## Subgraphs
 
@@ -112,13 +110,10 @@ g.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/subgraph-graphviz.py).
 
-Shown here in [Fig. 2.](images/subgraph-graphviz-ex.png) are the subgraphs 
+Shown here in @fig:subgraph-graphviz-ex are the subgraphs 
 produced by the code.
 
-<img src='images/subgraph-graphviz-ex.png' width='500'>
-
-[Fig. 2.](images/subgraph-graphviz-ex.png) Sequence of Two Bash Different 
-Command Paths 
+![Sequence of Two Bash Different Command Paths ](images/subgraph-graphviz-ex.png){#fig:subgraph-graphviz-ex}
 
 ## Data Structures
 
@@ -144,13 +139,12 @@ s.view()
 
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/structure-graphviz.py).
 
-Shown here in [Fig. 3.](images/structure-graphviz-ex.png) are the data 
+Shown here in @fig:structure-graphviz-ex are the data 
 structures produced by the code.
 
-<img src='images/structure-graphviz-ex.png' width='500'>
 
-[Fig. 3.](images/structure-graphviz-ex.png) Data Structure of 
-Various Directories and Files
+![Data Structure of 
+Various Directories and Files](images/structure-graphviz-ex.png){#fig:structure-graphviz-ex}
 
 ## Colors and Labels
 
@@ -191,16 +185,14 @@ g.view()
 
 This code can be accessed via [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/color-graphviz.py).
 
-Shown here in [Fig. 4.](images/color-graphviz-ex.png) is what the code produced.
+Shown here in @fig:color-graphviz-ex is what the code produced.
 
-<img src='images/color-graphviz-ex.png' width='500'>
-
-[Fig. 4.](images/color-graphviz-ex.png) Label Directed Graph with Various 
-Colored Nodes 
+![Label Directed Graph with Various 
+Colored Nodes ](images/color-graphviz-ex.png){#fig:color-graphviz-ex}
 
 ## Sources
 
-* https://pypi.org/project/graphviz/
-* https://graphviz.readthedocs.io/en/stable/examples.html
-* https://graphviz.readthedocs.io/en/stable/api.html
+* <https://pypi.org/project/graphviz/>
+* <https://graphviz.readthedocs.io/en/stable/examples.html>
+* <https://graphviz.readthedocs.io/en/stable/api.html>
 
