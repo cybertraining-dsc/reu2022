@@ -1,0 +1,9 @@
+# csv,timer,status,time,sum,start,tag,msg,uname.node,user,uname.system,platform.version
+# csv,mlp_mnist,ok,17.903,17.903,2022-07-26 14:07:37,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
+# csv,mnist_autoencoder,ok,14.554,14.554,2022-07-26 14:07:54,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
+# csv,mnist_cnn,ok,23.554,23.554,2022-07-26 14:08:09,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
+# csv,mnist_lstm,ok,14.557,14.557,2022-07-26 14:08:33,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
+# csv,mnist_mlp_with_lstm,ok,99.6,99.6,2022-07-26 14:08:47,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
+# csv,mnist_rnn,ok,26.577,26.577,2022-07-26 14:10:27,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
+# csv,mnist_with_distributed_training,ok,111.674,111.674,2022-07-26 14:10:53,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
+# csv,mnist_with_pytorch,ok,44.553,44.553,2022-07-26 14:12:45,gregor-desktop-AMD Ryzen 9 5950X 16-Core Processor-NVIDIA GeForce RTX 3090,None,gregor,desktop,Linux,#44~20.04.1-Ubuntu SMP Fri Jun 24 13:27:29 UTC 2022
