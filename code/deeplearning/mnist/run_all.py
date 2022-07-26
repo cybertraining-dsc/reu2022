@@ -10,6 +10,7 @@ from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.variables import Variables
 from cloudmesh.common.console import Console
 from cloudmesh.common.systeminfo import os_is_windows
+from cloudmesh.common.Shell import Shell
 
 
 dryrun = False
@@ -20,8 +21,8 @@ exec = "papermill"
 
 v = Variables()
 
-user = v["user"]
-host = v["host"]
+user = v["user"] or Shell.sys_user()
+host = v["host"] or socket.gethostname()
 gpu = v["gpu"]
 cpu = v["cpu"]
 device = v["device"]
@@ -48,25 +49,12 @@ if device is None:
   Console.error("device not set")
   error = True
 
-## USERNAME
-
-if os_is_windows():
-    user = os.environ["USERNAME"]
-else:
-    try:
-        user = os.environ['USER']
-    except:
-        user = os.system('basename $HOME')
-
-## HOST
-
-host = socket.gethostname()
 
 ## GPU
 if torch.cuda.is_available() == True:
     gpu = torch.cuda.get_device_name(0)
 else:
-    gpu='N/A'
+    gpu='NA'
 
 ## CPU
 
