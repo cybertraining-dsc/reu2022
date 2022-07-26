@@ -49,7 +49,7 @@ to continue research.
 
 ## Jacques Fleischer
 
-![Jacques's Picture](../project/images/bio/jacques.jpg)
+![Jacques Fleisher](./images/jacques.jpg)
 
 Jacques Fleischer is a sophomore at the Miami Dade Honors College. 
 He is set to receive his associate degree in computer science in 
@@ -121,6 +121,7 @@ is a member of African Student Union(ASU), National Society of Black engineers
 where he participates in several leadership development activities.
 
 ## Thomas Butler
+
 Thomas Butler is a Graduate Student at University of Virginia's School of Data 
 Science. His undergraduate degree is in Biomedical engineering. He has over 
 eight years of experience in the Infertility field helping patients, jointly 
@@ -129,6 +130,7 @@ joint research on how AMH effects pregnancy outcomes and sperm antibodies effect
 PSA. He has a certificate in Data Analytics from Georgia Institute of Technology.
 
 ## Robert Knuuti
+
 Robert Knuuti is a Graduate Student at University of Virginia's School of Data 
 Science. He has over 10 years experience in system architecture and software 
 engineering, and specializes in Development Operations and Cloud Computing. 
@@ -138,6 +140,7 @@ and has facilitated the construction of repeatable, tractable builds for users
 of these systems.
 
 ## Jake Kolessar
+
 Jake Kolessar is a Graduate Student at the University of Virginia's School 
 of Data Science. He has a background in mechanical engineering and 2 years 
 of experience as a Modeling, Simulation and Analysis Engineer. He has 
