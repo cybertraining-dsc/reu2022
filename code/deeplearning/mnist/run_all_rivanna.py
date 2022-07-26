@@ -91,6 +91,7 @@ for card in cards:
     waiting_for_squeue = False
     get_squeue = 'squeue -u $USER'
     r = os.system(get_squeue)
+    time.sleep(10)
     print(r)
     while r != 0:
         time.sleep(2)
