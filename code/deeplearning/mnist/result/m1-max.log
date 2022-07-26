@@ -1,0 +1,9 @@
+# csv,timer,status,time,sum,start,tag,msg,uname.node,user,uname.system,platform.version
+# csv,mlp_mnist,ok,23.599,23.599,2022-07-26 11:55:25,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
+# csv,mnist_autoencoder,ok,40.672,40.672,2022-07-26 11:55:49,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
+# csv,mnist_cnn,ok,147.222,147.222,2022-07-26 11:56:30,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
+# csv,mnist_lstm,ok,130.028,130.028,2022-07-26 11:58:57,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
+# csv,mnist_mlp_with_lstm,ok,3629.028,3629.028,2022-07-26 12:01:07,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
+# csv,mnist_rnn,ok,56.243,56.243,2022-07-26 13:01:36,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
+# csv,mnist_with_distributed_training,ok,3885.402,3885.402,2022-07-26 13:02:32,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
+# csv,mnist_with_pytorch,ok,23.775,23.775,2022-07-26 14:07:17,m1-gregor-arm-m1,None,m1,gregor,Darwin,12.5
