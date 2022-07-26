@@ -4,6 +4,10 @@ from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.variables import Variables
 from cloudmesh.common.console import Console
 import textwrap
+import os
+import sys
+
+dryrun = False
 
 exec = "sbatch"
 exec = "python"
@@ -17,22 +21,37 @@ gpu = v["gpu"]
 cpu = v["cpu"]
 device = v["device"]
 
+error = False
 
 if user is None:
   Console.error("user not set")
+  error = True
 
 if host is None:
   Console.error("host not set")
+  error = True
 
 if cpu is None:
   Console.error("cpu not set")
+  error = True
 
 if gpu is None:
   Console.error("gpu not set")
+  error = True
 
 if device is None:
   Console.error("device not set")
+  error = True
 
+print (user)
+print(host)
+print(gpu)
+print(cpu)
+
+tag = f"{host}-{user}-{cpu}-{gpu}"
+
+if error:
+  sys.exit()
 
 
 scripts = textwrap.dedent("""
@@ -53,10 +72,12 @@ for script in scripts:
 
   StopWatch.start(script)
   banner(command)
+  if not dryrun:
+    os.system(command)
   StopWatch.stop(script)
 
 
-StopWatch.benchmark(sysinfo=False)
+StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user)
 
 
 
