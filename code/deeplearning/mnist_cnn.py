@@ -182,7 +182,14 @@ try:
 except:  # noqa: E722
     gpuname = cpuinfo.get_cpu_info()['brand_raw']
 
+v = Variables()
+host = v('host')
+user = v('user')
+cpu = v('cpu')
+gpu = v('gpu')
+
 tag = 'mnist_cnn'
+tag = 'mnist_cnn-user-host-gpu-cpu'
 
 StopWatch.benchmark(tag=tag, node=gpuname, user=user)
 
