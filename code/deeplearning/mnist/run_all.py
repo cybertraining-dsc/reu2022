@@ -84,30 +84,30 @@ if error:
   sys.exit()
 
 
-# scripts = textwrap.dedent("""
-# mlp_mnist
-# mnist_autoencoder
-# mnist_cnn
-# mnist_lstm
-# mnist_mlp_with_lstm
-# mnist_rnn
-# mnist_with_distributed_training
-# mnist_with_pytorch""").strip().splitlines()
-#
-#
-# for script in scripts:
-#   if exec == "papermill":
-#     output = f"{script}-output"
-#     command = f"{exec} {script}.ipynb {output}.ipynb"
-#
-#   StopWatch.start(script)
-#   banner(command)
-#   if not dryrun:
-#     os.system(command)
-#   StopWatch.stop(script)
-#
-#
-# StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user)
+scripts = textwrap.dedent("""
+mlp_mnist
+mnist_autoencoder
+mnist_cnn
+mnist_lstm
+mnist_mlp_with_lstm
+mnist_rnn
+mnist_with_distributed_training
+mnist_with_pytorch""").strip().splitlines()
+
+
+for script in scripts:
+  if exec == "papermill":
+    output = f"{script}-output"
+    command = f"{exec} {script}.ipynb {output}.ipynb"
+
+  StopWatch.start(script)
+  banner(command)
+  if not dryrun:
+    os.system(command)
+  StopWatch.stop(script)
+
+
+StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user)
 
 
 
