@@ -91,9 +91,11 @@ for card in cards:
     waiting_for_squeue = False
     get_squeue = 'squeue -u $USER'
     r = os.system(get_squeue)
+    print(r)
     while r != 0:
         time.sleep(2)
         r = os.system(get_squeue)
+        print(r)
         continue
 
     StopWatch.stop('total')
