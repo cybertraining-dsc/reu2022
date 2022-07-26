@@ -59,7 +59,7 @@ f.view()
 This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphs/graphs-graphviz/examples/basic-graphviz.py).
 
 Shown here in @fig:basic-graphviz-ex is the graph produced
-from the code:
+from the code.
 
 ![Sequence of Bash Command Path](images/basic-graphviz-ex.png){#fig:basic-graphviz-ex}
 
