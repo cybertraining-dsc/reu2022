@@ -94,7 +94,7 @@ for s in scripts:
     command = f'cat {s}.log'
     r = os.system(command)
     print(r)
-    while 'progress=100' not in r:
+    while 'progress=100' not in str(r):
         time.sleep(2)
         r = os.system(command)
         continue
