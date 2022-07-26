@@ -81,9 +81,7 @@ for card in cards:
       command = f"{exec} --gres=gpu:{card}:1 {script}.sh"
     v['host']='rivanna'
     v['gpu']=card
-    v['user']='test'
-    v['device']='gpu'
-    v['cpu']='xeon'
+
 
     StopWatch.start(script)
     banner(command)
