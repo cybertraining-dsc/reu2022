@@ -114,7 +114,7 @@ x_test = x_test.astype('float32') / 255
 
 
 # Create Model
-# network parameters
+# network parameters.md
 batch_size = 4
 hidden_units = 64
 
