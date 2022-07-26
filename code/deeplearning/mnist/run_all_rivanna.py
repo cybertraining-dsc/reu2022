@@ -57,14 +57,15 @@ if error:
 scripts = textwrap.dedent("""
 mlp_mnist
 mnist_autoencoder
+mnist_cnn
+mnist_lstm
+mnist_mlp_with_lstm
+mnist_rnn
+mnist_with_distributed_training
+mnist_with_pytorch
 """).strip().splitlines()
 
-# mnist_cnn
-# mnist_lstm
-# mnist_mlp_with_lstm
-# mnist_rnn
-# mnist_with_distributed_training
-# mnist_with_pytorch
+
 
 cards = v['gpu']
 
@@ -88,18 +89,14 @@ for card in cards:
             sbatch = os.system(command)
 
 
-    waiting_for_squeue = False
-    get_squeue = 'squeue -u $USER'
-    r = os.system(get_squeue)
-    time.sleep(10)
-    print(r)
-    r = os.system(get_squeue)
-    print(r)
-    while r != 0:
-        time.sleep(2)
-        r = os.system(get_squeue)
-        print(r)
-        continue
+    # waiting_for_squeue = False
+    # r = os.path.exists('mnist_autoencoder.log')
+    # print(r)
+    # while r == False:
+    #     time.sleep(2)
+    #     r = os.path.exists('mnist_autoencoder.log')
+    #     print(r)
+    #     continue
 
     StopWatch.stop('total')
 
