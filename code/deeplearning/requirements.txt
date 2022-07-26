@@ -2,7 +2,8 @@ notebook
 jupyter
 jupyterlab
 nbconvert
-tensorflow
+tensorflow; platform_machine != 'arm64'
+tensorflow-macos; platform_machine == 'arm64'
 cloudmesh-common
 pycodestyle
 pep8
