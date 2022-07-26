@@ -89,14 +89,15 @@ for card in cards:
             sbatch = os.system(command)
 
 
-    # waiting_for_squeue = False
-    # r = os.path.exists('mnist_autoencoder.log')
-    # print(r)
-    # while r == False:
-    #     time.sleep(2)
-    #     r = os.path.exists('mnist_autoencoder.log')
-    #     print(r)
-    #     continue
+for s in scripts:
+    waiting_for_squeue = False
+    command = f'cat {s}.log'
+    r = os.system(command)
+    print(r)
+    while 'progress=100' not in r:
+        time.sleep(2)
+        r = os.system(command)
+        continue
 
     StopWatch.stop('total')
 
