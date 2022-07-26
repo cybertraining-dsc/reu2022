@@ -11,6 +11,7 @@ from cloudmesh.common.variables import Variables
 from cloudmesh.common.console import Console
 from cloudmesh.common.systeminfo import os_is_windows
 from cloudmesh.common.Shell import Shell
+import time
 
 
 dryrun = False
@@ -92,8 +93,20 @@ for card in cards:
       os.system(command)
     StopWatch.stop(script)
 
+waiting_for_squeue = False
+get_squeue = 'squeue -u $USER'
+while waiting_for_squeue:
+  r = os.system(get_squeue)
+  if user in r:
+    time.sleep(2)
+    pass
+  else:
+    waiting_for_squeue = True
+    break
 
-    StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
+StopWatch.Stop()
+
+StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
 
 
 
