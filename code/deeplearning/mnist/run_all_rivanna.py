@@ -77,7 +77,6 @@ else:
   cards = v['gpu'].split(',')
 for card in cards:
   for script in scripts:
-    StopWatch.start(script)
     if exec == "papermill":
       output = f"{script}-output"
       command = f"{exec} {script}.ipynb {output}.ipynb"
@@ -86,11 +85,12 @@ for card in cards:
     v['host']='rivanna'
     v['gpu']=card
 
-    
     banner(command)
     if not dryrun:
-      os.system(command)
-    StopWatch.stop(script)
+      sbatch = os.system(command)
+    StopWatch.start(sbatch)
+    StopWatch.stop(sbatch)
+
 
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
 
