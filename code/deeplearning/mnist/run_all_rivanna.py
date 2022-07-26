@@ -93,6 +93,8 @@ for card in cards:
     r = os.system(get_squeue)
     time.sleep(10)
     print(r)
+    r = os.system(get_squeue)
+    print(r)
     while r != 0:
         time.sleep(2)
         r = os.system(get_squeue)
