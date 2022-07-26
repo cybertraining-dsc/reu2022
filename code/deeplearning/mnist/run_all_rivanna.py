@@ -97,7 +97,7 @@ while waiting_for_squeue:
   r = os.system(get_squeue)
   if user in r:
     time.sleep(2)
-    pass
+    continue
   else:
     waiting_for_squeue = True
     break
