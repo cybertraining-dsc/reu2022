@@ -90,7 +90,6 @@ for card in cards:
     if not dryrun:
       sbatch = os.system(command)
     StopWatch.start(sbatch)
-    StopWatch.stop(sbatch)
 
 waiting_for_squeue = False
 get_squeue = 'squeue -u $USER'
@@ -103,7 +102,7 @@ while waiting_for_squeue:
     waiting_for_squeue = True
     break
 
-StopWatch.stop()
+StopWatch.stop(sbatch)
 
 StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
 
