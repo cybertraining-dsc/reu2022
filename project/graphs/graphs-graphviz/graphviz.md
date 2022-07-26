@@ -61,9 +61,9 @@ This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2
 Shown here in [Fig. 1.](images/basic-graphviz-ex.png) is the graph produced
 from the code:
 
-<img src='images/basic-graphviz-ex.png' width='500'>
+![test](images/basic-graphviz-ex.png)
 
-[Fig. 1.](images/basic-graphviz-ex.png) Sequence of Bash Command Path
+![Fig. 1.](images/basic-graphviz-ex.png) Sequence of Bash Command Path
 
 ## Subgraphs
 
