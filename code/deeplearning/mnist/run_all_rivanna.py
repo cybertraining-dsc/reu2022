@@ -103,7 +103,7 @@ while waiting_for_squeue:
     waiting_for_squeue = True
     break
 
-StopWatch.Stop()
+StopWatch.stop()
 
 StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
 
