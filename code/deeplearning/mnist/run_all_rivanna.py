@@ -73,6 +73,7 @@ if cards is None:
 else:
     cards = v['gpu'].split(',')
 for card in cards:
+    StopWatch.start('total')
     for script in scripts:
         if exec == "papermill":
             output = f"{script}-output"
@@ -85,17 +86,16 @@ for card in cards:
         banner(command)
         if not dryrun:
             sbatch = os.system(command)
-        StopWatch.start(sbatch)
 
-waiting_for_squeue = False
-get_squeue = 'squeue -u $USER'
-r = os.system(get_squeue)
-while r != 0:
-    time.sleep(2)
+
+    waiting_for_squeue = False
+    get_squeue = 'squeue -u $USER'
     r = os.system(get_squeue)
-    continue
+    while r != 0:
+        time.sleep(2)
+        r = os.system(get_squeue)
+        continue
 
-StopWatch.stop(sbatch)
+    StopWatch.stop('total')
 
-StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user,
-                    filename=f"all-{tag}.log")
+    StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
