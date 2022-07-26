@@ -25,8 +25,7 @@ file:
 https:
   "reu2022": "https://raw.githubusercontent.com/cybertraining-dsc/reu2022/main"
 BOOK:
-  - USEFUL_LINKS:
-    - "{file.reu2022}/README.md"
+  - "{file.reu2022}/README.md"
   - CONTRIBUTION_TO_THE_PROJECT:
     - "{file.reu2022}/contribute/intro-contribute.md"
     - "{file.reu2022}/contribute/calendar.md"
