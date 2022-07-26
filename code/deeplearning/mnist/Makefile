@@ -14,10 +14,6 @@ all: requirements $(NOTEBOOKS)
 
 
 #download:
-# 	curl -o E534_Higgs_Discovery_A.ipynb ${LOCATION}/E534_Higgs_Discovery_A.ipynb
-# 	curl -o E534_Higgs_Discovery_B.ipynb ${LOCATION}/E534_Higgs_Discovery_B.ipynb
-# 	curl -o E534_Higgs_Discovery_C.ipynb ${LOCATION}/E534_Higgs_Discovery_C.ipynb
-# 	curl -o E534_Higgs_Discovery_D.ipynb ${LOCATION}/E534_Higgs_Discovery_D.ipynb
 # 	curl -o google_colab_mnist_example.ipynb ${LOCATION}/google_colab_mnist_example.ipynb
 # 	curl -o mlp_mnist.ipynb ${LOCATION}/mlp_mnist.ipynb
 # 	curl -o mnist_autoencoder.ipynb ${LOCATION}/mnist_autoencoder.ipynb
@@ -28,66 +24,6 @@ all: requirements $(NOTEBOOKS)
 # 	curl -o mnist_with_distributed_training.ipynb ${LOCATION}/mnist_with_distributed_training.ipynb
 # 	curl -o mnist_with_pytorch.ipynb ${LOCATION}/mnist_with_pytorch.ipynb
 # 	curl -o python_warmup.ipynb ${LOCATION}/python_warmup.ipynb
-
-
-
-E534_Higgs_Discovery_A:
-	jupyter nbconvert E534_Higgs_Discovery_A.ipynb --clear-output --output tmp_E534_Higgs_Discovery_A.ipynb
-	jupyter nbconvert --to python tmp_E534_Higgs_Discovery_A.ipynb --output tmp_E534_Higgs_Discovery_A.py
-	fgrep -v "# In[ ]:" tmp_E534_Higgs_Discovery_A.py > E534_Higgs_Discovery_A.py
-	rm -f tmp_E534_Higgs_Discovery_A.ipynb tmp_E534_Higgs_Discovery_A.ipynb.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle E534_Higgs_Discovery_A.py
-	@echo "-----------------------------------------------------------"
-	-autopep8 E534_Higgs_Discovery_A.py > tmp_E534_Higgs_Discovery_A.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle tmp_E534_Higgs_Discovery_A.py
-	@echo "-----------------------------------------------------------"
-
-
-
-E534_Higgs_Discovery_B:
-	jupyter nbconvert E534_Higgs_Discovery_B.ipynb --clear-output --output tmp_E534_Higgs_Discovery_B.ipynb
-	jupyter nbconvert --to python tmp_E534_Higgs_Discovery_B.ipynb --output tmp_E534_Higgs_Discovery_B.py
-	fgrep -v "# In[ ]:" tmp_E534_Higgs_Discovery_B.py > E534_Higgs_Discovery_B.py
-	rm -f tmp_E534_Higgs_Discovery_B.ipynb tmp_E534_Higgs_Discovery_B.ipynb.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle E534_Higgs_Discovery_B.py
-	@echo "-----------------------------------------------------------"
-	-autopep8 E534_Higgs_Discovery_B.py > tmp_E534_Higgs_Discovery_B.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle tmp_E534_Higgs_Discovery_B.py
-	@echo "-----------------------------------------------------------"
-
-
-
-E534_Higgs_Discovery_C:
-	jupyter nbconvert E534_Higgs_Discovery_C.ipynb --clear-output --output tmp_E534_Higgs_Discovery_C.ipynb
-	jupyter nbconvert --to python tmp_E534_Higgs_Discovery_C.ipynb --output tmp_E534_Higgs_Discovery_C.py
-	fgrep -v "# In[ ]:" tmp_E534_Higgs_Discovery_C.py > E534_Higgs_Discovery_C.py
-	rm -f tmp_E534_Higgs_Discovery_C.ipynb tmp_E534_Higgs_Discovery_C.ipynb.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle E534_Higgs_Discovery_C.py
-	@echo "-----------------------------------------------------------"
-	-autopep8 E534_Higgs_Discovery_C.py > tmp_E534_Higgs_Discovery_C.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle tmp_E534_Higgs_Discovery_C.py
-	@echo "-----------------------------------------------------------"
-
-
-
-E534_Higgs_Discovery_D:
-	jupyter nbconvert E534_Higgs_Discovery_D.ipynb --clear-output --output tmp_E534_Higgs_Discovery_D.ipynb
-	jupyter nbconvert --to python tmp_E534_Higgs_Discovery_D.ipynb --output tmp_E534_Higgs_Discovery_D.py
-	fgrep -v "# In[ ]:" tmp_E534_Higgs_Discovery_D.py > E534_Higgs_Discovery_D.py
-	rm -f tmp_E534_Higgs_Discovery_D.ipynb tmp_E534_Higgs_Discovery_D.ipynb.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle E534_Higgs_Discovery_D.py
-	@echo "-----------------------------------------------------------"
-	-autopep8 E534_Higgs_Discovery_D.py > tmp_E534_Higgs_Discovery_D.py
-	@echo "-----------------------------------------------------------"
-	-pycodestyle tmp_E534_Higgs_Discovery_D.py
-	@echo "-----------------------------------------------------------"
 
 
 
