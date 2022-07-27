@@ -38,10 +38,9 @@ files are additionally marked with `%A`, which will be replaced with
 the job's unique id.
 
 The `--partition` specifies which queue the job will enter and thus the type
-of resources it is allowed. More information can be seen in the following
-image.
+of resources it is allowed. More information can be seen in @fig:slurm-partitions.
 
-![](images/partitions.png)
+![Slurm partitions](images/partitions.png){#fig:slurm-partitions}
 
 The `--gres` is used for jobs that use the GPU. The last number specifies
 the number of cores and the middle specifies which GPU will be used. It can

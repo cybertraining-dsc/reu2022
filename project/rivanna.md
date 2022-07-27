@@ -129,7 +129,7 @@ Here is the current status:
 
 For -account, users will enter either bii_dsc or bii_dsc_community depending on which group they belong to. You can find this by running the allocations utility at the commandline. For -gres=gpu:, users should enter the number of GPUs requested.
 
-The full details of the reservation are below. I named the Slurm reservation “bi_fox_dgx”.  It’s not a typo.  To change the name of the reservation, I would have to delete the reservation and re-create it and the actual name of the reservation does not affect the reservation’s usability.  I’ve successfully tested the ability to use this reservation for all the current bii_dsc and bii_dsc_community members using the Slurm parameters I sent previously.
+The full details of the reservation are below. I named the Slurm reservation “bi_fox_dgx".  It’s not a typo.  To change the name of the reservation, I would have to delete the reservation and re-create it and the actual name of the reservation does not affect the reservation’s usability.  I’ve successfully tested the ability to use this reservation for all the current bii_dsc and bii_dsc_community members using the Slurm parameters I sent previously.
 
 ```
 ReservationName=bi_fox_dgx StartTime=2022-06-01T08:37:38 EndTime=2022-06-02T08:37:38 Duration=1-00:00:00
@@ -283,7 +283,7 @@ in the example script below.
 #SBATCH --error=%u-%j.err
 #SBATCH --partition=gpu
 #SBATCH -c 1
-#SBATCH --gres=”gpu:v100:1”
+#SBATCH --gres="gpu:v100:1"
 #SBATCH --mem=4GB
 #SBATCH --time=3:00
 #SBATCH --account=c4gc
@@ -298,12 +298,12 @@ In the `sbatch` scripts, different GPUs can be activated by specifying it
 through `gres` argument. 
 
 ```
-#SBATCH --gres=”gpu:p100:1”
-#SBATCH --gres=”gpu:v100:1”
-#SBATCH --gres=”gpu:k80:1”
-#SBATCH --gres=”gpu:a100:1”
-#SBATCH --gres=”gpu:a100:1”
-#SBATCH --gres=”gpu:rtx2080:1”
+#SBATCH --gres="gpu:p100:1"
+#SBATCH --gres="gpu:v100:1"
+#SBATCH --gres="gpu:k80:1"
+#SBATCH --gres="gpu:a100:1"
+#SBATCH --gres="gpu:a100:1"
+#SBATCH --gres="gpu:rtx2080:1"
 ```
 
 * TODO: How can we use a100 w/ 40 GB vs. 80 GB?

@@ -59,12 +59,9 @@ plt.show()
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). 
-The output of this program is showcased in [Fig. 1.](examples/images/seaborn-lineplot.svg)
+The output of this program is showcased in @fig:seaborn-lineplot.
 
-<img src='examples/images/seaborn-lineplot.svg' width='500'>
-
-[Fig. 1.](examples/images/seaborn-lineplot.svg) Line Plot Created 
-from User Spotify Data.
+![Line Plot Created from User Spotify Data](examples/images/seaborn-lineplot.svg){#fig:seaborn-lineplot}
 
 ## Distribution Plots
 
@@ -82,12 +79,9 @@ plt.show()
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py).
-The output of this program is showcased in [Fig. 2.](examples/images/seaborn-displot.svg)
+The output of this program is showcased in @fig:seaborn-displot.
 
-<img src='examples/images/seaborn-displot.svg' width='500'>
-
-[Fig. 2.](examples/images/seaborn-displot.svg) Distribution Plot 
-Created from User Spotify Data
+! [Distribution Plot Created from User Spotify Data](examples/images/seaborn-displot.svg){#fig:seaborn-displot}
 
 
 ## Categorical Plots
@@ -110,12 +104,9 @@ plt.show()
 This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 
-The output from the program is showcased in [Fig. 3.](examples/images/seaborn-catplot.svg)
+The output from the program is showcased in @fig:seaborn-catplot.
 
-<img src='examples/images/seaborn-catplot.svg' width='500'>
-
-[Fig. 3.](examples/images/seaborn-catplot.svg) Categorical Plot Created 
-from User Spotify Data.
+![Categorical Plot Created from User Spotify Data](examples/images/seaborn-catplot.svg){#fig:seaborn-catplot}
 
 ## Regression Plots
 
@@ -134,12 +125,9 @@ plt.show()
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
-. The output of this program is showcased in [Fig. 4.](examples/images/seaborn-regplot.svg)
+. The output of this program is showcased in @fig:seaborn-regplot.
 
-<img src='examples/images/seaborn-regplot.svg' width='500'>
-
-[Fig. 4.](examples/images/seaborn-regplot.svg) Regression Plot Created from 
-User Spotify Data
+![Regression Plot Created from User Spotify Data](examples/images/seaborn-regplot.svg){#fig:seaborn-regplot} 
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.

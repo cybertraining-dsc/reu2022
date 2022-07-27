@@ -48,7 +48,6 @@ BOOK:
     - "{file.reu2022}/project/cloudmesh-common-StopWatch.md"
     - "{file.reu2022}/project/cms-command.md"
     - "{file.reu2022}/project/linux.md"
-    - "{file.reu2022}/project/python.md"
     - "{file.reu2022}/project/python/glob/glob.md"
     - "{file.reu2022}/project/python/mmap/mmap.md"
     - "{file.reu2022}/project/python/pickle/pickle.md"
@@ -91,7 +90,7 @@ BOOK:
   - OTHER:
     - "{file.reu2022}/project/books.md"
     - "{file.reu2022}/project/browser.md"
-    - "{file.reu2022}/project/docker.md"
+    - "{file.reu2022}/project/docker/docker.md"
     - "{file.reu2022}/project/git-bash-pseudo-console.md"
     - "{file.reu2022}/project/ssh-agent-windows.md"
     - "{file.reu2022}/project/ubuntu-wsl-cl.md"

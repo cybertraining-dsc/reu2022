@@ -159,10 +159,10 @@ that is done, the user is now connected to Rivanna through Docker.
 
 ## Sources
 
-* https://docs.docker.com/get-docker/
-* https://docs.docker.com/get-started/
-* https://docker-curriculum.com/
-* https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md
-* https://github.com/cybertraining-dsc/reu2022/blob/main/project/rivanna.md
+* <https://docs.docker.com/get-docker>
+* <https://docs.docker.com/get-started>
+* <https://docker-curriculum.com>
+* <https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md>
+* <https://github.com/cybertraining-dsc/reu2022/blob/main/project/rivanna.md>
 
 
