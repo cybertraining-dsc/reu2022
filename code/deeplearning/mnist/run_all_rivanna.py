@@ -74,24 +74,25 @@ for card in gpu:
     tag = f"{host}-{user}-{cpu}-{card}"
     StopWatch.start(f'{card}-total')
     for script in scripts:
+        StopWatch.start(f'{script}')
         if exec == "papermill":
             output = f"{script}-output"
             command = f"{exec} {script}.ipynb {output}.ipynb"
         elif exec == 'sbatch':
-            execute = f"{exec} --gres=gpu:{card}:1 {script}.sh"
-        banner(execute)
+            command = f"{exec} --gres=gpu:{card}:1 {script}.sh"
+        banner(command)
         if not dryrun:
-            Shell.run(execute)
+            Shell.run(command)
+        StopWatch.stop(f'{script}')
 
-    for s in scripts:
-        StopWatch.start(f'{s}')
-        command = f'cat {s}.log'
+    for script in scripts:
+        command = f'cat {script}.log'
         r = Shell.run(command)
         while 'progress=100' not in str(r):
             time.sleep(2)
             r = Shell.run(command)
             continue
-        StopWatch.stop(f'{s}')
+
 
     StopWatch.stop(f'{card}-total')
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
