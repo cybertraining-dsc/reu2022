@@ -55,13 +55,14 @@ if error:
 scripts = textwrap.dedent("""
 mlp_mnist
 mnist_autoencoder
-mnist_cnn
-mnist_lstm
-mnist_mlp_with_lstm
-mnist_rnn
-mnist_with_distributed_training
-mnist_with_pytorch
 """).strip().splitlines()
+
+# mnist_cnn
+# mnist_lstm
+# mnist_mlp_with_lstm
+# mnist_rnn
+# mnist_with_distributed_training
+# mnist_with_pytorch
 
 host = 'rivanna'
 
@@ -73,7 +74,6 @@ for card in gpu:
     tag = f"{host}-{user}-{cpu}-{card}"
     StopWatch.start(f'{card}-total')
     for script in scripts:
-        StopWatch.start(f'{script}')
         if exec == "papermill":
             output = f"{script}-output"
             command = f"{exec} {script}.ipynb {output}.ipynb"
@@ -82,6 +82,9 @@ for card in gpu:
         banner(execute)
         if not dryrun:
             Shell.run(execute)
+
+    for script in scripts:
+        StopWatch.start(f'{script}')
         command = f'cat {script}.log'
         r = Shell.run(command)
         while 'progress=100' not in str(r):
@@ -89,6 +92,8 @@ for card in gpu:
             r = Shell.run(command)
             continue
         StopWatch.stop(f'{script}')
-    StopWatch.stop(f'{card}-total')
 
+    StopWatch.stop(f'{card}-total')
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
+    StopWatch.clear()
+
