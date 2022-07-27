@@ -76,17 +76,16 @@ else:
 for card in cards:
     StopWatch.start('total')
     for script in scripts:
+        v['host'] = 'rivanna'
+        v['gpu'] = card
         if exec == "papermill":
             output = f"{script}-output"
             command = f"{exec} {script}.ipynb {output}.ipynb"
         elif exec == 'sbatch':
             command = f"{exec} --gres=gpu:{card}:1 {script}.sh"
-        v['host'] = 'rivanna'
-        v['gpu'] = card
-
         banner(command)
         if not dryrun:
-            sbatch = os.system(command)
+            sbatch = Shell.run(command)
 
 
     for s in scripts:
