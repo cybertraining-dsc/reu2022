@@ -76,6 +76,7 @@ else:
 for card in cards:
     StopWatch.start('total')
     for script in scripts:
+        StopWatch.start(f'{script}')
         if exec == "papermill":
             output = f"{script}-output"
             command = f"{exec} {script}.ipynb {output}.ipynb"
@@ -87,17 +88,18 @@ for card in cards:
         banner(command)
         if not dryrun:
             sbatch = os.system(command)
+        StopWatch.stop(f'{script}')
 
 
-for s in scripts:
-    waiting_for_squeue = False
-    command = f'cat {s}.log'
-    r = Shell.run(command)
-    print(r)
-    while 'progress=100' not in str(r):
-        time.sleep(2)
+    for s in scripts:
+        waiting_for_squeue = False
+        command = f'cat {s}.log'
         r = Shell.run(command)
-        continue
+        print(r)
+        while 'progress=100' not in str(r):
+            time.sleep(2)
+            r = Shell.run(command)
+            continue
 
     StopWatch.stop('total')
 
