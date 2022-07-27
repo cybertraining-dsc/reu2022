@@ -71,7 +71,7 @@ else:
     gpu = v['gpu'].split(',')
 for card in gpu:
     tag = f"{host}-{user}-{cpu}-{card}"
-    StopWatch.start('total')
+    StopWatch.start(f'{card}-total')
     for script in scripts:
         StopWatch.start(f'{script}')
         if exec == "papermill":
@@ -89,6 +89,6 @@ for card in gpu:
             r = Shell.run(command)
             continue
         StopWatch.stop(f'{script}')
-    StopWatch.stop('total')
+    StopWatch.stop(f'{card}-total')
 
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
