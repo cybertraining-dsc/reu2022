@@ -19,7 +19,11 @@ clicking `Uninstall` and completing the uninstallation wizard.
 
 Then, reinstall (or install for the first time) with chocolatey 
 in an instance of Powershell ran as administrator with
-`choco install git.install --params "/GitAndUnixToolsOnPath /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf" -y`
+
+```bash
+$ choco install git.install --params "/GitAndUnixToolsOnPath \
+        /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf" -y
+```
 
 If you do not have chocolatey then follow the tutorial at
 <https://chocolatey.org/install>, or use the standard Git
