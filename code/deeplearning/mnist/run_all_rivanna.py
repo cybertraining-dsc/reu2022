@@ -83,15 +83,15 @@ for card in gpu:
         if not dryrun:
             Shell.run(execute)
 
-    for script in scripts:
-        StopWatch.start(f'{script}')
-        command = f'cat {script}.log'
+    for s in scripts:
+        StopWatch.start(f'{s}')
+        command = f'cat {s}.log'
         r = Shell.run(command)
         while 'progress=100' not in str(r):
             time.sleep(2)
             r = Shell.run(command)
             continue
-        StopWatch.stop(f'{script}')
+        StopWatch.stop(f'{s}')
 
     StopWatch.stop(f'{card}-total')
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
