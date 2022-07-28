@@ -16,7 +16,7 @@ info:
 
 epub: clean version bib
 	mkdir -p dest
-	cat $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	cat $(CM)/su22-reu-385/*bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
 	bookmanager $(NAME).yaml get
 	bookmanager $(NAME).yaml epub
 	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
@@ -27,7 +27,7 @@ pdf: epub
 
 ai: clean version bib
 	mkdir -p dest
-	cat $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	cat $(CM)/su22-reu-385/*bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
 	bookmanager $(AI).yaml get
 	bookmanager $(AI).yaml epub
 	bookmanager $(AI).yaml pdf
