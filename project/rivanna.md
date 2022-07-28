@@ -2,6 +2,15 @@
 
 ---
 
+## Table of Contents
+
+* Rivanna
+* Running Tensorflow on Rivanna
+* Run Python MPI Programs on Rivanna
+* Setting Parameters while Running `mnist` Jobs
+
+---
+
 ![](images/learning.png) **Learning Objectives**
 
 * Learn how to use Rivanna

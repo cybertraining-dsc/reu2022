@@ -1,9 +1,23 @@
 # Run Python MPI programs on Rivanna
 
-see the book Python MPI
+---
 
-add chapter if not there
+## Table of Contents
 
+* Rivanna
+* Running Tensorflow on Rivanna
+* Run Python MPI Programs on Rivanna
+* Setting Parameters while Running `mnist` Jobs
+
+---
+
+![](images/learning.png) **Learning Objectives**
+
+* Learn how to submit Slurm jobs on Rivanna through SBATCH
+* Learn how to run SBATCH through Bash files
+* Learn how view the queue of running Slurm jobs
+
+---
 
 ## SBATCH in Bash Files
 
