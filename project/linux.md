@@ -17,12 +17,12 @@ Create a pull riquest with your contribution.
 
 Please read the folloing book and contribute to it.
 
-* <https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf>
+* [Linux Book](<https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf>)
 
 ## Github
 
 PLease read teh folloing tutorials and improve if needed
 
-* <https://cybertraining-dsc.github.io/docs/tutorial/git/git-pull-request/>
-* <https://cybertraining-dsc.github.io/docs/tutorial/git/git-ssh/>
-* <https://cybertraining-dsc.github.io/docs/tutorial/git/git-gh/>
+* [Git Pull Requests](<https://cybertraining-dsc.github.io/docs/tutorial/git/git-pull-request/>)
+* [Git ssh Command](<https://cybertraining-dsc.github.io/docs/tutorial/git/git-ssh/>)
+* [GitHub](<https://cybertraining-dsc.github.io/docs/tutorial/git/git-gh/>)

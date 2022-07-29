@@ -139,5 +139,5 @@ computers.close()
 
 ## Links
 
-* <https://pymotw.com/3/shelve/index.html>
-* <https://docs.python.org/3/library/shelve.html>
+* [Shelve Documentation](<https://pymotw.com/3/shelve/index.html>)
+* [Python Object Persistence](<https://docs.python.org/3/library/shelve.html>)

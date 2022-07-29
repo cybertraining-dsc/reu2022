@@ -299,21 +299,21 @@ available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
 ### Lists
 
-* <https://towardsdatascience.com/python-basics-6-lists-and-list-manipulation-a56be62b1f95>
-* <https://www.w3schools.com/python/python_ref_list.asp>
+* [List Manipulation](<https://towardsdatascience.com/python-basics-6-lists-and-list-manipulation-a56be62b1f95>)
+* [Python List and Array Methods](<https://www.w3schools.com/python/python_ref_list.asp>)
 
 ### Dictionaries
 
-* <https://www.pythonforbeginners.com/dictionary/dictionary-manipulation-in-python>
-* <https://www.w3schools.com/python/python_ref_dictionary.asp>
-* <https://www.w3schools.com/python/ref_dictionary_update.asp>
+* [Dictionary Manipulation in Python](<https://www.pythonforbeginners.com/dictionary/dictionary-manipulation-in-python>)
+* [Python Dictionary Methods](<https://www.w3schools.com/python/python_ref_dictionary.asp>)
+* [Update a dictionary](<https://www.w3schools.com/python/ref_dictionary_update.asp>)
 
 ### CSV Files
 
-* <https://www.geeksforgeeks.org/creating-a-dataframe-using-csv-files/>
-* <https://docs.python.org/3/library/csv.html#examples>
-* <https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html>
-* <https://docs.python.org/3/library/functions.html#open>
-* <https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737#extracting-information-from-a-csv-file>
-* <https://stackoverflow.com/questions/13039392/csv-list-index-out-of-range>
-* <https://www.geeksforgeeks.org/visualize-data-from-csv-file-in-python/>
+* [Create a dataframe](<https://www.geeksforgeeks.org/creating-a-dataframe-using-csv-files/>)
+* [CSV File Reading and Writing](<https://docs.python.org/3/library/csv.html#examples>)
+* [CSV File Overview](<https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html>)
+* [Python Built in Read CSV Files](<https://docs.python.org/3/library/functions.html#open>)
+* [Extracting Information from a CSV File](<https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737#extracting-information-from-a-csv-file>)
+* [List Index out of Range](<https://stackoverflow.com/questions/13039392/csv-list-index-out-of-range>)
+* [Visualizing Data in CSV](<https://www.geeksforgeeks.org/visualize-data-from-csv-file-in-python/>)

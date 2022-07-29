@@ -39,3 +39,8 @@ This code can be accessed from [GitHub](https://github.com/cybertraining-dsc/reu
 For requests, an `r` value of 200 means that the method was a success whereas a 100 means not a success. 
 
 In addition to these functions, the `requests` library has a plethora of other functionalities. It can send more data, convert to `json` files, execute `patches`, etc. The documentation for the `requests` library can be found [here](https://requests.readthedocs.io/en/latest/user/quickstart/#passing-parameters-in-urls). This link is also where the examples are drawn from.
+
+
+## Links
+
+* [Requests Documentation](https://requests.readthedocs.io/en/latest/user/quickstart/#passing-parameters-in-urls)

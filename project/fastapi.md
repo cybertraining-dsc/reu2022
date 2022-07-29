@@ -360,9 +360,8 @@ can be added as well.
 
 ## Links
 
-* <https://fastapi.tiangolo.com/tutorial/first-steps/>
-* <https://fastapi.tiangolo.com/tutorial/path-params/>
-* <https://fastapi.tiangolo.com/deployment/docker/>
-* <https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>
-* <https://fastapi.tiangolo.com/advanced/async-tests/>
-* cloudmesh cc TODO
+* [Fastapi First Step](<https://fastapi.tiangolo.com/tutorial/first-steps/>)
+* [Path Parameters](<https://fastapi.tiangolo.com/tutorial/path-params/>)
+* [Docker Deployment](<https://fastapi.tiangolo.com/deployment/docker/>)
+* [Using Test Client](<https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>)
+* [Async Tests](<https://fastapi.tiangolo.com/advanced/async-tests/>)
