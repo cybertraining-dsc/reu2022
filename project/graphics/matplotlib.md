@@ -281,8 +281,8 @@ plt.show()
 
 ### Links
 
-* <https://matplotlib.org/>
-* <https://matplotlib.org/stable/api/pyplot_summary.html>
-* <https://www.activestate.com/resources/quick-reads/what-is-matplotlib-in-python-how-to-use-it-for-plotting/>
-* <https://www.geeksforgeeks.org/bar-plot-in-matplotlib/>
+* <https://matplotlib.org/> [@www-matplotlib]
+* <https://matplotlib.org/stable/api/pyplot_summary.html> [@www-matplotlib-documentation]
+* <https://www.activestate.com/resources/quick-reads/what-is-matplotlib-in-python-how-to-use-it-for-plotting/> [@www-matplotlib-activestate]
+* <https://www.geeksforgeeks.org/bar-plot-in-matplotlib/> [@www-matplotlib-barplot]
 

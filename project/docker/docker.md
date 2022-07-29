@@ -159,9 +159,9 @@ that is done, the user is now connected to Rivanna through Docker.
 
 ## Links
 
-* [Get Docker](https://docs.docker.com/get-docker)
-* [Getting Started](https://docs.docker.com/get-started)
-* [Introduction to Docker](https://docker-curriculum.com)
+* [Get Docker](https://docs.docker.com/get-docker) [@www-docker-get]
+* [Getting Started](https://docs.docker.com/get-started) [@www-docker-documentation-setup]
+* [Introduction to Docker](https://docker-curriculum.com) [@www-docker-tutorial-beginner-2016]
 * [Setting Up GitBash](https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md)
 * [Rivanna Set Up](https://github.com/cybertraining-dsc/reu2022/blob/main/project/rivanna.md)
 

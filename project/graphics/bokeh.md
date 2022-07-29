@@ -240,8 +240,8 @@ This code can be accessed on
 
 ## Links
 
-* [Bokeh user guide for plotting ](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html)
-* [Latest Bokeh Information](http://docs.bokeh.org/en/latest/)
-* [Bokeh Documentation](https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html)
-* [Exporting Plots in Bokeh](https://docs.bokeh.org/en/latest/docs/user_guide/export.html)
+* [Bokeh user guide for plotting ](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html) [@www-plotting-basic-glyphs]
+* [Latest Bokeh Information](http://docs.bokeh.org/en/latest/) [@www-bokeh-documentation]
+* [Bokeh Documentation](https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html) [@www-bokeh-figure]
+* [Exporting Plots in Bokeh](https://docs.bokeh.org/en/latest/docs/user_guide/export.html) [@www-bokeh-exporting]
 
