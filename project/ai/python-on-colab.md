@@ -8,7 +8,7 @@ Python Exercise on Google Colab
 * [Open In Colab](https://colab.research.google.com/github/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/python_warmup.ipynb)   
 * [View in Github](https://github.com/cybertraining-dsc/cybertraining-dsc.github.io/blob/master/content/en/modules/notebooks/python_warmup.ipynb)   
 * [Download](https://raw.githubusercontent.com/cybertraining-dsc/cybertraining-dsc.github.io/master/content/en/modules/notebooks/python_warmup.ipynb)
-
+* [Book](https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf)
 
 In this exercise, we will take a look at some basic Python Concepts
 needed for day-to-day coding.
