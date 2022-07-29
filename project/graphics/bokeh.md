@@ -1,6 +1,6 @@
 # Bokeh
 
-Bokeh is a Python library useful for generating visualizations for web
+Bokeh [@www-bokeh] is a Python library useful for generating visualizations for web
 browsers. It generates graphics for all types of plots and dashboards
 powered by JavaScript without the user’s need to write any JavaScript
 code. The guide below will walk you through useful Bokeh commands and
@@ -56,7 +56,7 @@ This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py). The output is shown in @fig:bokeh-figure.
 
 
-![Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure}
+![Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure witdh=60%}
 
 ## Figure Parameters Example
 
@@ -240,8 +240,7 @@ This code can be accessed on
 
 ## Links
 
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
-* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
+* [Bokeh user guide for plotting ](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html)
 * <http://docs.bokeh.org/en/latest/>
 * <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
 * <https://docs.bokeh.org/en/latest/docs/user_guide/export.html>
