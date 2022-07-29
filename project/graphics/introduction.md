@@ -33,7 +33,7 @@ examples to identfy plots that you may want to generate.
 * [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html)
 * [seaborn gallery](https://seaborn.pydata.org/examples/index.html)
 * [bokeh gallery](https://docs.bokeh.org/en/latest/docs/gallery.html)
-* [pandas gallery](TODO)
+* [pandas gallery](https://pandas.pydata.org/pandas-docs/dev/user_guide/visualization.html)
 
 Another combined gallery is available as
 
