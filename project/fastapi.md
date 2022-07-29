@@ -366,8 +366,8 @@ can be added as well.
 
 ## Links
 
-* [Fastapi First Step](https://fastapi.tiangolo.com/tutorial/first-steps/)
-* [Path Parameters](https://fastapi.tiangolo.com/tutorial/path-params/)
-* [Docker Deployment](https://fastapi.tiangolo.com/deployment/docker/>)
-* [Using Test Client](https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>)
-* [Async Tests](https://fastapi.tiangolo.com/advanced/async-tests/>)
+* [Fastapi First Step](https://fastapi.tiangolo.com/tutorial/first-steps/)[@www-first-steps-fastapi]
+* [Path Parameters](https://fastapi.tiangolo.com/tutorial/path-params/)[@www-path-parameters-fastapi]
+* [Docker Deployment](https://fastapi.tiangolo.com/deployment/docker/>)[@www-fastapi-in-container]
+* [Using Test Client](https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>)[@www-fastapi-testing]
+* [Async Tests](https://fastapi.tiangolo.com/advanced/async-tests/>)[@www-async-tests]

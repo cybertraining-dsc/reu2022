@@ -25,8 +25,8 @@ the Rivanna system.
 
 * Presentations
  
-  * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
-  * [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)
+  * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)[@www-slurm-tutorial]
+  * [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/) [@www-computing-research]
 
 * [Intro to Rivanna](https://learning.rc.virginia.edu/notes/rivanna-intro/)
 
@@ -376,6 +376,6 @@ host rivanna
 
 ## Links
 
-* [ssh Config File](https://linuxize.com/post/using-the-ssh-config-file/)
+* [ssh Config File](https://linuxize.com/post/using-the-ssh-config-file/)[@www-linuxize]
 * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)
 * [UVA Rivanna presentation, June 8th, 2022](https://learning.rc.virginia.edu/notes/rivanna-intro/)

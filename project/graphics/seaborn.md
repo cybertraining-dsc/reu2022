@@ -148,9 +148,9 @@ This program can be downloaded from
 
 ## Links
 
-* <https://seaborn.pydata.org/api.html>
-* <https://www.geeksforgeeks.org/python-seaborn-tutorial/>
-* <https://www.geeksforgeeks.org/introduction-to-seaborn-python/>
-* <https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/>
-* <https://stackoverflow.com/questions/30336324/seaborn-load-dataset>
-* <https://github.com/mwaskom/seaborn-data/blob/master/planets.csv>
+* <https://seaborn.pydata.org/api.html> [@www-api-reference]
+* <https://www.geeksforgeeks.org/python-seaborn-tutorial/> [@www-seaborn-tutorial]
+* <https://www.geeksforgeeks.org/introduction-to-seaborn-python/> [@www-intro-seaborn]
+* <https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/> [@www-plotting-seaborn]
+* <https://stackoverflow.com/questions/30336324/seaborn-load-dataset> [@www-seaborn-load]
+* <https://github.com/mwaskom/seaborn-data/blob/master/planets.csv> [@www-seaborn-data]

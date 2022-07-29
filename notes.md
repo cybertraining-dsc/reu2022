@@ -44,7 +44,7 @@ project/graphics/data-management/python-data.md:319:* <https://www.geeksforgeeks
 
 project/graphics/pandas.md:196:* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html>
 project/graphics/pandas.md:197:* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html>
-project/graphics/pandas.md:198:* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html>
+project/graphics/pandas.md:198:* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html> [@www-pandas-dataframe-plotpie]
 
 project/graphics/bokeh.md:102:[here](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html).
 project/graphics/bokeh.md:135:<http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>

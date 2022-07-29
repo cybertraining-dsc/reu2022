@@ -94,5 +94,5 @@ This code can be accessed on [GitHub](https://github.com/cybertraining-dsc/reu20
 All specifics on queues can be researched at the below links:
 
 * [Python Queues](https://pymotw.com/3/queue/index.html) [@www-python-queue-thread-safe]
-* [Priority Queues in Python](https://www.geeksforgeeks.org/priority-queue-in-python/)
-* [Queue Documentations](https://docs.python.org/3/library/queue.html)
+* [Priority Queues in Python](https://www.geeksforgeeks.org/priority-queue-in-python/)[@www-python-queue-thread-safe]
+* [Queue Documentations](https://docs.python.org/3/library/queue.html)[@www-priority-queue-python]
