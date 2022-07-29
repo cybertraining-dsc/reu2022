@@ -42,7 +42,7 @@ BOOK:
     - "{file.timeseries}/time-series-prediction/stationary-and-nonstationary-timeseries/stationary-and-nonstationary.md"
     - "{file.timeseries}/time-series-prediction/smothen/smothen.md"
     - "{file.timeseries}/time-series-prediction/tft/temporal-fusion-transformer.md"
-    - "{file.timeseries}/time-series-prediction/refernce.md"
+    # - "{file.timeseries}/time-series-prediction/refernce.md"
 ##  - COMMUNICATION:
 ##    - "{file.chapter}/doc/communicate.md"
 ##    - "{file.mpi}/report-group.md"
