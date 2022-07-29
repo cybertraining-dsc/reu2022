@@ -165,7 +165,7 @@ You can `fgrep` the result as follows:
 $rivanna: fgrep '# csv' mnist_autoencoder_output.py
 ```
 
-## Sources
+## Links
 
 * [Tensorflow](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/)
 * [Rivanna Tensorflow](https://www.rc.virginia.edu/userinfo/rivanna/software/tensorflow/)

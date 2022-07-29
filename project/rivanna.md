@@ -1,6 +1,9 @@
 # Rivanna 
 
----
+Rivanna is UVA's High Performance Computing (HPC) System. Rivanna
+is used to run programs that require a lot of memory or computing
+power. This tutorial will go through the basics of Rivanna, from
+obtaining access to running specialized jobs.
 
 ## Table of Contents
 
@@ -9,15 +12,11 @@
 * Run Python MPI Programs on Rivanna
 * Setting Parameters while Running `mnist` Jobs
 
----
-
 ![](images/learning.png) **Learning Objectives**
 
 * Learn how to use Rivanna
 * Learn how to set up VPN to access Rivanna from commandline
 * Learn how to access Rivanna from a terminal including Windows
-
----
 
 ## Links
 
@@ -375,7 +374,7 @@ host rivanna
         IdentityFile ~/.ssh/id_rsa
 ```
 
-## Sources
+## Links
 
 * [ssh Config File](<https://linuxize.com/post/using-the-ssh-config-file/>)
 * [Knuuti](https://docs.google.com/presentation/d/1Xt4kOtQpvl1JTDETJkOS-OMi8csZsJJw03xGus3QLA0/edit?usp=sharing)

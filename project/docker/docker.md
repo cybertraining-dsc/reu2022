@@ -157,7 +157,7 @@ A prompt will ask if the user wants to continue connecting. Type in "yes".
 After that, it will ask for the user's Rivanna password, type it in. Once 
 that is done, the user is now connected to Rivanna through Docker.
 
-## Sources
+## Links
 
 * [Get Docker](<https://docs.docker.com/get-docker>)
 * [Getting Started](<https://docs.docker.com/get-started>)
