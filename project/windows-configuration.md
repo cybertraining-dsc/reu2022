@@ -9,8 +9,8 @@ must properly configure their machine to prepare it for a project.
 As we use Python 3.10.5 from `python.org`, please uninstall Anaconda.
 This can be done with `Add or remove programs`.
 
-Pycharm and Git Bash can be installed with the instructions found
-in *Install.*
+Pycharm and Git Bash can be installed with the instructions found in
+*Install.*
 
 ## Preparing for Virtualization
 
@@ -39,26 +39,24 @@ used as opposed to WSL 1. To install, type this into Powershell:
 wsl --install
 ```
 
-To install a particular distribution, use `wsl --install -d <DistroName>`
-instead. The available distributions can be found with `wsl --list --online`.
+To install a particular distribution, use `wsl --install -d
+<DistroName>` instead. The available distributions can be found with
+`wsl --list --online`.
 
-After WSL is installed, it can be accessed by typing `wsl` in Powershell.
+After WSL is installed, it can be accessed by typing `wsl` in
+Powershell. More documentation can be found in the [Microsoft 
+Official Documentation](<https://docs.microsoft.com/en-us/windows/wsl/install>).
 
 #### Directories in WSL
 
-WSL creates a Linux environment in your Windows directory. To access your
-directories with WSL, a special syntax is used. For example, your home
-directory, typically `C:\Users\<USERNAME>` and abbreviated to `~` is the
-following with WSL: `/mnt/c/Users/<USERNAME>/`. So to change directories
-to the Desktop in WSL, use this command:
+WSL creates a Linux environment in your Windows directory. To access
+your directories with WSL, a special syntax is used. For example, your
+home directory, typically `C:\Users\<USERNAME>` and abbreviated to `~`
+is the following with WSL: `/mnt/c/Users/<USERNAME>/`. So to change
+directories to the Desktop in WSL, use this command:
 
 ```wsl
 $ cd /mnt/c/Users/example_user/Desktop
 ```
 
 `example_user` would be replaced with the name of the User.
-
-
-## Links
-
-* <https://docs.microsoft.com/en-us/windows/wsl/install>
