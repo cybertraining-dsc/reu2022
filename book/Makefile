@@ -7,16 +7,22 @@ HOME=..
 
 include makefile.sys
 
-all: epub pdf
+all: pull epub pdf
 
 # authors
 
+pull:
+	git pull
+	cd ../../cloudmesh-common; git pull
+	cd ../../cloudmesh-cc; git pull
+	cd ../../su22-reu-385; git pull
 info:
 	ls ${CM}
 
 epub: clean version bib
 	mkdir -p dest
-	cat $(CM)/su22-reu-385/*bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	# ./timeseries-references.bib
+	cat $(CM)/su22-reu-385/*.bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
 	bookmanager $(NAME).yaml get
 	bookmanager $(NAME).yaml epub
 	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
@@ -25,7 +31,7 @@ pdf: epub
 	bookmanager $(NAME).yaml pdf
 	cp ./dest/vonLaszewski-$(NAME).pdf $(FINAL)/docs
 
-ai: clean version bib
+ai: clean pull version bib
 	mkdir -p dest
 	cat $(CM)/su22-reu-385/*bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
 	bookmanager $(AI).yaml get

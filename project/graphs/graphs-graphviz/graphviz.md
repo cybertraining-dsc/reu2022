@@ -192,7 +192,7 @@ Colored Nodes ](images/color-graphviz-ex.png){#fig:color-graphviz-ex}
 
 ## Links
 
-* [Graphviz Website](<https://pypi.org/project/graphviz/>)
-* [Graphviz Example](<https://graphviz.readthedocs.io/en/stable/examples.html>)
-* [Graphviz API Reference](<https://graphviz.readthedocs.io/en/stable/api.html>)
+* [Graphviz Website](https://pypi.org/project/graphviz/>)
+* [Graphviz Example](https://graphviz.readthedocs.io/en/stable/examples.html>)
+* [Graphviz API Reference](https://graphviz.readthedocs.io/en/stable/api.html>)
 

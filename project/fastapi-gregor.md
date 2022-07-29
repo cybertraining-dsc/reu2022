@@ -127,4 +127,4 @@ TODO: user computer as model
 
 ## Links
 
-* [Fastapi First Steps](<https://fastapi.tiangolo.com/tutorial/first-steps/>)
+* [Fastapi First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/)
