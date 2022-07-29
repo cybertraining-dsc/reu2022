@@ -98,11 +98,14 @@ BOOK:
   - BIOS:
     - "{file.reu2022}/contribute/bio.md"
   - EXPERIENCE_REPORTS:
-    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-381/main/README.md
-    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-382/main/README.md
-    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-383/main/README.md
-    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-384/main/README.md
-    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-385/main/README.md
+    - 381:
+      - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-381/main/README.md
+    - 382:
+      - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-382/main/README.md
+    - 383:
+      - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-383/main/README.md
+    - 385:
+      - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-385/main/README.md
 ##  - COMMUNICATION:
 ##    - "{file.chapter}/doc/communicate.md"
 ##    - "{file.mpi}/report-group.md"
