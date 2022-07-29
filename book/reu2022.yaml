@@ -97,6 +97,12 @@ BOOK:
     - "{file.reu2022}/project/uva.md"
   - BIOS:
     - "{file.reu2022}/contribute/bio.md"
+  - EXPERIENCE_REPORTS:
+    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-381/main/README.md
+    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-382/main/README.md
+    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-383/main/README.md
+    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-384/main/README.md
+    - https://raw.githubusercontent.com/cybertraining-dsc/su22-reu-385/main/README.md
 ##  - COMMUNICATION:
 ##    - "{file.chapter}/doc/communicate.md"
 ##    - "{file.mpi}/report-group.md"
