@@ -10,5 +10,7 @@
         * [optional] What challenges you’ve faced so far
     * It should be around 5-7 minutes long.
 * In order to access the Biocomplexity Institute building, you must alert your mentor and sign up on the BII app. If coming for the first time you need to request access with Ben S.
-*  [C4GC Links and Recordings](https://docs.google.com/spreadsheets/d/1vHwF4ctXbDb3Nhx7CBE4w9AX1KcwfBDni6CD1aAdV1A/edit#gid=0)
-*  Rivanna Orientation (C4GC specific) on Thursday June 9, 10 am - 11 am.
+* [C4GC Links and Recordings](https://docs.google.com/spreadsheets/d/1vHwF4ctXbDb3Nhx7CBE4w9AX1KcwfBDni6CD1aAdV1A/edit#gid=0)
+* The students within this REU found that the timing of the meetings for the C4GC meetings was not good, as it interrupted the thoughts from morning programming and discussion. The reason for this is that the students started at 8am with Professor von Lazsewski and met for between 30 minutes and a few hours every morning. Then, the students would have only a short time after the morning meeting to start work before the meeting with Benjamin Hurt. It would have been more efficient to have these meetings at the end of the day. It could be something to look forward to and something to help keep focus.
+* The students thought that the meetings were overall very, very good. They were something that the students looked forward to and found much inspiration in. 
+* Rivanna Orientation (C4GC specific) on Thursday June 9, 10 am - 11 am.
