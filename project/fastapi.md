@@ -24,6 +24,12 @@ To install FastAPI and uvicorn simply use the command:
 $ pip install "fastapi[all]"
 ```
 
+If this command does not work, use this alternative:
+
+``bash
+$ pip install --only-binary :all: fastapi[all]
+``
+
 ## FastAPI Quickstart
 
 One of the simplest FastAPI file looks like this, which we assume is placed 
