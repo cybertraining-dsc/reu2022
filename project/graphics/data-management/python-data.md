@@ -257,11 +257,13 @@ This code can be access from
 
 This code produces [@fig:csv-list-lineplot]. and Figure [@fig:csv-dict-lineplot].:
 
+![csv-list-lineplot](images/csv-list-lineplot.png)
 {#fig:csv-list-lineplot width=50%}
 
 [@fig:csv-list-lineplot]: created using the data
 available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
+![csv-dict-lineplot](images/csv-dict-lineplot.png)
 {#fig:csv-dict-lineplot width=50%}
 
 [@fig:csv-dict-lineplot]: created using the data
@@ -290,6 +292,7 @@ This code can be accessed from
 
 This code produces the [@fig:pandas-lineplot]:
 
+![pandas-lineplot](images/pandas-lineplot.png)
 {#fig:pandas-lineplot width=50%}
 
 [@fig:pandas-lineplot]: created using the data
