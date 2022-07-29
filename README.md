@@ -1,5 +1,9 @@
 # REU 2022
 
+## Introduction
+
+This REU2022 was created from the Bicomplexity Institute at the University of Virginia, specifically in their Computing for Global Challenges program. The division that the program operates from is the Network Sciences and Advanced Computing Division. The goal of the REU was to learn about cloud computing through project based learning, while also writing documentation for the National Science Foundation. The program lasted from June 2nd, 2022 until July 29th, 2022. Additionally, the program meshed the National Science Foundation with the Biocomplexity Institute, thus there were things that were similar and different between the two programs. 
+
 ## Books
 
 * <https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf>
