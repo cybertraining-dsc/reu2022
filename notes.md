@@ -41,9 +41,11 @@ project/graphics/data-management/python-data.md:316:* <https://docs.python.org/3
 project/graphics/data-management/python-data.md:317:* <https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737#extracting-information-from-a-csv-file>
 project/graphics/data-management/python-data.md:318:* <https://stackoverflow.com/questions/13039392/csv-list-index-out-of-range>
 project/graphics/data-management/python-data.md:319:* <https://www.geeksforgeeks.org/visualize-data-from-csv-file-in-python/>
+
 project/graphics/pandas.md:196:* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html>
 project/graphics/pandas.md:197:* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html>
 project/graphics/pandas.md:198:* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html>
+
 project/graphics/bokeh.md:102:[here](http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html).
 project/graphics/bokeh.md:135:<http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
 project/graphics/bokeh.md:243:* <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -51,10 +53,12 @@ project/graphics/bokeh.md:244:* <http://docs.bokeh.org/en/latest/docs/user_guide
 project/graphics/bokeh.md:245:* <http://docs.bokeh.org/en/latest/>
 project/graphics/bokeh.md:246:* <https://docs.bokeh.org/en/latest/docs/reference/plotting/figure.html>
 project/graphics/bokeh.md:247:* <https://docs.bokeh.org/en/latest/docs/user_guide/export.html>
+
 project/graphics/matplotlib.md:284:* <https://matplotlib.org/>
 project/graphics/matplotlib.md:285:* <https://matplotlib.org/stable/api/pyplot_summary.html>
 project/graphics/matplotlib.md:286:* <https://www.activestate.com/resources/quick-reads/what-is-matplotlib-in-python-how-to-use-it-for-plotting/>
 project/graphics/matplotlib.md:287:* <https://www.geeksforgeeks.org/bar-plot-in-matplotlib/>
+
 project/graphics/introduction.md:33:* [matplotlib gallery](https://matplotlib.org/stable/gallery/index.html)
 project/graphics/introduction.md:34:* [seaborn gallery](https://seaborn.pydata.org/examples/index.html)
 project/graphics/introduction.md:35:* [bokeh gallery](https://docs.bokeh.org/en/latest/docs/gallery.html)
