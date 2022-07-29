@@ -41,11 +41,11 @@ wsl --install
 
 To install a particular distribution, use `wsl --install -d
 <DistroName>` instead. The available distributions can be found with
-`wsl --list --online`.
+wsl --list --online`.
 
 After WSL is installed, it can be accessed by typing `wsl` in
 Powershell. More documentation can be found in the [Microsoft 
-Official Documentation](<https://docs.microsoft.com/en-us/windows/wsl/install>).
+Official Documentation](https://docs.microsoft.com/en-us/windows/wsl/install).
 
 #### Directories in WSL
 

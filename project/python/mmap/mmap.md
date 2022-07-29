@@ -172,4 +172,4 @@ Let's play with the dog, it's really nice out today!
 
 ## Links
 
-* [mmap documentation](<https://pymotw.com/3/mmap/index.html>)
+* [mmap documentation](https://pymotw.com/3/mmap/index.html>)
