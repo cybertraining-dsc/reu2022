@@ -167,6 +167,6 @@ $rivanna: fgrep '# csv' mnist_autoencoder_output.py
 
 ## Sources
 
-* https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
-* https://www.rc.virginia.edu/userinfo/rivanna/software/tensorflow/
-* https://www.rc.virginia.edu/userinfo/rivanna/software/containers/
+* [Tensorflow](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/)
+* [Rivanna Tensorflow](https://www.rc.virginia.edu/userinfo/rivanna/software/tensorflow/)
+* [Rivanna Software Container](https://www.rc.virginia.edu/userinfo/rivanna/software/containers/)

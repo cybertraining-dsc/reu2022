@@ -12,4 +12,4 @@ Documentation
 
 see cloudmesh.cmd5
 
-* https://github.com/cloudmesh/cloudmesh.cmd5
+* [Cloudmesh-CMD File](https://github.com/cloudmesh/cloudmesh.cmd5)
