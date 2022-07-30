@@ -59,7 +59,7 @@ This program can be downloaded from
 The output of this program is showcased in @fig:matplotlib-barchart2.
 
 
-![Spotify Data Shown in Bar Chart](examples/images/matplotlib-barchart.svg){#fig:matplotlib-barchart2} 
+![Spotify Data Shown in Bar Chart](examples/images/matplotlib-barchart.svg){#fig:matplotlib-barchart2 width=50%} 
 
 ### Line Chart
 
@@ -88,11 +88,11 @@ plt.show()
 ```
 
 This program can be downloaded from
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
-.
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py).
+
 The output of this program is showcased in @fig:matplotlib-linechart.
 
-![Sample Randomized Line Plot](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart} 
+![Sample Randomized Line Plot](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart width=50%} 
 
 
 ### Pie Chart
@@ -121,7 +121,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/gra
 The output of this program is showcased in @fig:matplotlib-piechart.
 
 
-[Genres of Music from Spotify Distributed on a Pie Chart](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart} 
+![Genres of Music from Spotify Distributed on a Pie Chart](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart width=50%} 
 
 ### Contour Plot
 
@@ -151,7 +151,7 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py). The output of this program is showcased in @fig:matplotlib-contour.
 
-![Multivariable Math Equation Shown on a Contour Plot](examples/images/matplotlib-contour.svg) {#fig:matplotlib-contour}
+![Multivariable Math Equation Shown on a Contour Plot](examples/images/matplotlib-contour.svg){#fig:matplotlib-contour width=50%}
 
 A contour plot allows data and equations consisting of three variables
 to be plotted through plotting 3D surfaces as 2D slices on a `xy`
@@ -226,9 +226,10 @@ plt.show()
 ```
 
 This program can be downloaded from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/rotatingticks.py).
-The output of this program is showcased in #fig:matplotlib-rotatingticks.
 
-[Line Plot with `x-axis` Ticks Rotated by 90 degrees and `y-axis` Ticks Rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:matplotlib-rotatingticks}
+The output of this program is showcased in @fig:matplotlib-rotatingticks.
+
+![Line Plot with `x-axis` Ticks Rotated by 90 degrees and `y-axis` Ticks Rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:matplotlib-rotatingticks  width=50%}
 
 ### Exporting
 
