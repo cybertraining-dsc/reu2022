@@ -1,8 +1,6 @@
 # Blockchain
 
-Author: Jacques Fleischer
-
-We presented on Thursday a blockchain paper.
+Author: Jacques Fleischer, Gregor von Laszewski
 
 ## Abstract
 
