@@ -1,22 +1,59 @@
-# Configuring Windows for REU
+# Configuring Windows for Research
 
 Unlike Linux and macOS, Windows runs on a completely different
-OS. Most coding environments are adapted to Linux, so Windows users
+OS. Many coding environments are adapted to Linux, so Windows users
 must properly configure their machine to prepare it for a project.
+This is of special importance when working in environments supprting 
+distributed cyberinfrastructure. Here in many cases Linux is required.
 
 ## Setting Up the Python Environment
 
-As we use Python 3.10.5 from `python.org`, please uninstall Anaconda.
+Often you need a specific version of Python. If in doubt, please 
+install the newest one. At time of writing this document it 
+is Python 3.10.5.
+
+Please download and install it from  `python.org`.
+We recommend that you uninstall Anaconda if you used that before 
+and use the verison from python.org instead..
 Development is easier when using a native
 Python installation instead of anaconda/conda.
 
 To uninstall anaconda, press the Windows key
 and type "Add or remove programs". Then, press
 Enter and search for `conda` in the "Search this
-list" box. Remove everything related to anaconda.
+list" box. Remove everything related to anaconda. 
+Note that anaconda may have set some environment 
+variables or added configuration scripts to your `.bashrc`
+files in case you use gitbash. Please, remove them and make sure your 
+pythin version from python.or works as expected.
+
+To edit python we recommend using pyCharm and not VSCode.
 
 Pycharm and Git Bash can be installed with the instructions found in
 *Install.*
+
+Installation may be simplified while using chocolatey.
+
+This includes
+
+* gitbash
+* pycharm
+* emacs
+* docker
+
+Before installing docker however you have to set up the 
+appropriate hypervisor at boot time. PLease let us know how 
+you set them for your machine, so we can add some information here. 
+You willlikely have to research it.
+
+Please also know that you MUST uninstall virtualbox before you 
+install docker, as old versions of virtualbox are incompatible 
+with docker and it is just easier to uninstall virtualbox and reinstall it.
+
+Next we summarize the instalations using chocolatey.
+
+Before installing anything, we recommend that you read the entire section. 
+Especially when installing docker and if you do not have a brand new computer.
 
 ## Install Chocolatey
 
@@ -105,12 +142,15 @@ WSL is a Linux virtual image designed for Windows. WSL 2 is typically
 used as opposed to WSL 1. To install, type this into administrative PowerShell:
 
 ```shell
-wsl --install
+PS> wsl --install
 ```
 
 To install a particular distribution, use `wsl --install -d
 <DistroName>` instead. The available distributions can be found with
-`wsl --list --online`.
+
+```
+PS> wsl --list --online
+```
 
 After WSL is installed, it can be accessed by typing `wsl` in
 Powershell. More documentation can be found in the [Microsoft 
@@ -120,12 +160,13 @@ Official Documentation](https://docs.microsoft.com/en-us/windows/wsl/install).
 
 WSL creates a Linux environment in your Windows directory. To access
 your directories with WSL, a special syntax is used. For example, your
-home directory, typically `C:\Users\<USERNAME>` and abbreviated to `~`
-is the following with WSL: `/mnt/c/Users/<USERNAME>/`. So to change
+home directory, typically `C:\Users\USERNAME` and abbreviated to `~`
+is the following with WSL: `/mnt/c/Users/USERNAME/`. So to change
 directories to the Desktop in WSL, use this command:
 
 ```wsl
-$ cd /mnt/c/Users/example_user/Desktop
+$ cd /mnt/c/Users/USERNAME/Desktop
 ```
 
-`example_user` would be replaced with the name of the User.
+where `USERANME` is to be  replaced with the name of the user.
+
