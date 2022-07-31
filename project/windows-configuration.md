@@ -41,9 +41,16 @@ $ choco install git.install --params "/GitAndUnixToolsOnPath \
 
 ## Install PyCharm, emacs, and Docker
 
-To install necessary development programs
-in an easy manner, issue the following
-command:
+Uninstall PyCharm Community version if already
+installed on the computer by pressing the Windows
+key and typing `Add or remove programs` (and
+press Enter). Then locate and uninstall PyCharm.
+
+The following command installs PyCharm Professional,
+among other necessary development programs.
+To install these programs in an easy manner,
+issue the following command (you must have 
+chocolatey installed):
 
 ```bash
 $ choco install pycharm emacs docker-desktop -y
@@ -80,8 +87,14 @@ virtual images like Windows Subsystem for Linux (WSL).
 
 Next, the BIOS settings must be changed to enable virtualization. To
 do this, search `Advanced startup` in the Windows Search Bar and
-click `Restart now`.  Next, find the `Virtualization` option in
-Windows BIOS configuration. This must be enabled.
+click `Restart now`. Click `Troubleshoot` and `Advanced startup options`
+and then `UEFI` to get into the BIOS. NOTE: These are not exhaustive
+instructions because computer brands and hardware differ vastly. The main
+objective is to get into the BIOS and search the tabs for any `Virtualization` 
+or `Hyper V` options in Windows BIOS configuration. They must be enabled.
+
+Better documentation on enabling virtualization, which is recommended by Docker
+and created by Berkeley, is located at <https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html>
 
 Lastly, check Windows features with `Turn Windows features on or off`.
 For Docker, `Hyper-V` and `Containers` must be enabled.
@@ -97,7 +110,7 @@ wsl --install
 
 To install a particular distribution, use `wsl --install -d
 <DistroName>` instead. The available distributions can be found with
-wsl --list --online`.
+`wsl --list --online`.
 
 After WSL is installed, it can be accessed by typing `wsl` in
 Powershell. More documentation can be found in the [Microsoft 
