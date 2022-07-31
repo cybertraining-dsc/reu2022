@@ -28,8 +28,8 @@ Ask if you have an idea and want confirmation.
 
 ## GitHub Insights
 
-* Project: <https://github.com/cybertraining-dsc/reu2022/projects/2>
-* Issues: <https://github.com/cybertraining-dsc/reu2022/issues>
-* Pulse: <https://github.com/cybertraining-dsc/reu2022/pulse>
-* Contributors: <https://github.com/cybertraining-dsc/reu2022/graphs/contributors>
-* Traffic: <https://github.com/cybertraining-dsc/reu2022/graphs/traffic>
+* [Project](https://github.com/cybertraining-dsc/reu2022/projects/2)
+* [Issues](https://github.com/cybertraining-dsc/reu2022/issues)
+* [Pulse](https://github.com/cybertraining-dsc/reu2022/pulse)
+* [Contributors](https://github.com/cybertraining-dsc/reu2022/graphs/contributors)
+* [Traffic](https://github.com/cybertraining-dsc/reu2022/graphs/traffic)

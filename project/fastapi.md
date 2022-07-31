@@ -24,6 +24,12 @@ To install FastAPI and uvicorn simply use the command:
 $ pip install "fastapi[all]"
 ```
 
+If this command does not work, use this alternative:
+
+``bash
+$ pip install --only-binary :all: fastapi[all]
+``
+
 ## FastAPI Quickstart
 
 One of the simplest FastAPI file looks like this, which we assume is placed 
@@ -328,7 +334,7 @@ def test_temperature():
 
 You can create several test functions and run them with `pytest`.
 Lastly, there are other parameters for `client.get()` that may be further explored
-in the [requests documentation](<https://requests.readthedocs.io/en/latest/user/quickstart/#passing-parameters-in-urls>).
+in the [requests documentation](https://requests.readthedocs.io/en/latest/user/quickstart/#passing-parameters-in-urls).
 
 ### Asynchronous Testing
 
@@ -360,9 +366,8 @@ can be added as well.
 
 ## Links
 
-* <https://fastapi.tiangolo.com/tutorial/first-steps/>
-* <https://fastapi.tiangolo.com/tutorial/path-params/>
-* <https://fastapi.tiangolo.com/deployment/docker/>
-* <https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>
-* <https://fastapi.tiangolo.com/advanced/async-tests/>
-* cloudmesh cc TODO
+* [Fastapi First Step](https://fastapi.tiangolo.com/tutorial/first-steps/)[@www-first-steps-fastapi]
+* [Path Parameters](https://fastapi.tiangolo.com/tutorial/path-params/)[@www-path-parameters-fastapi]
+* [Docker Deployment](https://fastapi.tiangolo.com/deployment/docker/>)[@www-fastapi-in-container]
+* [Using Test Client](https://fastapi.tiangolo.com/tutorial/testing/#using-testclient>)[@www-fastapi-testing]
+* [Async Tests](https://fastapi.tiangolo.com/advanced/async-tests/>)[@www-async-tests]

@@ -81,7 +81,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py).
 The output of this program is showcased in @fig:seaborn-displot.
 
-! [Distribution Plot Created from User Spotify Data](examples/images/seaborn-displot.svg){#fig:seaborn-displot}
+![Distribution Plot Created from User Spotify Data](examples/images/seaborn-displot.svg){#fig:seaborn-displot}
 
 
 ## Categorical Plots
@@ -106,7 +106,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/gra
 
 The output from the program is showcased in @fig:seaborn-catplot.
 
-![Categorical Plot Created from User Spotify Data](examples/images/seaborn-catplot.svg){#fig:seaborn-catplot}
+![Categorical Plot Created from User Spotify Data](examples/images/seaborn-catplot.svg){#fig:seaborn-catplot width=50%}
 
 ## Regression Plots
 
@@ -127,7 +127,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 . The output of this program is showcased in @fig:seaborn-regplot.
 
-![Regression Plot Created from User Spotify Data](examples/images/seaborn-regplot.svg){#fig:seaborn-regplot} 
+![Regression Plot Created from User Spotify Data](examples/images/seaborn-regplot.svg){#fig:seaborn-regplot width=50%} 
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.
@@ -148,9 +148,9 @@ This program can be downloaded from
 
 ## Links
 
-* <https://seaborn.pydata.org/api.html>
-* <https://www.geeksforgeeks.org/python-seaborn-tutorial/>
-* <https://www.geeksforgeeks.org/introduction-to-seaborn-python/>
-* <https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/>
-* <https://stackoverflow.com/questions/30336324/seaborn-load-dataset>
-* <https://github.com/mwaskom/seaborn-data/blob/master/planets.csv>
+* <https://seaborn.pydata.org/api.html> [@www-api-reference]
+* <https://www.geeksforgeeks.org/python-seaborn-tutorial/> [@www-seaborn-tutorial]
+* <https://www.geeksforgeeks.org/introduction-to-seaborn-python/> [@www-intro-seaborn]
+* <https://www.geeksforgeeks.org/plotting-graph-using-seaborn-python/> [@www-plotting-seaborn]
+* <https://stackoverflow.com/questions/30336324/seaborn-load-dataset> [@www-seaborn-load]
+* <https://github.com/mwaskom/seaborn-data/blob/master/planets.csv> [@www-seaborn-data]

@@ -1,3 +1,4 @@
+# module load ???
 sbatch mlp_mnist.sh
 sbatch mnist_autoencoder.sh
 sbatch mnist_cnn.sh

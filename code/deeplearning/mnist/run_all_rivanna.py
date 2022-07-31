@@ -49,56 +49,52 @@ if device is None:
     Console.error("device not set")
     error = True
 
-tag = f"{host}-{user}-{cpu}-{gpu}"
-
 if error:
     sys.exit()
 
 scripts = textwrap.dedent("""
 mlp_mnist
 mnist_autoencoder
-mnist_cnn
-mnist_lstm
-mnist_mlp_with_lstm
-mnist_rnn
-mnist_with_distributed_training
-mnist_with_pytorch
 """).strip().splitlines()
 
+# mnist_cnn
+# mnist_lstm
+# mnist_mlp_with_lstm
+# mnist_rnn
+# mnist_with_distributed_training
+# mnist_with_pytorch
 
+host = 'rivanna'
 
-cards = v['gpu']
-
-if cards is None:
-    cards = ['v100', 'a100', 'k80', 'p100', 'rtx-2080']
+if gpu is None:
+    gpu = ['v100', 'a100', 'k80', 'p100', 'rtx-2080']
 else:
-    cards = v['gpu'].split(',')
-for card in cards:
-    StopWatch.start('total')
+    gpu = v['gpu'].split(',')
+for card in gpu:
+    tag = f"{host}-{user}-{cpu}-{card}"
+    StopWatch.start(f'{card}-total')
     for script in scripts:
         if exec == "papermill":
             output = f"{script}-output"
             command = f"{exec} {script}.ipynb {output}.ipynb"
         elif exec == 'sbatch':
             command = f"{exec} --gres=gpu:{card}:1 {script}.sh"
-        v['host'] = 'rivanna'
-        v['gpu'] = card
-
         banner(command)
         if not dryrun:
-            sbatch = os.system(command)
+            os.system(command)
 
-
-for s in scripts:
-    waiting_for_squeue = False
-    command = f'cat {s}.log'
-    r = Shell.run(command)
-    print(r)
-    while 'progress=100' not in str(r):
-        time.sleep(2)
+    for script in scripts:
+        StopWatch.start(f'{script}')
+        command = f'cat {script}.log'
         r = Shell.run(command)
-        continue
+        while 'progress=100' not in str(r):
+            time.sleep(2)
+            r = Shell.run(command)
+            continue
+        StopWatch.stop(f'{script}')
 
-    StopWatch.stop('total')
 
+    StopWatch.stop(f'{card}-total')
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
+    StopWatch.clear()
+

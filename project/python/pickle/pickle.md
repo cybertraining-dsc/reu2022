@@ -71,6 +71,6 @@ Equal: True
 
 ## Links
 
-* <https://pymotw.com/3/pickle/index.html>
+* [Pickle Documentation](https://pymotw.com/3/pickle/index.html)[@www-pickle-serialization]
 
 

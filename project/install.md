@@ -229,6 +229,8 @@ $ echo "cd cm" >> .bash_profile
 
 ### Uninstall
 
+\
+
 ```bash
 $ rm -f ~/ENV3
 ```

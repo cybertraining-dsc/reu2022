@@ -157,12 +157,12 @@ A prompt will ask if the user wants to continue connecting. Type in "yes".
 After that, it will ask for the user's Rivanna password, type it in. Once 
 that is done, the user is now connected to Rivanna through Docker.
 
-## Sources
+## Links
 
-* <https://docs.docker.com/get-docker>
-* <https://docs.docker.com/get-started>
-* <https://docker-curriculum.com>
-* <https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md>
-* <https://github.com/cybertraining-dsc/reu2022/blob/main/project/rivanna.md>
+* [Get Docker](https://docs.docker.com/get-docker) [@www-docker-get]
+* [Getting Started](https://docs.docker.com/get-started) [@www-docker-documentation-setup]
+* [Introduction to Docker](https://docker-curriculum.com) [@www-docker-tutorial-beginner-2016]
+* [Setting Up GitBash](https://github.com/cybertraining-dsc/reu2022/blob/main/project/git-bash-pseudo-console.md)
+* [Rivanna Set Up](https://github.com/cybertraining-dsc/reu2022/blob/main/project/rivanna.md)
 
 

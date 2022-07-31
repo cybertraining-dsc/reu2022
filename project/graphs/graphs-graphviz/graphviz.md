@@ -190,9 +190,9 @@ Shown here in @fig:color-graphviz-ex is what the code produced.
 ![Label Directed Graph with Various 
 Colored Nodes ](images/color-graphviz-ex.png){#fig:color-graphviz-ex}
 
-## Sources
+## Links
 
-* <https://pypi.org/project/graphviz/>
-* <https://graphviz.readthedocs.io/en/stable/examples.html>
-* <https://graphviz.readthedocs.io/en/stable/api.html>
+* [Graphviz Website](https://pypi.org/project/graphviz/>)
+* [Graphviz Example](https://graphviz.readthedocs.io/en/stable/examples.html>)
+* [Graphviz API Reference](https://graphviz.readthedocs.io/en/stable/api.html>)
 

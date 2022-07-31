@@ -2,6 +2,15 @@
 
 ---
 
+## Table of Contents
+
+* Rivanna
+* Running Tensorflow on Rivanna
+* Run Python MPI Programs on Rivanna
+* Setting Parameters while Running `mnist` Jobs
+
+---
+
 ![](images/learning.png) **Learning Objectives**
 
 * Learn how to properly install Tensorflow on Rivanna using `conda`
@@ -156,8 +165,8 @@ You can `fgrep` the result as follows:
 $rivanna: fgrep '# csv' mnist_autoencoder_output.py
 ```
 
-## Sources
+## Links
 
-* https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/
-* https://www.rc.virginia.edu/userinfo/rivanna/software/tensorflow/
-* https://www.rc.virginia.edu/userinfo/rivanna/software/containers/
+* [Tensorflow](https://docs.anaconda.com/anaconda/user-guide/tasks/tensorflow/)[@www-tensorflow-anaconda]
+* [Rivanna Tensorflow](https://www.rc.virginia.edu/userinfo/rivanna/software/tensorflow/)[@www-tensforflow-rivanna]
+* [Rivanna Software Container](https://www.rc.virginia.edu/userinfo/rivanna/software/containers/)[@www-software-containers]

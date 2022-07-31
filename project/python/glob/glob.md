@@ -112,7 +112,7 @@ tmp/b+.txt
 tmp/subdir/c.txt
 ```
 
-## Lins
+## Links
 
-* <https://pymotw.com/3/glob/index.html>
+* [Glob Documentation](https://pymotw.com/3/glob/index.html>)[@www-glob-filename]
 

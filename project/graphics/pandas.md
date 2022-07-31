@@ -67,7 +67,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-barchart.py). 
 The output of this program is showcased in @fig:pandas-barchart.
 
-![Spotify Data Shown in Bar Chart](examples/images/pandas-barchart.svg){#fig:pandas-barchart} 
+![Spotify Data Shown in Bar Chart](examples/images/pandas-barchart.svg){#fig:pandas-barchart width=50%} 
 
 
 Note the differences in creating the chart. Since data frames support
@@ -114,7 +114,7 @@ This program can be downloaded from
 The output of this program is showcased in @fig:pandas-linechart.
 
 
-![Sample Randomized Line Plot](examples/images/pandas-linechart.svg){#fig:pandas-linechart}
+![Sample Randomized Line Plot](examples/images/pandas-linechart.svg){#fig:pandas-linechart width=50%}
 
 ## Pie Chart
 
@@ -139,9 +139,10 @@ save()
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-piechart.py). 
+
 The output of this program is showcased in @fig:pandas-piechart.
 
-![Genres of Music from Spotify Distributed on a Pie Chart](examples/images/pandas-piechart.svg){#fig:pandas-piechart}.
+![Genres of Music from Spotify Distributed on a Pie Chart](examples/images/pandas-piechart.svg){#fig:pandas-piechart width=50%}
 
 Note that instead of listing both the Categories and the Count as
 data, we use the categories as index. This gets the proper labeling
@@ -193,6 +194,6 @@ plt.show()
 
 ## Links
 
-* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html>
-* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html>
-* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html>
+* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html> [@www-pandas-dataframe-plotbar]
+* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html> [@www-pandas-dataframe-plotline]
+* <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html> [@www-pandas-dataframe-plotpie]

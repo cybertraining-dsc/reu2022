@@ -1,9 +1,14 @@
 # Run Python MPI programs on Rivanna
 
-see the book Python MPI
+---
 
-add chapter if not there
+**Learning Objectives**
 
+* Learn how to submit Slurm jobs on Rivanna through SBATCH
+* Learn how to run SBATCH through Bash files
+* Learn how view the queue of running Slurm jobs
+
+---
 
 ## SBATCH in Bash Files
 
@@ -40,7 +45,7 @@ the job's unique id.
 The `--partition` specifies which queue the job will enter and thus the type
 of resources it is allowed. More information can be seen in @fig:slurm-partitions.
 
-![Slurm partitions](images/partitions.png){#fig:slurm-partitions}
+```![Slurm partitions](images/partitions.png){#fig:slurm-partitions}```
 
 The `--gres` is used for jobs that use the GPU. The last number specifies
 the number of cores and the middle specifies which GPU will be used. It can
@@ -87,9 +92,7 @@ with the NVIDIA GPU specifications. For example, here are the P8 details.
 ```
 
 
-## Index
-
-### mlp_mnist.sh
+## mlp_mnist.sh
 
 ```bash
 #!/bin/sh
@@ -125,7 +128,7 @@ echo "# cloudmesh status=done progress=100 pid=$SLURM_JOB_ID"
 
 ### Makefile
 
-```Makefile
+```
 IMAGE=tensorflow-2.8.0
 image:
         cp ${IMAGE}.sif ${IMAGE}-cms.sif

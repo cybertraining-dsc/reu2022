@@ -31,7 +31,7 @@ in that directory.
 ## Issues for the REU2022
 
 In case you like to see all issues only for the REU2022, please check out
-the following
+the [GitHub Link](https://github.com/cloudmesh/cloudmesh-cc/issues).
 
 ```bash
 $ cd cm

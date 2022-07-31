@@ -255,17 +255,15 @@ plt.show()
 This code can be access from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/data-management/python-data.py)
 
-This code produces [@fig:csv-list-lineplot]. and Figure [@fig:csv-dict-lineplot].:
+This code produces [@fig:csv-list-lineplot] and [@fig:csv-dict-lineplot].
 
-{#fig:csv-list-lineplot width=50%}
+![CVS Line plot](images/csv-list-lineplot.png){#fig:csv-list-lineplot width=50%}
 
-[@fig:csv-list-lineplot]: created using the data
-available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
+[@fig:csv-list-lineplot] is created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
-{#fig:csv-dict-lineplot width=50%}
+![CSV dict line plot](images/csv-dict-lineplot.png){#fig:csv-dict-lineplot width=50%}
 
-[@fig:csv-dict-lineplot]: created using the data
-available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
+[@fig:csv-dict-lineplot] is created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
 However, it is so much more simple to accomplish this with the `pandas`
 library:
@@ -290,30 +288,30 @@ This code can be accessed from
 
 This code produces the [@fig:pandas-lineplot]:
 
-{#fig:pandas-lineplot width=50%}
+![pandas-lineplot](images/pandas-lineplot.png){#fig:pandas-lineplot width=50%}
 
-[@fig:pandas-lineplot]: created using the data
+[@fig:pandas-lineplot] is created using the data
 available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
 ## Links
 
 ### Lists
 
-* <https://towardsdatascience.com/python-basics-6-lists-and-list-manipulation-a56be62b1f95>
-* <https://www.w3schools.com/python/python_ref_list.asp>
+* [List Manipulation](https://towardsdatascience.com/python-basics-6-lists-and-list-manipulation-a56be62b1f95>) [@www-python-lists]
+* [Python List and Array Methods](https://www.w3schools.com/python/python_ref_list.asp>) [@www-python-list-array-methods]
 
 ### Dictionaries
 
-* <https://www.pythonforbeginners.com/dictionary/dictionary-manipulation-in-python>
-* <https://www.w3schools.com/python/python_ref_dictionary.asp>
-* <https://www.w3schools.com/python/ref_dictionary_update.asp>
+* [Dictionary Manipulation in Python](https://www.pythonforbeginners.com/dictionary/dictionary-manipulation-in-python>) [@www-dictionary-manipulation]
+* [Python Dictionary Methods](https://www.w3schools.com/python/python_ref_dictionary.asp>) [@www-python-dictionary-methods]
+* [Update a dictionary](https://www.w3schools.com/python/ref_dictionary_update.asp>) [@www-python-dictionary-update]
 
 ### CSV Files
 
-* <https://www.geeksforgeeks.org/creating-a-dataframe-using-csv-files/>
-* <https://docs.python.org/3/library/csv.html#examples>
-* <https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html>
-* <https://docs.python.org/3/library/functions.html#open>
-* <https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737#extracting-information-from-a-csv-file>
-* <https://stackoverflow.com/questions/13039392/csv-list-index-out-of-range>
-* <https://www.geeksforgeeks.org/visualize-data-from-csv-file-in-python/>
+* [Create a dataframe](https://www.geeksforgeeks.org/creating-a-dataframe-using-csv-files/>) [@www-data-using-csv]
+* [CSV File Reading and Writing](https://docs.python.org/3/library/csv.html#examples>) [@www-csv-file-reading-writing]
+* [CSV File Overview](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html>) [@www-csv-files]
+* [Python Built in Read CSV Files](https://docs.python.org/3/library/functions.html#open>) [@www-built-in-csv-functions]
+* [Extracting Information from a CSV File](https://www.protechtraining.com/blog/post/python-for-beginners-reading-manipulating-csv-files-737#extracting-information-from-a-csv-file>) [@www-python-csv-file-protech]
+* [List Index out of Range](https://stackoverflow.com/questions/13039392/csv-list-index-out-of-range>) [@www-csv-index-out-of-range]
+* [Visualizing Data in CSV](https://www.geeksforgeeks.org/visualize-data-from-csv-file-in-python/>) [@www-visualize-data-csv]

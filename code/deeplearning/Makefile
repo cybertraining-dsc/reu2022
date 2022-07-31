@@ -12,6 +12,11 @@ NOTEBOOKS = E534_Higgs_Discovery_A E534_Higgs_Discovery_B E534_Higgs_Discovery_C
 
 all: requirements $(NOTEBOOKS)
 
+local:
+	python mnist_all_local.py
+
+rivanna:
+	python mnist_all_rivanna.py
 
 #download:
 # 	curl -o E534_Higgs_Discovery_A.ipynb ${LOCATION}/E534_Higgs_Discovery_A.ipynb
