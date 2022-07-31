@@ -83,6 +83,9 @@ instructions because computer brands and hardware differ vastly. The main
 objective is to get into the BIOS and search the tabs for any `Virtualization` 
 or `Hyper V` options in Windows BIOS configuration. They must be enabled.
 
+Better documentation on enabling virtualization, which is recommended by Docker
+and created by Berkeley, is located at <https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html>
+
 Lastly, check Windows features with `Turn Windows features on or off`.
 For Docker, `Hyper-V` and `Containers` must be enabled.
 
