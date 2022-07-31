@@ -26,8 +26,9 @@ $ choco install git.install --params "/GitAndUnixToolsOnPath \
 ```
 
 If you do not have chocolatey then follow the tutorial at
-<https://chocolatey.org/install>, or use the standard Git
-installer and check the box that reads `Enable experiment 
+<https://chocolatey.org/install> and then run the aforementioned
+choco command, or forego chocolatey and use the standard Git
+installer by checking the box that reads `Enable experiment 
 support for pseudo consoles`.
 
 Now you can use `wsl` and other commands that would otherwise
