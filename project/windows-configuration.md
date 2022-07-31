@@ -79,6 +79,12 @@ $ choco install git.install --params "/GitAndUnixToolsOnPath \
         /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf" -y
 ```
 
+The `/NoAutoCrlf` sets it so that the files are
+not downloaded via git with Windows line endings.
+If it were downloaded with such line endings, then
+it would cause programming bugs. Programmers should
+Commit As-Is to avoid conflicts.
+
 ## Install PyCharm, emacs, and Docker
 
 Uninstall PyCharm Community version if already
