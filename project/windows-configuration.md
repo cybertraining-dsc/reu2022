@@ -66,7 +66,10 @@ Git Bash must be installed with specific
 configurations, as the discrepancy between
 Windows and other operating systems can
 cause errors during runtime, if not
-properly configured.
+properly configured. If Git Bash is already
+installed, uninstall it by pressing the Windows
+key and typing `Add or remove programs` (and
+press Enter). Then locate and uninstall Git Bash.
 
 To install Git Bash with chocolatey, issue
 the following command:
