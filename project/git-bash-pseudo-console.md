@@ -1,6 +1,8 @@
-# How to Set Up Git Bash with Pseudo Console Support on Windows
+# Using Git Bash on Windows
 
-First of all, try opening Git Bash and entering `wsl` (you must
+If you do not use wsl, you can skip the appropriate steps related to it.
+
+First, try opening Git Bash and entering `wsl` (you must
 have installed wsl). If it hangs, then follow the rest of this
 tutorial. If it does not hang, you do not need to follow this
 tutorial since you already have Pseudo Console Support.
