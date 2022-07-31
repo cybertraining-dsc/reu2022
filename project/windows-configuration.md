@@ -41,9 +41,14 @@ $ choco install git.install --params "/GitAndUnixToolsOnPath \
 
 ## Install PyCharm, emacs, and Docker
 
+Uninstall PyCharm Community version if already
+installed on the computer by pressing the Windows
+key and typing `Add or remove programs` (and
+press Enter). Then locate and uninstall PyCharm.
+
 To install necessary development programs
 in an easy manner, issue the following
-command:
+command (you must have chocolatey installed):
 
 ```bash
 $ choco install pycharm emacs docker-desktop -y
