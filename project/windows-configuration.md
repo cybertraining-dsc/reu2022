@@ -58,6 +58,16 @@ Code.
 A guide to activating PyCharm with a free professional
 license is available at <https://youtu.be/QPESX-VBnEU>
 
+## Configure PyCharm
+
+Press `Ctrl + Alt + S` in PyCharm and expand the
+`Editor` menu on the left-hand side. Then, click
+on `Code Style` and enter `79` in the `Hard wrap at:`
+box. Also, check the `Wrap on typing` checkbox.
+
+This is done so that the text in files is uniformly
+indented at 79 columns.
+
 ## Preparing for Virtualization
 
 ### Docker
