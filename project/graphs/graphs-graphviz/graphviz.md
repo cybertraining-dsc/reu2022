@@ -61,7 +61,7 @@ This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2
 Shown here in @fig:basic-graphviz-ex is the graph produced
 from the code.
 
-![Sequence of Bash Command Path](images/basic-graphviz-ex.png){#fig:basic-graphviz-ex}
+![Sequence of Bash Command Path](images/basic-graphviz-ex.png){#fig:basic-graphviz-ex width=50%}
 
 ## Subgraphs
 
@@ -113,7 +113,7 @@ This code can be accessed via [Github](https://github.com/cybertraining-dsc/reu2
 Shown here in @fig:subgraph-graphviz-ex are the subgraphs 
 produced by the code.
 
-![Sequence of Two Bash Different Command Paths ](images/subgraph-graphviz-ex.png){#fig:subgraph-graphviz-ex}
+![Sequence of Two Bash Different Command Paths ](images/subgraph-graphviz-ex.png){#fig:subgraph-graphviz-ex width=50%}
 
 ## Data Structures
 
@@ -144,7 +144,7 @@ structures produced by the code.
 
 
 ![Data Structure of 
-Various Directories and Files](images/structure-graphviz-ex.png){#fig:structure-graphviz-ex}
+Various Directories and Files](images/structure-graphviz-ex.png){#fig:structure-graphviz-ex width=50%}
 
 ## Colors and Labels
 
@@ -188,7 +188,7 @@ This code can be accessed via [GitHub](https://github.com/cybertraining-dsc/reu2
 Shown here in @fig:color-graphviz-ex is what the code produced.
 
 ![Label Directed Graph with Various 
-Colored Nodes ](images/color-graphviz-ex.png){#fig:color-graphviz-ex}
+Colored Nodes ](images/color-graphviz-ex.png){#fig:color-graphviz-ex width=25%}
 
 ## Links
 

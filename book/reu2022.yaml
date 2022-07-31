@@ -3,7 +3,7 @@ metadata:
   image: "cover.png"
   title: "Proceedings of the CyberTraining REU2022"
   subtitle: "CyberTraining for Students and Technologies from Generation Z"
-  author: "Gregor von Laszewski, Geoffrey C. Fox"
+  author: "Editors Gregor von Laszewski, Geoffrey C. Fox"
 #  subauthor: "Geoffrey C. Fox"
   email: "laszewski@gmail.com"
   url: "https:/cloudmesh-community.github.io/pub/vonlaszewski-reu2022.epub"
@@ -25,17 +25,19 @@ file:
 https:
   "reu2022": "https://raw.githubusercontent.com/cybertraining-dsc/reu2022/main"
 BOOK:
-  - "{file.reu2022}/README.md"
-  - "{file.reu2022}/project/books.md"
-  - "{file.reu2022}/security.md"
+  - PREFACE:
+    - "{file.reu2022}/README.md"
+    - "{file.reu2022}/project/contributor-list.md"
+    - "{file.reu2022}/project/books.md"
+#    - "{file.reu2022}/security.md"
   - CONTRIBUTION_TO_THE_PROJECT:
     - "{file.reu2022}/contribute/intro-contribute.md"
     - "{file.reu2022}/contribute/calendar.md"
     - "{file.reu2022}/action.md"
     - "{file.reu2022}/contribute/issues.md"
-    - "{file.reu2022}/contribute/c4gc-students.md"
+#    - "{file.reu2022}/contribute/c4gc-students.md"
     - "{file.reu2022}/contribute/teamwork.md"
-    - "{file.reu2022}/contribute/lessons.md"
+#    - "{file.reu2022}/contribute/lessons.md"
   - DEVELOPMENT_ENVIRONMENT:
     - "{file.reu2022}/project/install.md"
     - WINDOWS:
@@ -58,7 +60,8 @@ BOOK:
       - "{file.reu2022}/project/emacs.md"
   - PYTHON:
     - GRAPH_VIZUALIZATION:
-      - "{file.reu2022}/data/compare-graphics.md"
+#      - "{file.reu2022}/data/compare-graphics.md"
+      - "{file.reu2022}/data/compare-graphics-tex.md"
       - "{file.reu2022}/project/graphics/data-management/python-data.md"
       - "{file.reu2022}/project/graphics/introduction.md"
       - "{file.reu2022}/project/graphics/matplotlib.md"

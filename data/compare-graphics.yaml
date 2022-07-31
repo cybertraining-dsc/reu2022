@@ -1,13 +1,9 @@
 Value:
+  - charts
   - matlotlib
   - seaborn
   - bokeh
   - pandas
-charts:
-  - " "
-  - " "
-  - " "
-  - " "
 barchart:
   - "[plt.bar](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.bar.html#matplotlib.axes.Axes.bar)"
   - "[sns.barplot](https://seaborn.pydata.org/generated/seaborn.barplot.html)"
