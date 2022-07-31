@@ -104,6 +104,8 @@ license is available at <https://youtu.be/QPESX-VBnEU>
 
 ## Configure PyCharm
 
+### Set hard wrap
+
 Press `Ctrl + Alt + S` in PyCharm and expand the
 `Editor` menu on the left-hand side. Then, click
 on `Code Style` and enter `79` in the `Hard wrap at:`
@@ -111,6 +113,25 @@ box. Also, check the `Wrap on typing` checkbox.
 
 This is done so that the text in files is uniformly
 indented at 79 columns.
+
+### Makefile Tab configuration and formatting
+
+To change what the Tab key does in a Makefile,
+open a Makefile in PyCharm and click on `Tab`
+in the bottom right of the PyCharm interface.
+If you cannot find the `Tab` button, then click
+on `View` in the top-right, go to `Appearance`,
+and make sure `Status Bar` is checked.
+
+After clicking the `Tab` button in the
+bottom-right, click on `Configure Indents for
+Makefile...` Tab size should be 4.
+
+If PyCharm fails to render your Makefile correctly,
+right-click on the Makefile in your open files tabs
+and click `Override File Type`. If you cannot find
+`Makefile` in the list, you must install the `Makefile
+Language plugin` for PyCharm.
 
 ## Preparing for Virtualization
 
