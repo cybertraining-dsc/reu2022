@@ -46,9 +46,11 @@ installed on the computer by pressing the Windows
 key and typing `Add or remove programs` (and
 press Enter). Then locate and uninstall PyCharm.
 
-To install necessary development programs
-in an easy manner, issue the following
-command (you must have chocolatey installed):
+The following command installs PyCharm Professional,
+among other necessary development programs.
+To install these programs in an easy manner,
+issue the following command (you must have 
+chocolatey installed):
 
 ```bash
 $ choco install pycharm emacs docker-desktop -y
