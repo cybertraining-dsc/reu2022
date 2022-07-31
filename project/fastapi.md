@@ -30,6 +30,8 @@ If this command does not work, use this alternative:
 $ pip install --only-binary :all: fastapi[all]
 ``
 
+owever on some systems the `[all]` extensions may not yet bee supported. Let us know how to install it there and we add it to our description. We for example found issues in a recent update to fastAPI that had difficulties to be installed on M1 MacOS.
+
 ## FastAPI Quickstart
 
 One of the simplest FastAPI file looks like this, which we assume is placed 
