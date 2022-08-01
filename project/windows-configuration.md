@@ -155,10 +155,11 @@ virtual images like Windows Subsystem for Linux (WSL).
 Next, the BIOS settings must be changed to enable virtualization. To
 do this, search `Advanced startup` in the Windows Search Bar and
 click `Restart now`. Click `Troubleshoot` and `Advanced startup options`
-and then `UEFI` to get into the BIOS. NOTE: These are not exhaustive
-instructions because computer brands and hardware differ vastly. The main
-objective is to get into the BIOS and search the tabs for any `Virtualization` 
-or `Hyper V` options in Windows BIOS configuration. They must be enabled.
+and then `UEFI Firmware Settings` to get into the BIOS. NOTE: These are 
+not exhaustive instructions because computer brands and hardware differ 
+vastly. The main objective is to get into the BIOS and search the `Configure` tab 
+for any `Virtualization` or `Hyper V` options in Windows BIOS configuration. 
+They must be enabled, and then the user must exit the BIOS while saving changes.
 
 Better documentation on enabling virtualization, which is recommended by Docker
 and created by Berkeley, is located at <https://bce.berkeley.edu/enabling-virtualization-in-your-pc-bios.html>
