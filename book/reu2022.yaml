@@ -63,6 +63,15 @@ BOOK:
       - "{file.reu2022}/project/emacs.md"
   - PYTHON:
     - "{file.reu2022}/project/graphics/data/python-data.md"
+    - DATA_MANAGEMENT_MODULES:
+        - "{file.reu2022}/project/python/glob/glob.md"
+        - "{file.reu2022}/project/python/mmap/mmap.md"
+        - "{file.reu2022}/project/python/pickle/pickle.md"
+        - "{file.reu2022}/project/python/shelve/shelve.md"
+        - "{file.reu2022}/project/python/yamldb/yamldb.md"
+        - "{file.reu2022}/project/requests/requests.md"
+        - "{file.reu2022}/project/fastapi.md"
+        - "{file.reu2022}/project/python/queue/queue.md"
     - CHARTS:
 #      - "{file.reu2022}/data/compare-graphics.md"
       - "{file.reu2022}/data/compare-graphics-tex.md"
@@ -74,26 +83,17 @@ BOOK:
     - GRAPHS_WITH_PYTHON:
       - "{file.reu2022}/project/graphs/graphs-networkx/networkx.md"
       - "{file.reu2022}/project/graphs/graphs-graphviz/graphviz.md"
-    - SELECTED_DATA_MANAGEMENT_PYTHON_TOPICS:
-      - "{file.reu2022}/project/python/glob/glob.md"
-      - "{file.reu2022}/project/python/mmap/mmap.md"
-      - "{file.reu2022}/project/python/pickle/pickle.md"
-      - "{file.reu2022}/project/python/shelve/shelve.md"
-      - "{file.reu2022}/project/python/yamldb/yamldb.md"
-      - "{file.reu2022}/project/requests/requests.md"
-      - "{file.reu2022}/project/fastapi.md"
-      - "{file.reu2022}/project/python/queue/queue.md"
     - SELECTED_CLOUDMESH_TOPICS:
-      - "{file.reu2022}/project/cloudmesh-common-StopWatch.md"
       - "{file.reu2022}/project/cms-command.md"
+      - "{file.reu2022}/project/cloudmesh-common-StopWatch.md"
       - "{file.reu2022}/project/browser.md"
-    - CLOUDMESH_WORKFLOW:
-      - "{file.reu2022}/cloudmesh-computer/README.md"
-      - "{file.reu2022}/project/service/workflow/workflow.md"
-      - "{file.reu2022}/project/service/queue/service-queue.md"
-      - "{file.reu2022}/project/service/databases/databases.md"
-      - "{file.reu2022}/project/cloudmesh-cc/workflow.md"
-      - "{file.reu2022}/project/hpc/rivanna-tensorflow.md"
+      - CLOUDMESH_WORKFLOW:
+        - "{file.reu2022}/cloudmesh-computer/README.md"
+        - "{file.reu2022}/project/service/workflow/workflow.md"
+        - "{file.reu2022}/project/service/queue/service-queue.md"
+        - "{file.reu2022}/project/service/databases/databases.md"
+        - "{file.reu2022}/project/cloudmesh-cc/workflow.md"
+        - "{file.reu2022}/project/hpc/rivanna-tensorflow.md"
   - INTRODUCTION_TO_DEEP_LEARNING:
     - "{file.reu2022}/project/ai/introduction-ai.md"
     - OVERVIEW:

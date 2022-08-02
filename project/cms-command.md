@@ -8,7 +8,9 @@
 
 ---
 
-locate in the book how to use cms sys command generate. Generate a command with your username. No commit of this is necessary, but we need to make 
+Assignment:
+
+Locate in the book how to use cms sys command generate. Generate a command with your username. No commit of this is necessary, but we need to make 
 sure you understand how to create a command.
 
 ## Creating CLI commands using the cloudmesh command
@@ -33,6 +35,9 @@ In this framework there are a few parts to understand:
 It is necessary to update the arguments in the corresponding if statement. 
 
 ### Example of the CLI Creation
+
+Here is an example command:
+
 ```python
 from cloudmesh.shell.command import command
 from cloudmesh.shell.command import PluginCommand

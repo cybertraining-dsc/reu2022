@@ -26,6 +26,7 @@ Python 3.7.6
 
 ## Simple For Loop
 
+\
 
 ```
 for i in range(10):
@@ -52,6 +53,7 @@ list_items = ['a', 'b', 'c', 'd', 'e']
 
 ### Retrieving an Element
 
+\
 
 ```
 list_items[2]
@@ -61,6 +63,7 @@ list_items[2]
 
 ### Append New Values
 
+\
 
 ```
 list_items.append('f')
@@ -71,6 +74,7 @@ list_items
 
 ### Remove an Element
 
+\
 
 ```
 list_items.remove('a')
@@ -83,6 +87,7 @@ list_items
 
 ## Dictionary
 
+\
 
 ```
 dictionary_items = {'a':1, 'b': 2, 'c': 3}
@@ -90,6 +95,7 @@ dictionary_items = {'a':1, 'b': 2, 'c': 3}
 
 ### Retrieving an Item by Key
 
+\
 
 ```
 dictionary_items['b']
@@ -99,6 +105,7 @@ dictionary_items['b']
 
 ### Append New Item with Key
 
+\
 
 ```
 dictionary_items['c'] = 4
@@ -109,6 +116,7 @@ dictionary_items
 
 ### Delete an Item with Key
 
+\
 
 ```
 del dictionary_items['a'] 
@@ -119,6 +127,7 @@ dictionary_items
 
 ## Comparators
 
+\
 
 ```
 x = 10
@@ -165,6 +174,7 @@ else:
 
 ## Arithmetic
 
+\
 
 ```
 k = x * y * z
@@ -201,6 +211,7 @@ n
 
 ### Create a Random Numpy Array
 
+\
 
 ```
 import numpy as np
@@ -212,6 +223,7 @@ a.shape
 
 ### Reshape Numpy Array
 
+\
 
 ```
 b = a.reshape(10,10)
@@ -221,6 +233,8 @@ b.shape
     (10, 10)
 
 ### Manipulate Array Elements
+
+\
 
 ```
 c = b * 10

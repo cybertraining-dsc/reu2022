@@ -32,6 +32,7 @@ pip3 install cloudmesh-common
 
 ### Import Libraries 
 
+\
 
 ```
 from __future__ import absolute_import
@@ -49,6 +50,7 @@ from cloudmesh.common.StopWatch import StopWatch
 
 ### Download Data and Pre-Process 
 
+\
 
 ```
 StopWatch.start("data-load")
@@ -167,6 +169,7 @@ INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broa
 
 ### Train 
 
+\
 
 ```
 StopWatch.start("train")
@@ -195,6 +198,7 @@ Epoch 30/30
 
 ### Test 
 
+\
 
 ```
 StopWatch.start("evaluate")
@@ -269,6 +273,7 @@ pip3 install cloudmesh-common
 
 ### Import Libraries 
 
+\
 
 ```
 from __future__ import absolute_import
@@ -287,6 +292,7 @@ from cloudmesh.common.StopWatch import StopWatch
 
 ### Download Data and Pre-Process 
 
+\
 
 ```
 StopWatch.start("data-load")
@@ -318,6 +324,7 @@ dropout = 0.2
 
 ### Define Model 
 
+\
 
 ```
 StopWatch.start("compile")
@@ -387,6 +394,7 @@ Non-trainable params: 0
 
 ### Train 
 
+\
 
 ```
 StopWatch.start("train")
@@ -402,6 +410,7 @@ StopWatch.stop("train")
 
 ### Test 
 
+\
 
 ```
 StopWatch.start("evaluate")
@@ -472,7 +481,7 @@ from keras.datasets import mnist
 
 ### Pre-process data 
 
-####Load data 
+#### Load data 
 
 First we load the data from the inbuilt mnist dataset from Keras Here we
 have to split the data set into training and testing data. The training
@@ -777,6 +786,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9)
 
 ### Train 
 
+\
 
 ```
 epochs = 5
@@ -892,6 +902,7 @@ Install the following packages
 
 ### Import Libraries 
 
+\
 
 ```
 import tensorflow as tf
@@ -910,6 +921,7 @@ import matplotlib.pyplot as plt
 
 ### Download Data and Pre-Process 
 
+\
 
 ```
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -936,6 +948,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-dataset
 
 ### Define Model 
 
+\
 
 ```
 inputs = Input(shape=input_shape, name='encoder_input')
@@ -1041,6 +1054,7 @@ Non-trainable params: 0
 
 ### Train 
 
+\
 
 ```
 autoencoder.fit(x_train,
@@ -1061,6 +1075,7 @@ autoencoder.fit(x_train,
 
 ### Test 
 
+\
 
 ```
 x_decoded = autoencoder.predict(x_test)
@@ -1077,6 +1092,7 @@ Test accuracy: 91.8%
 
 ### Visualize 
 
+\
 
 ```
 imgs = np.concatenate([x_test[:8], x_decoded[:8]])
@@ -1119,6 +1135,7 @@ Install the following packages
 
 ### Import Libraries 
 
+\
 
 ```
 from __future__ import absolute_import
@@ -1136,6 +1153,7 @@ from keras.datasets import mnist
 
 ### Download Data and Pre-Process 
 
+\
 
 ```
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
@@ -1171,6 +1189,7 @@ Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-dataset
 
 ### Define Model 
 
+\
 
 ```
 model = Sequential()
@@ -1240,6 +1259,7 @@ _________________________________________________________________
 
 ### Train 
 
+\
 
 ```
 model.compile(loss='categorical_crossentropy',
@@ -1260,6 +1280,7 @@ model.fit(x_train, y_train, epochs=10, batch_size=batch_size)
 
 ### Test 
 
+\
 
 ```
 loss, acc = model.evaluate(x_test, y_test, batch_size=batch_size)
@@ -1307,6 +1328,7 @@ pip3 install cloudmesh-common
 
 ### Import Libraries 
 
+\
 
 ```
 from __future__ import absolute_import
@@ -1325,6 +1347,7 @@ from cloudmesh.common.StopWatch import StopWatch
 
 ### Download Data and Pre-Process 
 
+\
 
 ```
 StopWatch.start("data-load")
@@ -1356,6 +1379,7 @@ dropout = 0.2
 
 ### Define Model 
 
+\
 
 ```
 StopWatch.start("compile")
@@ -1406,6 +1430,7 @@ Non-trainable params: 0
 
 ### Train 
 
+\
 
 ```
 StopWatch.start("train")
@@ -1422,6 +1447,7 @@ StopWatch.stop("train")
 
 ### Test 
 
+\
 
 ```
 StopWatch.start("evaluate")
@@ -1490,6 +1516,7 @@ pip3 install cloudmesh-common
 
 ### Sample MLP with Tensorflow Keras 
 
+\
 
 ```
 from __future__ import absolute_import
@@ -1670,6 +1697,7 @@ Install the following packages
 
 ### Import Libraries 
 
+\
 
 ```
 from __future__ import absolute_import
@@ -1688,6 +1716,7 @@ from cloudmesh.common.StopWatch import StopWatch
 
 ### Download Data and Pre-Process 
 
+\
 
 ```
 StopWatch.start("data-load")
@@ -1719,6 +1748,7 @@ dropout = 0.2
 
 ### Define Model 
 
+\
 
 ```
 StopWatch.start("compile")
@@ -1769,6 +1799,7 @@ Non-trainable params: 0
 
 ### Train 
 
+\
 
 ```
 StopWatch.start("train")
@@ -1787,6 +1818,7 @@ StopWatch.stop("train")
 
 ### Test 
 
+\
 
 ```
 StopWatch.start("evaluate")

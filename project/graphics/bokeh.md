@@ -24,7 +24,7 @@ from bokeh.io import show
 from bokeh.plotting import figure
 ```
 
-## Bokeh Plotting Interface
+## Bokeh Plotting
 
 `bokeh.plotting` is the library’s main interface. It gives the ability
 to generate plots easily by providing parameters such as axes, grids,
@@ -56,7 +56,7 @@ This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py). The output is shown in @fig:bokeh-figure.
 
 
-![Bokeh Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure witdh=50%}
+![Bokeh Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure witdh=25%}
 
 ## Annotations
 
