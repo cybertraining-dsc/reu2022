@@ -28,10 +28,14 @@ $ cms git issues --repo=. --refresh
 This will open a Web page that list all issues across all repos
 in that directory.
 
-## Issues for the REU2022
-
 In case you like to see all issues only for the REU2022, please check out
 the [GitHub Link](https://github.com/cloudmesh/cloudmesh-cc/issues).
+
+
+To get all issues for cloudmesh projects that interrest you you can create an issuelist from 
+selected repositories.
+
+For example you can checkout the following
 
 ```bash
 $ cd cm

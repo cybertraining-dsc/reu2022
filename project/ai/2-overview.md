@@ -5,9 +5,8 @@ Lecture](https://docs.google.com/presentation/d/1esj3zXCswQm5n8kfF-BvRH2Ih6oqNpP
 
 * Youtube Video: <http://youtube.com/watch?v=mjWXGR9NcHU>
 
-Assignment: please note the differences between the previous class and write them down here:
+Assignment: please note the differences between the previous class and write them down and create a pull reuest to add them here.
 
-* TODO
 
 ## Assignments
 

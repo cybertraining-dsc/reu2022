@@ -4,6 +4,7 @@
 
 ![](images/learning.png) **Learning Objectives**
 
+* Learn how to set up a python development computer
 * Learn how to install python from python.org
 * Learn how to use a python venv
 * Learn how to install cloudmesh Shell
@@ -55,7 +56,7 @@ please start the downloaded program and follow the instructions carefully.
 * Click `Next` and check on to use the default git pull,
 * Click `Next` and check on to use the Git Credential Manager Core,
 * Click `Next` and check on enable file system caching, and then
-* Click 'Next' and check on Enble experiment support for pseudo consoles
+* Click `Next` and check on Enble experiment support for pseudo consoles
 * Click `Install` because we do not need experimental features.
 
 
@@ -192,7 +193,7 @@ Once the installation completes, your program will be ready for you to use.
 
 ### Install Python 3.10.5
 
-The installation from source can be done easily as shown:
+The installation from source can be done easily as shown next.
 
 ```bash
 $ mkdir -p ~/tmp
@@ -209,7 +210,7 @@ $ python3.10 -V
 
 ### Setting up the venv
 
-We assume you use bash
+We assume you use bash. Here are the steps to activate the virtual enviornment and install cloudmesh into the virtual envireonment called ENV3 which we will use for all of our lessons.
 
 ```bash
 $ python3.10 -m venv ~/ENV3
@@ -316,13 +317,13 @@ macOS startup commands `.zshrc` and `.zprofile` to start up in the virtual envir
 
 #### Uninstall
 
+\
+
 ```bash
 $ rm -rf ~/ENV3
 ````
 
-You may need to enter your system password. 
-
-### Updating Python
+### Update
 
 Before starting this process, ensure that python is in the correct path. Test in the terminal. 
 
@@ -381,7 +382,7 @@ on macOS. Installing `brew` is simple.
 * Fifth, enter the administrator password into the desired location. 
 
 * It may take a moment for the software to install, but it will
-  eventually say **"Installation successful!"** in the terminal. After
+  eventually say `Installation successful!` in the terminal. After
   that, Homebrew is installed onto the device.
 
 After the user has correctly installed Homebrew, it is simple to

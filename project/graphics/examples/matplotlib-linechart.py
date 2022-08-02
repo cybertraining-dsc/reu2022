@@ -1,6 +1,12 @@
 import matplotlib.pyplot as plt
 import random
 
+def save_plt(name):
+  plt.savefig(f'{name}.png', dpi=300)
+  plt.savefig(f'{name}.pdf')
+  plt.savefig(f'{name}.svg')
+  plt.show()
+
 x = []
 y = []
 for i in range(0, 100):
@@ -13,7 +19,5 @@ plt.plot(x, y)
 plt.xlabel("x")
 plt.ylabel("y")
 plt.title("Plot Test")
-plt.savefig('images/matplotlib-linechart.png', dpi=300)
-plt.savefig('images/matplotlib-linechart.pdf')
-plt.savefig('images/matplotlib-linechart.svg')
-plt.show()
+
+save_plt("images/matplotlib-linechart")

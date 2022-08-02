@@ -1,4 +1,4 @@
-# Python Graphics
+# Python Graphics Introduction
 
 ---
 

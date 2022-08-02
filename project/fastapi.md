@@ -223,8 +223,11 @@ Job1
 
 ## Integration with pedantic
 
-TODO: user computer as model
+Assignment:
 
+* Use pedantic to create acomputer that contains temperature and load and implement it
+* Use a regular python class to define dynamically access to temperature and proceessor 
+  load and contrast the implementation with the one where you use pedantic
 
 ## Running the cc FastAPI service
 

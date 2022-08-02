@@ -1,11 +1,11 @@
-## Matplotlib
+# Matplotlib
 
 Matplotlib is the main plotting library that allows the user to
 visualize data. Matplotlib creates figures that can be manipulated and
 transformed. This includes manipulations of axes, labels, fonts, and
 the size of the images.
 
-### Installation
+## Installation
 
 To install matplotlib, please use the command:
 
@@ -13,7 +13,7 @@ To install matplotlib, please use the command:
 $ pip install matplotlib
 ```
 
-### Import Statements
+## Import Statements
 
 The user will need to supply these import statements at the top of
 their code in order for Matplotlib to be imported.
@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-### Bar Chart
+## Bar Chart
 
 In Matplotlib, it is easy to create bar charts. For example, this is a
 demonstration of a simple bar chart using data from a user using
@@ -61,7 +61,7 @@ The output of this program is showcased in @fig:matplotlib-barchart2.
 
 ![Spotify Data Shown in Bar Chart](examples/images/matplotlib-barchart.svg){#fig:matplotlib-barchart2 width=50%} 
 
-### Line Chart
+## Line Chart
 
 The Matplotlib library in python allows for comprehensive line plots
 to be created. Here a line chart was created using a for loop to
@@ -95,7 +95,7 @@ The output of this program is showcased in @fig:matplotlib-linechart.
 ![Sample Randomized Line Plot](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart width=50%} 
 
 
-### Pie Chart
+## Pie Chart
 
 A pie chart is most commonly used when representing the division of
 components that form a whole thing e.g. showing how a budget is broken
@@ -123,7 +123,7 @@ The output of this program is showcased in @fig:matplotlib-piechart.
 
 ![Genres of Music from Spotify Distributed on a Pie Chart](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart width=50%} 
 
-### Contour Plot
+## Contour Plot
 
 Unlike the previous types of plots shown, contour plots allow data
 involving three variables to be plotted on a 2D surface. In this
@@ -168,34 +168,32 @@ variable `z` can be defined. The variables can come in the form of a
 list or dictionary or as an equation. The `levels` parameter
 determines the number of contour lines that can be drawn.
 
-### Titles, Labels, and Legends
+## Annotations
 
-#### Titles
+### Titles
 
-Titles are necessary to let the reader know about your graph or plot
-is exactly about. To give a title to your whole graph in matplotlib,
+Titles enable to add a title to the graph. NOte that in most academic 
+publications titles are not used and instead the information is added 
+to a separate caption for the figure.
+Nevertheless, to add a title to your whole graph in matplotlib,
 simply type:
 
 ```python
 plt.title("Title you want to set").
 ```
 
-#### x-axis labels and y-axis labels
+### XY Labels
 
-Within the Matplotlib library are the functions `plt.xlabel()` and
-`plt.ylabel()`. All these functions do is set a string to the two
-axes. To use these functions, simply type:
+To se an X and Y Labeel which are needed foa all publisations you can set them with 
 
 ```python
 plt.xlabel("Label you want to set")
 plt.ylabel("Label you want to set")
 ```
 
-#### Legend
+### Legend
 
-Sometimes, a legend may be necessary to let the reader know which part
-of the graph/plot corresponds to each part of the data shown. To show
-a legend, use the command:
+In case you have multiple graohs you will also want to provide some information about them in a legend:
 
 ```python
 plt.legend()
@@ -231,14 +229,12 @@ The output of this program is showcased in @fig:matplotlib-rotatingticks.
 
 ![Line Plot with `x-axis` Ticks Rotated by 90 degrees and `y-axis` Ticks Rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:matplotlib-rotatingticks  width=50%}
 
-### Exporting
+## Export
 
-#### Saving Chart as Files After a chart is created and displayed, it
-
-can be exported as a file outside the code using this command:
+Saving Chart as files is easy with the command:
 
 ```python
-plt.savefig("fname", dpi='figure')
+plt.savefig("fname", dpi=300)
 ```
 
 The name and format of the file are set as a string using
@@ -249,38 +245,33 @@ after the file name and specify the type after such as `.pdf`, `.png`,
 The parameter `dpi` sets the DPI (Dots per Inch) of the image being
 saved. Specify this number in the form of a float. For example, set
 `dpi=300`.
-
-Additionally, there is another way to save files that may be faster
-than calling a specific method for each file. The following code
-showcases this:
+Please note that we always want o print the png, SVG, and PDF as dependent 
+on publisher one or the other is preferred. The best way to deal with this is to 
+create a custom save plot function such as 
 
 ```python
 import matplotlib.pyplot as plt
-import os
-from matplotlib import pyplot
 
-
-def save():
-  name = os.path.basename(__file__).replace(".py", "")
-  plt.savefig(f'/filepath/{name}.png')
-  plt.savefig(f'filepath/{name}.pdf')
-  plt.savefig(f'filepath/{name}.svg')
+def save_plt(name):
+  plt.savefig(f'{name}.png', dpi=300)
+  plt.savefig(f'{name}.pdf')
+  plt.savefig(f'{name}.svg')
   plt.show()
 ```
 
 This code can be accessed on
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-linechart.py)
 
-#### Display
+### Display
 
-The very last command that should be written is `plt.show()`, as this
-command displays the graph that you made. To show, simply type:
+The `plt.show()`
+displays the graph on screen:
 
 ```python
 plt.show()
 ```
 
-### Links
+## Links
 
 * <https://matplotlib.org/> [@www-matplotlib]
 * <https://matplotlib.org/stable/api/pyplot_summary.html> [@www-matplotlib-documentation]

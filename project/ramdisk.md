@@ -1,4 +1,4 @@
-# Ramdisk
+# Cloudmesh Project Ramdisk
 
 ---
 
@@ -9,23 +9,26 @@
 
 ---
 
-how to set up aand manage a ramdisk on lunux
+THis is an easy assignment to develop a cloudmesh command that sets up a 
+RAMDISK in various opertaing systems. To facilitate this task we provide the 
+first initial information.
 
-develop cms program 
+The command should lokk similar to 
 
+```bash
+$ cms ramdisk --... --size=SIZE
+```
 
-cms ramdisk --... --size=SIZE
+We recommend that you use python humanize to manage easi to enter sizes such as 1GB.
 
-use humanize so we can us 1GB for size ...
+You coudl enhance the program to also integrate it into the OS so it starts up immediatly after reboot. However for now a simple ond demand program tos astrt and stop the ramdisk is suficcient.
 
-showcase 
+Advanced integration could include 
 
-a) dynamic ramdisk no reboot needed, but if reboot, ramdisk needs to
-be set up new
-
-b) ramdisk integrated in fstab with reboot
-
-c) backu and load ramdisk
+* dynamic ramdisk no reboot needed, but if reboot, ramdisk needs to
+  be set up new
+* ramdisk integrated in fstab with reboot
+* backup and load ramdisk
 
 
 On macOS a RAM disk with 512MB space can be created with the following
@@ -50,15 +53,13 @@ mount -t aufs -o br:/mnt/ramdisk=ro none /mnt/readonly
 # mount -t tmpfs -o size=256M tmpfs /tmp/ramdisk/
 ```
 
-using /dev/shm: 
+Links that could be useful include, but are not limited to
 
-http://ubuntuguide.net/ubuntu-using-ramdisk-for-better-performance-and-fast-response
+* Information about using /dev/shm is avaiilable at <http://ubuntuguide.net/ubuntu-using-ramdisk-for-better-performance-and-fast-response>
+* Various methods (in german) are documented at 
+<https://wiki.ubuntuusers.de/RAM-Disk_erstellen>
+* ramfs is an older file system type and is replaced in mostly by tmpfs.
+* Windows <https://forums.guru3d.com/threads/guide-using-imdisk-to-set-up-ram-disk-s-in-windows-with-no-limit-on-disk-size.356046/>
 
-Various methods:
-(in german): https://wiki.ubuntuusers.de/RAM-Disk_erstellen/
+Assignment:
 
-ramfs is an older file system type and is replaced in mostly by tmpfs.
-
-## windows
-
-https://forums.guru3d.com/threads/guide-using-imdisk-to-set-up-ram-disk-s-in-windows-with-no-limit-on-disk-size.356046/

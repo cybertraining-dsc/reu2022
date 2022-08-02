@@ -27,17 +27,19 @@ https:
 BOOK:
   - PREFACE:
     - "{file.reu2022}/README.md"
-    - "{file.reu2022}/project/contributor-list.md"
-    - "{file.reu2022}/project/books.md"
+    - "{file.reu2022}/preface-documents/material.md"
+#    - "{file.reu2022}/project/books.md"
 #    - "{file.reu2022}/security.md"
-  - CONTRIBUTION_TO_THE_PROJECT:
-    - "{file.reu2022}/contribute/intro-contribute.md"
-    - "{file.reu2022}/contribute/calendar.md"
-    - "{file.reu2022}/action.md"
-    - "{file.reu2022}/contribute/issues.md"
-#    - "{file.reu2022}/contribute/c4gc-students.md"
-    - "{file.reu2022}/contribute/teamwork.md"
-#    - "{file.reu2022}/contribute/lessons.md"
+    - CONTRIBUTION:
+      - "{file.reu2022}/project/contributor-list.md"
+      - "{file.reu2022}/contribute/calendar.md"
+      - "{file.reu2022}/contribute/duplication.md"
+      - "{file.reu2022}/contribute/insights.md"
+      - "{file.reu2022}/contribute/issues.md"
+      - "{file.reu2022}/contribute/teamwork.md"
+#      - "{file.reu2022}/action.md"
+#      - "{file.reu2022}/contribute/c4gc-students.md"
+#      - "{file.reu2022}/contribute/lessons.md"
   - DEVELOPMENT_ENVIRONMENT:
     - "{file.reu2022}/project/install.md"
     - WINDOWS:
@@ -46,28 +48,32 @@ BOOK:
       - "{file.reu2022}/project/ssh-agent-windows.md"
       - "{file.reu2022}/project/ubuntu-wsl-cl.md"
       - "{file.reu2022}/project/kill-process-windows.md"
-    - RIVANNA:
-      - "{file.reu2022}/project/uva.md"
-      - "{file.reu2022}/project/rivanna-introduction.md"
-      - "{file.reu2022}/project/rivanna-sbatch.md"
-      - "{file.reu2022}/project/rivanna-run-mpi-programs.md"
+    - HPC_RESOURCES:
+#      - "{file.reu2022}/project/hpc/uva.md"
+      - "{file.reu2022}/project/hpc/rivanna-introduction.md"
+      - "{file.reu2022}/project/hpc/rivanna-sbatch.md"
+      - "{file.reu2022}/project/hpc/rivanna-run-mpi-programs.md"
     - DOCKER:
       - "{file.reu2022}/project/docker/docker.md"
+  - LINUX:
+    - "{file.reu2022}/project/ramdisk.md"
     - USEFUL_COMMANDS:
-      - "{file.reu2022}/project/ramdisk.md"
       - "{file.reu2022}/project/linux.md"
       - "{file.reu2022}/project/pandoc.md"
       - "{file.reu2022}/project/emacs.md"
   - PYTHON:
-    - GRAPH_VIZUALIZATION:
+    - "{file.reu2022}/project/graphics/data/python-data.md"
+    - CHARTS:
 #      - "{file.reu2022}/data/compare-graphics.md"
       - "{file.reu2022}/data/compare-graphics-tex.md"
-      - "{file.reu2022}/project/graphics/data-management/python-data.md"
       - "{file.reu2022}/project/graphics/introduction.md"
       - "{file.reu2022}/project/graphics/matplotlib.md"
       - "{file.reu2022}/project/graphics/seaborn.md"
       - "{file.reu2022}/project/graphics/bokeh.md"
       - "{file.reu2022}/project/graphics/pandas.md"
+    - GRAPHS_WITH_PYTHON:
+      - "{file.reu2022}/project/graphs/graphs-networkx/networkx.md"
+      - "{file.reu2022}/project/graphs/graphs-graphviz/graphviz.md"
     - SELECTED_DATA_MANAGEMENT_PYTHON_TOPICS:
       - "{file.reu2022}/project/python/glob/glob.md"
       - "{file.reu2022}/project/python/mmap/mmap.md"
@@ -77,9 +83,6 @@ BOOK:
       - "{file.reu2022}/project/requests/requests.md"
       - "{file.reu2022}/project/fastapi.md"
       - "{file.reu2022}/project/python/queue/queue.md"
-    - GRAPHS_WITH_PYTHON:
-      - "{file.reu2022}/project/graphs/graphs-networkx/networkx.md"
-      - "{file.reu2022}/project/graphs/graphs-graphviz/graphviz.md"
     - SELECTED_CLOUDMESH_TOPICS:
       - "{file.reu2022}/project/cloudmesh-common-StopWatch.md"
       - "{file.reu2022}/project/cms-command.md"
@@ -90,7 +93,7 @@ BOOK:
       - "{file.reu2022}/project/service/queue/service-queue.md"
       - "{file.reu2022}/project/service/databases/databases.md"
       - "{file.reu2022}/project/cloudmesh-cc/workflow.md"
-      - "{file.reu2022}/project/rivanna-tensorflow.md"
+      - "{file.reu2022}/project/hpc/rivanna-tensorflow.md"
   - INTRODUCTION_TO_DEEP_LEARNING:
     - "{file.reu2022}/project/ai/introduction-ai.md"
     - OVERVIEW:
@@ -122,7 +125,7 @@ BOOK:
     - "{file.reu2022}/code/deeplearning/parameters.md"
     - "{file.reu2022}/project/mnist_parameters.md"
     - "{file.reu2022}/project/mnist-tensorflow-rivanna.md"
-    - "{file.reu2022}/project/rivanna-run-mpi-programs.md"
+    - "{file.reu2022}/project/hpc/rivanna-run-mpi-programs.md"
     - "{file.reu2022}/project/mnist-pytorch-rivanna.md"
   - BIOS:
     - "{file.reu2022}/contribute/bio.md"
