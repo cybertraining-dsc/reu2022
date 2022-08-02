@@ -58,14 +58,17 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/gra
 
 ![Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure witdh=50%}
 
-## Figure Parameters Example
+## Annotations
 
-* **x_axis_label** and **y_axis_label**: labels for the x and y axis
-* **x_range** and **y_range**: specifications for the range of the x
-* **and y axis title**: text title for your graph width** and
-* ****height**: width and height of your graph in pixels
-* **background_fill_color**: the background of the figure (takes any
-* **CSS colors)
+The titel can be set with **title**.
+Bokeh allows setting annotations with the paarmeters **x_axis_label** and **y_axis_label**.
+To set the range of the s and y axis you can use **x_range** and **y_range**. 
+
+## Dimensions and Color 
+
+The dimension of the plot can be set with **height** and **width**.
+The background color can be changed with 
+**background_fill_color**, however, we always want to set it to white for publications.
 
 ## Scatter Plot
 
@@ -215,6 +218,11 @@ export_png(fig, filename="file-name.png")
 export_svg(fig, filename="file-name.svg")
 ```
 
+Assignment:
+
+* find out how to add a dpi to the png image. Set it to 300dpi.
+* modify this document and the code accordingly
+
 Note that Chromium is slow and this process may take delay the
 execution and performance of the program.
 
@@ -235,8 +243,8 @@ def save(p):
 ```
 
 This code can be accessed on
-[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
-.
+[GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py).
+
 
 ## Links
 

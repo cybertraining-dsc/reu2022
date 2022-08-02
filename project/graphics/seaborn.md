@@ -134,17 +134,17 @@ that is listed in the sources section.
 
 ## Saving Figures
 
-Saving figures created by Seaborn is quite simple. This is because it
-is the exact same as in Matplotlib.
-
-To save a figure:
+Saving figures created by Seaborn is quite simple as it uses matplotlib.
 
 ```python
-plt.savefig('figure_path/figure_name')
+plt.savefig('figure_path/figure_name.png', dpi=300)
 ```
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
+
+We have included in the matplotlib section a function example that saves to png, 
+svg, and PDF which is often needed for publications.
 
 ## Links
 
