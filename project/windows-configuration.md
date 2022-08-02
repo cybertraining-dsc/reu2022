@@ -27,7 +27,7 @@ variables or added configuration scripts to your `.bashrc`
 files in case you use gitbash. Please, remove them and make sure your 
 pythin version from python.or works as expected.
 
-To edit python we recommend using pyCharm and not VSCode.
+To code in Python, we recommend using PyCharm and not VSCode.
 
 Pycharm and Git Bash can be installed with the instructions found in
 *Install.*
@@ -44,7 +44,7 @@ This includes
 Before installing docker however you have to set up the 
 appropriate hypervisor at boot time. PLease let us know how 
 you set them for your machine, so we can add some information here. 
-You willlikely have to research it.
+You will likely have to research it.
 
 Please also know that you MUST uninstall virtualbox before you 
 install docker, as old versions of virtualbox are incompatible 
