@@ -61,7 +61,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). 
 The output of this program is showcased in @fig:seaborn-lineplot.
 
-![Line Plot Created from User Spotify Data](examples/images/seaborn-lineplot.svg){#fig:seaborn-lineplot}
+![Seaborn Line Plot Created from User Spotify Data](examples/images/seaborn-lineplot.svg){#fig:seaborn-lineplot}
 
 ## Distribution Plots
 
@@ -81,7 +81,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py).
 The output of this program is showcased in @fig:seaborn-displot.
 
-![Distribution Plot Created from User Spotify Data](examples/images/seaborn-displot.svg){#fig:seaborn-displot}
+![Seaborn Distribution Plot Created from User Spotify Data](examples/images/seaborn-displot.svg){#fig:seaborn-displot}
 
 
 ## Categorical Plots
@@ -106,7 +106,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/gra
 
 The output from the program is showcased in @fig:seaborn-catplot.
 
-![Categorical Plot Created from User Spotify Data](examples/images/seaborn-catplot.svg){#fig:seaborn-catplot width=50%}
+![Seaborn Categorical Plot Created from User Spotify Data](examples/images/seaborn-catplot.svg){#fig:seaborn-catplot width=50%}
 
 ## Regression Plots
 
@@ -127,7 +127,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 . The output of this program is showcased in @fig:seaborn-regplot.
 
-![Regression Plot Created from User Spotify Data](examples/images/seaborn-regplot.svg){#fig:seaborn-regplot width=50%} 
+![Seaborn Regression Plot Created from User Spotify Data](examples/images/seaborn-regplot.svg){#fig:seaborn-regplot width=50%} 
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.
@@ -139,6 +139,8 @@ Saving figures created by Seaborn is quite simple as it uses matplotlib.
 ```python
 plt.savefig('figure_path/figure_name.png', dpi=300)
 ```
+
+See the matplotlib section fro a save function saving in svg, pdf, and png.
 
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)

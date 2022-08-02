@@ -56,7 +56,7 @@ This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py). The output is shown in @fig:bokeh-figure.
 
 
-![Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure witdh=50%}
+![Bokeh Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure witdh=50%}
 
 ## Annotations
 
@@ -98,7 +98,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/gra
 The output is shown in @fig:bokeh-scatter.
 
 
-![Sample Scatter Plot with Various Point Shapes](examples/images/bokeh-scatter.svg){#fig:bokeh-scatter width=50%} 
+![Bokeh Scatter Plot with Various Point Shapes](examples/images/bokeh-scatter.png){#fig:bokeh-scatter width=50%} 
 
 The list  possible marker types and the functions used to create
 them can be found
@@ -132,7 +132,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
 The output is shown in @fig:bokeh-linechart.
 
-![Sample Randomized Line Plot](examples/images/bokeh-linechart.png){#fig:bokeh-linechart width=50%} 
+![Bokeh Line Plot with random data.](examples/images/bokeh-linechart.png){#fig:bokeh-linechart width=50%} 
 
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -161,7 +161,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py). The output is shown in @fig:bokeh-barchart.
 
 
-![Spotify Data Shown in Bar Chart](examples/images/bokeh-barchart.png){#fig:bokeh-barchart width=50%}
+![Bokeh Bar CHart with Spotify Data.](examples/images/bokeh-barchart.png){#fig:bokeh-barchart width=50%}
 
 ## Saving Figures
 
