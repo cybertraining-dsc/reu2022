@@ -13,4 +13,5 @@ nvidia-smi --list-gpus
 source activate ENV3
 python example_mlp_mnist.py
 
-echo " cloudmesh status=done progress=100 pid=$$"#
+echo "# cloudmesh status=done progress=100 pid=$$"
+#
