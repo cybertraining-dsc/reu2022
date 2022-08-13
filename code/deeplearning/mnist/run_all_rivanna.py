@@ -4,7 +4,6 @@ import torch
 import textwrap
 import socket
 import cpuinfo
-from cloudmesh.common.Shell import Shell
 from cloudmesh.common.util import banner
 from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.variables import Variables
@@ -70,6 +69,7 @@ if gpu is None:
     gpu = ['v100', 'a100', 'k80', 'p100', 'rtx-2080']
 else:
     gpu = v['gpu'].split(',')
+os.chdir('~/reu2022/code/deeplearning/mnist')
 for card in gpu:
     tag = f"{host}-{user}-{cpu}-{card}"
     StopWatch.start(f'{card}-total')
@@ -82,7 +82,11 @@ for card in gpu:
         banner(command)
         if not dryrun:
             os.chdir('~/reu2022/code/deeplearning/mnist')
-            os.system(command)
+            banner(command)
+            try:
+                Shell.run(command)
+            except Exception as e:
+                print(e.output)
 
     for script in scripts:
         StopWatch.start(f'{script}')
