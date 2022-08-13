@@ -81,6 +81,7 @@ for card in gpu:
             command = f"{exec} --gres=gpu:{card}:1 {script}.sh"
         banner(command)
         if not dryrun:
+            os.chdir('~/reu2022/code/deeplearning/mnist')
             os.system(command)
 
     for script in scripts:
