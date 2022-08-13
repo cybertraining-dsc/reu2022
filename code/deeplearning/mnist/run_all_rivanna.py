@@ -69,7 +69,8 @@ if gpu is None:
     gpu = ['v100', 'a100', 'k80', 'p100', 'rtx-2080']
 else:
     gpu = v['gpu'].split(',')
-os.chdir('~/reu2022/code/deeplearning/mnist')
+path = Shell.map_filename('~/reu2022/code/deeplearning/mnist').path
+os.chdir(path)
 for card in gpu:
     tag = f"{host}-{user}-{cpu}-{card}"
     StopWatch.start(f'{card}-total')
@@ -81,7 +82,7 @@ for card in gpu:
             command = f"{exec} --gres=gpu:{card}:1 {script}.sh"
         banner(command)
         if not dryrun:
-            os.chdir('~/reu2022/code/deeplearning/mnist')
+            os.chdir(path)
             banner(command)
             try:
                 Shell.run(command)
