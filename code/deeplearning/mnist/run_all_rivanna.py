@@ -15,8 +15,8 @@ import time
 dryrun = False
 
 exec = "python"
-exec = "papermill"
 exec = "sbatch"
+exec = "papermill"
 
 v = Variables()
 
