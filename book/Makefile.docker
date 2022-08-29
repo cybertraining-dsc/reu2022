@@ -1,0 +1,119 @@
+NAME=reu2022
+AI=ai
+# CM=$(realpath ../..)
+REU_BOOK_DIR=$(realpath .)
+BOOK=${CM}/book
+FINAL=${CM}/pub
+HOME=..
+VERSION=latest
+FIRST_DIR=/cm
+FIRST_DIR=/cm/reu2022/book
+WIN_FIRST_DIR=//cm//reu2022//book
+CM=$(shell find ~ -type d -name 'cm' | head -n 1)
+USERNAME=$(shell basename $$HOME)
+BOOKMANAGER_COMMAND=bookmanager
+BOOKMANAGER_COMMAND=docker run --volume="${CM}:/cm" --workdir=$(FIRST_DIR) -it cloudmesh/bookmanager:latest bookmanager
+WIN_BOOKMANAGER_COMMAND=docker run --volume="//c//Users//${USERNAME}//cm://cm" --workdir=$(WIN_FIRST_DIR) -it cloudmesh/bookmanager:latest bookmanager
+
+include makefile.sys
+
+all: pull epub pdf
+
+# authors
+
+WORKDIR=$(realpath .)
+
+docker:
+	mkdir -p dest
+	# ./timeseries-references.bib
+	cat $(CM)/su22-reu-385/*.bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	$(BOOKMANAGER_COMMAND) $(NAME).yaml get
+	$(BOOKMANAGER_COMMAND) $(NAME).yaml epub
+	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
+
+windocker:
+	mkdir -p dest
+	# ./timeseries-references.bib
+	cat $(CM)/su22-reu-385/*.bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	$(WIN_BOOKMANAGER_COMMAND) $(NAME).yaml get
+	$(WIN_BOOKMANAGER_COMMAND) $(NAME).yaml epub
+	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
+
+shell:
+	docker run -v $(CM):/cm -w /cm --rm -it cloudmesh/bookmanager:${VERSION}  /bin/bash
+
+pull:
+	git pull
+	cd ../../cloudmesh-common; git pull
+	cd ../../cloudmesh-cc; git pull
+	cd ../../su22-reu-385; git pull
+info:
+	ls ${CM}
+
+epub: clean version bib
+	mkdir -p dest
+	# ./timeseries-references.bib
+	cat $(CM)/su22-reu-385/*.bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	bookmanager $(NAME).yaml get
+	bookmanager $(NAME).yaml epub
+	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
+
+pdf: epub
+	bookmanager $(NAME).yaml pdf
+	cp ./dest/vonLaszewski-$(NAME).pdf $(FINAL)/docs
+
+ai: clean pull version bib
+	mkdir -p dest
+	cat $(CM)/su22-reu-385/*bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
+	bookmanager $(AI).yaml get
+	bookmanager $(AI).yaml epub
+	bookmanager $(AI).yaml pdf
+	cp ./dest/vonLaszewski-$(AI).epub $(FINAL)/docs
+	cp ./dest/vonLaszewski-$(AI).pdf $(FINAL)/docs
+
+
+draft: clean version
+	mkdir -p dest
+	cat $(cm)/bib/*.bib > dest/all.bib
+	bookmanager $(NAME)-draft.yaml get
+	$(OPEN_EPUB) dest/vonLaszewski-$(NAME)-draft.epub
+
+
+epub-pdf:
+	ebook-convert \
+	  $(FINAL)/docs/vonLaszewski-$(NAME).epub \
+	  $(FINAL)/docs/vonLaszewski-$(NAME).pdf
+
+dest: clean fonts version
+	mkdir -p dest
+	cat $(HOME)/bib/*.bib > dest/all.bib
+	bookmanager $(NAME).yaml get
+	ebook-convert \
+	  dest/vonLaszewski-$(NAME).epub \
+	  dest/vonLaszewski-$(NAME).pdf
+
+publish:
+	cd $(FINAL); git commit -m "update python book" \
+	  docs/vonLaszewski-$(NAME).epub \
+	  docs/vonLaszewski-$(NAME).pdf; git push
+bib:
+	mkdir -p dest/bib
+	mkdir -p dest/book
+	touch dest/book/empty.md
+	touch dest/empty.md
+	cp $(BOOK)/bib/*.bib dest/bib
+
+version:
+	TZ=":US/Eastern"; date > ../version.md
+
+view:
+	-killall Books
+	$(OPEN_EPUB) $(FINAL)/docs/vonLaszewski-$(NAME).epub
+
+authors:
+	$(HOME)/bin/authors.py > $(HOME)/chapters/authors.md
+
+clean:
+	rm -rf dest
+
+include ./Makefile.bibtex
