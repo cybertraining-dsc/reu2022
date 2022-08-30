@@ -92,7 +92,7 @@ This program can be downloaded from
 
 The output of this program is showcased in @fig:matplotlib-linechart.
 
-![Matplotlib Line Plot (Random Data)](examples/images/matplotlib-linechart.pdf){#fig:matplotlib-linechart width=50%} 
+![Matplotlib Line Plot (Random Data)](examples/images/matplotlib-linechart.svg){#fig:matplotlib-linechart width=50%} 
 
 
 ## Pie Chart

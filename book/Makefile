@@ -9,6 +9,14 @@ include makefile.sys
 
 all: pull epub pdf
 
+
+docker-all:
+	make -f Makefile.docker all
+
+docker-shell:
+	make -f Makefile.docker shell
+
+
 # authors
 
 pull:
@@ -16,6 +24,7 @@ pull:
 	cd ../../cloudmesh-common; git pull
 	cd ../../cloudmesh-cc; git pull
 	cd ../../su22-reu-385; git pull
+
 info:
 	ls ${CM}
 
