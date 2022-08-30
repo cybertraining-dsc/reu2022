@@ -5,9 +5,9 @@ be cloned to your ~/cm folder before
 generating the book. These are the required
 repositories:
 
-https://github.com/cloudmesh-community/pub
-https://github.com/cloudmesh-community/book
-https://github.com/cybertraining-dsc/su22-reu-385
+* <https://github.com/cloudmesh-community/pub>
+* <https://github.com/cloudmesh-community/book>
+* <https://github.com/cybertraining-dsc/su22-reu-385>
 
 Docker must be running, as well. If you have
 docker desktop, simply start the program and
