@@ -6,38 +6,26 @@ BOOK=${CM}/book
 FINAL=${CM}/pub
 HOME=..
 VERSION=latest
-FIRST_DIR=/cm
+# FIRST_DIR=/cm
 FIRST_DIR=/cm/reu2022/book
 WIN_FIRST_DIR=//cm//reu2022//book
 CM=$(shell find ~ -type d -name 'cm' | head -n 1)
 USERNAME=$(shell basename $$HOME)
-BOOKMANAGER_COMMAND=bookmanager
+# BOOKMANAGER_COMMAND=bookmanager
 BOOKMANAGER_COMMAND=docker run --volume="${CM}:/cm" --workdir=$(FIRST_DIR) -it cloudmesh/bookmanager:latest bookmanager
-WIN_BOOKMANAGER_COMMAND=docker run --volume="//c//Users//${USERNAME}//cm://cm" --workdir=$(WIN_FIRST_DIR) -it cloudmesh/bookmanager:latest bookmanager
+
+ifeq ($(OS),Windows_NT)     # is Windows_NT on XP, 2000, 7, Vista, 10...
+    detected_OS=Windows
+    BOOKMANAGER_COMMAND=docker run --volume="//c//Users//${USERNAME}//cm://cm" --workdir=$(WIN_FIRST_DIR) -it cloudmesh/bookmanager:latest bookmanager
+else
+    detected_OS=$(shell uname)  # same as "uname -s"
+endif
 
 include makefile.sys
 
 all: pull epub pdf
 
 # authors
-
-WORKDIR=$(realpath .)
-
-docker:
-	mkdir -p dest
-	# ./timeseries-references.bib
-	cat $(CM)/su22-reu-385/*.bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
-	$(BOOKMANAGER_COMMAND) $(NAME).yaml get
-	$(BOOKMANAGER_COMMAND) $(NAME).yaml epub
-	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
-
-windocker:
-	mkdir -p dest
-	# ./timeseries-references.bib
-	cat $(CM)/su22-reu-385/*.bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
-	$(WIN_BOOKMANAGER_COMMAND) $(NAME).yaml get
-	$(WIN_BOOKMANAGER_COMMAND) $(NAME).yaml epub
-	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
 
 shell:
 	docker run -v $(CM):/cm -w /cm --rm -it cloudmesh/bookmanager:${VERSION}  /bin/bash
@@ -54,12 +42,12 @@ epub: clean version bib
 	mkdir -p dest
 	# ./timeseries-references.bib
 	cat $(CM)/su22-reu-385/*.bib $(CM)/book/bib/*.bib $(HOME)/*.bib  > dest/all.bib
-	bookmanager $(NAME).yaml get
-	bookmanager $(NAME).yaml epub
+	$(BOOKMANAGER_COMMAND) $(NAME).yaml get
+	$(BOOKMANAGER_COMMAND) $(NAME).yaml epub
 	cp ./dest/vonLaszewski-$(NAME).epub $(FINAL)/docs
 
 pdf: epub
-	bookmanager $(NAME).yaml pdf
+	$(BOOKMANAGER_COMMAND) $(NAME).yaml pdf
 	cp ./dest/vonLaszewski-$(NAME).pdf $(FINAL)/docs
 
 ai: clean pull version bib
