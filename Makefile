@@ -1,4 +1,5 @@
 IMAGE=tensorflow-2.8.0
+
 image:
 	cp ${IMAGE}.sif ${IMAGE}-cms.sif
 	singularity exec ${IMAGE}-cms.sif pip install cloudmesh-common -U
@@ -18,3 +19,6 @@ watch:
 
 cat:
 	cd experiment/${filename}; cat *.error *.log
+
+book:
+	cd book; make -f Makefile.docker all
