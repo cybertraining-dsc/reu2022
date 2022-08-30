@@ -121,7 +121,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/gra
 The output of this program is showcased in @fig:matplotlib-piechart.
 
 
-![Matplotlib Piecahrt (Genres of Music from Spotify).](examples/images/matplotlib-piechart.pdf){#fig:matplotlib-piechart width=50%} 
+![Matplotlib Piecahrt (Genres of Music from Spotify).](examples/images/matplotlib-piechart.svg){#fig:matplotlib-piechart width=50%} 
 
 ## Contour Plot
 
@@ -151,7 +151,7 @@ plt.show()
 This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/matplotlib-contour.py). The output of this program is showcased in @fig:matplotlib-contour.
 
-![Matplotlib Multivariable Math Equation Shown on a Contour Plot.](examples/images/matplotlib-contour.pdf){#fig:matplotlib-contour width=50%}
+![Matplotlib Multivariable Math Equation Shown on a Contour Plot.](examples/images/matplotlib-contour.svg){#fig:matplotlib-contour width=50%}
 
 A contour plot allows data and equations consisting of three variables
 to be plotted through plotting 3D surfaces as 2D slices on a `xy`
@@ -227,7 +227,7 @@ This program can be downloaded from [GitHub](https://github.com/cybertraining-ds
 
 The output of this program is showcased in @fig:matplotlib-rotatingticks.
 
-![Matplotlib Line Plot with `x-axis` Ticks Rotated by 90 degrees and `y-axis` Ticks Rotated by 45 degrees](examples/images/matplotlib-rotatingticks.pdf){#fig:matplotlib-rotatingticks  width=50%}
+![Matplotlib Line Plot with `x-axis` Ticks Rotated by 90 degrees and `y-axis` Ticks Rotated by 45 degrees](examples/images/matplotlib-rotatingticks.svg){#fig:matplotlib-rotatingticks  width=50%}
 
 ## Export
 
