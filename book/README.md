@@ -8,13 +8,17 @@ repositories:
 * <https://github.com/cloudmesh-community/pub>
 * <https://github.com/cloudmesh-community/book>
 * <https://github.com/cybertraining-dsc/su22-reu-385>
+* <https://github.com/cyberaide/bookmanager>
 
 Docker must be running, as well. If you have
 docker desktop, simply start the program and
 have it running in the background.
 
+Navigate to the bookmanager directory and run
+`make image`.
+
 To generate the book, stand in reu2022/book
-and run `make -f Makefile.docker all`
+and run `make -f Makefile.docker all`.
 
 If these instructions become outdated and there
 is no Makefile.docker due to its removal, then
