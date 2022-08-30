@@ -42,3 +42,7 @@ and compile it
 cd ~/cm/reu2022
 make book
 ```
+
+BUG: We have not yet figured out how to compile
+pdfs successfully as there is a bug with svg
+rendering.
