@@ -1,17 +1,20 @@
-# Teachning material and Course Web sites
+# Teaching Material and Course Websites
 
-Teching material form previous teaching activities was made avilable to the students at the beginning of
-the program. We list here a selection of them. Students were required to find other resources on the internet in case additinal material was needed. THis sevred as excersise to be able to identify relevant information.
+Teaching material form previous teaching activities was made available to the 
+students at the beginning of the program. We list here a selection of them. 
+Students were required to find other resources on the internet in case 
+additional material was needed. This served as an exercise to be able to 
+identify relevant information.
 
-Students main goal was to develop new teachng material while at the
+Students main goal was to develop new teaching material while at the
 same time conducting a project making the use of distributed
-cyberinfrastructure for deep learning simpler. Over time they
+cyberinfrastructure for deep learning simpler. Over time, they
 contributed to the teaching material.
 
 
 ## Books
 
-The following Teaching books were used:
+The following teaching books were used:
 
 * <https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf>
 * <https://cloudmesh-community.github.io/pub/vonLaszewski-python.epub>
@@ -24,7 +27,7 @@ The following Teaching books were used:
 
 ## The repository for our report
 
-The repository managing this proceedings is available at
+The repository managing these proceedings is available at
 
 * <https://github.com/cybertraining-dsc/reu2022>
 
@@ -33,11 +36,13 @@ Code was mainly developed in
 * <https://github.com/cloudmesh/cloudmesh-mpi>
 * <https://github.com/cloudmesh/cloudmesh-cc>
 
-Studenst maintained furthermore their own repositories whic are listed at the end of these proceedings
+Students maintained furthermore their own repositories which are listed at the 
+end of these proceedings.
 
 ## Slack
 
-Some private slacks not open to the community to coordinate activities include
+Some private Slacks that are not open to the community to coordinate 
+activities include
 
 * [Private Slack for student collaboration](https://cloudmesh-reu2022.slack.com)
 * [Private GC4G slack for event scheduling](https://biocomplexity-eoo5671.slack.com/archives/C031CR0B2QG)
@@ -52,7 +57,8 @@ The many UVA technical help ticket systems include
 
 ## Rivanna Information
 
-Information about The supercomputer with GPU's at University of Virginia are listed next
+Information about the Rivanna supercomputer with GPUs at University of 
+Virginia are listed next
 
 * Research Computing: <https://www.rc.virginia.edu/>
 * Rivanna Overview: <https://www.rc.virginia.edu/userinfo/rivanna/overview/>
@@ -65,18 +71,19 @@ Information about The supercomputer with GPU's at University of Virginia are lis
 * Rivanna Allocations: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
 
 
-## GitBash 
+## Git Bash 
 
 Students with Windows machines were asked to use GitBash
 
 * <https://git-scm.com/downloads>
 
-## Pycharm
+## PyCharm
 
-Students were asked to use pycharm for development.
+Students were asked to use PyCharm for development.
 
-* pycharm community edition: <https://www.jetbrains.com/pycharm/download>
-* md: <https://www.jetbrains.com/help/pycharm/markdown.html>
+* PyCharm Professional Edition: <https://www.jetbrains.com/pycharm/download>
+* PyCharm Markdown Manual: <https://www.jetbrains.com/help/pycharm/markdown.
+  html>
 * (optional) extension makefile: <https://plugins.jetbrains.com/plugin/9333-makefile-language>
 * (optional) rst: <https://www.jetbrains.com/help/pycharm/restructured-text.html>
 * 80 char: <https://intellij-support.jetbrains.com/hc/en-us/community/posts/206070859-How-do-I-enable-the-80-column-guideline-change>
@@ -87,7 +94,7 @@ Students were asked to use pycharm for development.
 
 ## Bibliography Management
 
-Bibliography was collected as bibtex and the following tools wer recommended
+Bibliography was collected as bibtex and the following tools were recommended
 
 * jabref: <https://www.jabref.org/>
 * bibtex: <https://en.wikipedia.org/wiki/BibTeX>
@@ -96,7 +103,8 @@ Bibliography was collected as bibtex and the following tools wer recommended
 
 ## Administrative Links
 
-The following links are only important for GRegor von Laszewski to enable account management.
+The following links are only important for Gregor von Laszewski to enable 
+account management.
 
 * request storage: <https://www.rc.virginia.edu/form/storage/>
 * rivanna partition/account: <https://www.rc.virginia.edu/userinfo/rivanna/allocations/>
