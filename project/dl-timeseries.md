@@ -8,7 +8,7 @@
 
 ---
 
-craete and documenta simple time series command
+create and document a simple time series command
 
 use cloudmesh sys command generate to create an extension so we can do a commandline tool 
 

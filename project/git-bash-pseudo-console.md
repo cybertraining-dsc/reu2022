@@ -1,14 +1,17 @@
 # Using Git Bash on Windows
 
-If you do not use wsl, you can skip the appropriate steps related to it.
+Git Bash is the terminal of choice for the Windows operating
+system. However, it must be properly configured for an optimal
+Python development experience; for example, Pseudo Console Support
+must be enabled.
 
 First, try opening Git Bash and entering `wsl` (you must
-have installed wsl). If it hangs, then follow the rest of this
-tutorial. If it does not hang, you do not need to follow this
-tutorial since you already have Pseudo Console Support.
+have installed WSL and Git Bash). If it hangs, then a reinstall of
+Git Bash is necessary. If it does not hang and instead launches into
+WSL, then Pseudo Console Support is enabled; however, make sure that
+you picked other necessary options when you installed Git Bash.
 
-If you already have Git Bash installed, then uninstall it one
-of several ways.
+To enable Pseudo Console Support, uninstall Git Bash.
 
 If you installed Git with `choco`, then do `choco uninstall git`
 and `choco uninstall git.install`.
@@ -19,8 +22,8 @@ press the Windows key, searching for `Add or remove
 programs`, searching for `Git`, clicking on it, then
 clicking `Uninstall` and completing the uninstallation wizard.
 
-Then, reinstall (or install for the first time) with chocolatey 
-in an instance of Powershell ran as administrator with
+Then install Git Bash in a Run as Administrator instance of Powershell by 
+executing the choco command:
 
 ```bash
 $ choco install git.install --params "/GitAndUnixToolsOnPath \
@@ -31,14 +34,17 @@ If you do not have chocolatey then follow the tutorial at
 <https://chocolatey.org/install> and then run the aforementioned
 choco command, or forego chocolatey and use the standard Git
 installer by checking the box that reads `Enable experiment 
-support for pseudo consoles`.
+support for pseudo consoles`. Also select the appropriate
+options that match what is specified in the previously written
+choco command.
 
 Now you can use `wsl` and other commands that would otherwise
 require `winpty` prepended to the command.
 
 ## Troubleshooting
 
-If an `already installed` message appears, such as
+If an `already installed` message appears when trying to use choco to
+install Git Bash, such as
 
 ```bash
 git.install v2.33.0.2 already installed.

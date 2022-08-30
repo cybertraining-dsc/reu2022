@@ -8,7 +8,7 @@ you have not achieved a contribution. Thus, please make sure that you contribute
 
 Ask if you have an idea and want confirmation.
 
-Tho see the contrinutions you can look at GitHub Insights:
+To see the contributions, you can look at GitHub Insights:
 
 * [Project](https://github.com/cybertraining-dsc/reu2022/projects/2)
 * [Issues](https://github.com/cybertraining-dsc/reu2022/issues)
@@ -16,6 +16,6 @@ Tho see the contrinutions you can look at GitHub Insights:
 * [Contributors](https://github.com/cybertraining-dsc/reu2022/graphs/contributors)
 * [Traffic](https://github.com/cybertraining-dsc/reu2022/graphs/traffic)
 
-However, note that the true contributiosn may not be determind form insights as 
+However, note that the true contributions may not be determined form insights as 
 it may include duplication of lines and other information that is not included in GitHub 
 Insights. 

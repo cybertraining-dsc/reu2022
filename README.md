@@ -8,10 +8,10 @@ databases, simulations and artificial intelligence applications hosted
 on clouds and supercomputers with convergent
 technologies. Correspondingly, there is an increasing need for
 research workforce job skills in these and related areas. This project
-takcourse material
+takes course material
 on this cyberinfrastructure and adapts it for training with an
 emphasis on the needs of under-represented communities. The techniques
-of the successful open source software movement are used to create
+of the successful open-source software movement are used to create
 sustainable communities around the course curriculum and software. The
 project is creating new technologies to enable this for today's
 generation of students. Skills in core cloud computing, big data,
@@ -47,7 +47,7 @@ participants, and purely online courses and these have both "teach the
 student" and "teach the teacher" modes; the latter enables easy spread
 of the classes. Hands-on learning with research projects built around
 the class material is fully supported. The project offers
-CyberTraining with all of the popular approaches used by the Apache
+CyberTraining with all the popular approaches used by the Apache
 Software Foundation, including Meetups and Hackathons. Modules for
 domain scientists and engineers, e.g., the cyberinfrastructure users
 that exploit advanced CI methods for research in nanoengineering and
@@ -64,14 +64,13 @@ of support through evaluation using the Foundation's intellectual
 merit and broader impacts review criteria.
 
 This grant was started under [NSF Award
-1829704](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1829704) amd
-transitioned to University of Virginia In November 2021 under [the NSF
-awrad Number
-2200409](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2200409).
-ath the Bicomplexity Institute at the University of Virginia.
+1829704](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1829704) and
+transitioned to the University of Virginia in November 2021 under [the NSF
+award number 2200409](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2200409)
+at the Biocomplexity Institute at the University of Virginia.
 Administrative support was provided by the BII UVA Global Challenges
-program. For most students , the program lasted from June 2nd, 2022
-until July 29th, 2022.  One student was funded for an additional
+program. For most students, the program lasted from June 2nd, 2022
+until July 29th, 2022. One student was funded for an additional
 month.
 
 

@@ -3,7 +3,7 @@
 Unlike Linux and macOS, Windows runs on a completely different
 OS. Many coding environments are adapted to Linux, so Windows users
 must properly configure their machine to prepare it for a project.
-This is of special importance when working in environments supprting 
+This is of special importance when working in environments supporting 
 distributed cyberinfrastructure. Here in many cases Linux is required.
 
 ## Setting Up the Python Environment
@@ -25,7 +25,7 @@ list" box. Remove everything related to anaconda.
 Note that anaconda may have set some environment 
 variables or added configuration scripts to your `.bashrc`
 files in case you use gitbash. Please, remove them and make sure your 
-pythin version from python.or works as expected.
+Python version from python.org works as expected.
 
 To code in Python, we recommend using PyCharm and not VSCode.
 
@@ -50,7 +50,7 @@ Please also know that you MUST uninstall virtualbox before you
 install docker, as old versions of virtualbox are incompatible 
 with docker and it is just easier to uninstall virtualbox and reinstall it.
 
-Next we summarize the instalations using chocolatey.
+Next we summarize the installations using chocolatey.
 
 Before installing anything, we recommend that you read the entire section. 
 Especially when installing docker and if you do not have a brand new computer.

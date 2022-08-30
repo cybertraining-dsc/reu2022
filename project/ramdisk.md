@@ -10,18 +10,22 @@
 ---
 
 THis is an easy assignment to develop a cloudmesh command that sets up a 
-RAMDISK in various opertaing systems. To facilitate this task we provide the 
+RAMDISK in various operating systems. To facilitate this task we provide the 
 first initial information.
 
-The command should lokk similar to 
+The command should look similar to 
 
 ```bash
 $ cms ramdisk --... --size=SIZE
 ```
 
-We recommend that you use python humanize to manage easi to enter sizes such as 1GB.
+We recommend that you use python humanize to make it easier to read file sizes 
+such as 1GB (without humanize, the number of bytes is displayed instead of 
+GB, making it hard to comprehend).
 
-You coudl enhance the program to also integrate it into the OS so it starts up immediatly after reboot. However for now a simple ond demand program tos astrt and stop the ramdisk is suficcient.
+You could enhance the program to also integrate it into the OS so it starts up 
+immediately after reboot. However for now a simple on demand program to start 
+and stop the ramdisk is sufficient.
 
 Advanced integration could include 
 
@@ -55,7 +59,8 @@ mount -t aufs -o br:/mnt/ramdisk=ro none /mnt/readonly
 
 Links that could be useful include, but are not limited to
 
-* Information about using /dev/shm is avaiilable at <http://ubuntuguide.net/ubuntu-using-ramdisk-for-better-performance-and-fast-response>
+* Information about using /dev/shm is available at <http://ubuntuguide.
+  net/ubuntu-using-ramdisk-for-better-performance-and-fast-response>
 * Various methods (in german) are documented at 
 <https://wiki.ubuntuusers.de/RAM-Disk_erstellen>
 * ramfs is an older file system type and is replaced in mostly by tmpfs.

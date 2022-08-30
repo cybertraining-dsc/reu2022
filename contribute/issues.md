@@ -1,7 +1,7 @@
 # Issues
 
-Cloudmesh contains a conveient program to list all issues of
-reporitories downloaded in the current directory. The command can be
+Cloudmesh contains a convenient program to list all issues of
+repositories downloaded in the current directory. The command can be
 installed with
 
 ```bash
@@ -32,7 +32,7 @@ In case you like to see all issues only for the REU2022, please check out
 the [GitHub Link](https://github.com/cloudmesh/cloudmesh-cc/issues).
 
 
-To get all issues for cloudmesh projects that interrest you you can create an issuelist from 
+To get all issues for cloudmesh projects that interest you, you can create an issue list from 
 selected repositories.
 
 For example you can checkout the following

@@ -16,7 +16,7 @@ define its functionality with an easy-to-use API.
 
 ## FastAPI Install
 
-As FastAPI will need a web server, we will use `uvicron` for development purposes. 
+As FastAPI will need a web server, we will use `uvicorn` for development purposes. 
 In a production environment other, more mature Web services are recommended.
 To install FastAPI and uvicorn simply use the command:
 
@@ -30,7 +30,7 @@ If this command does not work, use this alternative:
 $ pip install --only-binary :all: fastapi[all]
 ``
 
-owever on some systems the `[all]` extensions may not yet bee supported. Let us know how to install it there and we add it to our description. We for example found issues in a recent update to fastAPI that had difficulties to be installed on M1 MacOS.
+However on some systems the `[all]` extensions may not yet be supported. Let us know how to install it there and we add it to our description. We for example found issues in a recent update to fastAPI that had difficulties to be installed on M1 MacOS.
 
 ## FastAPI Quickstart
 
@@ -225,7 +225,7 @@ Job1
 
 Assignment:
 
-* Use pedantic to create acomputer that contains temperature and load and implement it
+* Use pedantic to create a computer that contains temperature and load and implement it
 * Use a regular python class to define dynamically access to temperature and proceessor 
   load and contrast the implementation with the one where you use pedantic
 
