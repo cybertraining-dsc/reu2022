@@ -6,6 +6,10 @@ Docker must be running, as well. If you have
 docker desktop, simply start the program and
 have it running in the background.
 
+If you have preexisting cloudmesh:bookmanager
+images, it may be necessary to `make clean`
+the images and remove them to ensure a clean
+slate and an updated image.
 
 A number of different repositories must
 be cloned to your ~/cm folder before
@@ -21,8 +25,6 @@ git clone https://github.com/cloudmesh/cloudmesh-nlp
 git clone https://github.com/cybertraining-dsc/su22-reu-385
 git clone https://github.com/cyberaide/bookmanager
 ```
-
-
 
 Navigate to the bookmanager directory and run
 `make image`.
