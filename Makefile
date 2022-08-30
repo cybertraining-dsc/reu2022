@@ -1,5 +1,7 @@
 IMAGE=tensorflow-2.8.0
 
+.PHONY: book
+
 image:
 	cp ${IMAGE}.sif ${IMAGE}-cms.sif
 	singularity exec ${IMAGE}-cms.sif pip install cloudmesh-common -U
@@ -22,3 +24,9 @@ cat:
 
 book:
 	cd book; make -f Makefile.docker all
+
+
+bookmanager:
+	cd ../bookmanager; make image
+
+

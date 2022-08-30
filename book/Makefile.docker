@@ -4,6 +4,9 @@ AI=ai
 REU_BOOK_DIR=$(realpath .)
 BOOK=${CM}/book
 FINAL=${CM}/pub
+UID=$(shell id -u)
+GID=$(shell id -g)
+PWD=$(shell pwd)
 HOME=..
 VERSION=latest
 # FIRST_DIR=/cm
@@ -12,7 +15,7 @@ WIN_FIRST_DIR=//cm//reu2022//book
 CM=$(shell find ~ -type d -name 'cm' | head -n 1)
 USERNAME=$(shell basename $$HOME)
 # BOOKMANAGER_COMMAND=bookmanager
-BOOKMANAGER_COMMAND=docker run --volume="${CM}:/cm" --workdir=$(FIRST_DIR) -it cloudmesh/bookmanager:latest bookmanager
+BOOKMANAGER_COMMAND=docker run --user ${UID}:${GID} --volume="${CM}:/cm" --workdir=$(FIRST_DIR) -it cloudmesh/bookmanager:latest bookmanager
 
 ifeq ($(OS),Windows_NT)     # is Windows_NT on XP, 2000, 7, Vista, 10...
     detected_OS=Windows
@@ -28,7 +31,7 @@ all: pull epub pdf
 # authors
 
 shell:
-	docker run -v $(CM):/cm -w /cm --rm -it cloudmesh/bookmanager:${VERSION}  /bin/bash
+	docker run --user ${UID}:${GID} -v $(CM):/cm -w /cm --rm -it cloudmesh/bookmanager:${VERSION}  /bin/bash
 
 pull:
 	git pull
