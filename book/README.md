@@ -7,6 +7,7 @@ repositories:
 
 * <https://github.com/cloudmesh-community/pub>
 * <https://github.com/cloudmesh-community/book>
+* https://github.com/cloudmesh/cloudmesh-nlp
 * <https://github.com/cybertraining-dsc/su22-reu-385>
 * <https://github.com/cyberaide/bookmanager>
 
