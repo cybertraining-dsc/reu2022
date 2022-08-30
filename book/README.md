@@ -37,10 +37,6 @@ To generate the book, stand in reu2022/book
 and compile it
 
 ```bash
-cd ~/cm
-make -f Makefile.docker all
+cd ~/cm/reu2022
+make book
 ```
-
-If these instructions become outdated and there
-is no Makefile.docker due to its removal, then
-simply run `make all` instead.
