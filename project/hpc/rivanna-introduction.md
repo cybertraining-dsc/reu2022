@@ -181,12 +181,23 @@ which will result in
 ```
 \normalsize
 
-## Activating Rivanna on GitBash
+## Connecting to UVA Anywhere VPN via CLI
 
-Once you have Rivanna installed locally on your computer with your account
-set up, if you have Cloudmesh installed, you can simply connect to Rivanna on
-the terminal using the following command. Make sure to run the terminal as
-Admin or else it won't work. 
+Once you have your Rivanna account set up, you must set up your UVA 
+Anywhere VPN, including downloading the necessary certificate from UVA.
+Once you install the certificate and install the Cisco AnyConnect software, 
+you can utilize cloudmesh-vpn to connect to the VPN via command line. Set 
+up cloudmesh-vpn with the following commands:
+
+```bash
+$ cd ~/cm
+$ git clone https://github.com/cloudmesh/cloudmesh-vpn
+$ cd cloudmesh-vpn
+$ pip install -e .
+```
+
+Then run this command in a terminal run as administrator (if using Windows)
+or else it will not work.
 
 ```bash
 $ cms vpn connect
@@ -200,10 +211,8 @@ $ cms vpn disconnect
 
 ## Installing Python 3.10.5 on Rivanna with ENV3
 
-After you log in into Rivanna, there's a chance you're running Rivanna on an
-outdated version of Python, restricting you from being able to run Python
-files properly. In order to do so, you'll need a fully to up-to-date version
-of Python with the ENV3 virtual environment.
+After you log in into Rivanna, you must update its Python version. Then, a 
+virtual environment can be created.
 
 ### Activate Python3
 
@@ -216,7 +225,7 @@ rivanna$ module load anaconda
 rivanna$ conda create -n ENV3  -c conda-forge python=3.10.5
 ```
 
-The last command may take a while. After it's done installing, activate the 
+The last command may take a while. After it is done installing, activate the 
 ENV3 virtual environment of Python 3.10.5 by typing in:
 
 ```bash
@@ -226,7 +235,7 @@ rivanna$ source activate ENV3
 
 ### .bashrc
 
-Now, you must open your `.bashrc` file. If it doesn't exist, create one.
+Now, you must open your `.bashrc` file. If it does not exist, create one.
 Using any editor, open it and copy and paste the following: 
 
 ```bash
@@ -245,7 +254,7 @@ source activate ENV3
 
 ### Installing Cloudmesh into Rivanna
 
-Once Python 3.10.5 is installed with the ENV3 virutal environment. Cloudmesh
+Once Python 3.10.5 is installed with the ENV3 virtual environment. Cloudmesh
 can now be installed by first making a `cm` directory, installing the
 Cloudmesh Installer through pip and using the installer to get the Cloudmesh
 files into the `cm` directory. All of this can be done using the following 
@@ -258,7 +267,7 @@ $ pip install cloudmesh-installer
 $ cloudmesh-installer --ssh get cms
 ```
 
-If the last command doesn't work due to access rights, type in:
+If the last command does not work due to access rights, type in:
 
 ```bash
 $ cloudmesh-installer get cms
@@ -294,7 +303,7 @@ in the example script below.
 python mydemojob.py
 ```
 
-### How Do You Activate Different GPUs
+### How to Activate Different GPUs
 
 In the `sbatch` scripts, different GPUs can be activated by specifying it 
 through `gres` argument. 
