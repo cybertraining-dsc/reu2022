@@ -4,7 +4,7 @@
 This section discusses the mobility in Industry
 
 1.  Industry being transformed by a) Autonomy (AI) and b) Electric power
-2.  Established Organizations can't change
+2.  Established Organizations cannot change
     -   General Motors (employees: 225,000 in 2016 to around 180,000
         in 2018) finds it hard to compete with Tesla (42000 employees)
     -   Market value GM was half the market value of Tesla at the start
@@ -25,7 +25,7 @@ This section discusses the mobility in Industry
 * [Summary
 Slides](https://drive.google.com/file/d/1_N3JwUz4Hj7YE_rmYPZRYdJUTbs7eDdw/view?usp=sharing)
 
-* Youtube Video: <http://youtube.com/watch?v=1UYAq4VfpJ4_002>
+* YouTube Video: <http://youtube.com/watch?v=1UYAq4VfpJ4_002>
 
 * [Full Slide
 Deck](https://docs.google.com/presentation/d/19yAgjNjsoSzPxEqn1Ghr9tG51EfGocuc6_JjOi_0Ijk/edit?usp=sharing)

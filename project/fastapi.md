@@ -108,7 +108,7 @@ trigger the functionality of the defined function after its definition.
 We have seen such an example in `@app.get("/")` which activates the `root` function when the
 URL of the server is specified followed by "/"
 
-You can add other path's and functions. Let us assume you add to our initial program the function 
+You can add other paths and functions. Let us assume you add to our initial program the function 
 
 ```python
 @app.get("/temperature")
