@@ -82,7 +82,7 @@ non-categorical data. Pandas supports line chart visualization with
 `plot.line()`. We use the same data and modifications as the
 [Matplotlib line chart
 example](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/matplotlib-linechart.py)
-that can be found on Github. Note that since this data relies on
+that can be found on GitHub. Note that since this data relies on
 random number generation the graphs will look slightly different each
 time.
 
@@ -118,7 +118,7 @@ The output of this program is showcased in @fig:pandas-linechart.
 
 ## Pie Chart
 
-A pie chart is useful for showing a divison of a whole. Data that can
+A pie chart is useful for showing a division of a whole. Data that can
 be represented by a pie chart can also be used to make a bar chart,
 since both typically use categorical counts. Pandas uses `plot.pie()`
 to make a pie chart, in a manner similar to `plot.bar()`. We use the
@@ -154,7 +154,7 @@ parameter `legend=None` in `plot.pie()`.
 
 Note that this is the same as the Matplotlib tutorial found
 [here]((https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/pandas-linechart.py))
-on Github.
+on GitHub.
 
 To export your graph as an image file, you can use the Matplotlib
 function `savefig("fname.x")`. You can specify the file type by
