@@ -259,11 +259,11 @@ This code can be access from
 
 This code produces [@fig:csv-list-lineplot] and [@fig:csv-dict-lineplot].
 
-![CVS Line plot](images/csv-list-lineplot.png){#fig:csv-list-lineplot width=50%}
+![CVS Line plot](images/csv-list-lineplot.pdf){#fig:csv-list-lineplot width=50%}
 
 [@fig:csv-list-lineplot] is created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
-![CSV dict line plot](images/csv-dict-lineplot.png){#fig:csv-dict-lineplot width=50%}
+![CSV dict line plot](images/csv-dict-lineplot.pdf){#fig:csv-dict-lineplot width=50%}
 
 [@fig:csv-dict-lineplot] is created using the data available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).
 
@@ -290,7 +290,7 @@ This code can be accessed from
 
 This code produces the [@fig:pandas-lineplot]:
 
-![pandas-lineplot](images/pandas-lineplot.png){#fig:pandas-lineplot width=50%}
+![pandas-lineplot](images/pandas-lineplot.pdf){#fig:pandas-lineplot width=50%}
 
 [@fig:pandas-lineplot] is created using the data
 available [here](https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html).

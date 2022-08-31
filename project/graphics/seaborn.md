@@ -61,7 +61,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py). 
 The output of this program is showcased in @fig:seaborn-lineplot.
 
-![Seaborn Line Plot Created from User Spotify Data](examples/images/seaborn-lineplot.png){#fig:seaborn-lineplot width=50%}
+![Seaborn Line Plot Created from User Spotify Data](examples/images/seaborn-lineplot.pdf){#fig:seaborn-lineplot width=50%}
 
 ## Distribution Plots
 
@@ -106,7 +106,7 @@ from [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/gra
 
 The output from the program is showcased in @fig:seaborn-catplot.
 
-![Seaborn Categorical Plot Created from User Spotify Data](examples/images/seaborn-catplot.png){#fig:seaborn-catplot width=50%}
+![Seaborn Categorical Plot Created from User Spotify Data](examples/images/seaborn-catplot.pdf){#fig:seaborn-catplot width=50%}
 
 ## Regression Plots
 
@@ -127,7 +127,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/blob/main/project/graphics/examples/seaborn-images.py)
 . The output of this program is showcased in @fig:seaborn-regplot.
 
-![Seaborn Regression Plot Created from User Spotify Data](examples/images/seaborn-regplot.png){#fig:seaborn-regplot width=50%} 
+![Seaborn Regression Plot Created from User Spotify Data](examples/images/seaborn-regplot.pdf){#fig:seaborn-regplot width=50%} 
 
 Each of these plots can be manipulated to the users needs via the API
 that is listed in the sources section.

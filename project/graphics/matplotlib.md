@@ -59,7 +59,7 @@ This program can be downloaded from
 The output of this program is showcased in @fig:matplotlib-barchart2.
 
 
-![Matplotlib Bar Chart (data from Spotify)](examples/images/matplotlib-barchart.png){#fig:matplotlib-barchart2 width=50%} 
+![Matplotlib Bar Chart (data from Spotify)](examples/images/matplotlib-barchart.pdf){#fig:matplotlib-barchart2 width=50%} 
 
 ## Line Chart
 

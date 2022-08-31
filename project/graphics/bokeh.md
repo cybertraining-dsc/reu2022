@@ -56,7 +56,7 @@ This program can be downloaded
 from [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-figure.py). The output is shown in @fig:bokeh-figure.
 
 
-![Bokeh Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure witdh=25%}
+![Bokeh Line and Point Plotted on a Chart](examples/images/bokeh-figure.png){#fig:bokeh-figure width=25%}
 
 ## Annotations
 
@@ -132,7 +132,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-linechart.py)
 The output is shown in @fig:bokeh-linechart.
 
-![Bokeh Line Plot with random data.](examples/images/bokeh-linechart.png){#fig:bokeh-linechart width=50%} 
+![Bokeh Line Plot with random data.](examples/images/bokeh-linechart.pdf){#fig:bokeh-linechart width=50%} 
 
 You can find the source code for other types of line plots here:
 <http://docs.bokeh.org/en/latest/docs/user_guide/plotting.html>
@@ -161,7 +161,7 @@ This program can be downloaded from
 [GitHub](https://github.com/cybertraining-dsc/reu2022/tree/main/project/graphics/examples/bokeh-barchart.py). The output is shown in @fig:bokeh-barchart.
 
 
-![Bokeh Bar CHart with Spotify Data.](examples/images/bokeh-barchart.png){#fig:bokeh-barchart width=50%}
+![Bokeh Bar Chart with Spotify Data.](examples/images/bokeh-barchart.png){#fig:bokeh-barchart width=50%}
 
 ## Saving Figures
 
@@ -180,7 +180,7 @@ with the figure function.
 ### Saving Figures as PNG
 
 As the purpose of Bokeh is to create interactive `.html`
-visualizations, it's recommended to keep your visualizations in this
+visualizations, it is recommended to keep your visualizations in this
 format. However, it may sometime be necessary to save as an image
 file.
 
