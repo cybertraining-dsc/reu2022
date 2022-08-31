@@ -26,14 +26,14 @@ as well.
 
 ### Cloning the repository
 
-In order to be able to accurately access all of the componenets of the workflow
-(specifically for using the python script for programming), it is necessary to 
+To be able to accurately access all the components of the workflow
+(specifically for using the Python script for programming), it is necessary to 
 navigate to [GitHub](https://github.com/cloudmesh/cloudmesh-cc) and clone the 
-respository so that you can incorporate it into your own python scripts. The 
+repository so that you can incorporate it into your own Python scripts. The 
 command looks like this: 
 
 ```bash
-git clone <insert the git clone ssh link>
+git clone https://github.com/cloudmesh/cloudmesh-cc.git
 ```
 
 In doing so, you can pull the whole cloudmesh-cc repository into your own code 
@@ -41,21 +41,21 @@ development.
 
 ### Using the repository in your own code
 
-Then, in you python script you would simply do the following:
+Then, in your Python script you would simply do the following:
 
 ```python
-from cloudmesh.cc.workflow import workflow
+from cloudmesh.cc.workflow import Workflow
 
-w = workflow(name='workflow', filename='pathtoyamlyouhave')
+w = Workflow(name='workflow', filename='pathtoyamlyouhave')
 ```
 
 ### Yaml files
 
 As you can see in the previous script, the workflow has a parameter called 
 `filename`. This parameter is used to load the data that exists in a file into
-the overal data structure that exists in the class. Essentially, this parameter 
-is used to bring all of your data into the workflow so that it can be manipulated
-and changed and used.
+the overall data structure that exists in the class. Essentially, this 
+parameter is used to bring all of your data into the workflow so that it 
+can be manipulated and changed and used.
 
 There are two options that exist for the instantiation of the workflow. One is 
 that you can pre-build a script that the workflow can use to load in a bunch of 
@@ -128,8 +128,6 @@ workflow:
       name: b
 ```
 
-This would be the most basic way to set this up. 
-
 
 ## Methods
 
@@ -139,7 +137,8 @@ These methods can be found on [GitHub](https://github.com/cloudmesh/cloudmesh-cc
 
 ### Adding new jobs and dependencies 
 
-One thing to point out here, however, is that you can manually add jobs and dependencies to the `workflow`, rather than only through the `yaml` file through the `add_job` and `add_dependencies` methods. 
+One can manually add jobs and dependencies to the `workflow` rather than 
+only through the `yaml` file through the `add_job` and `add_dependencies` methods. 
 
 To execute this in `python`, simply execute the following
 
@@ -167,6 +166,8 @@ The `run_topo` method creates and runs jobs based on the topological sorting tha
 
 There are `remove_job` and `remove_workflow` methods that can be used to get rid of a single job, or the entirety of a workflow. 
 
-In order to utilize `remove_job` is is necessary to specify the name of the job in the parameters. 
+In order to utilize `remove_job` it is necessary to specify the name of 
+the job in the parameters. 
 
-In order to utilize the `remove_workflow` is is necessary to specify the name of the workflow and then it should function as specified.
+In order to utilize the `remove_workflow` it is necessary to specify the 
+name of the workflow; then, it should function as specified.
