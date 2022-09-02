@@ -1,9 +1,9 @@
 # Google Colab
 
-Google colab is a valuable tool for students that are not able to set up their 
-compures for deep learning or have access to GPU's. It provides zero install access to GPUs through the Web browser.
+Google Colab is a valuable tool for students that are not able to set up their 
+computers for deep learning or have access to GPUs. It provides zero install access to GPUs through the Web browser.
 
-We provide a lecture  plus four Python notebooks
+We provide a lecture plus four Python notebooks
 
 -   [First DL: Deep Learning MNIST Example Spring](https://docs.google.com/presentation/d/1YoXPaDeHldUJM8gnbOvDsmc_U6ff5T6bYq_We1JHNMg/edit?usp=sharing)
 -   [Welcome To
@@ -15,4 +15,4 @@ We provide a lecture  plus four Python notebooks
 -   [MNIST Classification on Google
     Colab](https://cybertraining-dsc.github.io/modules/bigdataapplications/2020/google_colab_exercise/)
 
-* Youtube Video: <http://youtube.com/watch?v=r-aD0oHVAdA>
+* YouTube Video: <http://youtube.com/watch?v=r-aD0oHVAdA>
