@@ -54,6 +54,12 @@ if error:
 scripts = textwrap.dedent("""
 mlp_mnist
 mnist_autoencoder
+mnist_cnn
+mnist_lstm
+mnist_mlp_with_lstm
+mnist_rnn
+mnist_with_distributed_training
+mnist_with_pytorch
 """).strip().splitlines()
 
 # mnist_cnn
