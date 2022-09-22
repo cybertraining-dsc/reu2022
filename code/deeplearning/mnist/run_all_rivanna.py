@@ -96,16 +96,20 @@ for card in gpu:
                 print(e.output)
 
     for script in scripts:
+        banner(f'here is currentscript:{script}')
         StopWatch.start(f'{script}')
         command = f'cat {script}.log'
         r = Shell.run(command)
         while 'progress=100' not in str(r):
+            banner('progress 100 is not in log!')
             time.sleep(2)
+            banner(f'im gonna do:{command} now!')
             r = Shell.run(command)
             continue
+        banner('the while loop has ended')
         StopWatch.stop(f'{script}')
 
-
+    banner('ive made it past the script for loop')
     StopWatch.stop(f'{card}-total')
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
     StopWatch.clear()
