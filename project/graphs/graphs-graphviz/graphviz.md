@@ -7,18 +7,36 @@ shapes and colors.
 
 ## Installation and Importing
 
-In order to install `graphviz` on Windows fully, first, have Chocolatey 
+To take advantage of the graphing capabilities and convenience of graphviz,
+we must install it with `pip install graphviz` as well as utilize the
+standalone installer. It is more convenient to use package managers.
+
+## Windows
+
+To install graphviz on Windows fully, first, have Chocolatey 
 installed. Next, run Command Prompt as an administrator and type in the 
 following:
 
-```
+```bash
 choco install graphviz
 ```
 
-Next, go onto GitBash and type in the following:
+## Mac
+
+To install graphviz on Mac, you must have Homebrew installed. Then,
+issue the command:
 
 ```bash
-$ pip install graphviz
+brew install graphviz
+```
+
+## Linux
+
+graphviz is supposed to come included with Ubuntu. Nonetheless, if you
+still need to manually install graphviz, issue the command:
+
+```bash
+sudo apt install graphviz
 ```
 
 ## Creating the graph, adding nodes, and adding edges
