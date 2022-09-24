@@ -11,7 +11,7 @@ To take advantage of the graphing capabilities and convenience of graphviz,
 we must install it with `pip install graphviz` as well as utilize the
 standalone installer. It is more convenient to use package managers.
 
-## Windows
+### Windows
 
 To install graphviz on Windows fully, first, have Chocolatey 
 installed. Next, run Command Prompt as an administrator and type in the 
@@ -21,7 +21,7 @@ following:
 choco install graphviz
 ```
 
-## Mac
+### Mac
 
 To install graphviz on Mac, you must have Homebrew installed. Then,
 issue the command:
@@ -30,7 +30,7 @@ issue the command:
 brew install graphviz
 ```
 
-## Linux
+### Linux
 
 graphviz is supposed to come included with Ubuntu. Nonetheless, if you
 still need to manually install graphviz, issue the command:
