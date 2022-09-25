@@ -10,13 +10,16 @@ from cloudmesh.common.variables import Variables
 from cloudmesh.common.console import Console
 from cloudmesh.common.systeminfo import os_is_windows
 from cloudmesh.common.Shell import Shell
+from cloudmesh.common.StopWatch import progress
 import time
+
+StopWatch.progress(0)
 
 dryrun = False
 
 exec = "python"
-exec = "sbatch"
 exec = "papermill"
+exec = "sbatch"
 
 v = Variables()
 
@@ -51,15 +54,21 @@ if device is None:
 if error:
     sys.exit()
 
+StopWatch.progress(5)
+
+# scripts = textwrap.dedent("""
+# mlp_mnist
+# mnist_autoencoder
+# mnist_cnn
+# mnist_lstm
+# mnist_mlp_with_lstm
+# mnist_rnn
+# mnist_with_distributed_training
+# mnist_with_pytorch
+# """).strip().splitlines()
+
 scripts = textwrap.dedent("""
 mlp_mnist
-mnist_autoencoder
-mnist_cnn
-mnist_lstm
-mnist_mlp_with_lstm
-mnist_rnn
-mnist_with_distributed_training
-mnist_with_pytorch
 """).strip().splitlines()
 
 # mnist_cnn
@@ -71,11 +80,11 @@ mnist_with_pytorch
 
 host = 'rivanna'
 
-if gpu is None:
-    gpu = ['v100', 'a100', 'k80', 'p100', 'rtx-2080']
-else:
-    gpu = v['gpu'].split(',')
-path = Shell.map_filename('~/reu2022/code/deeplearning/mnist').path
+#if gpu is None:
+gpu = ['v100', 'a100', 'k80', 'p100', 'rtx-2080']
+#else:
+#    gpu = v['gpu'].split(',')
+path = Shell.map_filename('~/cm/cloudmesh-cc/tests/mnist').path
 os.chdir(path)
 for card in gpu:
     tag = f"{host}-{user}-{cpu}-{card}"
@@ -110,4 +119,7 @@ for card in gpu:
     StopWatch.stop(f'{card}-total')
     StopWatch.benchmark(sysinfo=False, tag=tag, node=host, user=user, filename=f"all-{tag}.log")
     StopWatch.clear()
+
+StopWatch.progress(100)
+
 
