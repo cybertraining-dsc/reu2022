@@ -157,13 +157,15 @@ else:
     except:  # noqa: E722
         user = os.system('basename $HOME')
 
-try:
-    gpuname = ''
-    for line in open('mlp_mnist.log', 'r'):
-        if 'GPU' in line and line[-2] == ')':
-            gpuname = gpuname + line[:line.find('(')] + '\n'
-except:  # noqa: E722
-    gpuname = cpuinfo.get_cpu_info()['brand_raw']
+# try:
+#     gpuname = ''
+#     for line in open('mlp_mnist.log', 'r'):
+#         if 'GPU' in line and line[-2] == ')':
+#             gpuname = gpuname + line[:line.find('(')] + '\n'
+# except:  # noqa: E722
+#     gpuname = cpuinfo.get_cpu_info()['brand_raw']
+
+gpuname = Shell.run('nvidia-smi --list-gpus')
 
 tag = 'mlp_mnist'
 

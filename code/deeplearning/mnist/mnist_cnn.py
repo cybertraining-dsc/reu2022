@@ -14,11 +14,7 @@
 
 
 
-try:
-    from cloudmesh.common.StopWatch import StopWatch
-except:  # noqa: E722
-    get_ipython().system(' pip install cloudmesh-common')
-    from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.StopWatch import StopWatch
 
 
 # ## Exporting Output Graphs
@@ -52,6 +48,7 @@ from keras.utils import to_categorical, plot_model    # noqa: E402
 from keras.datasets import mnist    # noqa: E402
 from cloudmesh.common.systeminfo import os_is_windows    # noqa: E402
 from cloudmesh.common.Shell import Shell    # noqa: E402
+from cloudmesh.common.variables import Variables
 
 StopWatch.stop('import')
 StopWatch.progress(1)
@@ -174,19 +171,21 @@ else:
     except:  # noqa: E722
         user = os.system('basename $HOME')
 
-try:
-    gpuname = ''
-    for line in open('mnist_cnn.log', 'r'):
-        if 'GPU' in line and line[-2] == ')':
-            gpuname = gpuname + line[:line.find('(')] + '\n'
-except:  # noqa: E722
-    gpuname = cpuinfo.get_cpu_info()['brand_raw']
+# try:
+#     gpuname = ''
+#     for line in open('mnist_cnn.log', 'r'):
+#         if 'GPU' in line and line[-2] == ')':
+#             gpuname = gpuname + line[:line.find('(')] + '\n'
+# except:  # noqa: E722
+#     gpuname = cpuinfo.get_cpu_info()['brand_raw']
+
+gpuname = Shell.run('nvidia-smi --list-gpus')
 
 v = Variables()
-host = v('host')
-user = v('user')
-cpu = v('cpu')
-gpu = v('gpu')
+host = v['host']
+user = v['user']
+cpu = v['cpu']
+gpu = v['gpu']
 
 tag = 'mnist_cnn'
 tag = 'mnist_cnn-user-host-gpu-cpu'
