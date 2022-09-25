@@ -37,7 +37,10 @@ def save(graph, filename):
 
 StopWatch.start("total")
 StopWatch.start("import")
-StopWatch.progress(0)
+filename = Shell.map_filename(f'~/reu2022/code/deeplearning/mnist/mlp_mnist.log').path
+print(filename)
+Shell.rm(filename)
+StopWatch.progress(0, filename=filename)
 
 import os    # noqa: E402
 import cpuinfo  #noqa: E402
@@ -50,7 +53,7 @@ from cloudmesh.common.systeminfo import os_is_windows    # noqa: E402
 from cloudmesh.common.Shell import Shell    # noqa: E402
 
 StopWatch.stop("import")
-StopWatch.progress(10)
+StopWatch.progress(10, filename=filename)
 
 
 # ## Data Load
@@ -62,7 +65,7 @@ StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 StopWatch.stop("data-load")
-StopWatch.progress(11)
+StopWatch.progress(11, filename=filename)
 
 
 # ## Data Pre-Process
@@ -85,7 +88,7 @@ x_test = np.reshape(x_test, [-1, input_size])
 x_test = x_test.astype('float32') / 255
 
 StopWatch.stop("data-pre-process")
-StopWatch.progress(12)
+StopWatch.progress(12, filename=filename)
 
 
 # ## Define Model
@@ -121,7 +124,7 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 StopWatch.stop("compile")
-StopWatch.progress(13)
+StopWatch.progress(13, filename=filename)
 
 
 # ## Train
@@ -133,7 +136,7 @@ StopWatch.start("train")
 model.fit(x_train, y_train, epochs=5, batch_size=batch_size)
 
 StopWatch.stop("train")
-StopWatch.progress(98)
+StopWatch.progress(98, filename=filename)
 
 
 # ## Test
@@ -147,7 +150,7 @@ print("\nTest accuracy: %.1f%%" % (100.0 * acc))
 
 StopWatch.stop("test")
 StopWatch.stop("total")
-StopWatch.progress(100)
+StopWatch.progress(100, filename=filename)
 
 if os_is_windows():
     user = os.environ["USERNAME"]

@@ -16,6 +16,7 @@ import os
 
 
 from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.Shell import Shell    # noqa: E402
 
 
 # ## Exporting Output Graphs
@@ -33,11 +34,14 @@ def save(graph, filename):
 
 # ## Import Libraries
 
-
+filename = '~/reu2022/code/deeplearning/mnist/mnist_autoencoder.log'
+filename = Shell.map_filename(filename).path
+print(filename)
+Shell.rm(filename)
 
 StopWatch.start("total")
 StopWatch.start("import")
-StopWatch.progress(0)
+StopWatch.progress(0, filename=filename)
 
 import os    # noqa: E402
 import cpuinfo    # noqa: E402
@@ -51,10 +55,11 @@ from keras.datasets import mnist    # noqa: E402
 from keras.utils import plot_model    # noqa: E402
 from keras import backend as K    # noqa: E402
 from cloudmesh.common.systeminfo import os_is_windows    # noqa: E402
-from cloudmesh.common.Shell import Shell    # noqa: E402
+
+
 
 StopWatch.stop("import")
-StopWatch.progress(10)
+StopWatch.progress(10, filename=filename)
 
 
 # ## Data Load
@@ -66,7 +71,7 @@ StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 StopWatch.stop("data-load")
-StopWatch.progress(11)
+StopWatch.progress(11, filename=filename)
 
 
 # ## Data Pre-Process
@@ -84,7 +89,7 @@ x_test = x_test.astype('float32') / 255
 input_shape = (image_size, image_size, 1)
 
 StopWatch.stop("data-pre-process")
-StopWatch.progress(12)
+StopWatch.progress(12, filename=filename)
 
 
 # ## Define Model
@@ -137,7 +142,7 @@ save(autoencoder, 'autoencoder')
 autoencoder.compile(loss='mse', optimizer='adam')
 
 StopWatch.stop('compile')
-StopWatch.progress(15)
+StopWatch.progress(15, filename=filename)
 
 
 # ## Train
@@ -153,7 +158,7 @@ autoencoder.fit(x_train,
                 batch_size=batch_size)
 
 StopWatch.stop("train")
-StopWatch.progress(95)
+StopWatch.progress(95, filename=filename)
 
 
 # ## Test
@@ -165,7 +170,7 @@ StopWatch.start("test")
 x_decoded = autoencoder.predict(x_test)
 
 StopWatch.stop("test")
-StopWatch.progress(99)
+StopWatch.progress(99, filename=filename)
 
 
 # ## Visualize
@@ -187,7 +192,7 @@ plt.savefig(f'images/input_and_decoded.svg')
 
 StopWatch.stop("visualize")
 StopWatch.stop("total")
-StopWatch.progress(100)
+StopWatch.progress(100, filename=filename)
 
 if os_is_windows():
     user = os.environ["USERNAME"]

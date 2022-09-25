@@ -12,6 +12,8 @@
 from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.Shell import Shell
 
+filename = Shell.map_filename(f'~/reu2022/code/deeplearning/mnist/mnist_with_pytorch.log').path
+
 
 # ## Import Libraries
 
@@ -19,7 +21,7 @@ from cloudmesh.common.Shell import Shell
 
 StopWatch.start('total')
 StopWatch.start('import')
-StopWatch.progress(0)
+StopWatch.progress(0, filename=filename)
 
 import os    # noqa: E402
 import cpuinfo    # noqa: E402
@@ -31,7 +33,7 @@ from keras.datasets import mnist    # noqa: E402
 from cloudmesh.common.systeminfo import os_is_windows    # noqa: E402
 
 StopWatch.stop('import')
-StopWatch.progress(6)
+StopWatch.progress(6, filename=filename)
 
 
 # ## Data Load
@@ -43,7 +45,7 @@ StopWatch.start("data-load")
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 StopWatch.stop("data-load")
-StopWatch.progress(7)
+StopWatch.progress(7, filename=filename)
 
 
 # ## Pre-Process Data
@@ -67,7 +69,7 @@ train_loader = torch.utils.data.DataLoader(train_data_set, batch_size=32, shuffl
 validation_loader = torch.utils.data.DataLoader(validation_data_set, batch_size=32, shuffle=True)
 
 StopWatch.stop("data-pre-process")
-StopWatch.progress(8)
+StopWatch.progress(8, filename=filename)
 
 
 # ## Define Model
@@ -97,7 +99,7 @@ model = nn.Sequential(nn.Linear(input_size, hidden_sizes[0]),
 print(model)
 
 StopWatch.stop("define-model")
-StopWatch.progress(9)
+StopWatch.progress(9, filename=filename)
 
 
 # ## Define Loss Function and Optimizer
@@ -116,7 +118,7 @@ criterion = nn.NLLLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.003, momentum=0.9)
 
 StopWatch.stop('define-loss')
-StopWatch.progress(10)
+StopWatch.progress(10, filename=filename)
 
 
 # # Model Training
@@ -151,7 +153,7 @@ for epoch in range(epochs):
     print("Epoch {} - Training loss: {}".format(epoch, average_loss))
 
 StopWatch.stop('train')
-StopWatch.progress(95)
+StopWatch.progress(95, filename=filename)
 
 
 # ## Test
@@ -188,7 +190,7 @@ print(f"Model Accuracy {(correct_predictions/all_count) * 100} %")
 
 StopWatch.stop('test')
 StopWatch.stop('total')
-StopWatch.progress(100)
+StopWatch.progress(100, filename=filename)
 
 if os_is_windows():
     user = os.environ["USERNAME"]
