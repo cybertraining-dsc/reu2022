@@ -15,11 +15,7 @@
 
 
 
-try:
-    from cloudmesh.common.StopWatch import StopWatch
-except:  # noqa: E722
-    get_ipython().system(' pip install cloudmesh-common')
-    from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.StopWatch import StopWatch
 
 
 # ## Exporting Output Graphs
