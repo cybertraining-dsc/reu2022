@@ -16,6 +16,7 @@
 
 
 from cloudmesh.common.StopWatch import StopWatch
+from cloudmesh.common.Shell import Shell    # noqa: E402
 
 
 # ## Exporting Output Graphs
@@ -33,11 +34,11 @@ def save(graph, filename):
 
 # ## Import Libraries
 
-
+gpuname = Shell.run('nvidia-smi --list-gpus')
 
 StopWatch.start("total")
 StopWatch.start("import")
-filename = Shell.map_filename(f'~/reu2022/code/deeplearning/mnist/mlp_mnist.log').path
+filename = Shell.map_filename(f'~/reu2022/code/deeplearning/mnist/mlp_mnist-{gpuname}.log').path
 print(filename)
 Shell.rm(filename)
 StopWatch.progress(0, filename=filename)
@@ -50,7 +51,6 @@ from keras.layers import Dense, Activation, Dropout    # noqa: E402
 from keras.utils import to_categorical, plot_model    # noqa: E402
 from keras.datasets import mnist    # noqa: E402
 from cloudmesh.common.systeminfo import os_is_windows    # noqa: E402
-from cloudmesh.common.Shell import Shell    # noqa: E402
 
 StopWatch.stop("import")
 StopWatch.progress(10, filename=filename)
@@ -168,11 +168,10 @@ else:
 # except:  # noqa: E722
 #     gpuname = cpuinfo.get_cpu_info()['brand_raw']
 
-gpuname = Shell.run('nvidia-smi --list-gpus')
 
 tag = 'mlp_mnist'
 
-StopWatch.benchmark(tag=tag, node=gpuname, user=user)
+StopWatch.benchmark(tag=tag, node=gpuname, user=user, filename=filename)
 
 
 # # REFERENCES

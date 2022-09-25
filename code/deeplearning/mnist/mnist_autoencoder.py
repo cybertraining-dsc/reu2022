@@ -21,6 +21,7 @@ from cloudmesh.common.Shell import Shell    # noqa: E402
 
 # ## Exporting Output Graphs
 
+gpuname = Shell.run('nvidia-smi --list-gpus')
 
 
 def save(graph, filename):
@@ -34,7 +35,7 @@ def save(graph, filename):
 
 # ## Import Libraries
 
-filename = '~/reu2022/code/deeplearning/mnist/mnist_autoencoder.log'
+filename = f'~/reu2022/code/deeplearning/mnist/mnist_autoencoder-{gpuname}.log'
 filename = Shell.map_filename(filename).path
 print(filename)
 Shell.rm(filename)
@@ -210,9 +211,8 @@ else:
 # except:  # noqa: E722
 #     gpuname = cpuinfo.get_cpu_info()['brand_raw']
 
-gpuname = Shell.run('nvidia-smi --list-gpus')
 
 tag = 'mnist_autoencoder'
 
-StopWatch.benchmark(tag=tag, node=gpuname, user=user)
+StopWatch.benchmark(tag=tag, node=gpuname, user=user, filename=filename)
 

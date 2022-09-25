@@ -17,7 +17,9 @@
 from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.Shell import Shell    # noqa: E402
 
-filename = Shell.map_filename(f'~/reu2022/code/deeplearning/mnist/mnist_cnn.log').path
+gpuname = Shell.run('nvidia-smi --list-gpus')
+filename = Shell.map_filename(f'~/reu2022/code/deeplearning/mnist/mnist_cnn-{gpuname}.log').path
+
 
 # ## Exporting Output Graphs
 
@@ -180,7 +182,6 @@ else:
 # except:  # noqa: E722
 #     gpuname = cpuinfo.get_cpu_info()['brand_raw']
 
-gpuname = Shell.run('nvidia-smi --list-gpus')
 
 v = Variables()
 host = v['host']
@@ -189,7 +190,7 @@ cpu = v['cpu']
 gpu = v['gpu']
 
 tag = 'mnist_cnn'
-tag = 'mnist_cnn-user-host-gpu-cpu'
+#tag = 'mnist_cnn-user-host-gpu-cpu'
 
-StopWatch.benchmark(tag=tag, node=gpuname, user=user)
+StopWatch.benchmark(tag=tag, node=gpuname, user=user, filename=filename)
 
