@@ -17,12 +17,14 @@ import os
 
 from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.Shell import Shell    # noqa: E402
+from cloudmesh.common.variables import Variables
 
 
 # ## Exporting Output Graphs
 
 gpuname = Shell.run('nvidia-smi --list-gpus')
-
+v = Variables()
+gpuname = v['currentgpu']
 
 def save(graph, filename):
     if os.path.exists("images"):

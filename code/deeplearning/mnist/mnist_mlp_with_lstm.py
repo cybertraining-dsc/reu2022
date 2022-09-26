@@ -14,8 +14,11 @@
 
 from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.Shell import Shell    # noqa: E402
+from cloudmesh.common.variables import Variables
 
 gpuname = Shell.run('nvidia-smi --list-gpus')
+v = Variables()
+gpuname = v['currentgpu']
 filename = Shell.map_filename(f'~/reu2022/code/deeplearning/mnist/mnist_mlp_with_lstm-{gpuname}.log').path
 
 # ## Exporting Output Graphs
