@@ -1,173 +1,157 @@
 # Workflow 
 
-The workflow class is a class in which users can upload files of jobs (bash and 
-sbatch scripts) and then these jobs are loaded, saved, and run (and in doing so, 
-images are produced of the workflow progression). 
+The Workflow class in cloudmesh-cc allows the creation of workflows, which are
+compilations of jobs to be run on nodes. These workflows report information on
+the status of jobs as they are run, whether locally or remotely. These jobs
+can be customized to run as bash scripts, Python scripts, Jupyter notebooks,
+or Slurm scripts.
 
-This class was implemented with the intention of allowing users to upload jobs
-that ranged in their complexity and necessary time to complete. Additionally, 
-the python script was created with the intention that jobs could be run on 
-various different operating systems (mac, Windows, and linux) and on different
-computers, depending on the configuration that the user specified. 
+Users can utilize the Workflow class in three different ways: through the
+command line interface, through a locally hosted web interface with FastAPI,
+or with REST API.
 
-For instance, if a user had four jobs that they wanted to run, but they wanted a
-few of these jobs to be run on a remote computer (like UVa's Rivanna) and a few
-to be run locally, they could split these tasks up and run them like that. They 
-can run these jobs in parallel (meaning that the remote and local jobs are run 
-at the same time) or they can run these in a topological sort fashion (which 
-means that the workflow will wait for the preceding job to finish before the next
-job is run). 
+The usefulness of such Workflow class includes the ability to upload
+a mixture of different types of jobs together, including local and remote;
+Slurm and shell; Windows and Unix; and so on. It also allows for a more
+efficient job execution as opposed to manually inputting commands repeatedly
+at a terminal. For example, a one-time specification inside a YAML
+configuration file automatically sets up log generation, fetches the log,
+reports progress, resets results on rerun, and other helpful features. 
 
-In this documentation, we will walk through the set up, methods, and use cases 
-for this workflow and will mention the `fastAPI` service that accompanies this
-as well. 
+In this documentation, we describe the installation and methods for this class,
+as well as the four different ways to interface the class: through command line
+interface, Python, browser GUI through local FastAPI server, or REST
+interface through local FastAPI server.
 
 ## Set-Up
 
-### Cloning the repository
-
-To be able to accurately access all the components of the workflow
-(specifically for using the Python script for programming), it is necessary to 
-navigate to [GitHub](https://github.com/cloudmesh/cloudmesh-cc) and clone the 
-repository so that you can incorporate it into your own Python scripts. The 
-command looks like this: 
+Downloading the code is relatively simple. We leverage the cloudmesh-installer
+to locally install the cloudmesh suite of repositories.
 
 ```bash
-git clone https://github.com/cloudmesh/cloudmesh-cc.git
+mkdir ~/cm
+cd ~/cm
+pip install cloudmesh-installer -U
+cloudmesh-installer get cc
 ```
 
-In doing so, you can pull the whole cloudmesh-cc repository into your own code 
-development.
+## A. Use Workflow Class in Python Code
 
-### Using the repository in your own code
-
-Then, in your Python script you would simply do the following:
+In Python, we can instantiate an instance of the Workflow class to
+create a new Workflow. We supply an arbitrary filename for the workflow and
+specify that we are not loading a preexisting one, but creating a new one.
 
 ```python
 from cloudmesh.cc.workflow import Workflow
 
-w = Workflow(name='workflow', filename='pathtoyamlyouhave')
+w = Workflow(name='workflow-example', load=False)
 ```
 
-### Yaml files
+Simply instantiating a workflow will create the necessary runtime
+directories located on your computer at 
+`~/.cloudmesh/workflow/workflow-example`. Within this directory is a `runtime`
+directory, where all the scripts of the workflow must be placed. Compatible
+script types include shell scripts `.sh`, Python scripts `.py`, Jupyter
+notebooks `.ipynb`, and Slurm scripts `.sh` (`#SBATCH` 
+directives are required in the Slurm script).
 
-As you can see in the previous script, the workflow has a parameter called 
-`filename`. This parameter is used to load the data that exists in a file into
-the overall data structure that exists in the class. Essentially, this 
-parameter is used to bring all of your data into the workflow so that it 
-can be manipulated and changed and used.
-
-There are two options that exist for the instantiation of the workflow. One is 
-that you can pre-build a script that the workflow can use to load in a bunch of 
-data (hence the `filename` parameter from before). The other way is that you 
-can manually add jobs (which will be discussed later on). First, let's discuss 
-the set-up of a proper yaml file for the `workflow` to load in.
-
-The yaml file should set up several parameters for the `workflow` to load in. 
-Rather than explain, we will show an example. 
-
-#### Example
-
-```bash
-workflow:
-  nodes:
-    start:
-      label: start
-      kind: local
-      user: jacksonmiskill
-      host: local
-      status: ready
-      progress: 0
-      created: '2022-07-20 13:35:35.600053'
-      modified: '2022-07-20 13:35:35.600053'
-      script: null
-      instance: null
-      name: start
-      parent: []
-    end:
-      label: end
-      kind: local
-      user: jacksonmiskill
-      host: local
-      status: ready
-      progress: 0
-      created: '2022-07-20 13:35:35.601217'
-      modified: '2022-07-20 13:35:35.601217'
-      script: null
-      instance: null
-      name: end
-      parent:
-      - job-local-2
-```
-
-Many of the methods within the `workflow` will update the yaml file with values, 
-like the `created` and `modified` fields. There are several fields that are 
-necessary to fill out before running, however, for the optimal functionality. 
-
-First: the name parameter is where the `start` and `end` are above their fields.
-It is necessary to fill this out with what you would like to run. This also used
-in order to make sure that the data structure works as intended. 
-
-`kind` it is necessary to fill out this field as well. This should specify where
-you want the job to be run- it gives the `workflow` a flag to look for in deciding
-which type of job to run. 
-
-`name` is it also necessary to go ahead and write in the name of the job that you 
-are attempting to instantiate. 
-
-So, a basic script might look like this:
-
-```bash
-workflow:
-  nodes:
-    a:
-      kind: local
-      name: a
-    b:
-      kind: local
-      name: b
-```
-
-
-## Methods
-
-The most important methods for this class are `jobs`, `load`, `add_job`, `add_dependencies`, `run_parallel`, `run_topo`, `remove_workflow`, `remove_job`, and `status`. 
-
-These methods can be found on [GitHub](https://github.com/cloudmesh/cloudmesh-cc) and are, for the most part, self-explantory.
-
-### Adding new jobs and dependencies 
-
-One can manually add jobs and dependencies to the `workflow` rather than 
-only through the `yaml` file through the `add_job` and `add_dependencies` methods. 
-
-To execute this in `python`, simply execute the following
+We can utilize some scripts that are already available in the repository for
+our workflow-example. We will now use cloudmesh Shell for path expansion and
+for copying the scripts.
 
 ```python
-from cloudmesh.cc.workflow import Workflow
+from cloudmesh.common.Shell import Shell
+from pathlib import Path
+import os
 
-w = Workflow(name='workflow', filename='pathtoyaml')
-
-w.add_job(name='job-x', label='job-x', kind='local', user='username', status='ready')
-
-w.add_job(name='job-y', label='job-y', kind='local', user='username', status='ready')
-
-w.add_dependencies(dependency='x-y')
+cloudmesh_cc_dir = Path(Shell.map_filename(
+    '~/cm/cloudmesh-cc/tests/workflow-example/').path).as_posix()
+scripts = [
+    "start.sh", "fetch-data.sh", "compute.sh", "analyze.sh", "end.sh"]
+for script in scripts:
+    Shell.copy(f"{cloudmesh_cc_dir}/{script}", w.runtime_dir)
 ```
 
-### Running jobs
+Lastly, we can enable the running of these scripts by adding jobs to the
+workflow object. We can also add dependencies to tell the workflow in which
+order to run the jobs.
 
-The `run_parallel` and `run_topo` methods are used in order to run the jobs that have been uploaded to the workflow data structure.The way that this works is simple. There are implementations of different kinds of the `job` object. This means that there is a `job` for `slurm`, for `local`, and for `ssh`. When the run method is called, it creates the correct type of job based on the kind of job as specified in the yaml file or in the `add_job` method. 
+```python
+for script in scripts:
+    w.add_job(
+        name=script, kind='local', label="{name}\nprogress={progress}")
+w.add_dependencies(f"analyze.sh,end.sh")
+w.add_dependencies(f"compute.sh,analyze.sh")
+w.add_dependencies(f"fetch-data.sh,compute.sh")
+w.add_dependencies(f"start.sh,fetch-data.sh")
+```
 
-The `run_parallel` method runs the jobs side-by-side, if there are different kinds that are distinguished throughout the jobs. For instance, if there are two kinds of jobs in the workflow- one as `ssh` and one as `local`, then the `run_parallel` method will run them separately and bring them together. 
+To test our workflow, we can run it in topological order with the command:
 
-The `run_topo` method creates and runs jobs based on the topological sorting that the sorting method does. This method essentially creates a sort, and will wait for the preceding job to finish before the next job is run. 
+```python
+os.chdir(w.runtime_dir)
+os.chdir('..')
+w.run_topo(show=True)
+```
 
-### Removing Jobs
+The workflow will now run the jobs in a topological order and show the
+progress of the jobs in your web browser.
 
-There are `remove_job` and `remove_workflow` methods that can be used to get rid of a single job, or the entirety of a workflow. 
+To instead load a YAML file for the configuration of the workflow,
+use the `filename=` parameter of the instantiation of the workflow.
+The supplied parameter should be a filepath that points to the location
+of the YAML, and `load=` should be `True`.
 
-In order to utilize `remove_job` it is necessary to specify the name of 
-the job in the parameters. 
+The following is the workflow-example configuration in YAML format.
 
-In order to utilize the `remove_workflow` it is necessary to specify the 
-name of the workflow; then, it should function as specified.
+```bash
+workflow:
+  nodes:
+    start.sh:
+       name: start.sh
+       user: gregor
+       host: localhost
+       kind: local
+       status: ready
+       label: '{name}\nprogress={progress}'
+       script: start.sh
+    fetch-data.sh:
+       name: fetch-data.sh
+       user: gregor
+       host: localhost
+       kind: local
+       status: ready
+       label: '{name}\nprogress={progress}'
+       script: fetch-data.sh
+   compute.sh:
+       name: compute.sh
+       user: gregor
+       host: localhost
+       kind: local
+       status: ready
+       label: '{name}\nprogress={progress}'
+       script: compute.sh
+   analyze.sh:
+       name: analyze.sh
+       user: gregor
+       host: localhost
+       kind: local
+       status: ready
+       label: '{name}\nprogress={progress}'
+       script: analyze.sh
+   end.sh:
+       name: end.sh
+       user: gregor
+       host: localhost
+       kind: local
+       status: ready
+       label: '{name}\nprogress={progress}'
+       script: end.sh
+  dependencies:
+    - start.sh,fetch-data.sh,compute.sh,analyze.sh,end.sh
+```
+
+The different options for kind include local, ssh, slurm, and wsl.
+The filetype, e.g. `.sh` or `.py`, is automatically inferred from the
+script.
+
