@@ -18,7 +18,7 @@ installed. Next, run Command Prompt as an administrator and type in the
 following:
 
 ```bash
-choco install graphviz
+choco install graphviz -y
 ```
 
 ### Mac
