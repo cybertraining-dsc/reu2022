@@ -21,6 +21,25 @@ with the following Rivanna documentation page: <https://www.rc.virginia.edu/user
 Please sign up on Wednesdays for a UVA Rivanna tutorial. The list of
 workshops can be seen at the following link: <https://www.rc.virginia.edu/education/workshops/>
 
-<https://cloudmesh-reu2022.slack.com/archives/C03F89TMFQ9/p1653399309252089>
-once this is all clarified, delete this file uva.md. or use if necessary
-if it provides a nice recap. do not have duplicated information in the hpc folder.
+When working with Gregor please use terminals and code editors with
+light themes, as it is difficult to read otherwise. For example,
+use IntelliJ light with PyCharm https://www.jetbrains.com/help/pycharm/user-interface-themes.html
+
+# Miscellaneous Material
+
+The following material can be read as supplementary information.
+This includes several books on utilizing the Python programming
+language and the Linux operating system. The length of this
+material is long, and it is only recommended as supplementary
+reading.
+
+Books:
+https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf
+https://cloudmesh-community.github.io/pub/vonLaszewski-python.epub
+https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf
+https://cloudmesh-community.github.io/pub/vonLaszewski-linux.epub
+https://cloudmesh-community.github.io/pub/vonLaszewski-writing.pdf
+https://cloudmesh-community.github.io/pub/vonLaszewski-communicate.pdf
+https://cloudmesh.github.io/cloudmesh-mpi/report-mpi.pdf
+https://cloudmesh-community.github.io/pub/vonLaszewski-reu2022.pdf
+
