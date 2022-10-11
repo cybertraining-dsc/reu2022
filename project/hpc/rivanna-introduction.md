@@ -33,7 +33,8 @@ the Rivanna system.
 * [Queues Documentation](https://www.rc.virginia.edu/userinfo/rivanna/queues)
 * [Documentation](https://www.rc.virginia.edu/userinfo/rivanna/login/#web-based-access)
 * [Login](https://rivanna-portal.hpc.virginia.edu)
-* [UVA VPN](https://in.virginia.edu/vpn)
+* [UVA 
+](https://in.virginia.edu/vpn)
 * [Shell access](https://rivanna-portal.hpc.virginia.edu/pun/sys/shell/ssh/rivanna.hpc.virginia.edu)
 * [JupyterLab](https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard/batch_connect/sys/jupyter_lab/session_contexts/new)
 * [UVA HPC Support Email](hpc-support@virginia.edu)
@@ -185,8 +186,10 @@ which will result in
 
 Once you have your Rivanna account set up, you must set up your UVA 
 Anywhere VPN, including downloading the necessary certificate from UVA.
-Once you install the certificate and install the Cisco AnyConnect software, 
-you can utilize cloudmesh-vpn to connect to the VPN via command line. Set 
+Once you install the certificate and install the Cisco AnyConnect software
+by following this link https://in.virginia.edu/vpn 
+then you can utilize cloudmesh-vpn to connect to the VPN via command line. 
+After following the documentation in the previous link, set 
 up cloudmesh-vpn with the following commands:
 
 ```bash
