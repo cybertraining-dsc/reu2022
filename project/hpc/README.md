@@ -36,7 +36,7 @@ light themes, as it is difficult to read otherwise. For example,
 use IntelliJ light with PyCharm 
 <https://www.jetbrains.com/help/pycharm/user-interface-themes.html>
 
-# Miscellaneous Material
+## Miscellaneous Material
 
 The following material can be read as supplementary information.
 This includes several books on utilizing the Python programming
