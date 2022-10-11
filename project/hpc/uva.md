@@ -34,12 +34,12 @@ material is long, and it is only recommended as supplementary
 reading.
 
 Books:
-https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf
-https://cloudmesh-community.github.io/pub/vonLaszewski-python.epub
-https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf
-https://cloudmesh-community.github.io/pub/vonLaszewski-linux.epub
-https://cloudmesh-community.github.io/pub/vonLaszewski-writing.pdf
-https://cloudmesh-community.github.io/pub/vonLaszewski-communicate.pdf
-https://cloudmesh.github.io/cloudmesh-mpi/report-mpi.pdf
-https://cloudmesh-community.github.io/pub/vonLaszewski-reu2022.pdf
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-python.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-python.epub>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-linux.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-linux.epub>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-writing.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-communicate.pdf>
+* <https://cloudmesh.github.io/cloudmesh-mpi/report-mpi.pdf>
+* <https://cloudmesh-community.github.io/pub/vonLaszewski-reu2022.pdf>
 
