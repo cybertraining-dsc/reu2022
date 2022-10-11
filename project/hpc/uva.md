@@ -1,4 +1,4 @@
-# University of Virginia
+# Necessary Steps to Research with Python at UVA
 
 Students who are collaborating with UVA and joining the cloudmesh
 or mlcommons initiative should become acquainted with documentation
