@@ -60,9 +60,13 @@ instructions to download UVA Anywhere at the following link:
 
 To log in to Rivanna, ensure you are connected to UVA Anywhere.
 You will be prompted to enter your UVA password (not your ssh-key
-password).
-Issue the following (make sure you replace `abc123` with your
-UVA id):
+password). If you do not have an ssh-key, then generate one by
+issuing `ssh-keygen` command in your terminal, such as Git Bash
+for Windows or the Terminal for macOS and Linux. Create a strong
+password that you will remember and press Enter to save to the
+default location.
+Then, issue the following commands (make sure you replace `abc123` with your
+UVA Computing ID):
 
 ```bash
 you@yourcomputer$ ssh-copy-id abc123@rivanna.hpc.virginia.edu 
