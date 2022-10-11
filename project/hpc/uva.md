@@ -12,7 +12,11 @@ Secondly, documentation on how to use the UVA Anywhere VPN
 can be found at the following link: <https://github.com/cybertraining-dsc/reu2022/blob/main/project/hpc/rivanna-introduction.md#connecting-to-uva-anywhere-vpn-via-cli>
 
 Once achieving a connection to Rivanna by setting up the VPN,
-follow the setup at the following link <https://github.com/cybertraining-dsc/reu2022/blob/main/project/hpc/rivanna-introduction.md#logging-in-to-rivanna-via-web-interface> which involves copying an ssh key for automated login.
+follow the setup at the following link <https://github.com/cybertraining-dsc/reu2022/blob/main/project/hpc/rivanna-introduction.md#logging-in-to-rivanna-via-web-interface> which involves copying an ssh key for automated login
+into Rivanna.
+
+Those who will be researching MPI on Rivanna should become acquainted
+with the following Rivanna documentation page: <https://www.rc.virginia.edu/userinfo/rivanna/software/mpi/>
 
 Please sign up on Wednesdays for a UVA Rivanna tutorial. The list of
 workshops can be seen at the following link: <https://www.rc.virginia.edu/education/workshops/>
