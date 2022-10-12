@@ -14,7 +14,7 @@ metadata:
   dest: "./dest/book"
   filename: "vonLaszewski-reu2022.epub"
   rights: (c) Gregor von Laszewski, 2022
-  date: 04 June, 2022
+  date: 12 October, 2022
 git:
   "chapters": "https://github.com/cloudmesh-community/book/blob/main/chapters"
   "credit": "https:/raw.githubusercontent.com/cyberaide/bookmanager/main/bookmanager/template"
@@ -52,7 +52,6 @@ BOOK:
 #      - "{file.reu2022}/project/hpc/uva.md"
       - "{file.reu2022}/project/hpc/rivanna-introduction.md"
       - "{file.reu2022}/project/hpc/rivanna-sbatch.md"
-      - "{file.reu2022}/project/hpc/rivanna-run-mpi-programs.md"
     - DOCKER:
       - "{file.reu2022}/project/docker/docker.md"
   - LINUX:
@@ -92,7 +91,6 @@ BOOK:
         - "{file.reu2022}/project/service/workflow/workflow.md"
         - "{file.reu2022}/project/service/queue/service-queue.md"
         - "{file.reu2022}/project/service/databases/databases.md"
-        - "{file.reu2022}/project/cloudmesh-cc/workflow.md"
         - "{file.reu2022}/project/hpc/rivanna-tensorflow.md"
   - INTRODUCTION_TO_DEEP_LEARNING:
     - "{file.reu2022}/project/ai/introduction-ai.md"
@@ -125,7 +123,6 @@ BOOK:
     - "{file.reu2022}/code/deeplearning/parameters.md"
     - "{file.reu2022}/project/mnist_parameters.md"
     - "{file.reu2022}/project/mnist-tensorflow-rivanna.md"
-    - "{file.reu2022}/project/hpc/rivanna-run-mpi-programs.md"
     - "{file.reu2022}/project/mnist-pytorch-rivanna.md"
   - BIOS:
     - "{file.reu2022}/contribute/bio.md"
