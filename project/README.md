@@ -65,7 +65,7 @@ Only important for Gregor (do not use)
 
 The many UVA technical help ticket systems
 * ITS: https://virginia.edusupportcenter.com/shp/uva/helpcenter
-Rivanna: https://varesearchhelp.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all[…]tatusPIds=1&statusPIds=1&statuses=open&statuses=closed
+* Rivanna: https://varesearchhelp.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all[…]tatusPIds=1&statusPIds=1&statuses=open&statuses=closed
 * BII https://uva-biocomplexity.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all&statuses=open&statuses=closed
 
 ## Miscellaneous Material
