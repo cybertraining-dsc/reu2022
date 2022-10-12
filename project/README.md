@@ -54,7 +54,14 @@ Bibliography Management:
 
 ## Links
 
-### Rivanna
+### Rivanna Information
+
+* https://www.rc.virginia.edu/
+* https://www.rc.virginia.edu/userinfo/rivanna/overview/
+* access through ssh: https://www.rc.virginia.edu/userinfo/rivanna/login/
+* access through Web Browser: https://shibidp.its.virginia.edu/idp/profile/SAML2/Redirect/SSO?execution=e2s1
+
+### Rivanna (Administrative)
 
 Only important for Gregor (do not use)
 * request storage: https://www.rc.virginia.edu/form/storage/
