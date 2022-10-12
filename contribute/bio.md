@@ -9,7 +9,7 @@ Alex Beck has completed his first year at the University of Virginia where he is
 majoring in electrical engineering. He is set to receive his Bachelor of Science degree
 in the Spring of 2025.
 
-Alex worked in research during the summer of 2022 at the UVA Biocomplexity 
+Alex worked in the summer of 2022 at the UVA Biocomplexity 
 Institute's Computing for Global Challenges program under Dr. Gregor von Laszewski
 where he gained experience in programming and data science. Prior to 
 that, he had previous experience in sales from working in retail. 
@@ -103,8 +103,8 @@ presidential scholar at such university.
 AbdulBaqiy currently works at Fedex Logistics at MVSU. He helps in
 data entry and data Analysis. He is hoping to polish his data analysis
 skills with this opportunity. In the summer of 2022, he partially participated 
-in the Biocomplexity Research Program at UVA where he used his skills
-in support of different researches.
+in the Biocomplexity Research Program at UVA where he started to learn 
+elementary python programming.
 
 AbdulBaqiy participates in several extracurricular activities. In MVSU he
 is a member of African Student Union (ASU), National Society of Black Engineers
