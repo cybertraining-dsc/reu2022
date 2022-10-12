@@ -40,33 +40,33 @@ use IntelliJ light with PyCharm
 
 ### PyCharm
 
-md: https://www.jetbrains.com/help/pycharm/markdown.html
-(optional) extension makefile: https://plugins.jetbrains.com/plugin/9333-makefile-language
-(optional) rst: https://www.jetbrains.com/help/pycharm/restructured-text.html
-80 char: https://intellij-support.jetbrains.com/hc/en-us/community/posts/206070859-How-do-I-enable-the-80-column-guideline-change
+* md: https://www.jetbrains.com/help/pycharm/markdown.html
+* (optional) extension makefile: https://plugins.jetbrains.com/plugin/9333-makefile-language
+* (optional) rst: https://www.jetbrains.com/help/pycharm/restructured-text.html
+* 80 char: https://intellij-support.jetbrains.com/hc/en-us/community/posts/206070859-How-do-I-enable-the-80-column-guideline-change
 
 ### Browser Extensions
 
 Bibliography Management:
-jabref: https://www.jabref.org/
-bibtex: https://en.wikipedia.org/wiki/BibTeX
-draft bibtex from urls: https://addons.mozilla.org/en-US/firefox/addon/bibitnow/ (has to be modified once copied. Not everything will work.
+* jabref: https://www.jabref.org/
+* bibtex: https://en.wikipedia.org/wiki/BibTeX
+* draft bibtex from urls: https://addons.mozilla.org/en-US/firefox/addon/bibitnow/ (has to be modified once copied. Not everything will work.
 
 ## Links
 
 ### Rivanna
 
 Only important for Gregor (do not use)
-request storage: https://www.rc.virginia.edu/form/storage/
-rivanna partition/account: https://www.rc.virginia.edu/userinfo/rivanna/allocations/
-managing groups: https://mygroups.virginia.edu/
+* request storage: https://www.rc.virginia.edu/form/storage/
+* rivanna partition/account: https://www.rc.virginia.edu/userinfo/rivanna/allocations/
+* managing groups: https://mygroups.virginia.edu/
 
 ### Rivanna Support
 
 The many UVA technical help ticket systems
-ITS: https://virginia.edusupportcenter.com/shp/uva/helpcenter
+* ITS: https://virginia.edusupportcenter.com/shp/uva/helpcenter
 Rivanna: https://varesearchhelp.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all[…]tatusPIds=1&statusPIds=1&statuses=open&statuses=closed
-BII https://uva-biocomplexity.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all&statuses=open&statuses=closed
+* BII https://uva-biocomplexity.atlassian.net/servicedesk/customer/user/requests?page=1&reporter=all&statuses=open&statuses=closed
 
 ## Miscellaneous Material
 
