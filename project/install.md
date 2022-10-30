@@ -132,9 +132,9 @@ $ pip install pip -U
 $ pip install cloudmesh-installer 
 $ cloudmesh-installer get cmd5 
 $ cms help
-$ touch .bashrc
-$ echo "source ~/ENV3/Scripts/activate" >> .bashrc
-$ echo "cd ~/cm" >> .bashrc
+$ touch ~/.bashrc
+$ echo "source ~/ENV3/Scripts/activate" >> ~/.bashrc
+$ echo "cd ~/cm" >> ~/.bashrc
 ```
 
 To activate it, start new Git Bash and terminate the first Git Bash window. 
