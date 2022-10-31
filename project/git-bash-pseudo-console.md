@@ -5,13 +5,7 @@ system. However, it must be properly configured for an optimal
 Python development experience; for example, Pseudo Console Support
 must be enabled.
 
-First, try opening Git Bash and entering `wsl` (you must
-have installed WSL and Git Bash). If it hangs, then a reinstall of
-Git Bash is necessary. If it does not hang and instead launches into
-WSL, then Pseudo Console Support is enabled; however, make sure that
-you picked other necessary options when you installed Git Bash.
-
-To enable Pseudo Console Support, uninstall Git Bash.
+First, uninstall Git Bash.
 
 If you installed Git with `choco`, then do `choco uninstall git`
 and `choco uninstall git.install`.
@@ -38,14 +32,19 @@ support for pseudo consoles`. Also select the appropriate
 options that match what is specified in the previously written
 choco command.
 
-Now you can use `wsl` and other commands that would otherwise
-require `winpty` prepended to the command.
-
 For good measure, execute the following in Git Bash to enforce
 LF line endings:
 
 ```bash
 $ git config --global core.autocrlf false
+```
+
+Also, generate an ssh-key:
+
+```bash
+$ ssh-keygen
+# press enter to save to default location
+# create a strong memorable password and confirm the password
 ```
 
 The following is also an ideal `~/.bashrc` file to have for
