@@ -41,6 +41,13 @@ choco command.
 Now you can use `wsl` and other commands that would otherwise
 require `winpty` prepended to the command.
 
+For good measure, execute the following in Git Bash to enforce
+LF line endings:
+
+```bash
+$ git config --global core.autocrlf false
+```
+
 ## Troubleshooting
 
 If an `already installed` message appears when trying to use choco to
