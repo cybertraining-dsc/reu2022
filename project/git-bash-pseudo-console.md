@@ -54,8 +54,8 @@ Python virtual environment or cm dir, then do `cd` and
 `python -m venv ~/ENV3` and `mkdir ~/cm`). You can create
 this `~/.bashrc` file by saying `nano ~/.bashrc` in Git Bash, copying
 the text, and then pasting the text with keyboard shortcut
-`Shift` + `Insert`. An error after first relaunching Git Bash
-after this created file is expected.
+`Shift` + `Insert`. An error regarding bash profile after first 
+relaunching Git Bash after this created file is expected.
 
 ```bash
 env=~/.ssh/agent.env
