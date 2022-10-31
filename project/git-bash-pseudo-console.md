@@ -5,7 +5,7 @@ system. However, it must be properly configured for an optimal
 Python development experience; for example, Pseudo Console Support
 must be enabled.
 
-First, uninstall Git Bash.
+First, uninstall Git Bash, if already installed.
 
 If you installed Git with `choco`, then do `choco uninstall git`
 and `choco uninstall git.install`.
