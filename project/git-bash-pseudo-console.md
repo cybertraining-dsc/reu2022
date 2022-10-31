@@ -26,10 +26,6 @@ $ choco install git.install --params "/GitAndUnixToolsOnPath \
 
 If you do not have chocolatey then follow the tutorial at
 <https://chocolatey.org/install> and then run the aforementioned
-choco command, or forego chocolatey and use the standard Git
-installer by checking the box that reads `Enable experiment 
-support for pseudo consoles`. Also select the appropriate
-options that match what is specified in the previously written
 choco command.
 
 For good measure, execute the following in Git Bash to enforce
