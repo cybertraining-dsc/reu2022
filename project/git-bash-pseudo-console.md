@@ -52,9 +52,10 @@ The following is also an ideal `~/.bashrc` file to have for
 cloudmesh development on Windows (if you do not have ENV3
 Python virtual environment or cm dir, then do `cd` and
 `python -m venv ~/ENV3` and `mkdir ~/cm`). You can create
-this file by saying `nano ~/.bashrc` in Git Bash, copying
+this `~/.bashrc` file by saying `nano ~/.bashrc` in Git Bash, copying
 the text, and then pasting the text with keyboard shortcut
-`Shift` + `Insert`.
+`Shift` + `Insert`. An error after first relaunching Git Bash
+after this created file is expected.
 
 ```bash
 env=~/.ssh/agent.env
