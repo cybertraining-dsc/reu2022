@@ -50,7 +50,7 @@ $ git config --global core.autocrlf false
 
 The following is also an ideal `~/.bashrc` file to have for
 cloudmesh development on Windows (if you do not have ENV3
-Python virtual environment or cm dir, then do `cd` and
+Python virtual environment or cm dir, then do
 `python -m venv ~/ENV3` and `mkdir ~/cm`). You can create
 this `~/.bashrc` file by saying `nano ~/.bashrc` in Git Bash, copying
 the text, and then pasting the text with keyboard shortcut
