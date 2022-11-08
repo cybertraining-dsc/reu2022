@@ -50,7 +50,8 @@ Python virtual environment or cm dir, then do
 this `~/.bashrc` file by saying `nano ~/.bashrc` in Git Bash, copying
 the text, and then pasting the text with keyboard shortcut
 `Shift` + `Insert`. Then say `Ctrl + X`, `y` and `Enter`, and
-then `Enter`. An error regarding bash profile after first 
+then `Enter`. Then restart Git Bash.
+An error regarding bash profile after first 
 relaunching Git Bash after this created file is expected.
 
 ```bash
