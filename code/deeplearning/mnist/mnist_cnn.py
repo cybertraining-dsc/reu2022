@@ -17,6 +17,7 @@
 from cloudmesh.common.StopWatch import StopWatch
 from cloudmesh.common.Shell import Shell    # noqa: E402
 from cloudmesh.common.variables import Variables
+from cloudmesh.common.StopWatch import progress
 
 gpuname = Shell.run('nvidia-smi --list-gpus')
 v = Variables()
@@ -43,7 +44,7 @@ def save(graph, filename):
 
 StopWatch.start('total')
 StopWatch.start('import')
-StopWatch.progress(0, filename=filename)
+progress(progress=0, filename=filename)
 
 import os    # noqa: E402
 import cpuinfo    # noqa: E402
@@ -57,7 +58,7 @@ from cloudmesh.common.systeminfo import os_is_windows    # noqa: E402
 from cloudmesh.common.variables import Variables
 
 StopWatch.stop('import')
-StopWatch.progress(1, filename=filename)
+progress(progress=1, filename=filename)
 
 
 # ## Data Load
@@ -69,7 +70,7 @@ StopWatch.start('data-load')
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 StopWatch.stop('data-load')
-StopWatch.progress(2, filename=filename)
+progress(progress=2, filename=filename)
 
 
 # ## Data Pre-Process
@@ -93,7 +94,7 @@ input_shape = (image_size, image_size, 1)
 print(input_shape)
 
 StopWatch.stop("data-pre-process")
-StopWatch.progress(3, filename=filename)
+progress(progress=3, filename=filename)
 
 
 # ## Define Model
@@ -141,7 +142,7 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 
 StopWatch.stop("compile")
-StopWatch.progress(4, filename=filename)
+progress(progress=4, filename=filename)
 
 
 # # Train
@@ -153,7 +154,7 @@ StopWatch.start('train')
 model.fit(x_train, y_train, epochs=5, batch_size=batch_size)
 
 StopWatch.stop('train')
-StopWatch.progress(99, filename=filename)
+progress(progress=99, filename=filename)
 
 
 # ## Test
@@ -167,7 +168,7 @@ print("\nTest accuracy: %.1f%%" % (100.0 * acc))
 
 StopWatch.stop('test')
 StopWatch.stop('total')
-StopWatch.progress(100, filename=filename)
+progress(progress=100, filename=filename)
 
 if os_is_windows():
     user = os.environ["USERNAME"]
