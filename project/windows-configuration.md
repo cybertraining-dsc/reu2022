@@ -201,5 +201,5 @@ directories to the Desktop in WSL, use this command:
 $ cd /mnt/c/Users/USERNAME/Desktop
 ```
 
-where `USERANME` is to be  replaced with the name of the user.
+where `USERNAME` is to be replaced with the name of the user.
 
