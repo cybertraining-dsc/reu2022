@@ -16,6 +16,9 @@ press the Windows key, searching for `Add or remove
 programs`, searching for `Git`, clicking on it, then
 clicking `Uninstall` and completing the uninstallation wizard.
 
+If you do not have chocolatey then follow the tutorial at
+<https://chocolatey.org/install>.
+
 Then install Git Bash in a Run as Administrator instance of Powershell by 
 executing the choco command:
 
@@ -23,10 +26,6 @@ executing the choco command:
 $ choco install git.install --params "/GitAndUnixToolsOnPath \
         /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf" -y
 ```
-
-If you do not have chocolatey then follow the tutorial at
-<https://chocolatey.org/install> and then run the aforementioned
-choco command.
 
 For good measure, execute the following in Git Bash to enforce
 LF line endings:
@@ -43,12 +42,18 @@ $ ssh-keygen
 # create a strong memorable password and confirm the password
 ```
 
+If you do not have ENV3 Python virtual environment or cm dir, 
+then execute these commands:
+
+```bash
+python -m venv ~/ENV3
+mkdir ~/cm
+```
+
 The following is also an ideal `~/.bashrc` file to have for
-cloudmesh development on Windows (if you do not have ENV3
-Python virtual environment or cm dir, then do
-`python -m venv ~/ENV3` and `mkdir ~/cm`). You can create
+cloudmesh development on Windows. You can create
 this `~/.bashrc` file by saying `nano ~/.bashrc` in Git Bash, copying
-the text, and then pasting the text with keyboard shortcut
+the text below, and then pasting the text with keyboard shortcut
 `Shift` + `Insert`. Then say `Ctrl + X`, `y` and `Enter`, and
 then `Enter`. Then restart Git Bash.
 An error regarding bash profile after first 
