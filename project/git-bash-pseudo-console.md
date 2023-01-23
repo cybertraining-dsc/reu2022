@@ -46,8 +46,8 @@ If you do not have ENV3 Python virtual environment or cm dir,
 then execute these commands:
 
 ```bash
-python -m venv ~/ENV3
-mkdir ~/cm
+$ python -m venv ~/ENV3
+$ mkdir ~/cm
 ```
 
 The following is also an ideal `~/.bashrc` file to have for
