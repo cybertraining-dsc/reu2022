@@ -76,7 +76,7 @@ the following command:
 
 ```bash
 $ choco install git.install --params "/GitAndUnixToolsOnPath \
-        /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf" -y
+        /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf /NoOpenSSH" -y
 ```
 
 The `/NoAutoCrlf` sets it so that the files are
