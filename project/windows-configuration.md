@@ -75,8 +75,7 @@ To install Git Bash with chocolatey, issue
 the following command:
 
 ```bash
-$ choco install git.install --params "/GitAndUnixToolsOnPath \
-        /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf /NoOpenSSH" -y
+choco install openssh git.install --params "'/GitAndUnixToolsOnPath /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf /NoOpenSSH'" -y
 ```
 
 The `/NoAutoCrlf` sets it so that the files are
