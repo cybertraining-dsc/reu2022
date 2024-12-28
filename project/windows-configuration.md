@@ -75,7 +75,7 @@ To install Git Bash with chocolatey, issue
 the following command:
 
 ```bash
-choco install git.install --params "'/GitAndUnixToolsOnPath /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf'" -y
+choco install openssh git.install --params "'/GitAndUnixToolsOnPath /Editor:Nano /PseudoConsoleSupport /NoAutoCrlf /NoOpenSSH'" -y
 ```
 
 The `/NoAutoCrlf` sets it so that the files are
@@ -235,6 +235,38 @@ fi
 if ! ssh-add -l > /dev/null 2>&1; then
     ssh-add ~/.ssh/id_rsa
 fi
+
+
+# -----------------------------------
+# Emulate ssh-copy-id in Git Bash
+# -----------------------------------
+ssh-copy-id() {
+    local userhost="$1"
+
+    if [ -z "$userhost" ]; then
+        echo "Usage: ssh_copy_id user@host"
+        return 1
+    fi
+
+    # Check which public key exists in ~/.ssh
+    local pubkey
+    if [ -f "$HOME/.ssh/id_ed25519.pub" ]; then
+        pubkey="$HOME/.ssh/id_ed25519.pub"
+    elif [ -f "$HOME/.ssh/id_rsa.pub" ]; then
+        pubkey="$HOME/.ssh/id_rsa.pub"
+    else
+        echo "No valid public key found in ~/.ssh. Generate one with ssh-keygen first."
+        return 1
+    fi
+
+    echo "Using public key: $pubkey"
+    echo "Copying key to $userhost..."
+
+    # Copy the key to the remote host’s authorized_keys
+    cat "$pubkey" | ssh "$userhost" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+    
+    echo "Key copied. You should now be able to SSH into $userhost without a password (assuming your SSH agent is running)."
+}
 
 source ~/ENV3/Scripts/activate
 cd ~/cm
