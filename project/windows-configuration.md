@@ -206,27 +206,36 @@ where `USERNAME` is to be replaced with the name of the user.
 ## bashrc
 
 ```bash
-env=~/.ssh/agent.env
+# Path to the SSH agent environment file
+SSH_ENV="$HOME/.ssh/agent.env"
 
-agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+# Function to load existing SSH agent environment
+agent_load_env() {
+    test -f "$SSH_ENV" && . "$SSH_ENV" >| /dev/null
+}
 
-agent_start () {
-    (umask 077; ssh-agent >| "$env")
-    . "$env" >| /dev/null ; }
+# Function to check if the SSH agent is running
+agent_running() {
+    [ -n "$SSH_AGENT_PID" ] && ps -p $SSH_AGENT_PID > /dev/null 2>&1
+}
 
+# Function to start a new SSH agent
+agent_start() {
+    echo "Starting a new SSH agent..."
+    (umask 077; ssh-agent >| "$SSH_ENV")
+    . "$SSH_ENV" >| /dev/null
+}
+
+# Load existing SSH agent environment or start a new one if necessary
 agent_load_env
-
-# agent_run_state: 0=agent running w/ key; 1=agent w/o key; 2=agent not running
-agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
-
-if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+if ! agent_running; then
     agent_start
-    ssh-add
-elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
-    ssh-add
 fi
 
-unset env
+# Add SSH key only if no identities are loaded
+if ! ssh-add -l > /dev/null 2>&1; then
+    ssh-add ~/.ssh/id_rsa
+fi
 
 source ~/ENV3/Scripts/activate
 cd ~/cm
